@@ -168,6 +168,134 @@ def development_gate(
     }
 
 
+def paired_uplift_gate(
+    conditions: dict[str, dict[str, Any]],
+    *,
+    reader: dict[str, Any],
+    computed_target_accuracy: float,
+    rule: dict[str, Any],
+) -> dict[str, Any]:
+    base_outputs = {
+        row["example_id"]: row for row in conditions["base"]["outputs"]
+    }
+    true_results = {
+        example_id: row["original_result"]
+        for example_id, row in base_outputs.items()
+    }
+    base_errors = [
+        example_id
+        for example_id, target in true_results.items()
+        if base_outputs[example_id]["parsed"] != target
+    ]
+    base_correct = [
+        example_id
+        for example_id, target in true_results.items()
+        if base_outputs[example_id]["parsed"] == target
+    ]
+
+    def paired(name: str) -> dict[str, Any]:
+        outputs = {
+            row["example_id"]: row for row in conditions[name]["outputs"]
+        }
+        recovered = sum(
+            outputs[example_id]["parsed"] == true_results[example_id]
+            for example_id in base_errors
+        )
+        preserved = sum(
+            outputs[example_id]["parsed"] == true_results[example_id]
+            for example_id in base_correct
+        )
+        harmed = len(base_correct) - preserved
+        return {
+            "base_error_count": len(base_errors),
+            "base_correct_count": len(base_correct),
+            "recovered_base_errors": recovered,
+            "base_error_recovery": recovered / max(1, len(base_errors)),
+            "preserved_base_correct": preserved,
+            "base_correct_preservation": preserved / max(1, len(base_correct)),
+            "harmed_base_correct": harmed,
+            "net_exact_improvement": recovered - harmed,
+            "net_exact_improvement_rate": (
+                (recovered - harmed) / len(true_results)
+            ),
+        }
+
+    paired_metrics = {
+        name: paired(name)
+        for name in (
+            "latent_read_compute_write",
+            "oracle_compute_native_write",
+            "random_native_subspace",
+            "shuffled_read_compute_write",
+        )
+    }
+    latent = conditions["latent_read_compute_write"]
+    oracle = conditions["oracle_compute_native_write"]
+    shuffled = conditions["shuffled_read_compute_write"]
+    latent_paired = paired_metrics["latent_read_compute_write"]
+    random_paired = paired_metrics["random_native_subspace"]
+    n = latent["n"]
+    oracle_gap = (
+        oracle["true_result_correct"] - latent["true_result_correct"]
+    ) / n
+    excess_recovery = (
+        latent_paired["recovered_base_errors"]
+        - random_paired["recovered_base_errors"]
+    ) / max(1, latent_paired["base_error_count"])
+    checks = {
+        "reader": (
+            reader["pair_accuracy"] >= rule["minimum_reader_pair_accuracy"]
+        ),
+        "deterministic_compute": (
+            computed_target_accuracy
+            >= rule["minimum_computed_target_accuracy"]
+        ),
+        "final_exact": (
+            latent["true_result_accuracy"]
+            >= rule["minimum_final_exact_accuracy"]
+        ),
+        "oracle_gap": (
+            oracle_gap <= rule["require_oracle_exact_gap_at_most"]
+        ),
+        "base_error_recovery": (
+            latent_paired["base_error_recovery"]
+            >= rule["minimum_base_error_recovery"]
+        ),
+        "base_correct_preservation": (
+            latent_paired["base_correct_preservation"]
+            >= rule["minimum_base_correct_preservation"]
+        ),
+        "net_improvement": (
+            latent_paired["net_exact_improvement_rate"]
+            >= rule["minimum_net_improvement_over_base"]
+        ),
+        "excess_recovery_over_random": (
+            excess_recovery
+            >= rule["minimum_excess_base_error_recovery_over_random"]
+        ),
+        "shuffled_control": (
+            shuffled["true_result_accuracy"]
+            <= rule["maximum_shuffled_true_accuracy"]
+        ),
+        "parse": (
+            not rule["require_parse_rate"] or latent["parse_rate"] == 1.0
+        ),
+        "digit_tokens": (
+            not rule["require_digit_token_rate"]
+            or latent["digit_token_rate"] == 1.0
+        ),
+    }
+    return {
+        "checks": checks,
+        "passes": all(checks.values()),
+        "paired_metrics": paired_metrics,
+        "derived": {
+            "oracle_exact_gap": oracle_gap,
+            "excess_base_error_recovery_over_random": excess_recovery,
+        },
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, required=True)
@@ -213,6 +341,12 @@ def main() -> None:
         development_paths = {
             "development_config": Path(config["development_config"]),
             "development_result": Path(config["development_result"]),
+            "development_metric_correction_config": Path(
+                config["development_metric_correction_config"]
+            ),
+            "development_metric_correction": Path(
+                config["development_metric_correction"]
+            ),
         }
         for name, path in development_paths.items():
             verify_sha256(path, config[f"{name}_sha256"])
@@ -222,8 +356,36 @@ def main() -> None:
         development_result = json.loads(
             development_paths["development_result"].read_text()
         )
-        if not development_result["passes"]:
-            raise SystemExit("development graft did not pass")
+        development_correction = json.loads(
+            development_paths["development_metric_correction"].read_text()
+        )
+        development_correction_config = json.loads(
+            development_paths[
+                "development_metric_correction_config"
+            ].read_text()
+        )
+        if development_result["config_sha256"] != config[
+            "development_config_sha256"
+        ]:
+            raise SystemExit("development result/config mismatch")
+        if not development_correction["passes"]:
+            raise SystemExit("corrected development graft did not pass")
+        if development_correction["config_sha256"] != config[
+            "development_metric_correction_config_sha256"
+        ]:
+            raise SystemExit("development correction/config mismatch")
+        if development_correction["original"]["result_sha256"] != config[
+            "development_result_sha256"
+        ]:
+            raise SystemExit("development correction/result mismatch")
+        if development_correction["corrected_rule"] != config[
+            "corrected_rule"
+        ]:
+            raise SystemExit("audit changed corrected development rule")
+        if development_correction_config["corrected_rule"] != config[
+            "corrected_rule"
+        ]:
+            raise SystemExit("audit differs from frozen correction config")
         locked = (
             "base_model_batch_size",
             "dataset_config_sha256",
@@ -377,12 +539,22 @@ def main() -> None:
             **result,
             **true_result_metrics(result, true_targets),
         }
-    gate = development_gate(
-        conditions,
-        reader=read_metrics,
-        computed_target_accuracy=computed_target_accuracy,
-        rule=config["development_rule"],
-    )
+    if config.get("gate_mode", "original") == "paired_uplift":
+        gate_rule = config["corrected_rule"]
+        gate = paired_uplift_gate(
+            conditions,
+            reader=read_metrics,
+            computed_target_accuracy=computed_target_accuracy,
+            rule=gate_rule,
+        )
+    else:
+        gate_rule = config["development_rule"]
+        gate = development_gate(
+            conditions,
+            reader=read_metrics,
+            computed_target_accuracy=computed_target_accuracy,
+            rule=gate_rule,
+        )
     report = {
         "schema_version": f"oli.phase8-phi-latent-graft-{evaluation_split}/v1",
         "created_at": datetime.now(UTC).isoformat(),
@@ -412,7 +584,8 @@ def main() -> None:
         },
         "conditions": conditions,
         "gate": {
-            "thresholds": config["development_rule"],
+            "mode": config.get("gate_mode", "original"),
+            "thresholds": gate_rule,
             **gate,
         },
         "passes": gate["passes"],

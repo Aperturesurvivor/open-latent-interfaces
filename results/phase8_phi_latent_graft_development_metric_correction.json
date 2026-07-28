@@ -1,0 +1,95 @@
+{
+  "checks": {
+    "base_correct_preservation": true,
+    "base_error_recovery": true,
+    "deterministic_compute": true,
+    "digit_tokens": true,
+    "excess_recovery_over_random": true,
+    "final_exact": true,
+    "net_improvement": true,
+    "oracle_gap": true,
+    "parse": true,
+    "reader": true,
+    "shuffled_control": true
+  },
+  "claim_boundary": "Transparent development-only paired-uplift metric correction. No model inference was rerun and no audit data was accessed.",
+  "config_sha256": "5e087f9c7af36a99a67bc7c25e174e173770f2726f4c5aca743a4597e9c57b08",
+  "corrected_rule": {
+    "maximum_shuffled_true_accuracy": 0.1,
+    "minimum_base_correct_preservation": 0.98,
+    "minimum_base_error_recovery": 0.75,
+    "minimum_computed_target_accuracy": 0.98,
+    "minimum_excess_base_error_recovery_over_random": 0.5,
+    "minimum_final_exact_accuracy": 0.75,
+    "minimum_net_improvement_over_base": 0.1,
+    "minimum_reader_pair_accuracy": 0.98,
+    "require_digit_token_rate": 1.0,
+    "require_oracle_exact_gap_at_most": 0.05,
+    "require_parse_rate": 1.0
+  },
+  "created_at": "2026-07-28T17:07:49.163631+00:00",
+  "derived": {
+    "excess_base_error_recovery_over_random": 0.5714285714285714,
+    "oracle_exact_gap": 0.0,
+    "required_final_exact_count": 34
+  },
+  "original": {
+    "config": "configs/phase8_phi_latent_graft_development.json",
+    "config_sha256": "bcf9f49c150320e40fb6da45449b24e251e50f2cdb29c6b08c46f07108f7a170",
+    "failed_checks": [
+      "control_advantage"
+    ],
+    "passes": false,
+    "result": "results/phase8_phi_latent_graft_development.json",
+    "result_sha256": "d35e45a43121303934d6eb86a431fc288a39c547db8c5c4a42458172f46174e4"
+  },
+  "paired_metrics": {
+    "latent_read_compute_write": {
+      "base_correct_count": 38,
+      "base_correct_preservation": 1.0,
+      "base_error_count": 7,
+      "base_error_recovery": 0.8571428571428571,
+      "harmed_base_correct": 0,
+      "net_exact_improvement": 6,
+      "net_exact_improvement_rate": 0.13333333333333333,
+      "preserved_base_correct": 38,
+      "recovered_base_errors": 6
+    },
+    "oracle_compute_native_write": {
+      "base_correct_count": 38,
+      "base_correct_preservation": 1.0,
+      "base_error_count": 7,
+      "base_error_recovery": 0.8571428571428571,
+      "harmed_base_correct": 0,
+      "net_exact_improvement": 6,
+      "net_exact_improvement_rate": 0.13333333333333333,
+      "preserved_base_correct": 38,
+      "recovered_base_errors": 6
+    },
+    "random_native_subspace": {
+      "base_correct_count": 38,
+      "base_correct_preservation": 1.0,
+      "base_error_count": 7,
+      "base_error_recovery": 0.2857142857142857,
+      "harmed_base_correct": 0,
+      "net_exact_improvement": 2,
+      "net_exact_improvement_rate": 0.044444444444444446,
+      "preserved_base_correct": 38,
+      "recovered_base_errors": 2
+    },
+    "shuffled_read_compute_write": {
+      "base_correct_count": 38,
+      "base_correct_preservation": 0.05263157894736842,
+      "base_error_count": 7,
+      "base_error_recovery": 0.0,
+      "harmed_base_correct": 36,
+      "net_exact_improvement": -36,
+      "net_exact_improvement_rate": -0.8,
+      "preserved_base_correct": 2,
+      "recovered_base_errors": 0
+    }
+  },
+  "passes": true,
+  "schema_version": "oli.phase8-phi-latent-graft-metric-correction/v1",
+  "status": "development_metric_correction_no_model_rerun"
+}

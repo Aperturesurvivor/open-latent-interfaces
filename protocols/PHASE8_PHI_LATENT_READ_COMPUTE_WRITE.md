@@ -110,6 +110,23 @@ digit-token checks remain unchanged. The original result and nonpass remain
 immutable and hash-referenced. The corrected rule is development-derived and
 must be frozen unchanged for the untouched audit.
 
+## Audit authorization
+
+The corrected development package passes all paired-uplift checks. The audit
+configuration authorizes exactly one run on the 45 untouched audit
+`carry_base` examples. It locks:
+
+- dataset, example-list, and token-contract hashes;
+- reader selection result, reader tensor, and hidden-state index;
+- audited writer manifest and all writer-internal artifacts through manifest
+  verification;
+- deterministic operation, random seed, conditions, and corrected thresholds;
+- original development config/result and correction config/result hashes;
+- audit runner hash, output path, and maximum run count.
+
+An existing audit output is never overwritten. Any failed audit conjunct is a
+final nonpass for this package and cannot be used to tune or repeat it.
+
 ## Claim boundary
 
 A passing audit would establish a complete deterministic latent graft under an
