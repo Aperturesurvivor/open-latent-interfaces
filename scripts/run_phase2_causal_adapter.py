@@ -348,7 +348,19 @@ def main() -> None:
     if "fit_templates" in config:
         prompt_views = [
             [
-                template.format(a=example.operand_a, b=example.operand_b)
+                tokenizer.apply_chat_template(
+                    [
+                        {
+                            "role": "user",
+                            "content": template.format(
+                                a=example.operand_a,
+                                b=example.operand_b,
+                            ),
+                        }
+                    ],
+                    tokenize=False,
+                    add_generation_prompt=True,
+                )
                 for example in fit
             ]
             for template in config["fit_templates"]
