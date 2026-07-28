@@ -410,6 +410,12 @@ The one authorized interpolation then passed at scale 1.6: 24/45 target tens
 versus 10/45 matched no-carry and 0/45 random. The universal tensor hash was
 unchanged, and scale 1.6 is fixed for untouched Qwen development.
 
+Qwen then passed one-shot untouched development without correction. The
+operand writer reached 43/45 exact versus 1/45 wrong-class; the universal carry
+writer reached 34/45 target tens versus 22/45 matched no-carry and 0/45
+random. See the
+[Phase 5 Qwen donor-free development summary](PHASE5_QWEN_DONOR_FREE_DEVELOPMENT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -522,6 +528,7 @@ either stage.
 - [Phase 5 Qwen carry-context scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md)
 - [Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md)
+- [Phase 5 Qwen donor-free development summary](PHASE5_QWEN_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)

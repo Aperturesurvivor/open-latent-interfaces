@@ -121,3 +121,9 @@ controls, random seed, and thresholds. The operand writer must reach 70% exact
 accuracy and the carry writer 50% target-tens accuracy; each must exceed its
 strongest fixed control by 25 points with a 100% parse rate. No
 development-driven retry is authorized.
+
+Both fixed interfaces passed untouched development without correction:
+operand exact accuracy was 43/45 against 1/45 wrong-class exact; carry tens
+accuracy was 34/45 against 22/45 matched no-carry and 0/45 random. A one-shot
+audit may now be authorized only after the engine, artifacts, token contract,
+metrics, output path, and maximum run count are hash-locked.
