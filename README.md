@@ -256,6 +256,13 @@ and 85/90 development examples were exact, with three aligned digit tokens on
 all 630 evaluated rows. The audit split remains sealed. See the
 [Phase 3 prefill summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md).
 
+A selection-only native-boundary map then found complete counterfactual
+next-digit control in Phi: 90/90 at hidden index 24 for the leading digit and
+90/90 at index 30 for both suffix positions. Strongest matched controls reached
+9/90, 9/90, and 11/90. This is a full-donor causal upper bound; rank compression
+and donor removal remain open. See the
+[Phase 3 native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -344,6 +351,7 @@ either stage.
 - [Phase 2 one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md)
 - [Phi-3.5 cross-model capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md)
 - [Phase 3 Phi prefill behavior summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md)
+- [Phase 3 Phi native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
