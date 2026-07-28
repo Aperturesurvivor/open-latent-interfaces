@@ -1,0 +1,13 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "fit_examples": 60,
+  "hidden_state_index": 23,
+  "ranks": [1, 2, 4, 8],
+  "random_seed": 20260805,
+  "scales": [0.5, 1.0, 2.0, 4.0, 8.0, 16.0],
+  "schema_version": "oli.phase1-paired-transport-writer-config/v1",
+  "selection_examples": 30,
+  "typed_writer_result": "results/phase1_typed_digit_writer_development.json",
+  "typed_writer_result_sha256": "e07b60455091d448b1e2b41f21a9d8e48e6819ad7d31a9db06d96bb053b4b629"
+}

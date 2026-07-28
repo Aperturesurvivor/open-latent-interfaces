@@ -67,3 +67,57 @@ def fit_digit_subspace(
     centered = centroids - centroids.mean(dim=0)
     _, _, basis = torch.linalg.svd(centered, full_matrices=False)
     return DigitSubspace(classes=classes, centroids=centroids, basis=basis)
+
+
+@dataclass(frozen=True)
+class TransportSubspace:
+    """Low-rank class-conditioned recipient-to-native transport deltas."""
+
+    classes: tuple[int, ...]
+    class_deltas: torch.Tensor
+    basis: torch.Tensor
+
+    def write_delta(
+        self,
+        target_digits: torch.Tensor,
+        *,
+        rank: int,
+        scale: float,
+    ) -> torch.Tensor:
+        if target_digits.ndim != 1:
+            raise ValueError("target digits must be a vector")
+        if rank < 1 or rank > self.basis.shape[0]:
+            raise ValueError("rank is outside the fitted basis")
+        class_rows = {value: index for index, value in enumerate(self.classes)}
+        try:
+            rows = torch.tensor(
+                [class_rows[int(value)] for value in target_digits.tolist()],
+                dtype=torch.long,
+            )
+        except KeyError as error:
+            raise ValueError(f"target digit {error.args[0]} was not fitted") from error
+        prototype_deltas = self.class_deltas[rows]
+        basis = self.basis[:rank]
+        return (prototype_deltas @ basis.T) @ basis * scale
+
+
+def fit_transport_subspace(
+    deltas: torch.Tensor,
+    digits: torch.Tensor,
+) -> TransportSubspace:
+    """Fit class-conditioned mean transports and their uncentered subspace."""
+
+    if deltas.ndim != 2 or digits.shape != (deltas.shape[0],):
+        raise ValueError("deltas and digits must align by example")
+    classes = tuple(sorted({int(value) for value in digits.tolist()}))
+    if len(classes) < 2:
+        raise ValueError("at least two digit classes are required")
+    class_deltas = torch.stack(
+        [deltas[digits == value].mean(dim=0) for value in classes]
+    )
+    _, _, basis = torch.linalg.svd(class_deltas, full_matrices=False)
+    return TransportSubspace(
+        classes=classes,
+        class_deltas=class_deltas,
+        basis=basis,
+    )
