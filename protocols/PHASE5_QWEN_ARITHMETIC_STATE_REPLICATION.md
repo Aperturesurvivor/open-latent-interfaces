@@ -61,3 +61,15 @@ carry-context token, and the downstream tail. Each target has an isotropic
 region- and norm-matched control; carry regions additionally face the matched
 no-carry `+1` regional delta. Selection gates and thresholds are identical to
 the Phase 4 regional map.
+
+## Regional result and bounded follow-up
+
+The generic operand token passed at Qwen hidden-state index 12 with 43/45
+exact targets against 0/45 random. The carry-context token localized at index
+16 but failed at unit scale: 11/45 target tens against 2/45 matched no-carry
+and 0/45 random. The downstream tail did not transfer.
+
+A scale-only follow-up may keep index 16 and the exact carry-context,
+matched-no-carry, and isotropic vectors fixed while evaluating a precommitted
+bounded scale grid. It may not rescan layers, change token regions, filter
+selection, or open development.

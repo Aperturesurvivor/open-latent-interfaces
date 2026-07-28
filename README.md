@@ -383,6 +383,12 @@ complete-correct fit quartets, 39/45 selection quartets, and 41/45 development
 quartets. No Phi coordinate is transferred. See the
 [Phase 5 Qwen behavior summary](PHASE5_QWEN_CARRY_BEHAVIOR_SUMMARY.md).
 
+The Qwen token-region scan then rediscovered an early operand edit at
+hidden-state index 12: 43/45 exact versus 0/45 random. A later carry-context
+effect appeared at index 16 but remained a unit-scale non-pass at 11/45 target
+tens versus 2/45 matched no-carry. See the
+[Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -491,6 +497,7 @@ either stage.
 - [Arithmetic-coordinate interface schema](schemas/arithmetic-coordinate-interface-v1.schema.json)
 - [Phase 5 Qwen arithmetic-state replication protocol](protocols/PHASE5_QWEN_ARITHMETIC_STATE_REPLICATION.md)
 - [Phase 5 Qwen carry-behavior summary](PHASE5_QWEN_CARRY_BEHAVIOR_SUMMARY.md)
+- [Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
