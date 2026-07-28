@@ -96,7 +96,7 @@ def test_jacobian_adapter_records_tokens_and_transported_direction() -> None:
         lens_checkpoint="local/fake-lens.pt",
         lens_checkpoint_revision="lens-revision",
     )
-    artifact = adapter.readout(np.array([1, 2, 3]), top_k=2, **site_kwargs())
+    artifact = adapter.readout(torch.tensor([1, 2, 3]), top_k=2, **site_kwargs())
 
     assert artifact.method.revision == JACOBIAN_LENS_REVISION
     assert artifact.observation["tokens"][0]["token"] == "two"

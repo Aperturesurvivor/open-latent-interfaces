@@ -45,6 +45,14 @@ result: leading-digit decoding stayed near chance, exact scalar recovery was
 control on aggregate margin. See the
 [Phase 0.1 executive summary](PHASE01_EXECUTIVE_SUMMARY.md).
 
+Phase 1A has now fit and exercised a real 24-prompt Jacobian lens across all
+internal layers. It sharply improved recognition that a numeric token belongs
+next, but its best selected layer identified the correct leading digit only
+12/72 times (16.7% versus 11.1% balanced chance, exploratory and uncorrected).
+The untouched model itself scored 7/72 at that boundary, so the next gate is a
+capability sweep before causal cartography. See the
+[Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -101,6 +109,8 @@ either stage.
 - [Phase 1A J-lens development protocol](protocols/PHASE1_JLENS_DEVELOPMENT.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
+- [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md)
+- [Phase 1A lab notebook](PHASE1A_LAB_NOTEBOOK.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

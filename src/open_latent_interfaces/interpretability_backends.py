@@ -17,6 +17,12 @@ NLA_INFERENCE_REVISION = "38b802a33d1d317f21b6825a9116f388c2141f86"
 JACOBIAN_LENS_REVISION = "581d398613e5602a5af361e1c34d3a92ea82ba8e"
 
 
+def _numpy_vector(value: Any) -> np.ndarray:
+    if isinstance(value, torch.Tensor):
+        return value.detach().float().cpu().numpy().astype(np.float32, copy=False).reshape(-1)
+    return np.asarray(value, dtype=np.float32).reshape(-1)
+
+
 class NLAAdapter:
     """Optional, duck-typed adapter for kitft/nla-inference.
 
@@ -61,7 +67,7 @@ class NLAAdapter:
         include_reconstruction_values: bool = False,
         generation: dict[str, Any] | None = None,
     ) -> InterpretabilityArtifact:
-        vector = np.asarray(activation, dtype=np.float32).reshape(-1)
+        vector = _numpy_vector(activation)
         site = LatentSite.from_activation(
             vector,
             target_model=target_model,
@@ -161,7 +167,7 @@ class JacobianLensAdapter:
             raise ValueError(
                 "J-lens reads decoder-block outputs; hidden-state index 0 is embeddings"
             )
-        vector = torch.as_tensor(np.asarray(activation, dtype=np.float32)).reshape(-1)
+        vector = torch.from_numpy(_numpy_vector(activation))
         if vector.numel() != self.lens.d_model:
             raise ValueError(
                 f"activation width {vector.numel()} != lens width {self.lens.d_model}"

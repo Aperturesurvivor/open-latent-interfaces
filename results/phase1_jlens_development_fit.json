@@ -1,0 +1,60 @@
+{
+  "checkpoint_path": "checkpoints/phase1_jlens_development.pt",
+  "created_at": "2026-07-28T06:59:16.315410+00:00",
+  "d_model": 896,
+  "dataset": {
+    "config": "wikitext-2-raw-v1",
+    "id": "Salesforce/wikitext",
+    "licenses": [
+      "CC-BY-SA-3.0",
+      "GFDL"
+    ],
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "split": "train",
+    "text_field": "text"
+  },
+  "device": "mps",
+  "dtype": "float16",
+  "elapsed_seconds": 511.97813295800006,
+  "lens_path": "artifacts/jlens/phase1_development_lens.pt",
+  "lens_sha256": "529bbc8b261d945bd4bb94785077b9f6bb5e545f20efd4fa236755c74a858c97",
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "n_prompts": 24,
+  "schema_version": "oli.jlens-fit-result/v1",
+  "selection_config": "configs/phase1_jlens_development.json",
+  "selection_config_sha256": "c57b4550cff029f09389614ab612bc6e279038f92d274c69acb9a49cd5d6d851",
+  "source_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "target_layer": 23,
+  "upstream": {
+    "license": "Apache-2.0",
+    "repository": "https://github.com/anthropics/jacobian-lens",
+    "revision": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  }
+}
