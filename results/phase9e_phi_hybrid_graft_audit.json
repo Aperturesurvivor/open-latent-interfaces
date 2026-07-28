@@ -1,0 +1,6512 @@
+{
+  "audit_runs": 1,
+  "claim_boundary": "One-shot pair-disjoint audit of latent operand decoding, external deterministic addition, iterative leading-token compilation, and native suffix writing on the frozen Phi model.",
+  "conditions": {
+    "base": {
+      "digit_token_count": 270,
+      "digit_token_rate": 1.0,
+      "hard_gate_rate_by_step": [
+        1.0,
+        0.9111111164093018,
+        0.9666666388511658
+      ],
+      "mean_relative_norm_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "n": 90,
+      "original_full_result_accuracy": 0.8888888888888888,
+      "original_full_result_correct": 80,
+      "outputs": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "generated_text": "136",
+          "original_result": 136,
+          "parsed": 136,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29953
+          ],
+          "target_result": 136
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "generated_text": "691",
+          "original_result": 701,
+          "parsed": 691,
+          "predicted_token_ids": [
+            29953,
+            29929,
+            29896
+          ],
+          "target_result": 701
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "generated_text": "103",
+          "original_result": 103,
+          "parsed": 103,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29941
+          ],
+          "target_result": 103
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "generated_text": "262",
+          "original_result": 262,
+          "parsed": 262,
+          "predicted_token_ids": [
+            29906,
+            29953,
+            29906
+          ],
+          "target_result": 262
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "generated_text": "778",
+          "original_result": 778,
+          "parsed": 778,
+          "predicted_token_ids": [
+            29955,
+            29955,
+            29947
+          ],
+          "target_result": 778
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "generated_text": "920",
+          "original_result": 930,
+          "parsed": 920,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29900
+          ],
+          "target_result": 930
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "generated_text": "911",
+          "original_result": 918,
+          "parsed": 911,
+          "predicted_token_ids": [
+            29929,
+            29896,
+            29896
+          ],
+          "target_result": 918
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "generated_text": "723",
+          "original_result": 723,
+          "parsed": 723,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29941
+          ],
+          "target_result": 723
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "generated_text": "100",
+          "original_result": 996,
+          "parsed": 100,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29900
+          ],
+          "target_result": 996
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "generated_text": "527",
+          "original_result": 527,
+          "parsed": 527,
+          "predicted_token_ids": [
+            29945,
+            29906,
+            29955
+          ],
+          "target_result": 527
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "generated_text": "631",
+          "original_result": 631,
+          "parsed": 631,
+          "predicted_token_ids": [
+            29953,
+            29941,
+            29896
+          ],
+          "target_result": 631
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "generated_text": "620",
+          "original_result": 620,
+          "parsed": 620,
+          "predicted_token_ids": [
+            29953,
+            29906,
+            29900
+          ],
+          "target_result": 620
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "generated_text": "893",
+          "original_result": 893,
+          "parsed": 893,
+          "predicted_token_ids": [
+            29947,
+            29929,
+            29941
+          ],
+          "target_result": 893
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "generated_text": "561",
+          "original_result": 561,
+          "parsed": 561,
+          "predicted_token_ids": [
+            29945,
+            29953,
+            29896
+          ],
+          "target_result": 561
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "generated_text": "929",
+          "original_result": 929,
+          "parsed": 929,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29929
+          ],
+          "target_result": 929
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            29929,
+            29955,
+            29946
+          ],
+          "target_result": 974
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "generated_text": "501",
+          "original_result": 491,
+          "parsed": 501,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29896
+          ],
+          "target_result": 491
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "generated_text": "284",
+          "original_result": 284,
+          "parsed": 284,
+          "predicted_token_ids": [
+            29906,
+            29947,
+            29946
+          ],
+          "target_result": 284
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "generated_text": "860",
+          "original_result": 860,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "generated_text": "295",
+          "original_result": 295,
+          "parsed": 295,
+          "predicted_token_ids": [
+            29906,
+            29929,
+            29945
+          ],
+          "target_result": 295
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "generated_text": "165",
+          "original_result": 985,
+          "parsed": 165,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29945
+          ],
+          "target_result": 985
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "generated_text": "169",
+          "original_result": 169,
+          "parsed": 169,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29929
+          ],
+          "target_result": 169
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "generated_text": "376",
+          "original_result": 376,
+          "parsed": 376,
+          "predicted_token_ids": [
+            29941,
+            29955,
+            29953
+          ],
+          "target_result": 376
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            29947,
+            29947,
+            29906
+          ],
+          "target_result": 882
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "generated_text": "114",
+          "original_result": 114,
+          "parsed": 114,
+          "predicted_token_ids": [
+            29896,
+            29896,
+            29946
+          ],
+          "target_result": 114
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "generated_text": "125",
+          "original_result": 125,
+          "parsed": 125,
+          "predicted_token_ids": [
+            29896,
+            29906,
+            29945
+          ],
+          "target_result": 125
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "generated_text": "480",
+          "original_result": 480,
+          "parsed": 480,
+          "predicted_token_ids": [
+            29946,
+            29947,
+            29900
+          ],
+          "target_result": 480
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "generated_text": "402",
+          "original_result": 402,
+          "parsed": 402,
+          "predicted_token_ids": [
+            29946,
+            29900,
+            29906
+          ],
+          "target_result": 402
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "generated_text": "941",
+          "original_result": 941,
+          "parsed": 941,
+          "predicted_token_ids": [
+            29929,
+            29946,
+            29896
+          ],
+          "target_result": 941
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "generated_text": "675",
+          "original_result": 675,
+          "parsed": 675,
+          "predicted_token_ids": [
+            29953,
+            29955,
+            29945
+          ],
+          "target_result": 675
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "generated_text": "786",
+          "original_result": 686,
+          "parsed": 786,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29953
+          ],
+          "target_result": 686
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "generated_text": "837",
+          "original_result": 837,
+          "parsed": 837,
+          "predicted_token_ids": [
+            29947,
+            29941,
+            29955
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "generated_text": "707",
+          "original_result": 697,
+          "parsed": 707,
+          "predicted_token_ids": [
+            29955,
+            29900,
+            29955
+          ],
+          "target_result": 697
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            29947,
+            29900,
+            29946
+          ],
+          "target_result": 804
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            29941,
+            29945,
+            29946
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "generated_text": "192",
+          "original_result": 192,
+          "parsed": 192,
+          "predicted_token_ids": [
+            29896,
+            29929,
+            29906
+          ],
+          "target_result": 192
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "generated_text": "952",
+          "original_result": 952,
+          "parsed": 952,
+          "predicted_token_ids": [
+            29929,
+            29945,
+            29906
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "generated_text": "734",
+          "original_result": 734,
+          "parsed": 734,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29946
+          ],
+          "target_result": 734
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "generated_text": "790",
+          "original_result": 790,
+          "parsed": 790,
+          "predicted_token_ids": [
+            29955,
+            29929,
+            29900
+          ],
+          "target_result": 790
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "generated_text": "457",
+          "original_result": 457,
+          "parsed": 457,
+          "predicted_token_ids": [
+            29946,
+            29945,
+            29955
+          ],
+          "target_result": 457
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "generated_text": "468",
+          "original_result": 468,
+          "parsed": 468,
+          "predicted_token_ids": [
+            29946,
+            29953,
+            29947
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "generated_text": "619",
+          "original_result": 619,
+          "parsed": 619,
+          "predicted_token_ids": [
+            29953,
+            29896,
+            29929
+          ],
+          "target_result": 619
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "generated_text": "653",
+          "original_result": 653,
+          "parsed": 653,
+          "predicted_token_ids": [
+            29953,
+            29945,
+            29941
+          ],
+          "target_result": 653
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "generated_text": "789",
+          "original_result": 789,
+          "parsed": 789,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29929
+          ],
+          "target_result": 789
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "generated_text": "273",
+          "original_result": 273,
+          "parsed": 273,
+          "predicted_token_ids": [
+            29906,
+            29955,
+            29941
+          ],
+          "target_result": 273
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "generated_text": "240",
+          "original_result": 240,
+          "parsed": 240,
+          "predicted_token_ids": [
+            29906,
+            29946,
+            29900
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "generated_text": "664",
+          "original_result": 664,
+          "parsed": 664,
+          "predicted_token_ids": [
+            29953,
+            29953,
+            29946
+          ],
+          "target_result": 664
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "generated_text": "228",
+          "original_result": 228,
+          "parsed": 228,
+          "predicted_token_ids": [
+            29906,
+            29906,
+            29947
+          ],
+          "target_result": 228
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "generated_text": "907",
+          "original_result": 907,
+          "parsed": 907,
+          "predicted_token_ids": [
+            29929,
+            29900,
+            29955
+          ],
+          "target_result": 907
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "generated_text": "435",
+          "original_result": 435,
+          "parsed": 435,
+          "predicted_token_ids": [
+            29946,
+            29941,
+            29945
+          ],
+          "target_result": 435
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "generated_text": "871",
+          "original_result": 871,
+          "parsed": 871,
+          "predicted_token_ids": [
+            29947,
+            29955,
+            29896
+          ],
+          "target_result": 871
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "generated_text": "815",
+          "original_result": 815,
+          "parsed": 815,
+          "predicted_token_ids": [
+            29947,
+            29896,
+            29945
+          ],
+          "target_result": 815
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "generated_text": "538",
+          "original_result": 538,
+          "parsed": 538,
+          "predicted_token_ids": [
+            29945,
+            29941,
+            29947
+          ],
+          "target_result": 538
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "generated_text": "239",
+          "original_result": 239,
+          "parsed": 239,
+          "predicted_token_ids": [
+            29906,
+            29941,
+            29929
+          ],
+          "target_result": 239
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "generated_text": "365",
+          "original_result": 365,
+          "parsed": 365,
+          "predicted_token_ids": [
+            29941,
+            29953,
+            29945
+          ],
+          "target_result": 365
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "generated_text": "413",
+          "original_result": 413,
+          "parsed": 413,
+          "predicted_token_ids": [
+            29946,
+            29896,
+            29941
+          ],
+          "target_result": 413
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "generated_text": "479",
+          "original_result": 479,
+          "parsed": 479,
+          "predicted_token_ids": [
+            29946,
+            29955,
+            29929
+          ],
+          "target_result": 479
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "generated_text": "594",
+          "original_result": 594,
+          "parsed": 594,
+          "predicted_token_ids": [
+            29945,
+            29929,
+            29946
+          ],
+          "target_result": 594
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "generated_text": "572",
+          "original_result": 572,
+          "parsed": 572,
+          "predicted_token_ids": [
+            29945,
+            29955,
+            29906
+          ],
+          "target_result": 572
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "generated_text": "309",
+          "original_result": 309,
+          "parsed": 309,
+          "predicted_token_ids": [
+            29941,
+            29900,
+            29929
+          ],
+          "target_result": 309
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            29896,
+            29946,
+            29955
+          ],
+          "target_result": 147
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "generated_text": "505",
+          "original_result": 505,
+          "parsed": 505,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29945
+          ],
+          "target_result": 505
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "generated_text": "712",
+          "original_result": 712,
+          "parsed": 712,
+          "predicted_token_ids": [
+            29955,
+            29896,
+            29906
+          ],
+          "target_result": 712
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "generated_text": "608",
+          "original_result": 608,
+          "parsed": 608,
+          "predicted_token_ids": [
+            29953,
+            29900,
+            29947
+          ],
+          "target_result": 608
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "generated_text": "446",
+          "original_result": 446,
+          "parsed": 446,
+          "predicted_token_ids": [
+            29946,
+            29946,
+            29953
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "generated_text": "767",
+          "original_result": 767,
+          "parsed": 767,
+          "predicted_token_ids": [
+            29955,
+            29953,
+            29955
+          ],
+          "target_result": 767
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "generated_text": "321",
+          "original_result": 321,
+          "parsed": 321,
+          "predicted_token_ids": [
+            29941,
+            29906,
+            29896
+          ],
+          "target_result": 321
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "generated_text": "343",
+          "original_result": 343,
+          "parsed": 343,
+          "predicted_token_ids": [
+            29941,
+            29946,
+            29941
+          ],
+          "target_result": 343
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "generated_text": "745",
+          "original_result": 745,
+          "parsed": 745,
+          "predicted_token_ids": [
+            29955,
+            29946,
+            29945
+          ],
+          "target_result": 745
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "generated_text": "424",
+          "original_result": 424,
+          "parsed": 424,
+          "predicted_token_ids": [
+            29946,
+            29906,
+            29946
+          ],
+          "target_result": 424
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "generated_text": "332",
+          "original_result": 332,
+          "parsed": 332,
+          "predicted_token_ids": [
+            29941,
+            29941,
+            29906
+          ],
+          "target_result": 332
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "generated_text": "583",
+          "original_result": 583,
+          "parsed": 583,
+          "predicted_token_ids": [
+            29945,
+            29947,
+            29941
+          ],
+          "target_result": 583
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            29906,
+            29896,
+            29955
+          ],
+          "target_result": 217
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "generated_text": "826",
+          "original_result": 826,
+          "parsed": 826,
+          "predicted_token_ids": [
+            29947,
+            29906,
+            29953
+          ],
+          "target_result": 826
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "generated_text": "737",
+          "original_result": 387,
+          "parsed": 737,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29955
+          ],
+          "target_result": 387
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "generated_text": "550",
+          "original_result": 550,
+          "parsed": 550,
+          "predicted_token_ids": [
+            29945,
+            29945,
+            29900
+          ],
+          "target_result": 550
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "generated_text": "848",
+          "original_result": 848,
+          "parsed": 848,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29947
+          ],
+          "target_result": 848
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "generated_text": "181",
+          "original_result": 181,
+          "parsed": 181,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29896
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "generated_text": "756",
+          "original_result": 756,
+          "parsed": 756,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29953
+          ],
+          "target_result": 756
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "generated_text": "398",
+          "original_result": 398,
+          "parsed": 398,
+          "predicted_token_ids": [
+            29941,
+            29929,
+            29947
+          ],
+          "target_result": 398
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "generated_text": "516",
+          "original_result": 516,
+          "parsed": 516,
+          "predicted_token_ids": [
+            29945,
+            29896,
+            29953
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "generated_text": "170",
+          "original_result": 170,
+          "parsed": 170,
+          "predicted_token_ids": [
+            29896,
+            29955,
+            29900
+          ],
+          "target_result": 170
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "generated_text": "860",
+          "original_result": 859,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 859
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "generated_text": "642",
+          "original_result": 642,
+          "parsed": 642,
+          "predicted_token_ids": [
+            29953,
+            29946,
+            29906
+          ],
+          "target_result": 642
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "generated_text": "549",
+          "original_result": 549,
+          "parsed": 549,
+          "predicted_token_ids": [
+            29945,
+            29946,
+            29929
+          ],
+          "target_result": 549
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "generated_text": "158",
+          "original_result": 158,
+          "parsed": 158,
+          "predicted_token_ids": [
+            29896,
+            29945,
+            29947
+          ],
+          "target_result": 158
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "generated_text": "206",
+          "original_result": 206,
+          "parsed": 206,
+          "predicted_token_ids": [
+            29906,
+            29900,
+            29953
+          ],
+          "target_result": 206
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "generated_text": "310",
+          "original_result": 310,
+          "parsed": 310,
+          "predicted_token_ids": [
+            29941,
+            29896,
+            29900
+          ],
+          "target_result": 310
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            29906,
+            29945,
+            29896
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "generated_text": "963",
+          "original_result": 963,
+          "parsed": 963,
+          "predicted_token_ids": [
+            29929,
+            29953,
+            29941
+          ],
+          "target_result": 963
+        }
+      ],
+      "parse_count": 90,
+      "parse_rate": 1.0,
+      "step_original_accuracy": [
+        0.9222222222222223,
+        0.9111111111111111,
+        0.9666666666666667
+      ],
+      "step_original_correct": [
+        83,
+        82,
+        87
+      ],
+      "step_target_accuracy": [
+        0.9222222222222223,
+        0.9111111111111111,
+        0.9666666666666667
+      ],
+      "step_target_correct": [
+        83,
+        82,
+        87
+      ],
+      "target_full_result_accuracy": 0.8888888888888888,
+      "target_full_result_correct": 80,
+      "true_result_accuracy": 0.8888888888888888,
+      "true_result_correct": 80
+    },
+    "latent_read_compute_hybrid_write": {
+      "digit_token_count": 270,
+      "digit_token_rate": 1.0,
+      "hard_gate_rate_by_step": [
+        0.9222221970558167,
+        0.9777777791023254,
+        0.9888888597488403
+      ],
+      "mean_relative_norm_by_step": [
+        0.001228537643328309,
+        0.008402958512306213,
+        0.004132884554564953
+      ],
+      "n": 90,
+      "original_full_result_accuracy": 1.0,
+      "original_full_result_correct": 90,
+      "outputs": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "generated_text": "136",
+          "original_result": 136,
+          "parsed": 136,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29953
+          ],
+          "target_result": 136
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "generated_text": "701",
+          "original_result": 701,
+          "parsed": 701,
+          "predicted_token_ids": [
+            29955,
+            29900,
+            29896
+          ],
+          "target_result": 701
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "generated_text": "103",
+          "original_result": 103,
+          "parsed": 103,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29941
+          ],
+          "target_result": 103
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "generated_text": "262",
+          "original_result": 262,
+          "parsed": 262,
+          "predicted_token_ids": [
+            29906,
+            29953,
+            29906
+          ],
+          "target_result": 262
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "generated_text": "778",
+          "original_result": 778,
+          "parsed": 778,
+          "predicted_token_ids": [
+            29955,
+            29955,
+            29947
+          ],
+          "target_result": 778
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "generated_text": "930",
+          "original_result": 930,
+          "parsed": 930,
+          "predicted_token_ids": [
+            29929,
+            29941,
+            29900
+          ],
+          "target_result": 930
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "generated_text": "918",
+          "original_result": 918,
+          "parsed": 918,
+          "predicted_token_ids": [
+            29929,
+            29896,
+            29947
+          ],
+          "target_result": 918
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "generated_text": "723",
+          "original_result": 723,
+          "parsed": 723,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29941
+          ],
+          "target_result": 723
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "generated_text": "996",
+          "original_result": 996,
+          "parsed": 996,
+          "predicted_token_ids": [
+            29929,
+            29929,
+            29953
+          ],
+          "target_result": 996
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "generated_text": "527",
+          "original_result": 527,
+          "parsed": 527,
+          "predicted_token_ids": [
+            29945,
+            29906,
+            29955
+          ],
+          "target_result": 527
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "generated_text": "631",
+          "original_result": 631,
+          "parsed": 631,
+          "predicted_token_ids": [
+            29953,
+            29941,
+            29896
+          ],
+          "target_result": 631
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "generated_text": "620",
+          "original_result": 620,
+          "parsed": 620,
+          "predicted_token_ids": [
+            29953,
+            29906,
+            29900
+          ],
+          "target_result": 620
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "generated_text": "893",
+          "original_result": 893,
+          "parsed": 893,
+          "predicted_token_ids": [
+            29947,
+            29929,
+            29941
+          ],
+          "target_result": 893
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "generated_text": "561",
+          "original_result": 561,
+          "parsed": 561,
+          "predicted_token_ids": [
+            29945,
+            29953,
+            29896
+          ],
+          "target_result": 561
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "generated_text": "929",
+          "original_result": 929,
+          "parsed": 929,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29929
+          ],
+          "target_result": 929
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            29929,
+            29955,
+            29946
+          ],
+          "target_result": 974
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "generated_text": "491",
+          "original_result": 491,
+          "parsed": 491,
+          "predicted_token_ids": [
+            29946,
+            29929,
+            29896
+          ],
+          "target_result": 491
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "generated_text": "284",
+          "original_result": 284,
+          "parsed": 284,
+          "predicted_token_ids": [
+            29906,
+            29947,
+            29946
+          ],
+          "target_result": 284
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "generated_text": "860",
+          "original_result": 860,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "generated_text": "295",
+          "original_result": 295,
+          "parsed": 295,
+          "predicted_token_ids": [
+            29906,
+            29929,
+            29945
+          ],
+          "target_result": 295
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "generated_text": "985",
+          "original_result": 985,
+          "parsed": 985,
+          "predicted_token_ids": [
+            29929,
+            29947,
+            29945
+          ],
+          "target_result": 985
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "generated_text": "169",
+          "original_result": 169,
+          "parsed": 169,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29929
+          ],
+          "target_result": 169
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "generated_text": "376",
+          "original_result": 376,
+          "parsed": 376,
+          "predicted_token_ids": [
+            29941,
+            29955,
+            29953
+          ],
+          "target_result": 376
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            29947,
+            29947,
+            29906
+          ],
+          "target_result": 882
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "generated_text": "114",
+          "original_result": 114,
+          "parsed": 114,
+          "predicted_token_ids": [
+            29896,
+            29896,
+            29946
+          ],
+          "target_result": 114
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "generated_text": "125",
+          "original_result": 125,
+          "parsed": 125,
+          "predicted_token_ids": [
+            29896,
+            29906,
+            29945
+          ],
+          "target_result": 125
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "generated_text": "480",
+          "original_result": 480,
+          "parsed": 480,
+          "predicted_token_ids": [
+            29946,
+            29947,
+            29900
+          ],
+          "target_result": 480
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "generated_text": "402",
+          "original_result": 402,
+          "parsed": 402,
+          "predicted_token_ids": [
+            29946,
+            29900,
+            29906
+          ],
+          "target_result": 402
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "generated_text": "941",
+          "original_result": 941,
+          "parsed": 941,
+          "predicted_token_ids": [
+            29929,
+            29946,
+            29896
+          ],
+          "target_result": 941
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "generated_text": "675",
+          "original_result": 675,
+          "parsed": 675,
+          "predicted_token_ids": [
+            29953,
+            29955,
+            29945
+          ],
+          "target_result": 675
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "generated_text": "686",
+          "original_result": 686,
+          "parsed": 686,
+          "predicted_token_ids": [
+            29953,
+            29947,
+            29953
+          ],
+          "target_result": 686
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "generated_text": "837",
+          "original_result": 837,
+          "parsed": 837,
+          "predicted_token_ids": [
+            29947,
+            29941,
+            29955
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "generated_text": "697",
+          "original_result": 697,
+          "parsed": 697,
+          "predicted_token_ids": [
+            29953,
+            29929,
+            29955
+          ],
+          "target_result": 697
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            29947,
+            29900,
+            29946
+          ],
+          "target_result": 804
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            29941,
+            29945,
+            29946
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "generated_text": "192",
+          "original_result": 192,
+          "parsed": 192,
+          "predicted_token_ids": [
+            29896,
+            29929,
+            29906
+          ],
+          "target_result": 192
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "generated_text": "952",
+          "original_result": 952,
+          "parsed": 952,
+          "predicted_token_ids": [
+            29929,
+            29945,
+            29906
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "generated_text": "734",
+          "original_result": 734,
+          "parsed": 734,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29946
+          ],
+          "target_result": 734
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "generated_text": "790",
+          "original_result": 790,
+          "parsed": 790,
+          "predicted_token_ids": [
+            29955,
+            29929,
+            29900
+          ],
+          "target_result": 790
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "generated_text": "457",
+          "original_result": 457,
+          "parsed": 457,
+          "predicted_token_ids": [
+            29946,
+            29945,
+            29955
+          ],
+          "target_result": 457
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "generated_text": "468",
+          "original_result": 468,
+          "parsed": 468,
+          "predicted_token_ids": [
+            29946,
+            29953,
+            29947
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "generated_text": "619",
+          "original_result": 619,
+          "parsed": 619,
+          "predicted_token_ids": [
+            29953,
+            29896,
+            29929
+          ],
+          "target_result": 619
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "generated_text": "653",
+          "original_result": 653,
+          "parsed": 653,
+          "predicted_token_ids": [
+            29953,
+            29945,
+            29941
+          ],
+          "target_result": 653
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "generated_text": "789",
+          "original_result": 789,
+          "parsed": 789,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29929
+          ],
+          "target_result": 789
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "generated_text": "273",
+          "original_result": 273,
+          "parsed": 273,
+          "predicted_token_ids": [
+            29906,
+            29955,
+            29941
+          ],
+          "target_result": 273
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "generated_text": "240",
+          "original_result": 240,
+          "parsed": 240,
+          "predicted_token_ids": [
+            29906,
+            29946,
+            29900
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "generated_text": "664",
+          "original_result": 664,
+          "parsed": 664,
+          "predicted_token_ids": [
+            29953,
+            29953,
+            29946
+          ],
+          "target_result": 664
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "generated_text": "228",
+          "original_result": 228,
+          "parsed": 228,
+          "predicted_token_ids": [
+            29906,
+            29906,
+            29947
+          ],
+          "target_result": 228
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "generated_text": "907",
+          "original_result": 907,
+          "parsed": 907,
+          "predicted_token_ids": [
+            29929,
+            29900,
+            29955
+          ],
+          "target_result": 907
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "generated_text": "435",
+          "original_result": 435,
+          "parsed": 435,
+          "predicted_token_ids": [
+            29946,
+            29941,
+            29945
+          ],
+          "target_result": 435
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "generated_text": "871",
+          "original_result": 871,
+          "parsed": 871,
+          "predicted_token_ids": [
+            29947,
+            29955,
+            29896
+          ],
+          "target_result": 871
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "generated_text": "815",
+          "original_result": 815,
+          "parsed": 815,
+          "predicted_token_ids": [
+            29947,
+            29896,
+            29945
+          ],
+          "target_result": 815
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "generated_text": "538",
+          "original_result": 538,
+          "parsed": 538,
+          "predicted_token_ids": [
+            29945,
+            29941,
+            29947
+          ],
+          "target_result": 538
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "generated_text": "239",
+          "original_result": 239,
+          "parsed": 239,
+          "predicted_token_ids": [
+            29906,
+            29941,
+            29929
+          ],
+          "target_result": 239
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "generated_text": "365",
+          "original_result": 365,
+          "parsed": 365,
+          "predicted_token_ids": [
+            29941,
+            29953,
+            29945
+          ],
+          "target_result": 365
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "generated_text": "413",
+          "original_result": 413,
+          "parsed": 413,
+          "predicted_token_ids": [
+            29946,
+            29896,
+            29941
+          ],
+          "target_result": 413
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "generated_text": "479",
+          "original_result": 479,
+          "parsed": 479,
+          "predicted_token_ids": [
+            29946,
+            29955,
+            29929
+          ],
+          "target_result": 479
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "generated_text": "594",
+          "original_result": 594,
+          "parsed": 594,
+          "predicted_token_ids": [
+            29945,
+            29929,
+            29946
+          ],
+          "target_result": 594
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "generated_text": "572",
+          "original_result": 572,
+          "parsed": 572,
+          "predicted_token_ids": [
+            29945,
+            29955,
+            29906
+          ],
+          "target_result": 572
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "generated_text": "309",
+          "original_result": 309,
+          "parsed": 309,
+          "predicted_token_ids": [
+            29941,
+            29900,
+            29929
+          ],
+          "target_result": 309
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            29896,
+            29946,
+            29955
+          ],
+          "target_result": 147
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "generated_text": "505",
+          "original_result": 505,
+          "parsed": 505,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29945
+          ],
+          "target_result": 505
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "generated_text": "712",
+          "original_result": 712,
+          "parsed": 712,
+          "predicted_token_ids": [
+            29955,
+            29896,
+            29906
+          ],
+          "target_result": 712
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "generated_text": "608",
+          "original_result": 608,
+          "parsed": 608,
+          "predicted_token_ids": [
+            29953,
+            29900,
+            29947
+          ],
+          "target_result": 608
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "generated_text": "446",
+          "original_result": 446,
+          "parsed": 446,
+          "predicted_token_ids": [
+            29946,
+            29946,
+            29953
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "generated_text": "767",
+          "original_result": 767,
+          "parsed": 767,
+          "predicted_token_ids": [
+            29955,
+            29953,
+            29955
+          ],
+          "target_result": 767
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "generated_text": "321",
+          "original_result": 321,
+          "parsed": 321,
+          "predicted_token_ids": [
+            29941,
+            29906,
+            29896
+          ],
+          "target_result": 321
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "generated_text": "343",
+          "original_result": 343,
+          "parsed": 343,
+          "predicted_token_ids": [
+            29941,
+            29946,
+            29941
+          ],
+          "target_result": 343
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "generated_text": "745",
+          "original_result": 745,
+          "parsed": 745,
+          "predicted_token_ids": [
+            29955,
+            29946,
+            29945
+          ],
+          "target_result": 745
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "generated_text": "424",
+          "original_result": 424,
+          "parsed": 424,
+          "predicted_token_ids": [
+            29946,
+            29906,
+            29946
+          ],
+          "target_result": 424
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "generated_text": "332",
+          "original_result": 332,
+          "parsed": 332,
+          "predicted_token_ids": [
+            29941,
+            29941,
+            29906
+          ],
+          "target_result": 332
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "generated_text": "583",
+          "original_result": 583,
+          "parsed": 583,
+          "predicted_token_ids": [
+            29945,
+            29947,
+            29941
+          ],
+          "target_result": 583
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            29906,
+            29896,
+            29955
+          ],
+          "target_result": 217
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "generated_text": "826",
+          "original_result": 826,
+          "parsed": 826,
+          "predicted_token_ids": [
+            29947,
+            29906,
+            29953
+          ],
+          "target_result": 826
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "generated_text": "387",
+          "original_result": 387,
+          "parsed": 387,
+          "predicted_token_ids": [
+            29941,
+            29947,
+            29955
+          ],
+          "target_result": 387
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "generated_text": "550",
+          "original_result": 550,
+          "parsed": 550,
+          "predicted_token_ids": [
+            29945,
+            29945,
+            29900
+          ],
+          "target_result": 550
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "generated_text": "848",
+          "original_result": 848,
+          "parsed": 848,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29947
+          ],
+          "target_result": 848
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "generated_text": "181",
+          "original_result": 181,
+          "parsed": 181,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29896
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "generated_text": "756",
+          "original_result": 756,
+          "parsed": 756,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29953
+          ],
+          "target_result": 756
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "generated_text": "398",
+          "original_result": 398,
+          "parsed": 398,
+          "predicted_token_ids": [
+            29941,
+            29929,
+            29947
+          ],
+          "target_result": 398
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "generated_text": "516",
+          "original_result": 516,
+          "parsed": 516,
+          "predicted_token_ids": [
+            29945,
+            29896,
+            29953
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "generated_text": "170",
+          "original_result": 170,
+          "parsed": 170,
+          "predicted_token_ids": [
+            29896,
+            29955,
+            29900
+          ],
+          "target_result": 170
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "generated_text": "859",
+          "original_result": 859,
+          "parsed": 859,
+          "predicted_token_ids": [
+            29947,
+            29945,
+            29929
+          ],
+          "target_result": 859
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "generated_text": "642",
+          "original_result": 642,
+          "parsed": 642,
+          "predicted_token_ids": [
+            29953,
+            29946,
+            29906
+          ],
+          "target_result": 642
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "generated_text": "549",
+          "original_result": 549,
+          "parsed": 549,
+          "predicted_token_ids": [
+            29945,
+            29946,
+            29929
+          ],
+          "target_result": 549
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "generated_text": "158",
+          "original_result": 158,
+          "parsed": 158,
+          "predicted_token_ids": [
+            29896,
+            29945,
+            29947
+          ],
+          "target_result": 158
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "generated_text": "206",
+          "original_result": 206,
+          "parsed": 206,
+          "predicted_token_ids": [
+            29906,
+            29900,
+            29953
+          ],
+          "target_result": 206
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "generated_text": "310",
+          "original_result": 310,
+          "parsed": 310,
+          "predicted_token_ids": [
+            29941,
+            29896,
+            29900
+          ],
+          "target_result": 310
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            29906,
+            29945,
+            29896
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "generated_text": "963",
+          "original_result": 963,
+          "parsed": 963,
+          "predicted_token_ids": [
+            29929,
+            29953,
+            29941
+          ],
+          "target_result": 963
+        }
+      ],
+      "parse_count": 90,
+      "parse_rate": 1.0,
+      "step_original_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "step_original_correct": [
+        90,
+        90,
+        90
+      ],
+      "step_target_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "step_target_correct": [
+        90,
+        90,
+        90
+      ],
+      "target_full_result_accuracy": 1.0,
+      "target_full_result_correct": 90,
+      "true_result_accuracy": 1.0,
+      "true_result_correct": 90
+    },
+    "oracle_compute_hybrid_write": {
+      "digit_token_count": 270,
+      "digit_token_rate": 1.0,
+      "hard_gate_rate_by_step": [
+        0.9222221970558167,
+        0.9777777791023254,
+        0.9888888597488403
+      ],
+      "mean_relative_norm_by_step": [
+        0.001228537643328309,
+        0.008402958512306213,
+        0.004132884554564953
+      ],
+      "n": 90,
+      "original_full_result_accuracy": 1.0,
+      "original_full_result_correct": 90,
+      "outputs": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "generated_text": "136",
+          "original_result": 136,
+          "parsed": 136,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29953
+          ],
+          "target_result": 136
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "generated_text": "701",
+          "original_result": 701,
+          "parsed": 701,
+          "predicted_token_ids": [
+            29955,
+            29900,
+            29896
+          ],
+          "target_result": 701
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "generated_text": "103",
+          "original_result": 103,
+          "parsed": 103,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29941
+          ],
+          "target_result": 103
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "generated_text": "262",
+          "original_result": 262,
+          "parsed": 262,
+          "predicted_token_ids": [
+            29906,
+            29953,
+            29906
+          ],
+          "target_result": 262
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "generated_text": "778",
+          "original_result": 778,
+          "parsed": 778,
+          "predicted_token_ids": [
+            29955,
+            29955,
+            29947
+          ],
+          "target_result": 778
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "generated_text": "930",
+          "original_result": 930,
+          "parsed": 930,
+          "predicted_token_ids": [
+            29929,
+            29941,
+            29900
+          ],
+          "target_result": 930
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "generated_text": "918",
+          "original_result": 918,
+          "parsed": 918,
+          "predicted_token_ids": [
+            29929,
+            29896,
+            29947
+          ],
+          "target_result": 918
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "generated_text": "723",
+          "original_result": 723,
+          "parsed": 723,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29941
+          ],
+          "target_result": 723
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "generated_text": "996",
+          "original_result": 996,
+          "parsed": 996,
+          "predicted_token_ids": [
+            29929,
+            29929,
+            29953
+          ],
+          "target_result": 996
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "generated_text": "527",
+          "original_result": 527,
+          "parsed": 527,
+          "predicted_token_ids": [
+            29945,
+            29906,
+            29955
+          ],
+          "target_result": 527
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "generated_text": "631",
+          "original_result": 631,
+          "parsed": 631,
+          "predicted_token_ids": [
+            29953,
+            29941,
+            29896
+          ],
+          "target_result": 631
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "generated_text": "620",
+          "original_result": 620,
+          "parsed": 620,
+          "predicted_token_ids": [
+            29953,
+            29906,
+            29900
+          ],
+          "target_result": 620
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "generated_text": "893",
+          "original_result": 893,
+          "parsed": 893,
+          "predicted_token_ids": [
+            29947,
+            29929,
+            29941
+          ],
+          "target_result": 893
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "generated_text": "561",
+          "original_result": 561,
+          "parsed": 561,
+          "predicted_token_ids": [
+            29945,
+            29953,
+            29896
+          ],
+          "target_result": 561
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "generated_text": "929",
+          "original_result": 929,
+          "parsed": 929,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29929
+          ],
+          "target_result": 929
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            29929,
+            29955,
+            29946
+          ],
+          "target_result": 974
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "generated_text": "491",
+          "original_result": 491,
+          "parsed": 491,
+          "predicted_token_ids": [
+            29946,
+            29929,
+            29896
+          ],
+          "target_result": 491
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "generated_text": "284",
+          "original_result": 284,
+          "parsed": 284,
+          "predicted_token_ids": [
+            29906,
+            29947,
+            29946
+          ],
+          "target_result": 284
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "generated_text": "860",
+          "original_result": 860,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "generated_text": "295",
+          "original_result": 295,
+          "parsed": 295,
+          "predicted_token_ids": [
+            29906,
+            29929,
+            29945
+          ],
+          "target_result": 295
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "generated_text": "985",
+          "original_result": 985,
+          "parsed": 985,
+          "predicted_token_ids": [
+            29929,
+            29947,
+            29945
+          ],
+          "target_result": 985
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "generated_text": "169",
+          "original_result": 169,
+          "parsed": 169,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29929
+          ],
+          "target_result": 169
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "generated_text": "376",
+          "original_result": 376,
+          "parsed": 376,
+          "predicted_token_ids": [
+            29941,
+            29955,
+            29953
+          ],
+          "target_result": 376
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            29947,
+            29947,
+            29906
+          ],
+          "target_result": 882
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "generated_text": "114",
+          "original_result": 114,
+          "parsed": 114,
+          "predicted_token_ids": [
+            29896,
+            29896,
+            29946
+          ],
+          "target_result": 114
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "generated_text": "125",
+          "original_result": 125,
+          "parsed": 125,
+          "predicted_token_ids": [
+            29896,
+            29906,
+            29945
+          ],
+          "target_result": 125
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "generated_text": "480",
+          "original_result": 480,
+          "parsed": 480,
+          "predicted_token_ids": [
+            29946,
+            29947,
+            29900
+          ],
+          "target_result": 480
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "generated_text": "402",
+          "original_result": 402,
+          "parsed": 402,
+          "predicted_token_ids": [
+            29946,
+            29900,
+            29906
+          ],
+          "target_result": 402
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "generated_text": "941",
+          "original_result": 941,
+          "parsed": 941,
+          "predicted_token_ids": [
+            29929,
+            29946,
+            29896
+          ],
+          "target_result": 941
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "generated_text": "675",
+          "original_result": 675,
+          "parsed": 675,
+          "predicted_token_ids": [
+            29953,
+            29955,
+            29945
+          ],
+          "target_result": 675
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "generated_text": "686",
+          "original_result": 686,
+          "parsed": 686,
+          "predicted_token_ids": [
+            29953,
+            29947,
+            29953
+          ],
+          "target_result": 686
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "generated_text": "837",
+          "original_result": 837,
+          "parsed": 837,
+          "predicted_token_ids": [
+            29947,
+            29941,
+            29955
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "generated_text": "697",
+          "original_result": 697,
+          "parsed": 697,
+          "predicted_token_ids": [
+            29953,
+            29929,
+            29955
+          ],
+          "target_result": 697
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            29947,
+            29900,
+            29946
+          ],
+          "target_result": 804
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            29941,
+            29945,
+            29946
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "generated_text": "192",
+          "original_result": 192,
+          "parsed": 192,
+          "predicted_token_ids": [
+            29896,
+            29929,
+            29906
+          ],
+          "target_result": 192
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "generated_text": "952",
+          "original_result": 952,
+          "parsed": 952,
+          "predicted_token_ids": [
+            29929,
+            29945,
+            29906
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "generated_text": "734",
+          "original_result": 734,
+          "parsed": 734,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29946
+          ],
+          "target_result": 734
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "generated_text": "790",
+          "original_result": 790,
+          "parsed": 790,
+          "predicted_token_ids": [
+            29955,
+            29929,
+            29900
+          ],
+          "target_result": 790
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "generated_text": "457",
+          "original_result": 457,
+          "parsed": 457,
+          "predicted_token_ids": [
+            29946,
+            29945,
+            29955
+          ],
+          "target_result": 457
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "generated_text": "468",
+          "original_result": 468,
+          "parsed": 468,
+          "predicted_token_ids": [
+            29946,
+            29953,
+            29947
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "generated_text": "619",
+          "original_result": 619,
+          "parsed": 619,
+          "predicted_token_ids": [
+            29953,
+            29896,
+            29929
+          ],
+          "target_result": 619
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "generated_text": "653",
+          "original_result": 653,
+          "parsed": 653,
+          "predicted_token_ids": [
+            29953,
+            29945,
+            29941
+          ],
+          "target_result": 653
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "generated_text": "789",
+          "original_result": 789,
+          "parsed": 789,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29929
+          ],
+          "target_result": 789
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "generated_text": "273",
+          "original_result": 273,
+          "parsed": 273,
+          "predicted_token_ids": [
+            29906,
+            29955,
+            29941
+          ],
+          "target_result": 273
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "generated_text": "240",
+          "original_result": 240,
+          "parsed": 240,
+          "predicted_token_ids": [
+            29906,
+            29946,
+            29900
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "generated_text": "664",
+          "original_result": 664,
+          "parsed": 664,
+          "predicted_token_ids": [
+            29953,
+            29953,
+            29946
+          ],
+          "target_result": 664
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "generated_text": "228",
+          "original_result": 228,
+          "parsed": 228,
+          "predicted_token_ids": [
+            29906,
+            29906,
+            29947
+          ],
+          "target_result": 228
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "generated_text": "907",
+          "original_result": 907,
+          "parsed": 907,
+          "predicted_token_ids": [
+            29929,
+            29900,
+            29955
+          ],
+          "target_result": 907
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "generated_text": "435",
+          "original_result": 435,
+          "parsed": 435,
+          "predicted_token_ids": [
+            29946,
+            29941,
+            29945
+          ],
+          "target_result": 435
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "generated_text": "871",
+          "original_result": 871,
+          "parsed": 871,
+          "predicted_token_ids": [
+            29947,
+            29955,
+            29896
+          ],
+          "target_result": 871
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "generated_text": "815",
+          "original_result": 815,
+          "parsed": 815,
+          "predicted_token_ids": [
+            29947,
+            29896,
+            29945
+          ],
+          "target_result": 815
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "generated_text": "538",
+          "original_result": 538,
+          "parsed": 538,
+          "predicted_token_ids": [
+            29945,
+            29941,
+            29947
+          ],
+          "target_result": 538
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "generated_text": "239",
+          "original_result": 239,
+          "parsed": 239,
+          "predicted_token_ids": [
+            29906,
+            29941,
+            29929
+          ],
+          "target_result": 239
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "generated_text": "365",
+          "original_result": 365,
+          "parsed": 365,
+          "predicted_token_ids": [
+            29941,
+            29953,
+            29945
+          ],
+          "target_result": 365
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "generated_text": "413",
+          "original_result": 413,
+          "parsed": 413,
+          "predicted_token_ids": [
+            29946,
+            29896,
+            29941
+          ],
+          "target_result": 413
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "generated_text": "479",
+          "original_result": 479,
+          "parsed": 479,
+          "predicted_token_ids": [
+            29946,
+            29955,
+            29929
+          ],
+          "target_result": 479
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "generated_text": "594",
+          "original_result": 594,
+          "parsed": 594,
+          "predicted_token_ids": [
+            29945,
+            29929,
+            29946
+          ],
+          "target_result": 594
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "generated_text": "572",
+          "original_result": 572,
+          "parsed": 572,
+          "predicted_token_ids": [
+            29945,
+            29955,
+            29906
+          ],
+          "target_result": 572
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "generated_text": "309",
+          "original_result": 309,
+          "parsed": 309,
+          "predicted_token_ids": [
+            29941,
+            29900,
+            29929
+          ],
+          "target_result": 309
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            29896,
+            29946,
+            29955
+          ],
+          "target_result": 147
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "generated_text": "505",
+          "original_result": 505,
+          "parsed": 505,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29945
+          ],
+          "target_result": 505
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "generated_text": "712",
+          "original_result": 712,
+          "parsed": 712,
+          "predicted_token_ids": [
+            29955,
+            29896,
+            29906
+          ],
+          "target_result": 712
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "generated_text": "608",
+          "original_result": 608,
+          "parsed": 608,
+          "predicted_token_ids": [
+            29953,
+            29900,
+            29947
+          ],
+          "target_result": 608
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "generated_text": "446",
+          "original_result": 446,
+          "parsed": 446,
+          "predicted_token_ids": [
+            29946,
+            29946,
+            29953
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "generated_text": "767",
+          "original_result": 767,
+          "parsed": 767,
+          "predicted_token_ids": [
+            29955,
+            29953,
+            29955
+          ],
+          "target_result": 767
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "generated_text": "321",
+          "original_result": 321,
+          "parsed": 321,
+          "predicted_token_ids": [
+            29941,
+            29906,
+            29896
+          ],
+          "target_result": 321
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "generated_text": "343",
+          "original_result": 343,
+          "parsed": 343,
+          "predicted_token_ids": [
+            29941,
+            29946,
+            29941
+          ],
+          "target_result": 343
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "generated_text": "745",
+          "original_result": 745,
+          "parsed": 745,
+          "predicted_token_ids": [
+            29955,
+            29946,
+            29945
+          ],
+          "target_result": 745
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "generated_text": "424",
+          "original_result": 424,
+          "parsed": 424,
+          "predicted_token_ids": [
+            29946,
+            29906,
+            29946
+          ],
+          "target_result": 424
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "generated_text": "332",
+          "original_result": 332,
+          "parsed": 332,
+          "predicted_token_ids": [
+            29941,
+            29941,
+            29906
+          ],
+          "target_result": 332
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "generated_text": "583",
+          "original_result": 583,
+          "parsed": 583,
+          "predicted_token_ids": [
+            29945,
+            29947,
+            29941
+          ],
+          "target_result": 583
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            29906,
+            29896,
+            29955
+          ],
+          "target_result": 217
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "generated_text": "826",
+          "original_result": 826,
+          "parsed": 826,
+          "predicted_token_ids": [
+            29947,
+            29906,
+            29953
+          ],
+          "target_result": 826
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "generated_text": "387",
+          "original_result": 387,
+          "parsed": 387,
+          "predicted_token_ids": [
+            29941,
+            29947,
+            29955
+          ],
+          "target_result": 387
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "generated_text": "550",
+          "original_result": 550,
+          "parsed": 550,
+          "predicted_token_ids": [
+            29945,
+            29945,
+            29900
+          ],
+          "target_result": 550
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "generated_text": "848",
+          "original_result": 848,
+          "parsed": 848,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29947
+          ],
+          "target_result": 848
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "generated_text": "181",
+          "original_result": 181,
+          "parsed": 181,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29896
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "generated_text": "756",
+          "original_result": 756,
+          "parsed": 756,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29953
+          ],
+          "target_result": 756
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "generated_text": "398",
+          "original_result": 398,
+          "parsed": 398,
+          "predicted_token_ids": [
+            29941,
+            29929,
+            29947
+          ],
+          "target_result": 398
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "generated_text": "516",
+          "original_result": 516,
+          "parsed": 516,
+          "predicted_token_ids": [
+            29945,
+            29896,
+            29953
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "generated_text": "170",
+          "original_result": 170,
+          "parsed": 170,
+          "predicted_token_ids": [
+            29896,
+            29955,
+            29900
+          ],
+          "target_result": 170
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "generated_text": "859",
+          "original_result": 859,
+          "parsed": 859,
+          "predicted_token_ids": [
+            29947,
+            29945,
+            29929
+          ],
+          "target_result": 859
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "generated_text": "642",
+          "original_result": 642,
+          "parsed": 642,
+          "predicted_token_ids": [
+            29953,
+            29946,
+            29906
+          ],
+          "target_result": 642
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "generated_text": "549",
+          "original_result": 549,
+          "parsed": 549,
+          "predicted_token_ids": [
+            29945,
+            29946,
+            29929
+          ],
+          "target_result": 549
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "generated_text": "158",
+          "original_result": 158,
+          "parsed": 158,
+          "predicted_token_ids": [
+            29896,
+            29945,
+            29947
+          ],
+          "target_result": 158
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "generated_text": "206",
+          "original_result": 206,
+          "parsed": 206,
+          "predicted_token_ids": [
+            29906,
+            29900,
+            29953
+          ],
+          "target_result": 206
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "generated_text": "310",
+          "original_result": 310,
+          "parsed": 310,
+          "predicted_token_ids": [
+            29941,
+            29896,
+            29900
+          ],
+          "target_result": 310
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            29906,
+            29945,
+            29896
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "generated_text": "963",
+          "original_result": 963,
+          "parsed": 963,
+          "predicted_token_ids": [
+            29929,
+            29953,
+            29941
+          ],
+          "target_result": 963
+        }
+      ],
+      "parse_count": 90,
+      "parse_rate": 1.0,
+      "step_original_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "step_original_correct": [
+        90,
+        90,
+        90
+      ],
+      "step_target_accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "step_target_correct": [
+        90,
+        90,
+        90
+      ],
+      "target_full_result_accuracy": 1.0,
+      "target_full_result_correct": 90,
+      "true_result_accuracy": 1.0,
+      "true_result_correct": 90
+    },
+    "random_norm_matched": {
+      "digit_token_count": 270,
+      "digit_token_rate": 1.0,
+      "hard_gate_rate_by_step": [
+        0.9222221970558167,
+        0.0,
+        0.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.0012285378761589527,
+        0.0413510836660862,
+        0.01388376671820879
+      ],
+      "n": 90,
+      "original_full_result_accuracy": 0.8888888888888888,
+      "original_full_result_correct": 80,
+      "outputs": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "generated_text": "136",
+          "original_result": 136,
+          "parsed": 136,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29953
+          ],
+          "target_result": 136
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "generated_text": "691",
+          "original_result": 701,
+          "parsed": 691,
+          "predicted_token_ids": [
+            29953,
+            29929,
+            29896
+          ],
+          "target_result": 701
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "generated_text": "103",
+          "original_result": 103,
+          "parsed": 103,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29941
+          ],
+          "target_result": 103
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "generated_text": "262",
+          "original_result": 262,
+          "parsed": 262,
+          "predicted_token_ids": [
+            29906,
+            29953,
+            29906
+          ],
+          "target_result": 262
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "generated_text": "778",
+          "original_result": 778,
+          "parsed": 778,
+          "predicted_token_ids": [
+            29955,
+            29955,
+            29947
+          ],
+          "target_result": 778
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "generated_text": "920",
+          "original_result": 930,
+          "parsed": 920,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29900
+          ],
+          "target_result": 930
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "generated_text": "911",
+          "original_result": 918,
+          "parsed": 911,
+          "predicted_token_ids": [
+            29929,
+            29896,
+            29896
+          ],
+          "target_result": 918
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "generated_text": "723",
+          "original_result": 723,
+          "parsed": 723,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29941
+          ],
+          "target_result": 723
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "generated_text": "109",
+          "original_result": 996,
+          "parsed": 109,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29929
+          ],
+          "target_result": 996
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "generated_text": "527",
+          "original_result": 527,
+          "parsed": 527,
+          "predicted_token_ids": [
+            29945,
+            29906,
+            29955
+          ],
+          "target_result": 527
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "generated_text": "631",
+          "original_result": 631,
+          "parsed": 631,
+          "predicted_token_ids": [
+            29953,
+            29941,
+            29896
+          ],
+          "target_result": 631
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "generated_text": "620",
+          "original_result": 620,
+          "parsed": 620,
+          "predicted_token_ids": [
+            29953,
+            29906,
+            29900
+          ],
+          "target_result": 620
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "generated_text": "893",
+          "original_result": 893,
+          "parsed": 893,
+          "predicted_token_ids": [
+            29947,
+            29929,
+            29941
+          ],
+          "target_result": 893
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "generated_text": "561",
+          "original_result": 561,
+          "parsed": 561,
+          "predicted_token_ids": [
+            29945,
+            29953,
+            29896
+          ],
+          "target_result": 561
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "generated_text": "929",
+          "original_result": 929,
+          "parsed": 929,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29929
+          ],
+          "target_result": 929
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            29929,
+            29955,
+            29946
+          ],
+          "target_result": 974
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "generated_text": "501",
+          "original_result": 491,
+          "parsed": 501,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29896
+          ],
+          "target_result": 491
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "generated_text": "284",
+          "original_result": 284,
+          "parsed": 284,
+          "predicted_token_ids": [
+            29906,
+            29947,
+            29946
+          ],
+          "target_result": 284
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "generated_text": "860",
+          "original_result": 860,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "generated_text": "295",
+          "original_result": 295,
+          "parsed": 295,
+          "predicted_token_ids": [
+            29906,
+            29929,
+            29945
+          ],
+          "target_result": 295
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "generated_text": "165",
+          "original_result": 985,
+          "parsed": 165,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29945
+          ],
+          "target_result": 985
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "generated_text": "169",
+          "original_result": 169,
+          "parsed": 169,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29929
+          ],
+          "target_result": 169
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "generated_text": "376",
+          "original_result": 376,
+          "parsed": 376,
+          "predicted_token_ids": [
+            29941,
+            29955,
+            29953
+          ],
+          "target_result": 376
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            29947,
+            29947,
+            29906
+          ],
+          "target_result": 882
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "generated_text": "114",
+          "original_result": 114,
+          "parsed": 114,
+          "predicted_token_ids": [
+            29896,
+            29896,
+            29946
+          ],
+          "target_result": 114
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "generated_text": "125",
+          "original_result": 125,
+          "parsed": 125,
+          "predicted_token_ids": [
+            29896,
+            29906,
+            29945
+          ],
+          "target_result": 125
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "generated_text": "480",
+          "original_result": 480,
+          "parsed": 480,
+          "predicted_token_ids": [
+            29946,
+            29947,
+            29900
+          ],
+          "target_result": 480
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "generated_text": "402",
+          "original_result": 402,
+          "parsed": 402,
+          "predicted_token_ids": [
+            29946,
+            29900,
+            29906
+          ],
+          "target_result": 402
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "generated_text": "941",
+          "original_result": 941,
+          "parsed": 941,
+          "predicted_token_ids": [
+            29929,
+            29946,
+            29896
+          ],
+          "target_result": 941
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "generated_text": "675",
+          "original_result": 675,
+          "parsed": 675,
+          "predicted_token_ids": [
+            29953,
+            29955,
+            29945
+          ],
+          "target_result": 675
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "generated_text": "786",
+          "original_result": 686,
+          "parsed": 786,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29953
+          ],
+          "target_result": 686
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "generated_text": "837",
+          "original_result": 837,
+          "parsed": 837,
+          "predicted_token_ids": [
+            29947,
+            29941,
+            29955
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "generated_text": "727",
+          "original_result": 697,
+          "parsed": 727,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29955
+          ],
+          "target_result": 697
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            29947,
+            29900,
+            29946
+          ],
+          "target_result": 804
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            29941,
+            29945,
+            29946
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "generated_text": "192",
+          "original_result": 192,
+          "parsed": 192,
+          "predicted_token_ids": [
+            29896,
+            29929,
+            29906
+          ],
+          "target_result": 192
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "generated_text": "952",
+          "original_result": 952,
+          "parsed": 952,
+          "predicted_token_ids": [
+            29929,
+            29945,
+            29906
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "generated_text": "734",
+          "original_result": 734,
+          "parsed": 734,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29946
+          ],
+          "target_result": 734
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "generated_text": "790",
+          "original_result": 790,
+          "parsed": 790,
+          "predicted_token_ids": [
+            29955,
+            29929,
+            29900
+          ],
+          "target_result": 790
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "generated_text": "457",
+          "original_result": 457,
+          "parsed": 457,
+          "predicted_token_ids": [
+            29946,
+            29945,
+            29955
+          ],
+          "target_result": 457
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "generated_text": "468",
+          "original_result": 468,
+          "parsed": 468,
+          "predicted_token_ids": [
+            29946,
+            29953,
+            29947
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "generated_text": "619",
+          "original_result": 619,
+          "parsed": 619,
+          "predicted_token_ids": [
+            29953,
+            29896,
+            29929
+          ],
+          "target_result": 619
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "generated_text": "653",
+          "original_result": 653,
+          "parsed": 653,
+          "predicted_token_ids": [
+            29953,
+            29945,
+            29941
+          ],
+          "target_result": 653
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "generated_text": "789",
+          "original_result": 789,
+          "parsed": 789,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29929
+          ],
+          "target_result": 789
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "generated_text": "273",
+          "original_result": 273,
+          "parsed": 273,
+          "predicted_token_ids": [
+            29906,
+            29955,
+            29941
+          ],
+          "target_result": 273
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "generated_text": "240",
+          "original_result": 240,
+          "parsed": 240,
+          "predicted_token_ids": [
+            29906,
+            29946,
+            29900
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "generated_text": "664",
+          "original_result": 664,
+          "parsed": 664,
+          "predicted_token_ids": [
+            29953,
+            29953,
+            29946
+          ],
+          "target_result": 664
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "generated_text": "228",
+          "original_result": 228,
+          "parsed": 228,
+          "predicted_token_ids": [
+            29906,
+            29906,
+            29947
+          ],
+          "target_result": 228
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "generated_text": "907",
+          "original_result": 907,
+          "parsed": 907,
+          "predicted_token_ids": [
+            29929,
+            29900,
+            29955
+          ],
+          "target_result": 907
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "generated_text": "435",
+          "original_result": 435,
+          "parsed": 435,
+          "predicted_token_ids": [
+            29946,
+            29941,
+            29945
+          ],
+          "target_result": 435
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "generated_text": "871",
+          "original_result": 871,
+          "parsed": 871,
+          "predicted_token_ids": [
+            29947,
+            29955,
+            29896
+          ],
+          "target_result": 871
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "generated_text": "815",
+          "original_result": 815,
+          "parsed": 815,
+          "predicted_token_ids": [
+            29947,
+            29896,
+            29945
+          ],
+          "target_result": 815
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "generated_text": "538",
+          "original_result": 538,
+          "parsed": 538,
+          "predicted_token_ids": [
+            29945,
+            29941,
+            29947
+          ],
+          "target_result": 538
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "generated_text": "239",
+          "original_result": 239,
+          "parsed": 239,
+          "predicted_token_ids": [
+            29906,
+            29941,
+            29929
+          ],
+          "target_result": 239
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "generated_text": "365",
+          "original_result": 365,
+          "parsed": 365,
+          "predicted_token_ids": [
+            29941,
+            29953,
+            29945
+          ],
+          "target_result": 365
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "generated_text": "413",
+          "original_result": 413,
+          "parsed": 413,
+          "predicted_token_ids": [
+            29946,
+            29896,
+            29941
+          ],
+          "target_result": 413
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "generated_text": "479",
+          "original_result": 479,
+          "parsed": 479,
+          "predicted_token_ids": [
+            29946,
+            29955,
+            29929
+          ],
+          "target_result": 479
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "generated_text": "594",
+          "original_result": 594,
+          "parsed": 594,
+          "predicted_token_ids": [
+            29945,
+            29929,
+            29946
+          ],
+          "target_result": 594
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "generated_text": "572",
+          "original_result": 572,
+          "parsed": 572,
+          "predicted_token_ids": [
+            29945,
+            29955,
+            29906
+          ],
+          "target_result": 572
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "generated_text": "309",
+          "original_result": 309,
+          "parsed": 309,
+          "predicted_token_ids": [
+            29941,
+            29900,
+            29929
+          ],
+          "target_result": 309
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            29896,
+            29946,
+            29955
+          ],
+          "target_result": 147
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "generated_text": "505",
+          "original_result": 505,
+          "parsed": 505,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29945
+          ],
+          "target_result": 505
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "generated_text": "712",
+          "original_result": 712,
+          "parsed": 712,
+          "predicted_token_ids": [
+            29955,
+            29896,
+            29906
+          ],
+          "target_result": 712
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "generated_text": "608",
+          "original_result": 608,
+          "parsed": 608,
+          "predicted_token_ids": [
+            29953,
+            29900,
+            29947
+          ],
+          "target_result": 608
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "generated_text": "446",
+          "original_result": 446,
+          "parsed": 446,
+          "predicted_token_ids": [
+            29946,
+            29946,
+            29953
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "generated_text": "767",
+          "original_result": 767,
+          "parsed": 767,
+          "predicted_token_ids": [
+            29955,
+            29953,
+            29955
+          ],
+          "target_result": 767
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "generated_text": "321",
+          "original_result": 321,
+          "parsed": 321,
+          "predicted_token_ids": [
+            29941,
+            29906,
+            29896
+          ],
+          "target_result": 321
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "generated_text": "343",
+          "original_result": 343,
+          "parsed": 343,
+          "predicted_token_ids": [
+            29941,
+            29946,
+            29941
+          ],
+          "target_result": 343
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "generated_text": "745",
+          "original_result": 745,
+          "parsed": 745,
+          "predicted_token_ids": [
+            29955,
+            29946,
+            29945
+          ],
+          "target_result": 745
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "generated_text": "424",
+          "original_result": 424,
+          "parsed": 424,
+          "predicted_token_ids": [
+            29946,
+            29906,
+            29946
+          ],
+          "target_result": 424
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "generated_text": "332",
+          "original_result": 332,
+          "parsed": 332,
+          "predicted_token_ids": [
+            29941,
+            29941,
+            29906
+          ],
+          "target_result": 332
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "generated_text": "583",
+          "original_result": 583,
+          "parsed": 583,
+          "predicted_token_ids": [
+            29945,
+            29947,
+            29941
+          ],
+          "target_result": 583
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            29906,
+            29896,
+            29955
+          ],
+          "target_result": 217
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "generated_text": "826",
+          "original_result": 826,
+          "parsed": 826,
+          "predicted_token_ids": [
+            29947,
+            29906,
+            29953
+          ],
+          "target_result": 826
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "generated_text": "737",
+          "original_result": 387,
+          "parsed": 737,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29955
+          ],
+          "target_result": 387
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "generated_text": "550",
+          "original_result": 550,
+          "parsed": 550,
+          "predicted_token_ids": [
+            29945,
+            29945,
+            29900
+          ],
+          "target_result": 550
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "generated_text": "848",
+          "original_result": 848,
+          "parsed": 848,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29947
+          ],
+          "target_result": 848
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "generated_text": "181",
+          "original_result": 181,
+          "parsed": 181,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29896
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "generated_text": "756",
+          "original_result": 756,
+          "parsed": 756,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29953
+          ],
+          "target_result": 756
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "generated_text": "398",
+          "original_result": 398,
+          "parsed": 398,
+          "predicted_token_ids": [
+            29941,
+            29929,
+            29947
+          ],
+          "target_result": 398
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "generated_text": "516",
+          "original_result": 516,
+          "parsed": 516,
+          "predicted_token_ids": [
+            29945,
+            29896,
+            29953
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "generated_text": "170",
+          "original_result": 170,
+          "parsed": 170,
+          "predicted_token_ids": [
+            29896,
+            29955,
+            29900
+          ],
+          "target_result": 170
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "generated_text": "863",
+          "original_result": 859,
+          "parsed": 863,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29941
+          ],
+          "target_result": 859
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "generated_text": "642",
+          "original_result": 642,
+          "parsed": 642,
+          "predicted_token_ids": [
+            29953,
+            29946,
+            29906
+          ],
+          "target_result": 642
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "generated_text": "549",
+          "original_result": 549,
+          "parsed": 549,
+          "predicted_token_ids": [
+            29945,
+            29946,
+            29929
+          ],
+          "target_result": 549
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "generated_text": "158",
+          "original_result": 158,
+          "parsed": 158,
+          "predicted_token_ids": [
+            29896,
+            29945,
+            29947
+          ],
+          "target_result": 158
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "generated_text": "206",
+          "original_result": 206,
+          "parsed": 206,
+          "predicted_token_ids": [
+            29906,
+            29900,
+            29953
+          ],
+          "target_result": 206
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "generated_text": "310",
+          "original_result": 310,
+          "parsed": 310,
+          "predicted_token_ids": [
+            29941,
+            29896,
+            29900
+          ],
+          "target_result": 310
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            29906,
+            29945,
+            29896
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "generated_text": "963",
+          "original_result": 963,
+          "parsed": 963,
+          "predicted_token_ids": [
+            29929,
+            29953,
+            29941
+          ],
+          "target_result": 963
+        }
+      ],
+      "parse_count": 90,
+      "parse_rate": 1.0,
+      "step_original_accuracy": [
+        0.9222222222222223,
+        0.9111111111111111,
+        0.9666666666666667
+      ],
+      "step_original_correct": [
+        83,
+        82,
+        87
+      ],
+      "step_target_accuracy": [
+        0.9222222222222223,
+        0.9111111111111111,
+        0.9666666666666667
+      ],
+      "step_target_correct": [
+        83,
+        82,
+        87
+      ],
+      "target_full_result_accuracy": 0.8888888888888888,
+      "target_full_result_correct": 80,
+      "true_result_accuracy": 0.8888888888888888,
+      "true_result_correct": 80
+    },
+    "shuffled_read_compute_hybrid_write": {
+      "digit_token_count": 270,
+      "digit_token_rate": 1.0,
+      "hard_gate_rate_by_step": [
+        0.1666666716337204,
+        0.0555555559694767,
+        0.06666667014360428
+      ],
+      "mean_relative_norm_by_step": [
+        0.11395727843046188,
+        0.5099568963050842,
+        0.43428564071655273
+      ],
+      "n": 90,
+      "original_full_result_accuracy": 0.0,
+      "original_full_result_correct": 0,
+      "outputs": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "generated_text": "701",
+          "original_result": 136,
+          "parsed": 701,
+          "predicted_token_ids": [
+            29955,
+            29900,
+            29896
+          ],
+          "target_result": 701
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "generated_text": "103",
+          "original_result": 701,
+          "parsed": 103,
+          "predicted_token_ids": [
+            29896,
+            29900,
+            29941
+          ],
+          "target_result": 103
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "generated_text": "262",
+          "original_result": 103,
+          "parsed": 262,
+          "predicted_token_ids": [
+            29906,
+            29953,
+            29906
+          ],
+          "target_result": 262
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "generated_text": "778",
+          "original_result": 262,
+          "parsed": 778,
+          "predicted_token_ids": [
+            29955,
+            29955,
+            29947
+          ],
+          "target_result": 778
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "generated_text": "130",
+          "original_result": 778,
+          "parsed": 130,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29900
+          ],
+          "target_result": 930
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "generated_text": "918",
+          "original_result": 930,
+          "parsed": 918,
+          "predicted_token_ids": [
+            29929,
+            29896,
+            29947
+          ],
+          "target_result": 918
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "generated_text": "723",
+          "original_result": 918,
+          "parsed": 723,
+          "predicted_token_ids": [
+            29955,
+            29906,
+            29941
+          ],
+          "target_result": 723
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "generated_text": "996",
+          "original_result": 723,
+          "parsed": 996,
+          "predicted_token_ids": [
+            29929,
+            29929,
+            29953
+          ],
+          "target_result": 996
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "generated_text": "527",
+          "original_result": 996,
+          "parsed": 527,
+          "predicted_token_ids": [
+            29945,
+            29906,
+            29955
+          ],
+          "target_result": 527
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "generated_text": "631",
+          "original_result": 527,
+          "parsed": 631,
+          "predicted_token_ids": [
+            29953,
+            29941,
+            29896
+          ],
+          "target_result": 631
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "generated_text": "621",
+          "original_result": 631,
+          "parsed": 621,
+          "predicted_token_ids": [
+            29953,
+            29906,
+            29896
+          ],
+          "target_result": 620
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "generated_text": "893",
+          "original_result": 620,
+          "parsed": 893,
+          "predicted_token_ids": [
+            29947,
+            29929,
+            29941
+          ],
+          "target_result": 893
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "generated_text": "561",
+          "original_result": 893,
+          "parsed": 561,
+          "predicted_token_ids": [
+            29945,
+            29953,
+            29896
+          ],
+          "target_result": 561
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "generated_text": "929",
+          "original_result": 561,
+          "parsed": 929,
+          "predicted_token_ids": [
+            29929,
+            29906,
+            29929
+          ],
+          "target_result": 929
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "generated_text": "974",
+          "original_result": 929,
+          "parsed": 974,
+          "predicted_token_ids": [
+            29929,
+            29955,
+            29946
+          ],
+          "target_result": 974
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "generated_text": "491",
+          "original_result": 974,
+          "parsed": 491,
+          "predicted_token_ids": [
+            29946,
+            29929,
+            29896
+          ],
+          "target_result": 491
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "generated_text": "284",
+          "original_result": 491,
+          "parsed": 284,
+          "predicted_token_ids": [
+            29906,
+            29947,
+            29946
+          ],
+          "target_result": 284
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "generated_text": "860",
+          "original_result": 284,
+          "parsed": 860,
+          "predicted_token_ids": [
+            29947,
+            29953,
+            29900
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "generated_text": "295",
+          "original_result": 860,
+          "parsed": 295,
+          "predicted_token_ids": [
+            29906,
+            29929,
+            29945
+          ],
+          "target_result": 295
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "generated_text": "985",
+          "original_result": 295,
+          "parsed": 985,
+          "predicted_token_ids": [
+            29929,
+            29947,
+            29945
+          ],
+          "target_result": 985
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "generated_text": "169",
+          "original_result": 985,
+          "parsed": 169,
+          "predicted_token_ids": [
+            29896,
+            29953,
+            29929
+          ],
+          "target_result": 169
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "generated_text": "376",
+          "original_result": 169,
+          "parsed": 376,
+          "predicted_token_ids": [
+            29941,
+            29955,
+            29953
+          ],
+          "target_result": 376
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "generated_text": "882",
+          "original_result": 376,
+          "parsed": 882,
+          "predicted_token_ids": [
+            29947,
+            29947,
+            29906
+          ],
+          "target_result": 882
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "generated_text": "114",
+          "original_result": 882,
+          "parsed": 114,
+          "predicted_token_ids": [
+            29896,
+            29896,
+            29946
+          ],
+          "target_result": 114
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "generated_text": "125",
+          "original_result": 114,
+          "parsed": 125,
+          "predicted_token_ids": [
+            29896,
+            29906,
+            29945
+          ],
+          "target_result": 125
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "generated_text": "180",
+          "original_result": 125,
+          "parsed": 180,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29900
+          ],
+          "target_result": 480
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "generated_text": "402",
+          "original_result": 480,
+          "parsed": 402,
+          "predicted_token_ids": [
+            29946,
+            29900,
+            29906
+          ],
+          "target_result": 402
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "generated_text": "941",
+          "original_result": 402,
+          "parsed": 941,
+          "predicted_token_ids": [
+            29929,
+            29946,
+            29896
+          ],
+          "target_result": 941
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "generated_text": "675",
+          "original_result": 941,
+          "parsed": 675,
+          "predicted_token_ids": [
+            29953,
+            29955,
+            29945
+          ],
+          "target_result": 675
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "generated_text": "686",
+          "original_result": 675,
+          "parsed": 686,
+          "predicted_token_ids": [
+            29953,
+            29947,
+            29953
+          ],
+          "target_result": 686
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "generated_text": "737",
+          "original_result": 686,
+          "parsed": 737,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29955
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "generated_text": "697",
+          "original_result": 837,
+          "parsed": 697,
+          "predicted_token_ids": [
+            29953,
+            29929,
+            29955
+          ],
+          "target_result": 697
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "generated_text": "804",
+          "original_result": 697,
+          "parsed": 804,
+          "predicted_token_ids": [
+            29947,
+            29900,
+            29946
+          ],
+          "target_result": 804
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "generated_text": "354",
+          "original_result": 804,
+          "parsed": 354,
+          "predicted_token_ids": [
+            29941,
+            29945,
+            29946
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "generated_text": "192",
+          "original_result": 354,
+          "parsed": 192,
+          "predicted_token_ids": [
+            29896,
+            29929,
+            29906
+          ],
+          "target_result": 192
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "generated_text": "952",
+          "original_result": 192,
+          "parsed": 952,
+          "predicted_token_ids": [
+            29929,
+            29945,
+            29906
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "generated_text": "734",
+          "original_result": 952,
+          "parsed": 734,
+          "predicted_token_ids": [
+            29955,
+            29941,
+            29946
+          ],
+          "target_result": 734
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "generated_text": "790",
+          "original_result": 734,
+          "parsed": 790,
+          "predicted_token_ids": [
+            29955,
+            29929,
+            29900
+          ],
+          "target_result": 790
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "generated_text": "457",
+          "original_result": 790,
+          "parsed": 457,
+          "predicted_token_ids": [
+            29946,
+            29945,
+            29955
+          ],
+          "target_result": 457
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "generated_text": "468",
+          "original_result": 457,
+          "parsed": 468,
+          "predicted_token_ids": [
+            29946,
+            29953,
+            29947
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "generated_text": "619",
+          "original_result": 468,
+          "parsed": 619,
+          "predicted_token_ids": [
+            29953,
+            29896,
+            29929
+          ],
+          "target_result": 619
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "generated_text": "653",
+          "original_result": 619,
+          "parsed": 653,
+          "predicted_token_ids": [
+            29953,
+            29945,
+            29941
+          ],
+          "target_result": 653
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "generated_text": "789",
+          "original_result": 653,
+          "parsed": 789,
+          "predicted_token_ids": [
+            29955,
+            29947,
+            29929
+          ],
+          "target_result": 789
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "generated_text": "273",
+          "original_result": 789,
+          "parsed": 273,
+          "predicted_token_ids": [
+            29906,
+            29955,
+            29941
+          ],
+          "target_result": 273
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "generated_text": "240",
+          "original_result": 273,
+          "parsed": 240,
+          "predicted_token_ids": [
+            29906,
+            29946,
+            29900
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "generated_text": "664",
+          "original_result": 240,
+          "parsed": 664,
+          "predicted_token_ids": [
+            29953,
+            29953,
+            29946
+          ],
+          "target_result": 664
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "generated_text": "228",
+          "original_result": 664,
+          "parsed": 228,
+          "predicted_token_ids": [
+            29906,
+            29906,
+            29947
+          ],
+          "target_result": 228
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "generated_text": "907",
+          "original_result": 228,
+          "parsed": 907,
+          "predicted_token_ids": [
+            29929,
+            29900,
+            29955
+          ],
+          "target_result": 907
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "generated_text": "435",
+          "original_result": 907,
+          "parsed": 435,
+          "predicted_token_ids": [
+            29946,
+            29941,
+            29945
+          ],
+          "target_result": 435
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "generated_text": "871",
+          "original_result": 435,
+          "parsed": 871,
+          "predicted_token_ids": [
+            29947,
+            29955,
+            29896
+          ],
+          "target_result": 871
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "generated_text": "815",
+          "original_result": 871,
+          "parsed": 815,
+          "predicted_token_ids": [
+            29947,
+            29896,
+            29945
+          ],
+          "target_result": 815
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "generated_text": "538",
+          "original_result": 815,
+          "parsed": 538,
+          "predicted_token_ids": [
+            29945,
+            29941,
+            29947
+          ],
+          "target_result": 538
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "generated_text": "239",
+          "original_result": 538,
+          "parsed": 239,
+          "predicted_token_ids": [
+            29906,
+            29941,
+            29929
+          ],
+          "target_result": 239
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "generated_text": "365",
+          "original_result": 239,
+          "parsed": 365,
+          "predicted_token_ids": [
+            29941,
+            29953,
+            29945
+          ],
+          "target_result": 365
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "generated_text": "413",
+          "original_result": 365,
+          "parsed": 413,
+          "predicted_token_ids": [
+            29946,
+            29896,
+            29941
+          ],
+          "target_result": 413
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "generated_text": "479",
+          "original_result": 413,
+          "parsed": 479,
+          "predicted_token_ids": [
+            29946,
+            29955,
+            29929
+          ],
+          "target_result": 479
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "generated_text": "594",
+          "original_result": 479,
+          "parsed": 594,
+          "predicted_token_ids": [
+            29945,
+            29929,
+            29946
+          ],
+          "target_result": 594
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "generated_text": "572",
+          "original_result": 594,
+          "parsed": 572,
+          "predicted_token_ids": [
+            29945,
+            29955,
+            29906
+          ],
+          "target_result": 572
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "generated_text": "309",
+          "original_result": 572,
+          "parsed": 309,
+          "predicted_token_ids": [
+            29941,
+            29900,
+            29929
+          ],
+          "target_result": 309
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "generated_text": "147",
+          "original_result": 309,
+          "parsed": 147,
+          "predicted_token_ids": [
+            29896,
+            29946,
+            29955
+          ],
+          "target_result": 147
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "generated_text": "505",
+          "original_result": 147,
+          "parsed": 505,
+          "predicted_token_ids": [
+            29945,
+            29900,
+            29945
+          ],
+          "target_result": 505
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "generated_text": "712",
+          "original_result": 505,
+          "parsed": 712,
+          "predicted_token_ids": [
+            29955,
+            29896,
+            29906
+          ],
+          "target_result": 712
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "generated_text": "648",
+          "original_result": 712,
+          "parsed": 648,
+          "predicted_token_ids": [
+            29953,
+            29946,
+            29947
+          ],
+          "target_result": 608
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "generated_text": "446",
+          "original_result": 608,
+          "parsed": 446,
+          "predicted_token_ids": [
+            29946,
+            29946,
+            29953
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "generated_text": "767",
+          "original_result": 446,
+          "parsed": 767,
+          "predicted_token_ids": [
+            29955,
+            29953,
+            29955
+          ],
+          "target_result": 767
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "generated_text": "321",
+          "original_result": 767,
+          "parsed": 321,
+          "predicted_token_ids": [
+            29941,
+            29906,
+            29896
+          ],
+          "target_result": 321
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "generated_text": "343",
+          "original_result": 321,
+          "parsed": 343,
+          "predicted_token_ids": [
+            29941,
+            29946,
+            29941
+          ],
+          "target_result": 343
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "generated_text": "745",
+          "original_result": 343,
+          "parsed": 745,
+          "predicted_token_ids": [
+            29955,
+            29946,
+            29945
+          ],
+          "target_result": 745
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "generated_text": "424",
+          "original_result": 745,
+          "parsed": 424,
+          "predicted_token_ids": [
+            29946,
+            29906,
+            29946
+          ],
+          "target_result": 424
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "generated_text": "332",
+          "original_result": 424,
+          "parsed": 332,
+          "predicted_token_ids": [
+            29941,
+            29941,
+            29906
+          ],
+          "target_result": 332
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "generated_text": "583",
+          "original_result": 332,
+          "parsed": 583,
+          "predicted_token_ids": [
+            29945,
+            29947,
+            29941
+          ],
+          "target_result": 583
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "generated_text": "217",
+          "original_result": 583,
+          "parsed": 217,
+          "predicted_token_ids": [
+            29906,
+            29896,
+            29955
+          ],
+          "target_result": 217
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "generated_text": "826",
+          "original_result": 217,
+          "parsed": 826,
+          "predicted_token_ids": [
+            29947,
+            29906,
+            29953
+          ],
+          "target_result": 826
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "generated_text": "387",
+          "original_result": 826,
+          "parsed": 387,
+          "predicted_token_ids": [
+            29941,
+            29947,
+            29955
+          ],
+          "target_result": 387
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "generated_text": "750",
+          "original_result": 387,
+          "parsed": 750,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29900
+          ],
+          "target_result": 550
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "generated_text": "848",
+          "original_result": 550,
+          "parsed": 848,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29947
+          ],
+          "target_result": 848
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "generated_text": "181",
+          "original_result": 848,
+          "parsed": 181,
+          "predicted_token_ids": [
+            29896,
+            29947,
+            29896
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "generated_text": "756",
+          "original_result": 181,
+          "parsed": 756,
+          "predicted_token_ids": [
+            29955,
+            29945,
+            29953
+          ],
+          "target_result": 756
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "generated_text": "398",
+          "original_result": 756,
+          "parsed": 398,
+          "predicted_token_ids": [
+            29941,
+            29929,
+            29947
+          ],
+          "target_result": 398
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "generated_text": "516",
+          "original_result": 398,
+          "parsed": 516,
+          "predicted_token_ids": [
+            29945,
+            29896,
+            29953
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "generated_text": "170",
+          "original_result": 516,
+          "parsed": 170,
+          "predicted_token_ids": [
+            29896,
+            29955,
+            29900
+          ],
+          "target_result": 170
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "generated_text": "859",
+          "original_result": 170,
+          "parsed": 859,
+          "predicted_token_ids": [
+            29947,
+            29945,
+            29929
+          ],
+          "target_result": 859
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "generated_text": "842",
+          "original_result": 859,
+          "parsed": 842,
+          "predicted_token_ids": [
+            29947,
+            29946,
+            29906
+          ],
+          "target_result": 642
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "generated_text": "542",
+          "original_result": 642,
+          "parsed": 542,
+          "predicted_token_ids": [
+            29945,
+            29946,
+            29906
+          ],
+          "target_result": 549
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "generated_text": "158",
+          "original_result": 549,
+          "parsed": 158,
+          "predicted_token_ids": [
+            29896,
+            29945,
+            29947
+          ],
+          "target_result": 158
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "generated_text": "206",
+          "original_result": 158,
+          "parsed": 206,
+          "predicted_token_ids": [
+            29906,
+            29900,
+            29953
+          ],
+          "target_result": 206
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "generated_text": "310",
+          "original_result": 206,
+          "parsed": 310,
+          "predicted_token_ids": [
+            29941,
+            29896,
+            29900
+          ],
+          "target_result": 310
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "generated_text": "251",
+          "original_result": 310,
+          "parsed": 251,
+          "predicted_token_ids": [
+            29906,
+            29945,
+            29896
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "generated_text": "963",
+          "original_result": 251,
+          "parsed": 963,
+          "predicted_token_ids": [
+            29929,
+            29953,
+            29941
+          ],
+          "target_result": 963
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "generated_text": "136",
+          "original_result": 963,
+          "parsed": 136,
+          "predicted_token_ids": [
+            29896,
+            29941,
+            29953
+          ],
+          "target_result": 136
+        }
+      ],
+      "parse_count": 90,
+      "parse_rate": 1.0,
+      "step_original_accuracy": [
+        0.17777777777777778,
+        0.044444444444444446,
+        0.06666666666666667
+      ],
+      "step_original_correct": [
+        16,
+        4,
+        6
+      ],
+      "step_target_accuracy": [
+        0.9444444444444444,
+        0.9888888888888889,
+        0.9777777777777777
+      ],
+      "step_target_correct": [
+        85,
+        89,
+        88
+      ],
+      "target_full_result_accuracy": 0.9111111111111111,
+      "target_full_result_correct": 82,
+      "true_result_accuracy": 0.0,
+      "true_result_correct": 0
+    }
+  },
+  "config_sha256": "fe551da2968add3b128f2e72b77f27418312f842dcf63b38875e430dbaee6d53",
+  "created_at": "2026-07-28T18:44:37.867580+00:00",
+  "dataset": {
+    "canonical_pairs_sha256": "f83211e26f61544b66952eeb75524666aab30e08c89aa6cd44b6303f4238d365",
+    "example_ids_sha256": "fb1d6fa21e4ea762a6f6d67589eda88f6493d59e3204a25de7dbe6e4bd268e5c",
+    "examples": 90,
+    "prior_dataset_hashes": {
+      "phase3": "5a8783160f8add9bf551a8de3207b1b5a5c9ac763638250d00cd6de1807bf941",
+      "phase4": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574",
+      "phase6": "86fc17da6fa3856068a66adb0641ab63da9c82a2d9c53cb5c983ff20f27e8cd4",
+      "phase7": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a"
+    },
+    "sha256": "8f598a3a1891aae5bd3f4c12cb8ad4b3c08347fffc4dfc3969986f6a6ae54c0e"
+  },
+  "deterministic_compute": {
+    "accuracy": 1.0,
+    "correct": 90,
+    "operation": "integer_addition",
+    "targets": [
+      136,
+      701,
+      103,
+      262,
+      778,
+      930,
+      918,
+      723,
+      996,
+      527,
+      631,
+      620,
+      893,
+      561,
+      929,
+      974,
+      491,
+      284,
+      860,
+      295,
+      985,
+      169,
+      376,
+      882,
+      114,
+      125,
+      480,
+      402,
+      941,
+      675,
+      686,
+      837,
+      697,
+      804,
+      354,
+      192,
+      952,
+      734,
+      790,
+      457,
+      468,
+      619,
+      653,
+      789,
+      273,
+      240,
+      664,
+      228,
+      907,
+      435,
+      871,
+      815,
+      538,
+      239,
+      365,
+      413,
+      479,
+      594,
+      572,
+      309,
+      147,
+      505,
+      712,
+      608,
+      446,
+      767,
+      321,
+      343,
+      745,
+      424,
+      332,
+      583,
+      217,
+      826,
+      387,
+      550,
+      848,
+      181,
+      756,
+      398,
+      516,
+      170,
+      859,
+      642,
+      549,
+      158,
+      206,
+      310,
+      251,
+      963
+    ]
+  },
+  "elapsed_seconds": 411.1787806670036,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "gate": {
+    "checks": {
+      "base_correct_preservation": true,
+      "base_error_recovery": true,
+      "compute": true,
+      "digit_tokens": true,
+      "excess_recovery_over_random": true,
+      "latent_exact": true,
+      "leading_norm": true,
+      "net_non_degradation": true,
+      "oracle_exact": true,
+      "oracle_gap": true,
+      "parse": true,
+      "positions": true,
+      "reader": true,
+      "shuffled_target_following": true,
+      "shuffled_true_control": true,
+      "suffix_norms": true
+    },
+    "derived": {
+      "oracle_exact_gap": 0.0
+    },
+    "paired_metrics": {
+      "base_correct_count": 80,
+      "base_error_count": 10,
+      "conditions": {
+        "latent_read_compute_hybrid_write": {
+          "base_correct_count": 80,
+          "base_correct_preservation": 1.0,
+          "base_error_count": 10,
+          "base_error_recovery": 1.0,
+          "harmed_base_correct": 0,
+          "net_exact_improvement": 10,
+          "net_exact_improvement_rate": 0.1111111111111111,
+          "preserved_base_correct": 80,
+          "recovered_base_errors": 10
+        },
+        "oracle_compute_hybrid_write": {
+          "base_correct_count": 80,
+          "base_correct_preservation": 1.0,
+          "base_error_count": 10,
+          "base_error_recovery": 1.0,
+          "harmed_base_correct": 0,
+          "net_exact_improvement": 10,
+          "net_exact_improvement_rate": 0.1111111111111111,
+          "preserved_base_correct": 80,
+          "recovered_base_errors": 10
+        },
+        "random_norm_matched": {
+          "base_correct_count": 80,
+          "base_correct_preservation": 1.0,
+          "base_error_count": 10,
+          "base_error_recovery": 0.0,
+          "harmed_base_correct": 0,
+          "net_exact_improvement": 0,
+          "net_exact_improvement_rate": 0.0,
+          "preserved_base_correct": 80,
+          "recovered_base_errors": 0
+        }
+      }
+    },
+    "passes": true,
+    "recovery_branch": "observed_base_errors",
+    "thresholds": {
+      "maximum_oracle_exact_gap": 0.03,
+      "maximum_shuffled_true_accuracy": 0.15,
+      "minimum_base_correct_preservation": 0.98,
+      "minimum_base_error_recovery": 0.8,
+      "minimum_computed_target_accuracy": 0.98,
+      "minimum_excess_base_error_recovery_over_random": 0.5,
+      "minimum_final_exact_accuracy": 0.95,
+      "minimum_net_improvement_over_base": 0.0,
+      "minimum_position_accuracy": 0.95,
+      "minimum_reader_pair_accuracy": 0.98,
+      "minimum_shuffled_target_accuracy": 0.9,
+      "require_digit_token_rate": true,
+      "require_parse_rate": true
+    }
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "passes": true,
+  "reader": {
+    "hidden_state_index": 1,
+    "metrics": {
+      "digit_accuracy": 1.0,
+      "digit_correct": 496,
+      "digit_count": 496,
+      "n": 90,
+      "operand_a_accuracy": 1.0,
+      "operand_a_correct": 90,
+      "operand_b_accuracy": 1.0,
+      "operand_b_correct": 90,
+      "pair_accuracy": 1.0,
+      "pair_correct": 90,
+      "rows": [
+        {
+          "example_id": "phase9e-audit-l1-t3-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 38,
+          "predicted_operand_b": 98
+        },
+        {
+          "example_id": "phase9e-audit-l7-t0-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 608,
+          "predicted_operand_b": 93
+        },
+        {
+          "example_id": "phase9e-audit-l1-t0-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 82,
+          "predicted_operand_b": 21
+        },
+        {
+          "example_id": "phase9e-audit-l2-t6-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 89,
+          "predicted_operand_b": 173
+        },
+        {
+          "example_id": "phase9e-audit-l7-t7-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 259,
+          "predicted_operand_b": 519
+        },
+        {
+          "example_id": "phase9e-audit-l9-t3-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 122,
+          "predicted_operand_b": 808
+        },
+        {
+          "example_id": "phase9e-audit-l9-t1-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 529,
+          "predicted_operand_b": 389
+        },
+        {
+          "example_id": "phase9e-audit-l7-t2-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 474,
+          "predicted_operand_b": 249
+        },
+        {
+          "example_id": "phase9e-audit-l9-t9-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 761,
+          "predicted_operand_b": 235
+        },
+        {
+          "example_id": "phase9e-audit-l5-t2-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 426,
+          "predicted_operand_b": 101
+        },
+        {
+          "example_id": "phase9e-audit-l6-t3-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 221,
+          "predicted_operand_b": 410
+        },
+        {
+          "example_id": "phase9e-audit-l6-t2-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 127,
+          "predicted_operand_b": 493
+        },
+        {
+          "example_id": "phase9e-audit-l8-t9-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 739,
+          "predicted_operand_b": 154
+        },
+        {
+          "example_id": "phase9e-audit-l5-t6-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 537,
+          "predicted_operand_b": 24
+        },
+        {
+          "example_id": "phase9e-audit-l9-t2-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 204,
+          "predicted_operand_b": 725
+        },
+        {
+          "example_id": "phase9e-audit-l9-t7-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 282,
+          "predicted_operand_b": 692
+        },
+        {
+          "example_id": "phase9e-audit-l4-t9-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 278,
+          "predicted_operand_b": 213
+        },
+        {
+          "example_id": "phase9e-audit-l2-t8-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 22,
+          "predicted_operand_b": 262
+        },
+        {
+          "example_id": "phase9e-audit-l8-t6-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 470,
+          "predicted_operand_b": 390
+        },
+        {
+          "example_id": "phase9e-audit-l2-t9-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 120,
+          "predicted_operand_b": 175
+        },
+        {
+          "example_id": "phase9e-audit-l9-t8-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 911,
+          "predicted_operand_b": 74
+        },
+        {
+          "example_id": "phase9e-audit-l1-t6-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 39,
+          "predicted_operand_b": 130
+        },
+        {
+          "example_id": "phase9e-audit-l3-t7-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 157,
+          "predicted_operand_b": 219
+        },
+        {
+          "example_id": "phase9e-audit-l8-t8-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 140,
+          "predicted_operand_b": 742
+        },
+        {
+          "example_id": "phase9e-audit-l1-t1-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 76,
+          "predicted_operand_b": 38
+        },
+        {
+          "example_id": "phase9e-audit-l1-t2-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 57,
+          "predicted_operand_b": 68
+        },
+        {
+          "example_id": "phase9e-audit-l4-t8-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 336,
+          "predicted_operand_b": 144
+        },
+        {
+          "example_id": "phase9e-audit-l4-t0-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 221,
+          "predicted_operand_b": 181
+        },
+        {
+          "example_id": "phase9e-audit-l9-t4-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 102,
+          "predicted_operand_b": 839
+        },
+        {
+          "example_id": "phase9e-audit-l6-t7-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 456,
+          "predicted_operand_b": 219
+        },
+        {
+          "example_id": "phase9e-audit-l6-t8-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 647,
+          "predicted_operand_b": 39
+        },
+        {
+          "example_id": "phase9e-audit-l8-t3-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 618,
+          "predicted_operand_b": 219
+        },
+        {
+          "example_id": "phase9e-audit-l6-t9-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 568,
+          "predicted_operand_b": 129
+        },
+        {
+          "example_id": "phase9e-audit-l8-t0-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 316,
+          "predicted_operand_b": 488
+        },
+        {
+          "example_id": "phase9e-audit-l3-t5-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 278,
+          "predicted_operand_b": 76
+        },
+        {
+          "example_id": "phase9e-audit-l1-t9-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 160,
+          "predicted_operand_b": 32
+        },
+        {
+          "example_id": "phase9e-audit-l9-t5-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 25,
+          "predicted_operand_b": 927
+        },
+        {
+          "example_id": "phase9e-audit-l7-t3-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 63,
+          "predicted_operand_b": 671
+        },
+        {
+          "example_id": "phase9e-audit-l7-t9-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 726,
+          "predicted_operand_b": 64
+        },
+        {
+          "example_id": "phase9e-audit-l4-t5-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 158,
+          "predicted_operand_b": 299
+        },
+        {
+          "example_id": "phase9e-audit-l4-t6-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 329,
+          "predicted_operand_b": 139
+        },
+        {
+          "example_id": "phase9e-audit-l6-t1-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 450,
+          "predicted_operand_b": 169
+        },
+        {
+          "example_id": "phase9e-audit-l6-t5-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 162,
+          "predicted_operand_b": 491
+        },
+        {
+          "example_id": "phase9e-audit-l7-t8-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 406,
+          "predicted_operand_b": 383
+        },
+        {
+          "example_id": "phase9e-audit-l2-t7-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 24,
+          "predicted_operand_b": 249
+        },
+        {
+          "example_id": "phase9e-audit-l2-t4-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 79,
+          "predicted_operand_b": 161
+        },
+        {
+          "example_id": "phase9e-audit-l6-t6-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 351,
+          "predicted_operand_b": 313
+        },
+        {
+          "example_id": "phase9e-audit-l2-t2-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 39,
+          "predicted_operand_b": 189
+        },
+        {
+          "example_id": "phase9e-audit-l9-t0-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 39,
+          "predicted_operand_b": 868
+        },
+        {
+          "example_id": "phase9e-audit-l4-t3-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 200,
+          "predicted_operand_b": 235
+        },
+        {
+          "example_id": "phase9e-audit-l8-t7-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 591,
+          "predicted_operand_b": 280
+        },
+        {
+          "example_id": "phase9e-audit-l8-t1-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 436,
+          "predicted_operand_b": 379
+        },
+        {
+          "example_id": "phase9e-audit-l5-t3-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 261,
+          "predicted_operand_b": 277
+        },
+        {
+          "example_id": "phase9e-audit-l2-t3-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 129,
+          "predicted_operand_b": 110
+        },
+        {
+          "example_id": "phase9e-audit-l3-t6-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 136,
+          "predicted_operand_b": 229
+        },
+        {
+          "example_id": "phase9e-audit-l4-t1-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 252,
+          "predicted_operand_b": 161
+        },
+        {
+          "example_id": "phase9e-audit-l4-t7-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 24,
+          "predicted_operand_b": 455
+        },
+        {
+          "example_id": "phase9e-audit-l5-t9-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 497,
+          "predicted_operand_b": 97
+        },
+        {
+          "example_id": "phase9e-audit-l5-t7-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 78,
+          "predicted_operand_b": 494
+        },
+        {
+          "example_id": "phase9e-audit-l3-t0-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 224,
+          "predicted_operand_b": 85
+        },
+        {
+          "example_id": "phase9e-audit-l1-t4-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 99,
+          "predicted_operand_b": 48
+        },
+        {
+          "example_id": "phase9e-audit-l5-t0-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 59,
+          "predicted_operand_b": 446
+        },
+        {
+          "example_id": "phase9e-audit-l7-t1-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 677,
+          "predicted_operand_b": 35
+        },
+        {
+          "example_id": "phase9e-audit-l6-t0-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 269,
+          "predicted_operand_b": 339
+        },
+        {
+          "example_id": "phase9e-audit-l4-t4-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 159,
+          "predicted_operand_b": 287
+        },
+        {
+          "example_id": "phase9e-audit-l7-t6-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 260,
+          "predicted_operand_b": 507
+        },
+        {
+          "example_id": "phase9e-audit-l3-t2-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 230,
+          "predicted_operand_b": 91
+        },
+        {
+          "example_id": "phase9e-audit-l3-t4-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 185,
+          "predicted_operand_b": 158
+        },
+        {
+          "example_id": "phase9e-audit-l7-t4-o5",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 190,
+          "predicted_operand_b": 555
+        },
+        {
+          "example_id": "phase9e-audit-l4-t2-o4",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 202,
+          "predicted_operand_b": 222
+        },
+        {
+          "example_id": "phase9e-audit-l3-t3-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 112,
+          "predicted_operand_b": 220
+        },
+        {
+          "example_id": "phase9e-audit-l5-t8-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 259,
+          "predicted_operand_b": 324
+        },
+        {
+          "example_id": "phase9e-audit-l2-t1-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 167,
+          "predicted_operand_b": 50
+        },
+        {
+          "example_id": "phase9e-audit-l8-t2-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 768,
+          "predicted_operand_b": 58
+        },
+        {
+          "example_id": "phase9e-audit-l3-t8-o7",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 349,
+          "predicted_operand_b": 38
+        },
+        {
+          "example_id": "phase9e-audit-l5-t5-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 270,
+          "predicted_operand_b": 280
+        },
+        {
+          "example_id": "phase9e-audit-l8-t4-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 161,
+          "predicted_operand_b": 687
+        },
+        {
+          "example_id": "phase9e-audit-l1-t8-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 31,
+          "predicted_operand_b": 150
+        },
+        {
+          "example_id": "phase9e-audit-l7-t5-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 456,
+          "predicted_operand_b": 300
+        },
+        {
+          "example_id": "phase9e-audit-l3-t9-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 158,
+          "predicted_operand_b": 240
+        },
+        {
+          "example_id": "phase9e-audit-l5-t1-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 262,
+          "predicted_operand_b": 254
+        },
+        {
+          "example_id": "phase9e-audit-l1-t7-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 150,
+          "predicted_operand_b": 20
+        },
+        {
+          "example_id": "phase9e-audit-l8-t5-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 462,
+          "predicted_operand_b": 397
+        },
+        {
+          "example_id": "phase9e-audit-l6-t4-o2",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 361,
+          "predicted_operand_b": 281
+        },
+        {
+          "example_id": "phase9e-audit-l5-t4-o9",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 319,
+          "predicted_operand_b": 230
+        },
+        {
+          "example_id": "phase9e-audit-l1-t5-o8",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 69,
+          "predicted_operand_b": 89
+        },
+        {
+          "example_id": "phase9e-audit-l2-t0-o6",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 160,
+          "predicted_operand_b": 46
+        },
+        {
+          "example_id": "phase9e-audit-l3-t1-o0",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 30,
+          "predicted_operand_b": 280
+        },
+        {
+          "example_id": "phase9e-audit-l2-t5-o1",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 67,
+          "predicted_operand_b": 184
+        },
+        {
+          "example_id": "phase9e-audit-l9-t6-o3",
+          "operand_a_exact": true,
+          "operand_b_exact": true,
+          "predicted_operand_a": 40,
+          "predicted_operand_b": 923
+        }
+      ]
+    }
+  },
+  "runner_sha256": "060c45ecc969685f561a5c4d0c4c2d3d639e92528ffa80b34505ec57119c662a",
+  "schema_version": "oli.phase9e-phi-hybrid-graft-audit/v1",
+  "source_hashes": {
+    "compiler_module_sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d",
+    "compiler_selection_result_sha256": "6776b9e315e6ceb56e3e61019774b9520e8ee2f7f85aa895907d117342b26447",
+    "dataset_config_sha256": "574cd6700763aecf8187e1ce77b0b007ab7ed1cae1fc443552bfa9dcd15e0945",
+    "dataset_generator_sha256": "cc668cbdf4b2540ba63341923ca4ad2e6badda17d8502209331a0b92d014f37e",
+    "development_config_sha256": "05caec1a98234551aebfce59f737f39df2a0e0aae7ee4a231fec57aadc5a188b",
+    "development_correction_config_sha256": "1b29d445bf61401baa1d00dce2460a58ee568ed08810cc68a2470ee94d7a26d7",
+    "development_correction_sha256": "07038f7f834774df0f505e8a9b85859fb1c752d01fc5e8c6251e698f581e757b",
+    "development_result_sha256": "a41a28814499e0eaf0c3190d0aba5ade98070c2b35bd63d070d8216257fad02a",
+    "reader_artifact_sha256": "58f84aeda73713e9eb2e8ed0347639fc84f60273ad69557d7718b096cd6ac0c0",
+    "reader_selection_result_sha256": "ab2f8bb2c0f028e5b1b771cb907965d2efae95a18744644cb67e51dd487938d2",
+    "suffix_artifact_sha256": "62d7302c7bcfe7ebe529f4f20ab91f43b61ebc8bda8bf2df86ccb053868122f0",
+    "suffix_basis_artifact_sha256": "960aac22478678a81a9677f03c0d7e885c60a603f22aa3737e0a19bb41803faa",
+    "suffix_selection_result_sha256": "c6a57224e2824845e2c7b60d449b3d0b58df9306aad69c15ee2fefee719acfb6"
+  },
+  "status": "one_shot_audit",
+  "writer": {
+    "leading_compiler": {
+      "desired_margin": 8.0,
+      "hidden_state_index": 24,
+      "iterations": 3,
+      "norm_cap": 0.75
+    },
+    "suffix_writer": {
+      "hidden_state_index": 30,
+      "norm_cap": 1.0,
+      "rank": 32,
+      "scale": 1.0
+    }
+  }
+}

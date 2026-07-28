@@ -76,3 +76,28 @@ mechanism, that the compiled path is a stable semantic neuron set, that
 natural-language thoughts were decoded, or that the specific vectors
 transfer to another model.
 
+## One-shot outcome
+
+The sole authorized run passed every frozen gate:
+
+- operand-pair reader accuracy: `90/90`;
+- deterministic computed-target accuracy: `90/90`;
+- latent and oracle complete answers: `90/90`;
+- latent leading, tens, and ones positions: `90/90` each;
+- unmodified base answers: `80/90`;
+- recovered base errors: `10/10`;
+- preserved base-correct rows: `80/80`;
+- random-control base-error recovery: `0/10`;
+- shuffled requested-target exact accuracy: `82/90`;
+- shuffled true accuracy: `0/90`;
+- parse and decimal-token rates: `1.0`.
+
+Mean true-target relative intervention norms were `0.00123` at the leading
+position, `0.00840` at tens, and `0.00413` at ones. All are far below their
+frozen per-row caps.
+
+The result is
+`results/phase9e_phi_hybrid_graft_audit.json`, SHA-256
+`d8a2ef793653814d04147050e0bdfaa7bccf7fefaeef066294861c50179ec8cf`.
+The result records `audit_runs: 1`; no repeat is authorized.
+
