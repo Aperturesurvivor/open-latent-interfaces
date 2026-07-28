@@ -80,8 +80,16 @@ at hidden state 23 / decoder block 22, targeted donors changed the next leading
 digit on 42/45 examples versus 1/45 random and 2/45 shuffled controls.
 Generated answers became the donor's leading digit plus the recipient's
 original suffix on 38/45 examples. This is a causal, internal, sequential
-digit-write interface—not yet a compact or full-result graft. See the
+digit-write interface. See the
 [native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md).
+
+A frozen closed-loop follow-up reapplied matched native states at each of the
+three answer positions. It generated the complete counterfactual donor result
+on 38/45 development examples (84.4%), versus 0/45 for base, same-leading, and
+random controls and 1/45 for a shuffled-donor control. This establishes a
+causal native sequential write path, but it remains a large full-residual
+transplant rather than a compact deterministic graft. See the
+[stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md).
 
 ## Why this is separate from ordinary activation steering
 
@@ -149,6 +157,7 @@ either stage.
 - [Phase 1B J-lens development summary](PHASE1B_JLENS_SUMMARY.md)
 - [Phase 1B probe and carry-causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md)
 - [Phase 1C native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md)
+- [Phase 1D stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

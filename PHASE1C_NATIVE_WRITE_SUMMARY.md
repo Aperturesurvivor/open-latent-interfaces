@@ -2,7 +2,8 @@
 
 ## Outcome
 
-**Causal leading-digit write found; full-result write not yet found.**
+**Causal leading-digit write found; it motivated a passing stepwise
+full-result development experiment.**
 
 Replacing the final-prompt residual state with a matched native donor state
 localized a sharp causal transition at HF hidden state 23 / decoder block 22,
@@ -80,7 +81,7 @@ frozen internal-depth gate and survives direct generation.
 - Full multi-token target writing has not passed.
 - No NLA-compatible 1.5B pair exists yet.
 
-## Next experiment
+## Follow-up
 
 Apply matched native donor states at the same boundary at each autoregressive
 digit step. The target is a complete three-digit counterfactual result:
@@ -95,6 +96,9 @@ deterministic target digits
   → emit digit 3
 ```
 
-If that passes, compress the donor replacements into a low-rank typed write
-bridge and compare against random, shuffled, same-digit, and direct-logit
-controls.
+That frozen follow-up passed on 38/45 development examples, versus at most 1/45
+for any control. See the
+[Phase 1D stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md).
+The next experiment is to compress the donor replacements into a low-rank
+typed write bridge and compare against random, shuffled, same-digit, and
+full-residual controls.
