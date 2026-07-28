@@ -2,6 +2,7 @@ from open_latent_interfaces.donors import (
     choose_cyclic_donors,
     choose_donors,
     choose_multi_donors,
+    choose_position_donors,
     choose_prefix_donors,
 )
 from open_latent_interfaces.phase1_data import build_phase1_additions
@@ -80,3 +81,33 @@ def test_prefix_donors_match_targets_and_are_pool_order_invariant() -> None:
         str(fit[index].result).startswith(str(target)[:2])
         for index, target in zip(forward, targets, strict=True)
     )
+
+
+def test_position_donors_match_requested_or_wrong_digit() -> None:
+    examples = build_phase2_additions()
+    fit = [example for example in examples if example.split == "fit"]
+    selection = [example for example in examples if example.split == "selection"]
+    targets = balanced_counterfactual_results(selection)
+    for position in range(3):
+        targeted = choose_position_donors(
+            fit,
+            selection,
+            targets,
+            position=position,
+        )
+        wrong = choose_position_donors(
+            fit,
+            selection,
+            targets,
+            position=position,
+            wrong_digit=True,
+        )
+        for target, targeted_index, wrong_index in zip(
+            targets,
+            targeted,
+            wrong,
+            strict=True,
+        ):
+            desired = int(str(target)[position])
+            assert int(str(fit[targeted_index].result)[position]) == desired
+            assert int(str(fit[wrong_index].result)[position]) != desired

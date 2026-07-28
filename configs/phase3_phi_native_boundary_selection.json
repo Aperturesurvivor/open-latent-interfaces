@@ -1,0 +1,44 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase3_phi_prefill_behavior_development.json",
+  "behavior_result_sha256": "b8c71ac2ae6bb03b9fb707e3434695cea5f98cecdfb584f25a697e0dfdcbda35",
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "dataset_config_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "donor_assignment_sha256": {
+    "0": {
+      "targeted": "bca11c787dbb3811a41651a128d07ed43c6db5c2c6635ecc5c3cb86ff30277ec",
+      "wrong": "2fa3ce515d69008c18aa81c74d19e49e5a6053bd0d6ac81ec3370cd4abcd3569"
+    },
+    "1": {
+      "targeted": "3e21b4e712d9f97c329e8bf8a92a5cb83454457d340923f702a7bdd6eda0a2eb",
+      "wrong": "cd32bac22d12ad9a1f0740c43878ad0c426b7f244e4251d92c2520efff668f1e"
+    },
+    "2": {
+      "targeted": "8483c195b7e108486e08f5216a5b8b740d2ef12c52479a3d84f516b6db446c8d",
+      "wrong": "11674dfe857685a7a534730b10b7450966fcfef2f46b08e5ba7232e255a842c6"
+    }
+  },
+  "hidden_state_indices": [
+    17,
+    21,
+    24,
+    27,
+    30,
+    32
+  ],
+  "random_control_seed": 20260729,
+  "schema_version": "oli.phase3-native-boundary-config/v1",
+  "selection_rule": {
+    "maximum_relative_norm": 1.5,
+    "minimum_control_advantage": 0.25,
+    "minimum_target_accuracy": 0.7,
+    "score_order": [
+      "target_accuracy",
+      "control_advantage",
+      "target_margin",
+      "negative_relative_norm",
+      "earlier_boundary"
+    ]
+  },
+  "target_sha256": "54f954934aae1c812667ea60e68eb49f0a0edd02478ac1e0a6f0f5e3d64be493"
+}

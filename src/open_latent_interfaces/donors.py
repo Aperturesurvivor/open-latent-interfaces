@@ -130,3 +130,43 @@ def choose_prefix_donors(
         slot = int.from_bytes(digest[:8], "big") % len(candidates)
         selections.append(candidates[slot][1])
     return selections
+
+
+def choose_position_donors(
+    donor_pool: list[Any],
+    recipients: list[Any],
+    targets: list[int],
+    *,
+    position: int,
+    wrong_digit: bool = False,
+) -> list[int]:
+    """Choose stable donors by a requested decimal digit at one position."""
+    if len(recipients) != len(targets):
+        raise ValueError("recipients and targets must align")
+    if position not in (0, 1, 2):
+        raise ValueError("position must be 0, 1, or 2")
+    selections = []
+    for recipient, target in zip(recipients, targets, strict=True):
+        rendered_target = str(target)
+        if len(rendered_target) != 3:
+            raise ValueError("position donors require three-digit targets")
+        desired = int(rendered_target[position])
+        if wrong_digit:
+            desired = desired % 9 + 1 if position == 0 else (desired + 1) % 10
+        candidates = sorted(
+            (
+                (donor.example_id, index)
+                for index, donor in enumerate(donor_pool)
+                if int(str(donor.result)[position]) == desired
+            ),
+        )
+        if not candidates:
+            raise ValueError(
+                f"no donor available for digit {desired} at position {position}"
+            )
+        digest = hashlib.sha256(
+            f"{recipient.example_id}:{target}:{position}:{int(wrong_digit)}".encode()
+        ).digest()
+        slot = int.from_bytes(digest[:8], "big") % len(candidates)
+        selections.append(candidates[slot][1])
+    return selections
