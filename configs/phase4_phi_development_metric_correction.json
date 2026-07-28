@@ -1,0 +1,11 @@
+{
+  "correction_rule": {
+    "choose_metric": "exact_result_accuracy",
+    "minimum_control_advantage": 0.25,
+    "minimum_target_accuracy": 0.7,
+    "require_parse_rate": 1.0
+  },
+  "original_result": "results/phase4_phi_donor_free_development.json",
+  "original_result_sha256": "ec524cd83a7823ddcadf8640f204b6ea1f448f4764c5ff671ccc8efd93b0c94d",
+  "schema_version": "oli.phase4-development-metric-correction-config/v1"
+}
