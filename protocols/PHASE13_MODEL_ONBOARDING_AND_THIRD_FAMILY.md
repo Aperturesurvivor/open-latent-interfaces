@@ -388,6 +388,29 @@ and perfect parse and digit-token rates.
 This is the first authorized use of Phase 13 development data. A nonpass must
 be preserved and cannot authorize an audit.
 
+The integrated development run completed once and passed every declared check:
+
+- result: `results/phase13_smollm2_compiler_graft_development.json`
+- result SHA-256:
+  `77119f7935fa2a1cdb17b8dae4ee3a819d812eaebfd386a6a7ea81f79d16f901`
+- reader: 90 / 90 exact operand pairs
+- deterministic host addition: 90 / 90
+- base exact: 27 / 90
+- oracle and latent compiler grafts: 90 / 90 each
+- repaired base errors: 63 / 63
+- preserved base-correct examples: 27 / 27
+- random and wrong-target exact: 28 / 90 and 29 / 90
+- shuffled requested-target following: 83 / 90
+- shuffled true-result exact: 0 / 90
+- shuffled-random requested-target following: 0 / 90
+- latent per-position, parse, and digit-token rates: 100%
+
+The result demonstrates on held exposed data that SmolLM2's early operand
+reader can drive deterministic external addition and a three-step late
+residual compiler, with both identity preservation and causal target
+specificity. It authorizes generation and freezing of one new pair- and
+template-disjoint audit dataset. It is not itself audit evidence.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
