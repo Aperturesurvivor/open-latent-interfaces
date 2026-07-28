@@ -1,0 +1,1193 @@
+{
+  "claim_boundary": "Full residual replacement is an on-manifold donor diagnostic but transfers many variables at once. It localizes causal state without identifying a minimal typed write direction.",
+  "config_sha256": "8a5296bba8c8fdc3ab15deb345bc35d837cca35b922595333332f133890af35f",
+  "created_at": "2026-07-28T08:03:32.078569+00:00",
+  "dataset": {
+    "audit_examples_unopened": 45,
+    "development_examples": 45,
+    "sha256": "33bde4a417cbde662295c3c69265b17dc8160aa110ae8090f5e74819f1e6c7b4"
+  },
+  "donor_selection": {
+    "map": [
+      {
+        "recipient_id": "phase1-development-000",
+        "recipient_result": 688,
+        "same_leading_donor_id": "phase1-development-043",
+        "same_leading_donor_result": 687,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-001",
+        "recipient_result": 441,
+        "same_leading_donor_id": "phase1-development-005",
+        "same_leading_donor_result": 462,
+        "target_donor_id": "phase1-development-028",
+        "target_donor_result": 539
+      },
+      {
+        "recipient_id": "phase1-development-002",
+        "recipient_result": 768,
+        "same_leading_donor_id": "phase1-development-008",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-036",
+        "target_donor_result": 870
+      },
+      {
+        "recipient_id": "phase1-development-003",
+        "recipient_result": 214,
+        "same_leading_donor_id": "phase1-development-025",
+        "same_leading_donor_result": 248,
+        "target_donor_id": "phase1-development-024",
+        "target_donor_result": 325
+      },
+      {
+        "recipient_id": "phase1-development-004",
+        "recipient_result": 367,
+        "same_leading_donor_id": "phase1-development-042",
+        "same_leading_donor_result": 364,
+        "target_donor_id": "phase1-development-017",
+        "target_donor_result": 471
+      },
+      {
+        "recipient_id": "phase1-development-005",
+        "recipient_result": 462,
+        "same_leading_donor_id": "phase1-development-017",
+        "same_leading_donor_result": 471,
+        "target_donor_id": "phase1-development-044",
+        "target_donor_result": 575
+      },
+      {
+        "recipient_id": "phase1-development-006",
+        "recipient_result": 840,
+        "same_leading_donor_id": "phase1-development-032",
+        "same_leading_donor_result": 847,
+        "target_donor_id": "phase1-development-018",
+        "target_donor_result": 928
+      },
+      {
+        "recipient_id": "phase1-development-007",
+        "recipient_result": 150,
+        "same_leading_donor_id": "phase1-development-033",
+        "same_leading_donor_result": 133,
+        "target_donor_id": "phase1-development-035",
+        "target_donor_result": 251
+      },
+      {
+        "recipient_id": "phase1-development-008",
+        "recipient_result": 747,
+        "same_leading_donor_id": "phase1-development-031",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-032",
+        "target_donor_result": 847
+      },
+      {
+        "recipient_id": "phase1-development-009",
+        "recipient_result": 881,
+        "same_leading_donor_id": "phase1-development-036",
+        "same_leading_donor_result": 870,
+        "target_donor_id": "phase1-development-015",
+        "target_donor_result": 961
+      },
+      {
+        "recipient_id": "phase1-development-010",
+        "recipient_result": 103,
+        "same_leading_donor_id": "phase1-development-039",
+        "same_leading_donor_result": 109,
+        "target_donor_id": "phase1-development-003",
+        "target_donor_result": 214
+      },
+      {
+        "recipient_id": "phase1-development-011",
+        "recipient_result": 350,
+        "same_leading_donor_id": "phase1-development-042",
+        "same_leading_donor_result": 364,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-012",
+        "recipient_result": 535,
+        "same_leading_donor_id": "phase1-development-028",
+        "same_leading_donor_result": 539,
+        "target_donor_id": "phase1-development-038",
+        "target_donor_result": 623
+      },
+      {
+        "recipient_id": "phase1-development-013",
+        "recipient_result": 252,
+        "same_leading_donor_id": "phase1-development-035",
+        "same_leading_donor_result": 251,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-014",
+        "recipient_result": 955,
+        "same_leading_donor_id": "phase1-development-030",
+        "same_leading_donor_result": 958,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-015",
+        "recipient_result": 961,
+        "same_leading_donor_id": "phase1-development-030",
+        "same_leading_donor_result": 958,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-016",
+        "recipient_result": 291,
+        "same_leading_donor_id": "phase1-development-013",
+        "same_leading_donor_result": 252,
+        "target_donor_id": "phase1-development-004",
+        "target_donor_result": 367
+      },
+      {
+        "recipient_id": "phase1-development-017",
+        "recipient_result": 471,
+        "same_leading_donor_id": "phase1-development-005",
+        "same_leading_donor_result": 462,
+        "target_donor_id": "phase1-development-044",
+        "target_donor_result": 575
+      },
+      {
+        "recipient_id": "phase1-development-018",
+        "recipient_result": 928,
+        "same_leading_donor_id": "phase1-development-029",
+        "same_leading_donor_result": 906,
+        "target_donor_id": "phase1-development-033",
+        "target_donor_result": 133
+      },
+      {
+        "recipient_id": "phase1-development-019",
+        "recipient_result": 696,
+        "same_leading_donor_id": "phase1-development-000",
+        "same_leading_donor_result": 688,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-020",
+        "recipient_result": 404,
+        "same_leading_donor_id": "phase1-development-001",
+        "same_leading_donor_result": 441,
+        "target_donor_id": "phase1-development-012",
+        "target_donor_result": 535
+      },
+      {
+        "recipient_id": "phase1-development-021",
+        "recipient_result": 616,
+        "same_leading_donor_id": "phase1-development-038",
+        "same_leading_donor_result": 623,
+        "target_donor_id": "phase1-development-023",
+        "target_donor_result": 721
+      },
+      {
+        "recipient_id": "phase1-development-022",
+        "recipient_result": 335,
+        "same_leading_donor_id": "phase1-development-024",
+        "same_leading_donor_result": 325,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-023",
+        "recipient_result": 721,
+        "same_leading_donor_id": "phase1-development-027",
+        "same_leading_donor_result": 730,
+        "target_donor_id": "phase1-development-006",
+        "target_donor_result": 840
+      },
+      {
+        "recipient_id": "phase1-development-024",
+        "recipient_result": 325,
+        "same_leading_donor_id": "phase1-development-022",
+        "same_leading_donor_result": 335,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-025",
+        "recipient_result": 248,
+        "same_leading_donor_id": "phase1-development-035",
+        "same_leading_donor_result": 251,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-026",
+        "recipient_result": 800,
+        "same_leading_donor_id": "phase1-development-006",
+        "same_leading_donor_result": 840,
+        "target_donor_id": "phase1-development-029",
+        "target_donor_result": 906
+      },
+      {
+        "recipient_id": "phase1-development-027",
+        "recipient_result": 730,
+        "same_leading_donor_id": "phase1-development-023",
+        "same_leading_donor_result": 721,
+        "target_donor_id": "phase1-development-006",
+        "target_donor_result": 840
+      },
+      {
+        "recipient_id": "phase1-development-028",
+        "recipient_result": 539,
+        "same_leading_donor_id": "phase1-development-012",
+        "same_leading_donor_result": 535,
+        "target_donor_id": "phase1-development-038",
+        "target_donor_result": 623
+      },
+      {
+        "recipient_id": "phase1-development-029",
+        "recipient_result": 906,
+        "same_leading_donor_id": "phase1-development-018",
+        "same_leading_donor_result": 928,
+        "target_donor_id": "phase1-development-039",
+        "target_donor_result": 109
+      },
+      {
+        "recipient_id": "phase1-development-030",
+        "recipient_result": 958,
+        "same_leading_donor_id": "phase1-development-014",
+        "same_leading_donor_result": 955,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-031",
+        "recipient_result": 747,
+        "same_leading_donor_id": "phase1-development-008",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-032",
+        "target_donor_result": 847
+      },
+      {
+        "recipient_id": "phase1-development-032",
+        "recipient_result": 847,
+        "same_leading_donor_id": "phase1-development-006",
+        "same_leading_donor_result": 840,
+        "target_donor_id": "phase1-development-014",
+        "target_donor_result": 955
+      },
+      {
+        "recipient_id": "phase1-development-033",
+        "recipient_result": 133,
+        "same_leading_donor_id": "phase1-development-007",
+        "same_leading_donor_result": 150,
+        "target_donor_id": "phase1-development-025",
+        "target_donor_result": 248
+      },
+      {
+        "recipient_id": "phase1-development-034",
+        "recipient_result": 483,
+        "same_leading_donor_id": "phase1-development-017",
+        "same_leading_donor_result": 471,
+        "target_donor_id": "phase1-development-037",
+        "target_donor_result": 576
+      },
+      {
+        "recipient_id": "phase1-development-035",
+        "recipient_result": 251,
+        "same_leading_donor_id": "phase1-development-013",
+        "same_leading_donor_result": 252,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-036",
+        "recipient_result": 870,
+        "same_leading_donor_id": "phase1-development-009",
+        "same_leading_donor_result": 881,
+        "target_donor_id": "phase1-development-015",
+        "target_donor_result": 961
+      },
+      {
+        "recipient_id": "phase1-development-037",
+        "recipient_result": 576,
+        "same_leading_donor_id": "phase1-development-044",
+        "same_leading_donor_result": 575,
+        "target_donor_id": "phase1-development-043",
+        "target_donor_result": 687
+      },
+      {
+        "recipient_id": "phase1-development-038",
+        "recipient_result": 623,
+        "same_leading_donor_id": "phase1-development-021",
+        "same_leading_donor_result": 616,
+        "target_donor_id": "phase1-development-023",
+        "target_donor_result": 721
+      },
+      {
+        "recipient_id": "phase1-development-039",
+        "recipient_result": 109,
+        "same_leading_donor_id": "phase1-development-010",
+        "same_leading_donor_result": 103,
+        "target_donor_id": "phase1-development-003",
+        "target_donor_result": 214
+      },
+      {
+        "recipient_id": "phase1-development-040",
+        "recipient_result": 595,
+        "same_leading_donor_id": "phase1-development-037",
+        "same_leading_donor_result": 576,
+        "target_donor_id": "phase1-development-019",
+        "target_donor_result": 696
+      },
+      {
+        "recipient_id": "phase1-development-041",
+        "recipient_result": 196,
+        "same_leading_donor_id": "phase1-development-007",
+        "same_leading_donor_result": 150,
+        "target_donor_id": "phase1-development-016",
+        "target_donor_result": 291
+      },
+      {
+        "recipient_id": "phase1-development-042",
+        "recipient_result": 364,
+        "same_leading_donor_id": "phase1-development-004",
+        "same_leading_donor_result": 367,
+        "target_donor_id": "phase1-development-005",
+        "target_donor_result": 462
+      },
+      {
+        "recipient_id": "phase1-development-043",
+        "recipient_result": 687,
+        "same_leading_donor_id": "phase1-development-000",
+        "same_leading_donor_result": 688,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-044",
+        "recipient_result": 575,
+        "same_leading_donor_id": "phase1-development-037",
+        "same_leading_donor_result": 576,
+        "target_donor_id": "phase1-development-043",
+        "target_donor_result": 687
+      }
+    ],
+    "matching": "suffix distance, carry mismatch count, operand distance",
+    "target_digit": "cyclic next leading digit 1-9",
+    "template_matched": true
+  },
+  "elapsed_seconds": 626.5137971660006,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layers": {
+    "14": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 1.485108733177185,
+          "mean_relative_norm": 0.03320816531777382,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.630728721618652,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.849305152893066,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.832118034362793
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 1.341514229774475,
+          "mean_relative_norm": 0.03000071831047535,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.61388874053955,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.865103721618652,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.805208206176758
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 1.4851090908050537,
+          "mean_relative_norm": 0.033208172768354416,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.611632347106934,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.854340553283691,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.817187309265137
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 1.458170771598816,
+          "mean_relative_norm": 0.0326065793633461,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.648090362548828,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.906944274902344,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.845312118530273
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 1.485108733177185,
+          "mean_relative_norm": 0.03320816531777382,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.624305725097656,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.88038158416748,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.832985877990723
+          }
+        }
+      },
+      "decoder_block": 13
+    },
+    "18": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 5.481212615966797,
+          "mean_relative_norm": 0.09391024708747864,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.558506965637207,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.726388931274414,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.726909637451172
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 5.0538716316223145,
+          "mean_relative_norm": 0.08661536872386932,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.719791412353516,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.940104484558105,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.927430152893066
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 5.48121452331543,
+          "mean_relative_norm": 0.09391029179096222,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.696353912353516,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.865278244018555,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.908159255981445
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 5.380797386169434,
+          "mean_relative_norm": 0.09219895303249359,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.855208396911621,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 13.158854484558105,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.073264122009277
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 5.481212615966797,
+          "mean_relative_norm": 0.09391024708747864,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.63454818725586,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.81701374053955,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.949131965637207
+          }
+        }
+      },
+      "decoder_block": 17
+    },
+    "21": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 23.227115631103516,
+          "mean_relative_norm": 0.3209860026836395,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.878819465637207,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 11.694965362548828,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.155555725097656
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 22.036941528320312,
+          "mean_relative_norm": 0.3044125735759735,
+          "metrics": {
+            "generated_original_exact": 0.7555555555555555,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.30798625946045,
+            "original_digit_accuracy": 0.7777777910232544,
+            "original_mean_digit_margin": 5.5293402671813965,
+            "target_digit_accuracy": 0.02222222276031971,
+            "target_mean_digit_margin": -14.007986068725586
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 23.227121353149414,
+          "mean_relative_norm": 0.3209860920906067,
+          "metrics": {
+            "generated_original_exact": 0.8,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.52170181274414,
+            "original_digit_accuracy": 0.800000011920929,
+            "original_mean_digit_margin": 6.788888931274414,
+            "target_digit_accuracy": 0.02222222276031971,
+            "target_mean_digit_margin": -13.132118225097656
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 22.635517120361328,
+          "mean_relative_norm": 0.31306371092796326,
+          "metrics": {
+            "generated_original_exact": 0.6888888888888889,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -9.557291984558105,
+            "original_digit_accuracy": 0.6888889074325562,
+            "original_mean_digit_margin": 4.804340362548828,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -12.534028053283691
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 23.227115631103516,
+          "mean_relative_norm": 0.3209860026836395,
+          "metrics": {
+            "generated_original_exact": 0.5111111111111111,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -7.99913215637207,
+            "original_digit_accuracy": 0.5111111402511597,
+            "original_mean_digit_margin": 1.4368056058883667,
+            "target_digit_accuracy": 0.06666667014360428,
+            "target_mean_digit_margin": -12.40086841583252
+          }
+        }
+      },
+      "decoder_block": 20
+    },
+    "23": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283344626426697,
+          "metrics": {
+            "generated_original_exact": 0.8444444444444444,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.896528244018555,
+            "original_digit_accuracy": 0.8666666746139526,
+            "original_mean_digit_margin": 8.32204818725586,
+            "target_digit_accuracy": 0.02222222276031971,
+            "target_mean_digit_margin": -12.400346755981445
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 63.19243621826172,
+          "mean_relative_norm": 0.5374929904937744,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.114062309265137,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.813020706176758,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.133159637451172
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283345222473145,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.439409255981445,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.55555534362793,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.629687309265137
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 72.30009460449219,
+          "mean_relative_norm": 0.6166548132896423,
+          "metrics": {
+            "generated_original_exact": 0.06666666666666667,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -0.35642361640930176,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.290277481079102,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -15.005728721618652
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283344626426697,
+          "metrics": {
+            "generated_original_exact": 0.022222222222222223,
+            "generated_target_exact": 0.044444444444444446,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.89305591583252,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.89305591583252,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.822569847106934
+          }
+        }
+      },
+      "decoder_block": 22
+    },
+    "24": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 110.01600646972656,
+          "mean_relative_norm": 0.7117106318473816,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.988715171813965,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 9.680902481079102,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -12.196701049804688
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 85.64696502685547,
+          "mean_relative_norm": 0.5537217259407043,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.157638549804688,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.925520896911621,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.177430152893066
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 110.0160140991211,
+          "mean_relative_norm": 0.7117106914520264,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.15538215637207,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.326562881469727,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.403645515441895
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 108.0156478881836,
+          "mean_relative_norm": 0.69916832447052,
+          "metrics": {
+            "generated_original_exact": 0.06666666666666667,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -0.7138888835906982,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -13.63368034362793,
+            "target_digit_accuracy": 0.06666667014360428,
+            "target_mean_digit_margin": -14.64513874053955
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 110.01600646972656,
+          "mean_relative_norm": 0.7117106914520264,
+          "metrics": {
+            "generated_original_exact": 0.022222222222222223,
+            "generated_target_exact": 0.044444444444444446,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.92725658416748,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.92725658416748,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.942708015441895
+          }
+        }
+      },
+      "decoder_block": 23
+    },
+    "25": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 128.35496520996094,
+          "mean_relative_norm": 0.6891615390777588,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -10.860069274902344,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 8.412500381469727,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -10.994096755981445
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 99.51100158691406,
+          "mean_relative_norm": 0.5342581272125244,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.154340744018555,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.904166221618652,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.176909446716309
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 128.35496520996094,
+          "mean_relative_norm": 0.689161479473114,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.296180725097656,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.374479293823242,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.553125381469727
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 125.96829223632812,
+          "mean_relative_norm": 0.6769561767578125,
+          "metrics": {
+            "generated_original_exact": 0.06666666666666667,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -0.5251736044883728,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.442187309265137,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -15.320659637451172
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 128.35496520996094,
+          "mean_relative_norm": 0.6891615390777588,
+          "metrics": {
+            "generated_original_exact": 0.022222222222222223,
+            "generated_target_exact": 0.044444444444444446,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.901041984558105,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.901041984558105,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.910590171813965
+          }
+        }
+      },
+      "decoder_block": 24
+    },
+    "26": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 155.84878540039062,
+          "mean_relative_norm": 0.6651748418807983,
+          "metrics": {
+            "generated_original_exact": 0.9333333333333333,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -10.631597518920898,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 8.699652671813965,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -10.847569465637207
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 114.65789031982422,
+          "mean_relative_norm": 0.49037984013557434,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.161110877990723,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.913888931274414,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.184374809265137
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 155.84878540039062,
+          "mean_relative_norm": 0.6651749014854431,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.54079818725586,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.58055591583252,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.838021278381348
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 152.9754638671875,
+          "mean_relative_norm": 0.6531640887260437,
+          "metrics": {
+            "generated_original_exact": 0.06666666666666667,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -0.7286458611488342,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.881597518920898,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -15.96961784362793
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 155.84878540039062,
+          "mean_relative_norm": 0.6651748418807983,
+          "metrics": {
+            "generated_original_exact": 0.044444444444444446,
+            "generated_target_exact": 0.044444444444444446,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.910937309265137,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.910937309265137,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.916319847106934
+          }
+        }
+      },
+      "decoder_block": 25
+    },
+    "27": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 180.42156982421875,
+          "mean_relative_norm": 0.6694400310516357,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.034504890441895,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 9.251214981079102,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -11.232769012451172
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 124.78784942626953,
+          "mean_relative_norm": 0.4631631076335907,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.16493034362793,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.912847518920898,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.187847137451172
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 180.42160034179688,
+          "mean_relative_norm": 0.669439971446991,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.360069274902344,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.38732624053955,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.641319274902344
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 176.98269653320312,
+          "mean_relative_norm": 0.6568338871002197,
+          "metrics": {
+            "generated_original_exact": 0.06666666666666667,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -1.318750023841858,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.410069465637207,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -16.073610305786133
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 180.42156982421875,
+          "mean_relative_norm": 0.669439971446991,
+          "metrics": {
+            "generated_original_exact": 0.044444444444444446,
+            "generated_target_exact": 0.022222222222222223,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.906944274902344,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.906944274902344,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.915624618530273
+          }
+        }
+      },
+      "decoder_block": 26
+    },
+    "28": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 118.95179748535156,
+          "mean_relative_norm": 0.7368167638778687,
+          "metrics": {
+            "generated_original_exact": 0.9555555555555556,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.200346946716309,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 11.530902862548828,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.387152671813965
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 83.64421844482422,
+          "mean_relative_norm": 0.5185213088989258,
+          "metrics": {
+            "generated_original_exact": 1.0,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.66649341583252,
+            "original_digit_accuracy": 1.0,
+            "original_mean_digit_margin": 14.58680534362793,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.66649341583252
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 118.95179748535156,
+          "mean_relative_norm": 0.7368168234825134,
+          "metrics": {
+            "generated_original_exact": 0.9777777777777777,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.376214981079102,
+            "original_digit_accuracy": 1.0,
+            "original_mean_digit_margin": 14.125520706176758,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.376214981079102
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 116.61083221435547,
+          "mean_relative_norm": 0.7223222255706787,
+          "metrics": {
+            "generated_original_exact": 0.4444444444444444,
+            "generated_target_exact": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -7.71875,
+            "original_digit_accuracy": 0.3777777850627899,
+            "original_mean_digit_margin": -0.31909722089767456,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -9.355555534362793
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 118.95179748535156,
+          "mean_relative_norm": 0.7368168234825134,
+          "metrics": {
+            "generated_original_exact": 0.2,
+            "generated_target_exact": 0.022222222222222223,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 2.8256945610046387,
+            "original_digit_accuracy": 0.08888889104127884,
+            "original_mean_digit_margin": -2.8256945610046387,
+            "target_digit_accuracy": 0.9111111164093018,
+            "target_mean_digit_margin": 2.792708396911621
+          }
+        }
+      },
+      "decoder_block": 27
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase1-native-donor-patch/v1",
+  "status": "development_only"
+}
