@@ -195,6 +195,14 @@ localized to residual representation or coefficient prediction rather than
 the write boundary itself. See the
 [tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md).
 
+Projecting exact donor transports into a fit-only PCA basis then showed that
+only 16 dimensions are required at index 27: rank 16 retained 89/90 selection
+and 89/90 development tens digits, while rank 32 reached 90/90 selection.
+Matched controls remained at or below 11/90. This separates the remaining
+problem from output dimensionality: the next writer must predict the correct
+16 coefficients without a donor. See the
+[tens delta-rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -275,6 +283,7 @@ either stage.
 - [Phase 2 balanced-counterfactual summary](PHASE2_BALANCED_COUNTERFACTUAL_SUMMARY.md)
 - [Phase 2 fixed-weight scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md)
 - [Phase 2 tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md)
+- [Phase 2 tens native-delta rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
