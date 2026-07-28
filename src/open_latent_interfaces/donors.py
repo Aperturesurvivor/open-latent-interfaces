@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from typing import Any
 
 
@@ -96,4 +97,36 @@ def choose_cyclic_donors(
                 min(candidates, key=lambda item: donor_distance(recipient, item[1]))[0]
             )
         selections.append(row)
+    return selections
+
+
+def choose_prefix_donors(
+    donor_pool: list[Any],
+    recipients: list[Any],
+    targets: list[int],
+    *,
+    prefix_length: int,
+) -> list[int]:
+    """Choose stable donor-pool indices matching each requested result prefix."""
+    if len(recipients) != len(targets):
+        raise ValueError("recipients and targets must align")
+    if prefix_length < 1:
+        raise ValueError("prefix length must be positive")
+    selections = []
+    for recipient, target in zip(recipients, targets, strict=True):
+        prefix = str(target)[:prefix_length]
+        candidates = sorted(
+            (
+                (donor.example_id, index)
+                for index, donor in enumerate(donor_pool)
+                if str(donor.result).startswith(prefix)
+            ),
+        )
+        if not candidates:
+            raise ValueError(f"no donor available for result prefix {prefix}")
+        digest = hashlib.sha256(
+            f"{recipient.example_id}:{prefix}".encode()
+        ).digest()
+        slot = int.from_bytes(digest[:8], "big") % len(candidates)
+        selections.append(candidates[slot][1])
     return selections
