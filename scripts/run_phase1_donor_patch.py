@@ -272,6 +272,12 @@ def main() -> None:
                 max_new_tokens=config["max_new_tokens"],
             )
             parsed = [parse_first_integer(response) for response in responses]
+            hybrid_results = [
+                int(target_digit) * 100 + int(original) % 100
+                for target_digit, original in zip(
+                    target_digits, original_results, strict=True
+                )
+            ]
             metrics = digit_metrics(
                 logits,
                 target_digits,
@@ -293,6 +299,34 @@ def main() -> None:
                     )
                     / len(parsed),
                     "generation_parse_rate": sum(value is not None for value in parsed)
+                    / len(parsed),
+                    "generated_target_leading_digit_accuracy": sum(
+                        value is not None
+                        and 100 <= value <= 999
+                        and int(str(value)[0]) == int(target_digit)
+                        for value, target_digit in zip(
+                            parsed, target_digits, strict=True
+                        )
+                    )
+                    / len(parsed),
+                    "generated_original_suffix_accuracy": sum(
+                        value is not None and value % 100 == int(original) % 100
+                        for value, original in zip(
+                            parsed, original_results, strict=True
+                        )
+                    )
+                    / len(parsed),
+                    "generated_target_donor_suffix_accuracy": sum(
+                        value is not None and value % 100 == int(target) % 100
+                        for value, target in zip(
+                            parsed, target_results, strict=True
+                        )
+                    )
+                    / len(parsed),
+                    "generated_hybrid_exact": sum(
+                        value == hybrid
+                        for value, hybrid in zip(parsed, hybrid_results, strict=True)
+                    )
                     / len(parsed),
                 }
             )

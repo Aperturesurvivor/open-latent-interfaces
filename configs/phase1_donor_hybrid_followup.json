@@ -1,0 +1,16 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "hidden_state_indices": [
+    23
+  ],
+  "max_new_tokens": 8,
+  "probe_config": "configs/phase1_probe_development.json",
+  "probe_config_sha256": "8e7deccf81e6a12b7bdd3dfa5f2d14f8ea90a9160664f6d7b99452541e63f7bb",
+  "random_seed": 20260802,
+  "schema_version": "oli.phase1-native-donor-patch-followup/v1",
+  "selection_evidence": {
+    "development_result_sha256": "8ccb8468cbed6c511738c5ee6a5d383faa5012a649d6252e4a34016ec4125a6b",
+    "reason": "Earliest tested boundary with 93.3% targeted leading-digit transfer"
+  }
+}
