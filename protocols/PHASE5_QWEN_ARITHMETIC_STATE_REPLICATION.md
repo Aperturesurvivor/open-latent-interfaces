@@ -41,3 +41,10 @@ Workflow portability requires comparable causal and held-out evidence in both
 families. It does not require matching layers, vector directions, ranks, or
 effect sizes. Direct Phi-to-Qwen vector transfer is outside scope and must not
 be attempted or implied.
+
+## Behavior result
+
+The frozen non-audit behavior gate passed in every split: 95.56% fit rows,
+95.00% selection rows, and 95.56% development rows were exact, with
+158/180, 39/45, and 41/45 complete-correct quartets respectively. The eligible
+fit pool therefore advances to causal mapping without a behavior amendment.
