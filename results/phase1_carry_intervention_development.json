@@ -1,0 +1,215 @@
+{
+  "candidate": {
+    "decoder_block": 20,
+    "hidden_state_index": 21,
+    "probe_development_metrics": {
+      "accuracy": 0.8222222328186035,
+      "auc": 0.876518189907074,
+      "balanced_accuracy": 0.8248987793922424
+    },
+    "variable": "tens_carry"
+  },
+  "claim_boundary": "Probe-directed residual shifts test one-step hundreds-digit effects. They do not establish full-result sufficiency or on-manifold writes.",
+  "conditions": {
+    "base": {
+      "mean_delta_norm": 0.0,
+      "mean_relative_norm": 0.0,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.848586082458496,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "mean_counterfactual_minus_original_logit": -13.848586082458496,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.638206481933594
+      }
+    },
+    "random|strength=0.5": {
+      "mean_delta_norm": 0.5668635964393616,
+      "mean_relative_norm": 0.00784777570515871,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.844121932983398,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.1666666716337204,
+        "mean_counterfactual_minus_original_logit": -13.844121932983398,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.632440567016602
+      }
+    },
+    "random|strength=1": {
+      "mean_delta_norm": 1.1337273120880127,
+      "mean_relative_norm": 0.01569554954767227,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.818265914916992,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.1666666716337204,
+        "mean_counterfactual_minus_original_logit": -13.818265914916992,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.606584548950195
+      }
+    },
+    "random|strength=2": {
+      "mean_delta_norm": 2.2674548625946045,
+      "mean_relative_norm": 0.03139109909534454,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.826451301574707,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.190476194024086,
+        "mean_counterfactual_minus_original_logit": -13.826451301574707,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.618117332458496
+      }
+    },
+    "random|strength=4": {
+      "mean_delta_norm": 4.534909248352051,
+      "mean_relative_norm": 0.06278220564126968,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.741257667541504,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.1666666716337204,
+        "mean_counterfactual_minus_original_logit": -13.741257667541504,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.541481018066406
+      }
+    },
+    "shuffled_label|strength=0.5": {
+      "mean_delta_norm": 0.5668636560440063,
+      "mean_relative_norm": 0.00784777570515871,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.848958015441895,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.190476194024086,
+        "mean_counterfactual_minus_original_logit": -13.848958015441895,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.637462615966797
+      }
+    },
+    "shuffled_label|strength=1": {
+      "mean_delta_norm": 1.1337273120880127,
+      "mean_relative_norm": 0.01569555141031742,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.841331481933594,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.3095238208770752,
+        "mean_counterfactual_minus_original_logit": -13.841331481933594,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.629464149475098
+      }
+    },
+    "shuffled_label|strength=2": {
+      "mean_delta_norm": 2.2674546241760254,
+      "mean_relative_norm": 0.03139110282063484,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.825334548950195,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.5476190447807312,
+        "mean_counterfactual_minus_original_logit": -13.825334548950195,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.614397048950195
+      }
+    },
+    "shuffled_label|strength=4": {
+      "mean_delta_norm": 4.534909248352051,
+      "mean_relative_norm": 0.06278220564126968,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.7775297164917,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.8571428656578064,
+        "mean_counterfactual_minus_original_logit": -13.7775297164917,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.570870399475098
+      }
+    },
+    "targeted|strength=0.5": {
+      "mean_delta_norm": 0.5668635964393616,
+      "mean_relative_norm": 0.007847774773836136,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.8474702835083,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.6666666865348816,
+        "mean_counterfactual_minus_original_logit": -13.8474702835083,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.639137268066406
+      }
+    },
+    "targeted|strength=1": {
+      "mean_delta_norm": 1.1337271928787231,
+      "mean_relative_norm": 0.01569554954767227,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.845051765441895,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 1.0,
+        "mean_counterfactual_minus_original_logit": -13.845051765441895,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.640067100524902
+      }
+    },
+    "targeted|strength=2": {
+      "mean_delta_norm": 2.2674543857574463,
+      "mean_relative_norm": 0.03139109909534454,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.823288917541504,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 1.0,
+        "mean_counterfactual_minus_original_logit": -13.823288917541504,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.624628067016602
+      }
+    },
+    "targeted|strength=4": {
+      "mean_delta_norm": 4.534908771514893,
+      "mean_relative_norm": 0.06278219819068909,
+      "metrics": {
+        "counterfactual_digit_accuracy": 0.0476190485060215,
+        "counterfactual_mean_digit_margin": -13.78515625,
+        "counterfactual_vocabulary_top1": 0.0476190485060215,
+        "desired_carry_probe_accuracy": 0.976190447807312,
+        "mean_counterfactual_minus_original_logit": -13.78515625,
+        "original_digit_accuracy": 0.9523809552192688,
+        "original_mean_digit_margin": 12.598028182983398
+      }
+    }
+  },
+  "config_sha256": "e51072efbe2f377111b97e473ab6e4dd4f2a943fc2e5e1b2f57d37fee5d43bc5",
+  "created_at": "2026-07-28T07:48:02.783549+00:00",
+  "dataset": {
+    "audit_examples_unopened": 45,
+    "eligible_development_examples": 42,
+    "sha256": "33bde4a417cbde662295c3c69265b17dc8160aa110ae8090f5e74819f1e6c7b4"
+  },
+  "elapsed_seconds": 39.354131125001004,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "intervention": {
+    "desired_state": "opposite tens-carry label",
+    "expected_counterfactual": "result +/- 100",
+    "max_relative_norm": 0.25,
+    "probe_margin": 1.0,
+    "strengths": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ]
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase1-carry-intervention/v1",
+  "status": "development_only"
+}

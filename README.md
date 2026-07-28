@@ -68,6 +68,13 @@ patches—not interpretation prose—must now determine whether earlier
 non-vocabulary state exists. See the
 [Phase 1B J-lens summary](PHASE1B_JLENS_SUMMARY.md).
 
+Layer-wide probes reproduced that timing: exact pre-output result decoding
+peaked at 6.7%, while teacher-forced decoding reached 97.8% only at the final
+hidden state. A tens-carry probe was 82.5% balanced-accurate at an internal
+boundary, but flipping its probe score on 100% of examples produced no
+counterfactual hundreds-digit effect and matched random controls. See the
+[probe and causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -132,6 +139,7 @@ either stage.
 - [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md)
 - [Phase 1A lab notebook](PHASE1A_LAB_NOTEBOOK.md)
 - [Phase 1B J-lens development summary](PHASE1B_JLENS_SUMMARY.md)
+- [Phase 1B probe and carry-causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
