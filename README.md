@@ -91,6 +91,14 @@ causal native sequential write path, but it remains a large full-residual
 transplant rather than a compact deterministic graft. See the
 [stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md).
 
+A donor-free compression then learned position-specific digit subspaces using
+training data only. Its rank-8 leading-digit writer retained 36/45 target
+transfer (80.0%) with clean control separation, but the closed-loop writer
+produced only 2/45 complete results because the second-position interface did
+not generalize. This partial pass localizes the next problem: counterfactual
+prefixes require contextual state transport in addition to digit encoding. See
+the [typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -158,6 +166,7 @@ either stage.
 - [Phase 1B probe and carry-causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md)
 - [Phase 1C native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md)
 - [Phase 1D stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md)
+- [Phase 1E donor-free typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
