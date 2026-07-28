@@ -46,3 +46,18 @@ The original universal selection is a non-pass. The artifact is a single
 donor-free direction and is therefore already rank one as a writable
 coordinate, but development use is unauthorized until the bounded scale
 correction is frozen and executed.
+
+## Bounded correction outcome
+
+The no-rerun correction was frozen at commit `3b4cdcb`. It audited only the
+three original scales under the original thresholds. Scale 1.0 was the sole
+passing scale and is fixed for development; scales 0.5 and 1.5 failed.
+
+- correction result SHA-256:
+  `aa26f80978c20a3baca7f64c00df2a37bc8f8288654ca46a2e7d8a0c8acc77ba`
+- new model inference: none
+- new data, scales, fitted weights, or thresholds: none
+
+This correction does not change the original result's non-pass status. It
+authorizes the predeclared scale-1.0 candidate for untouched development under
+a separately frozen validation gate.

@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "Transparent post-hoc correction of a selection-rule defect. The original run remains a non-pass. No model inference, new scale, fitted weight, or additional data were introduced.",
+  "config_sha256": "3a3be1d94170fe469fae46ec4370f389f1150041aa68e782055096f1b99c1bf5",
+  "correction_rule": {
+    "choose": "smallest_scale_passing_all_original_gates",
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": 1.0
+  },
+  "created_at": "2026-07-28T15:40:14.875662+00:00",
+  "original_result": {
+    "passes": false,
+    "path": "results/phase4_phi_universal_carry_selection.json",
+    "selected_scale": 1.5,
+    "sha256": "a4b151f5b1dee6995cb5038c861afbada3f252b9abcd6c46138da4851b378929"
+  },
+  "passes": true,
+  "passing_scales": [
+    1.0
+  ],
+  "scale_audit": {
+    "0.5": {
+      "control_advantage": 0.08888888888888889,
+      "parse_rate": 1.0,
+      "passes_all_original_gates": false,
+      "strongest_control_tens_accuracy": 0.06666666666666667,
+      "target_full_accuracy": 0.15555555555555556,
+      "target_tens_accuracy": 0.15555555555555556
+    },
+    "1.0": {
+      "control_advantage": 0.3111111111111111,
+      "parse_rate": 1.0,
+      "passes_all_original_gates": true,
+      "strongest_control_tens_accuracy": 0.4,
+      "target_full_accuracy": 0.6666666666666666,
+      "target_tens_accuracy": 0.7111111111111111
+    },
+    "1.5": {
+      "control_advantage": 0.13333333333333341,
+      "parse_rate": 1.0,
+      "passes_all_original_gates": false,
+      "strongest_control_tens_accuracy": 0.7333333333333333,
+      "target_full_accuracy": 0.8222222222222222,
+      "target_tens_accuracy": 0.8666666666666667
+    }
+  },
+  "schema_version": "oli.phase4-universal-carry-scale-correction/v1",
+  "selected_scale": 1.0,
+  "status": "post_hoc_bounded_rule_correction_no_model_rerun"
+}

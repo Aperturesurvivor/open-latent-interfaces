@@ -344,6 +344,10 @@ advantage failed; the original run is therefore preserved as a non-pass
 pending a bounded no-rerun rule correction. See the
 [Phase 4 universal carry summary](PHASE4_UNIVERSAL_CARRY_SUMMARY.md).
 
+The bounded correction then found that scale 1.0—and only scale 1.0—passed all
+original gates. No model inference or new candidate was introduced. That
+single universal direction is therefore fixed for untouched development.
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss

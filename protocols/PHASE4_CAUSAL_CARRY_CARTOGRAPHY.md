@@ -142,6 +142,11 @@ audit all predeclared scales under the original thresholds and select the
 smallest scale passing every gate. It may not add scales, rerun inference,
 change thresholds, or introduce data or weights.
 
+The bounded correction selected scale 1.0 as the only predeclared scale
+passing all original gates. The original selection remains a non-pass. A
+development runner may now use exactly that universal vector, index 13, and
+scale 1.0 without further tuning.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
