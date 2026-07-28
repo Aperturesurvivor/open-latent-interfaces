@@ -394,6 +394,12 @@ scale 2.0: 26/45 target tens versus 7/45 matched no-carry and 0/45 random.
 Scale 2.0 was the smallest passing candidate. See the
 [Phase 5 Qwen carry-scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md).
 
+Qwen-only donor-free fitting then produced a 40/45 exact operand writer at
+scale 1.0. Its digit-conditioned carry writer failed because wrong source-digit
+classes transferred equally well, independently favoring a universal carry
+direction. See the
+[Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -504,6 +510,7 @@ either stage.
 - [Phase 5 Qwen carry-behavior summary](PHASE5_QWEN_CARRY_BEHAVIOR_SUMMARY.md)
 - [Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md)
 - [Phase 5 Qwen carry-context scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md)
+- [Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)

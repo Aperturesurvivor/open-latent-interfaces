@@ -86,3 +86,10 @@ evaluates scales 0.5, 1.0, 1.5, 2.0, and 3.0. The operand target must beat
 wrong-class and isotropic controls; the carry target must beat matched
 no-carry, wrong-class, and isotropic controls. The smallest scale satisfying
 all gates is selected. Development remains unopened.
+
+The donor-free operand writer passed at index 12 and scale 1.0 with 40/45
+exact targets against 1/45 wrong-class exact and 0/45 random. The
+digit-conditioned carry writer failed because wrong source-digit classes
+transferred equally well. A bounded universal-vector follow-up may aggregate
+the already fitted Qwen class vectors by their fit counts and compare them
+with the equivalently aggregated no-carry vector and isotropic control.
