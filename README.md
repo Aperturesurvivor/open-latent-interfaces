@@ -32,6 +32,12 @@ be trained, then frozen for inference.
 No NLA has been trained here. No deterministic graft has passed an end-to-end
 audit. Probe decodability is not treated as causal use.
 
+The first completed Qwen2.5-0.5B pilot is an infrastructure success and a
+scientific non-pass: approximate result information was decodable, but exact
+recovery failed and the causal first-digit advantage over a shuffled-result
+control was small. See the
+[Phase 0 executive summary](PHASE0_EXECUTIVE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -71,6 +77,7 @@ interpreting the output.
 - [Research program](docs/RESEARCH_PROGRAM.md)
 - [Prior art and claims boundary](docs/PRIOR_ART_AND_CLAIMS.md)
 - [Phase 0 pilot protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md)
+- [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 
 ## Upstream foundations
 

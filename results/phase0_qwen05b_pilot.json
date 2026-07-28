@@ -1,0 +1,411 @@
+{
+  "causal_result_intervention": {
+    "base": {
+      "mean_target_logit": 20.71435546875,
+      "mean_target_rank": 3.15625,
+      "median_target_rank": 2.0,
+      "top1_exact": 0.46875
+    },
+    "eligible_examples": 32,
+    "endpoint": "first generated result digit only",
+    "fit_digit_support": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ineligible_first_digit_examples": 0,
+    "pilot_selected_strength": 2.0,
+    "selection_warning": "Strength was selected on the pilot test set; it must be frozen on a new audit before any confirmatory claim.",
+    "status": "pilot_complete",
+    "strength_sweep": {
+      "0.5": {
+        "activation_norm_mean": 235.27816772460938,
+        "delta_norm_mean": 1.8401293754577637,
+        "shuffled_margin_delta": 0.0048828125,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.7177734375,
+          "mean_target_rank": 3.03125,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.46875
+        },
+        "targeted": {
+          "mean_target_logit": 20.71435546875,
+          "mean_target_rank": 3.0,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.46875
+        },
+        "targeted_margin_delta": 0.01171875,
+        "targeted_minus_shuffled_margin_delta": 0.0068359375
+      },
+      "1.0": {
+        "activation_norm_mean": 235.27816772460938,
+        "delta_norm_mean": 3.6802587509155273,
+        "shuffled_margin_delta": 0.00927734375,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.68701171875,
+          "mean_target_rank": 2.96875,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.46875
+        },
+        "targeted": {
+          "mean_target_logit": 20.693359375,
+          "mean_target_rank": 2.875,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.46875
+        },
+        "targeted_margin_delta": 0.021484375,
+        "targeted_minus_shuffled_margin_delta": 0.01220703125
+      },
+      "2.0": {
+        "activation_norm_mean": 235.27816772460938,
+        "delta_norm_mean": 7.360517501831055,
+        "shuffled_margin_delta": 0.00537109375,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.53271484375,
+          "mean_target_rank": 3.09375,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.4375
+        },
+        "targeted": {
+          "mean_target_logit": 20.60693359375,
+          "mean_target_rank": 2.71875,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.5
+        },
+        "targeted_margin_delta": 0.04541015625,
+        "targeted_minus_shuffled_margin_delta": 0.0400390625
+      }
+    },
+    "unused_scalar_probe_test_metrics": {
+      "mae": 78.54490661621094,
+      "r2": 0.6803343296051025,
+      "rounded_exact": 0.0
+    },
+    "write_bridge": "leading-digit categorical ridge margin direction"
+  },
+  "claim_boundary": "This run tests frozen-model observability and a probe-defined oracle-result intervention. It is not an NLA, an end-to-end deterministic graft, or proof of a model-native mathematical API.",
+  "configuration": {
+    "batch_size": 8,
+    "digit_margin": 1.0,
+    "graft_strengths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "hidden_state_indices": [
+      5,
+      10,
+      14,
+      19,
+      24
+    ],
+    "max_relative_norm": 0.15,
+    "probe_l2": 10.0,
+    "seed": 240727
+  },
+  "dataset": {
+    "development_examples": 128,
+    "examples": 640,
+    "generator": "open_latent_interfaces.dataset.build_phase0_dataset",
+    "sha256": "bedf2010922efa6704c63600dd9d66e0525a574311653bd2f4e7a576bda5c808",
+    "test_examples": 128,
+    "train_examples": 384
+  },
+  "environment": {
+    "created_at": "2026-07-28T06:27:28.749096+00:00",
+    "cuda_available": false,
+    "git_commit": "463f6f3d983ad0a3db10f2d0064659b6457f684c",
+    "mps_available": true,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layer_metrics": {
+    "10": {
+      "leading_digit_development": {
+        "accuracy": 0.21875,
+        "macro_recall_present_classes": 0.31700682640075684,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.3333333432674408,
+          "2": 0.0,
+          "3": 0.20000000298023224,
+          "4": 0.2857142984867096,
+          "5": 0.4000000059604645,
+          "6": 0.0,
+          "7": null,
+          "8": 1.0,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.1875,
+        "macro_recall_present_classes": 0.22083334624767303,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.3333333432674408,
+          "4": 0.0,
+          "5": 0.3333333432674408,
+          "6": 0.5,
+          "7": 0.0,
+          "8": 0.6000000238418579,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 64.52314758300781,
+        "r2": 0.7763186693191528,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 78.99945068359375,
+        "r2": 0.7863329648971558,
+        "rounded_exact": 0.0
+      }
+    },
+    "14": {
+      "leading_digit_development": {
+        "accuracy": 0.15625,
+        "macro_recall_present_classes": 0.26802724599838257,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.3333333432674408,
+          "2": 0.0,
+          "3": 0.20000000298023224,
+          "4": 0.1428571492433548,
+          "5": 0.20000000298023224,
+          "6": 0.0,
+          "7": null,
+          "8": 1.0,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.1875,
+        "macro_recall_present_classes": 0.17847223579883575,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.0,
+          "2": 0.25,
+          "3": 0.3333333432674408,
+          "4": 0.1111111119389534,
+          "5": 0.3333333432674408,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.4000000059604645,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 52.70375442504883,
+        "r2": 0.8563267588615417,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 64.66919708251953,
+        "r2": 0.8607266545295715,
+        "rounded_exact": 0.0
+      }
+    },
+    "19": {
+      "leading_digit_development": {
+        "accuracy": 0.34375,
+        "macro_recall_present_classes": 0.414965957403183,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.3333333432674408,
+          "2": 0.0,
+          "3": 0.20000000298023224,
+          "4": 0.1428571492433548,
+          "5": 0.800000011920929,
+          "6": 0.4285714328289032,
+          "7": null,
+          "8": 1.0,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.3125,
+        "macro_recall_present_classes": 0.29027777910232544,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.0,
+          "2": 0.25,
+          "3": 0.3333333432674408,
+          "4": 0.2222222238779068,
+          "5": 0.6666666865348816,
+          "6": 0.0,
+          "7": 0.25,
+          "8": 0.6000000238418579,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 79.84849548339844,
+        "r2": 0.6246322393417358,
+        "rounded_exact": 0.03125
+      },
+      "sum_test": {
+        "mae": 77.1639175415039,
+        "r2": 0.7139819860458374,
+        "rounded_exact": 0.0
+      }
+    },
+    "24": {
+      "leading_digit_development": {
+        "accuracy": 0.4375,
+        "macro_recall_present_classes": 0.5023809671401978,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.6666666865348816,
+          "2": 0.25,
+          "3": 0.20000000298023224,
+          "4": 0.4285714328289032,
+          "5": 0.4000000059604645,
+          "6": 0.5714285969734192,
+          "7": null,
+          "8": 1.0,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.53125,
+        "macro_recall_present_classes": 0.4437500238418579,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.0,
+          "2": 0.25,
+          "3": 0.6666666865348816,
+          "4": 0.6666666865348816,
+          "5": 0.6666666865348816,
+          "6": 0.0,
+          "7": 0.5,
+          "8": 0.800000011920929,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 83.84202575683594,
+        "r2": 0.6123015880584717,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 75.94825744628906,
+        "r2": 0.7251459956169128,
+        "rounded_exact": 0.0
+      }
+    },
+    "5": {
+      "leading_digit_development": {
+        "accuracy": 0.25,
+        "macro_recall_present_classes": 0.33741495013237,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.3333333432674408,
+          "2": 0.0,
+          "3": 0.20000000298023224,
+          "4": 0.1428571492433548,
+          "5": 0.4000000059604645,
+          "6": 0.2857142984867096,
+          "7": null,
+          "8": 1.0,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.3125,
+        "macro_recall_present_classes": 0.37013888359069824,
+        "per_class_recall": {
+          "0": null,
+          "1": 0.5,
+          "2": 0.0,
+          "3": 0.3333333432674408,
+          "4": 0.1111111119389534,
+          "5": 0.6666666865348816,
+          "6": 0.5,
+          "7": 0.25,
+          "8": 0.6000000238418579,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 58.66617202758789,
+        "r2": 0.835671067237854,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 49.14205551147461,
+        "r2": 0.9153262376785278,
+        "rounded_exact": 0.0
+      }
+    }
+  },
+  "model": {
+    "frozen_parameters": true,
+    "name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "number_of_blocks": 24,
+    "requested_revision": "main",
+    "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "pilot_selected_hidden_state_index": 24,
+  "status": "pilot",
+  "study": "phase0-native-mathematical-channel-pilot"
+}
