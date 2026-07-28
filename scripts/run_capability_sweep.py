@@ -50,6 +50,7 @@ def main() -> None:
         seed=config["dataset"]["seed"],
         development_pairs=config["dataset"]["development_pairs"],
         audit_pairs=config["dataset"]["audit_pairs"],
+        protocol_version=config["dataset"].get("protocol_version", "v1"),
     )
     observed_hash = capability_dataset_sha256(examples)
     if observed_hash != config["dataset"]["sha256"]:
@@ -141,6 +142,38 @@ def main() -> None:
             row
         )
         regimes[row["regime"]].append(row)
+    primary_presentations = config["selection_rule"].get(
+        "primary_presentations", ["raw", "chat"]
+    )
+    primary_rows = [
+        row for row in rows if row["presentation"] in primary_presentations
+    ]
+    primary_regimes: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    primary_cells: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(
+        list
+    )
+    for row in primary_rows:
+        primary_regimes[row["regime"]].append(row)
+        primary_cells[
+            (row["regime"], row["template_family"], row["presentation"])
+        ].append(row)
+    aggregate_threshold = config["selection_rule"]["aggregate_exact_accuracy"]
+    cell_threshold = config["selection_rule"]["worst_cell_exact_accuracy"]
+    gate_by_regime = {}
+    for regime, regime_rows in sorted(primary_regimes.items()):
+        aggregate = summarize(regime_rows)["exact_accuracy"]
+        relevant_cells = [
+            summarize(cell_rows)["exact_accuracy"]
+            for key, cell_rows in primary_cells.items()
+            if key[0] == regime
+        ]
+        worst_cell = min(relevant_cells)
+        gate_by_regime[regime] = {
+            "aggregate_exact_accuracy": aggregate,
+            "worst_cell_exact_accuracy": worst_cell,
+            "passes": aggregate >= aggregate_threshold
+            and worst_cell >= cell_threshold,
+        }
     report = {
         "schema_version": "oli.capability-sweep/v1",
         "created_at": datetime.now(UTC).isoformat(),
@@ -156,6 +189,11 @@ def main() -> None:
             "dtype": args.dtype,
         },
         "overall": summarize(rows),
+        "primary_selection": {
+            "presentations": primary_presentations,
+            "overall": summarize(primary_rows),
+            "regimes": gate_by_regime,
+        },
         "regimes": {
             regime: summarize(regime_rows)
             for regime, regime_rows in sorted(regimes.items())

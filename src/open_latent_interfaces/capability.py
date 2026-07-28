@@ -9,7 +9,7 @@ from typing import Literal
 
 CapabilitySplit = Literal["development", "audit"]
 
-CAPABILITY_TEMPLATES = {
+CAPABILITY_TEMPLATES_V1 = {
     "direct": "What is {a} + {b}? Respond with only the integer.",
     "symbolic": "{a} + {b} =",
     "word_problem": (
@@ -17,6 +17,16 @@ CAPABILITY_TEMPLATES = {
         "How many pieces are there in total? Respond with only the integer."
     ),
 }
+CAPABILITY_TEMPLATES_V2 = {
+    "direct": "What is {a} + {b}? Respond with only the integer.",
+    "symbolic": "Compute {a} + {b}. Respond with only the integer.",
+    "word_problem": (
+        "There are {a} red pieces and {b} blue pieces. "
+        "How many pieces are there in total? Respond with only the integer."
+    ),
+}
+# Backward-compatible public alias for the already-run v1 sweep.
+CAPABILITY_TEMPLATES = CAPABILITY_TEMPLATES_V1
 
 
 @dataclass(frozen=True)
@@ -86,6 +96,7 @@ def build_capability_sweep(
     seed: int = 20260728,
     development_pairs: int = 12,
     audit_pairs: int = 8,
+    protocol_version: str = "v1",
 ) -> list[CapabilityExample]:
     if min(development_pairs, audit_pairs) < 1:
         raise ValueError("both splits require at least one pair")
@@ -96,6 +107,12 @@ def build_capability_sweep(
         "two_digit_with_carry",
         "three_digit_mixed",
     )
+    if protocol_version == "v1":
+        templates = CAPABILITY_TEMPLATES_V1
+    elif protocol_version == "v2":
+        templates = CAPABILITY_TEMPLATES_V2
+    else:
+        raise ValueError(f"unknown capability protocol version: {protocol_version}")
     examples: list[CapabilityExample] = []
     for regime_index, regime in enumerate(regimes):
         pairs = _candidate_pairs(regime)
@@ -113,7 +130,7 @@ def build_capability_sweep(
                 a, b = canonical_pair
                 if rng.randrange(2):
                     a, b = b, a
-                for family, template in CAPABILITY_TEMPLATES.items():
+                for family, template in templates.items():
                     base_prompt = template.format(a=a, b=b)
                     for presentation in ("raw", "chat"):
                         examples.append(
@@ -153,7 +170,7 @@ def assert_capability_invariants(examples: list[CapabilityExample]) -> None:
             raise ValueError(f"wrong result for {example.example_id}")
     expected_conditions = {
         (family, presentation)
-        for family in CAPABILITY_TEMPLATES
+        for family in {example.template_family for example in examples}
         for presentation in ("raw", "chat")
     }
     if any(value != expected_conditions for value in conditions.values()):

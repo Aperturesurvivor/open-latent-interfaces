@@ -7,12 +7,24 @@ reliably before claiming to map its correct mathematical reasoning. This gate
 was added after Phase 1A showed strong generic numeric readout but chance-level
 value identity on a regime the base model did not solve.
 
+## V1 outcome and V2 revision
+
+V1 failed and its audit was never opened. It also exposed that the symbolic
+template did not request answer-only output, making first-integer scoring
+incommensurate across templates. The preserved result is in
+`CAPABILITY_GATE_V1_RESULTS.md`.
+
+V2 is a newly frozen development/audit experiment. Every template explicitly
+requests only the integer. Native chat formatting is the primary interface for
+the instruction-tuned checkpoint; raw formatting remains a diagnostic control
+and cannot help a regime pass.
+
 ## Frozen factors
 
 - five regimes: single-digit no-carry, single-digit carry, two-digit no-carry,
   two-digit carry, and mixed three-digit;
 - three prompt families: direct, symbolic, and word problem;
-- raw and native chat-template presentation;
+- native chat-template presentation as primary, raw presentation as diagnostic;
 - 12 development and 8 audit canonical operand pairs per regime;
 - reversed operands cannot cross splits;
 - greedy generation with a fixed maximum of eight new tokens;
@@ -26,7 +38,7 @@ audit pairs are exact- and commutative-disjoint.
 Development may select the easiest regime satisfying both:
 
 1. at least 90% aggregate exact accuracy;
-2. at least 80% exact accuracy in every template/presentation cell.
+2. at least 80% exact accuracy in every primary chat-template-family cell.
 
 Prefer the hardest regime that passes. No individual example may be removed.
 The selected regime and rule must be committed before authorizing the audit.

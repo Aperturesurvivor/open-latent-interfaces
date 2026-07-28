@@ -27,6 +27,9 @@ def test_capability_dataset_is_deterministic() -> None:
     assert capability_dataset_sha256(
         build_capability_sweep()
     ) == capability_dataset_sha256(build_capability_sweep())
+    assert capability_dataset_sha256(
+        build_capability_sweep(protocol_version="v1")
+    ) != capability_dataset_sha256(build_capability_sweep(protocol_version="v2"))
 
 
 def test_parse_first_integer() -> None:
