@@ -291,6 +291,13 @@ most 1/90 exact for any norm-matched control. The audit remains sealed pending
 a committed one-shot package. See the
 [Phase 3 closed-loop development summary](PHASE3_PHI_CLOSED_LOOP_DEVELOPMENT_SUMMARY.md).
 
+The sealed Phi audit then passed every gate on its single authorized run:
+70/90 exact counterfactual results, position accuracies of 70/90, 90/90, and
+90/90, identity preservation of 89/90, and 0/90 exact for every matched
+control. This independently reproduces the donor-free native-coordinate
+workflow in a second model family, while using different boundaries and ranks.
+See the [Phase 3 audit summary](PHASE3_PHI_AUDIT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -384,6 +391,7 @@ either stage.
 - [Phase 3 Phi prototype-selection summary](PHASE3_PHI_PROTOTYPE_SELECTION_SUMMARY.md)
 - [Phase 3 Phi leading-prototype rank summary](PHASE3_PHI_LEADING_PROTOTYPE_RANK_SUMMARY.md)
 - [Phase 3 Phi closed-loop development summary](PHASE3_PHI_CLOSED_LOOP_DEVELOPMENT_SUMMARY.md)
+- [Phase 3 Phi one-shot audit summary](PHASE3_PHI_AUDIT_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
