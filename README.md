@@ -232,9 +232,11 @@ Substituting both suffix dictionaries into closed-loop generation produced
 87/90 exact balanced counterfactual results. Leading, tens, and ones control
 reached 87/90, 90/90, and 90/90; identity reached 90/90; the strongest exact
 matched control reached 10/90. Every frozen development gate passed. The
-project is now eligible to freeze—not adapt—its first one-shot audit package.
-See the
-[dual-prototype summary](PHASE2_CLOSED_LOOP_DUAL_PROTOTYPE_SUMMARY.md).
+project then froze and executed its first one-shot audit package. On the held-
+out audit prompt family, exact control reached 88/90, both suffix positions
+reached 90/90, identity reached 90/90, and the strongest exact control reached
+12/90. Every frozen audit gate passed. See the
+[one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md).
 
 ## Why this is separate from ordinary activation steering
 
@@ -321,6 +323,7 @@ either stage.
 - [Phase 2 closed-loop hybrid summary](PHASE2_CLOSED_LOOP_HYBRID_SUMMARY.md)
 - [Phase 2 cross-position ones prototype summary](PHASE2_ONES_PROTOTYPE_TRANSFER_SUMMARY.md)
 - [Phase 2 closed-loop dual-prototype summary](PHASE2_CLOSED_LOOP_DUAL_PROTOTYPE_SUMMARY.md)
+- [Phase 2 one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

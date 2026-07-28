@@ -1,0 +1,6691 @@
+{
+  "advancement_gate": {
+    "control_advantage_minimum": 0.25,
+    "exact_target_minimum": 0.5,
+    "identity_preservation_minimum": 0.9,
+    "parse_rate_required": 1.0,
+    "per_position_target_minimum": 0.7,
+    "relative_norm_maximum": 1.0
+  },
+  "claim_boundary": "One-shot frozen audit; no post-audit selection or repair.",
+  "conditions": {
+    "base": {
+      "hard_gate_rate_by_step": [
+        0.03333333507180214,
+        0.0,
+        0.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "original_full_result_accuracy": 0.9111111111111111,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "990",
+          "original_result": 990,
+          "parsed": 990,
+          "predicted_token_ids": [
+            24,
+            24,
+            15
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "506",
+          "original_result": 506,
+          "parsed": 506,
+          "predicted_token_ids": [
+            20,
+            15,
+            21
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "475",
+          "original_result": 475,
+          "parsed": 475,
+          "predicted_token_ids": [
+            19,
+            22,
+            20
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "134",
+          "original_result": 134,
+          "parsed": 134,
+          "predicted_token_ids": [
+            16,
+            18,
+            19
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "538",
+          "original_result": 548,
+          "parsed": 538,
+          "predicted_token_ids": [
+            20,
+            18,
+            23
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "253",
+          "original_result": 253,
+          "parsed": 253,
+          "predicted_token_ids": [
+            17,
+            20,
+            18
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "772",
+          "original_result": 772,
+          "parsed": 772,
+          "predicted_token_ids": [
+            22,
+            22,
+            17
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "726",
+          "original_result": 726,
+          "parsed": 726,
+          "predicted_token_ids": [
+            22,
+            17,
+            21
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "662",
+          "original_result": 662,
+          "parsed": 662,
+          "predicted_token_ids": [
+            21,
+            21,
+            17
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "979",
+          "original_result": 979,
+          "parsed": 979,
+          "predicted_token_ids": [
+            24,
+            22,
+            24
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "168",
+          "original_result": 168,
+          "parsed": 168,
+          "predicted_token_ids": [
+            16,
+            21,
+            23
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "196",
+          "original_result": 196,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "264",
+          "original_result": 264,
+          "parsed": 264,
+          "predicted_token_ids": [
+            17,
+            21,
+            19
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "470",
+          "original_result": 470,
+          "parsed": 470,
+          "predicted_token_ids": [
+            19,
+            22,
+            15
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            23,
+            23,
+            17
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "627",
+          "original_result": 627,
+          "parsed": 627,
+          "predicted_token_ids": [
+            21,
+            17,
+            22
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "133",
+          "original_result": 133,
+          "parsed": 133,
+          "predicted_token_ids": [
+            16,
+            18,
+            18
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "717",
+          "original_result": 717,
+          "parsed": 717,
+          "predicted_token_ids": [
+            22,
+            16,
+            22
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "106",
+          "original_result": 106,
+          "parsed": 106,
+          "predicted_token_ids": [
+            16,
+            15,
+            21
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "138",
+          "original_result": 138,
+          "parsed": 138,
+          "predicted_token_ids": [
+            16,
+            18,
+            23
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "844",
+          "original_result": 844,
+          "parsed": 844,
+          "predicted_token_ids": [
+            23,
+            19,
+            19
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "694",
+          "original_result": 694,
+          "parsed": 694,
+          "predicted_token_ids": [
+            21,
+            24,
+            19
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "731",
+          "original_result": 731,
+          "parsed": 731,
+          "predicted_token_ids": [
+            22,
+            18,
+            16
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "315",
+          "original_result": 315,
+          "parsed": 315,
+          "predicted_token_ids": [
+            18,
+            16,
+            20
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "335",
+          "original_result": 335,
+          "parsed": 335,
+          "predicted_token_ids": [
+            18,
+            18,
+            20
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "976",
+          "original_result": 976,
+          "parsed": 976,
+          "predicted_token_ids": [
+            24,
+            22,
+            21
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            23,
+            15,
+            19
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "829",
+          "original_result": 829,
+          "parsed": 829,
+          "predicted_token_ids": [
+            23,
+            17,
+            24
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "971",
+          "original_result": 971,
+          "parsed": 971,
+          "predicted_token_ids": [
+            24,
+            22,
+            16
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "597",
+          "original_result": 497,
+          "parsed": 597,
+          "predicted_token_ids": [
+            20,
+            24,
+            22
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "234",
+          "original_result": 234,
+          "parsed": 234,
+          "predicted_token_ids": [
+            17,
+            18,
+            19
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "705",
+          "original_result": 705,
+          "parsed": 705,
+          "predicted_token_ids": [
+            22,
+            15,
+            20
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "539",
+          "original_result": 539,
+          "parsed": 539,
+          "predicted_token_ids": [
+            20,
+            18,
+            24
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "351",
+          "original_result": 351,
+          "parsed": 351,
+          "predicted_token_ids": [
+            18,
+            20,
+            16
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "405",
+          "original_result": 405,
+          "parsed": 405,
+          "predicted_token_ids": [
+            19,
+            15,
+            20
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            17,
+            16,
+            22
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "558",
+          "original_result": 558,
+          "parsed": 558,
+          "predicted_token_ids": [
+            20,
+            20,
+            23
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "333",
+          "original_result": 233,
+          "parsed": 333,
+          "predicted_token_ids": [
+            18,
+            18,
+            18
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "732",
+          "original_result": 732,
+          "parsed": 732,
+          "predicted_token_ids": [
+            22,
+            18,
+            17
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "356",
+          "original_result": 356,
+          "parsed": 356,
+          "predicted_token_ids": [
+            18,
+            20,
+            21
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "452",
+          "original_result": 452,
+          "parsed": 452,
+          "predicted_token_ids": [
+            19,
+            20,
+            17
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "512",
+          "original_result": 512,
+          "parsed": 512,
+          "predicted_token_ids": [
+            20,
+            16,
+            17
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "382",
+          "original_result": 282,
+          "parsed": 382,
+          "predicted_token_ids": [
+            18,
+            23,
+            17
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "325",
+          "original_result": 325,
+          "parsed": 325,
+          "predicted_token_ids": [
+            18,
+            17,
+            20
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "154",
+          "original_result": 154,
+          "parsed": 154,
+          "predicted_token_ids": [
+            16,
+            20,
+            19
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "891",
+          "original_result": 891,
+          "parsed": 891,
+          "predicted_token_ids": [
+            23,
+            24,
+            16
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "198",
+          "original_result": 198,
+          "parsed": 198,
+          "predicted_token_ids": [
+            16,
+            24,
+            23
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "486",
+          "original_result": 486,
+          "parsed": 486,
+          "predicted_token_ids": [
+            19,
+            23,
+            21
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "644",
+          "original_result": 644,
+          "parsed": 644,
+          "predicted_token_ids": [
+            21,
+            19,
+            19
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            18,
+            20,
+            19
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "713",
+          "original_result": 713,
+          "parsed": 713,
+          "predicted_token_ids": [
+            22,
+            16,
+            18
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "774",
+          "original_result": 774,
+          "parsed": 774,
+          "predicted_token_ids": [
+            22,
+            22,
+            19
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "995",
+          "original_result": 995,
+          "parsed": 995,
+          "predicted_token_ids": [
+            24,
+            24,
+            20
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "378",
+          "original_result": 378,
+          "parsed": 378,
+          "predicted_token_ids": [
+            18,
+            22,
+            23
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "831",
+          "original_result": 831,
+          "parsed": 831,
+          "predicted_token_ids": [
+            23,
+            18,
+            16
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "416",
+          "original_result": 416,
+          "parsed": 416,
+          "predicted_token_ids": [
+            19,
+            16,
+            21
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "611",
+          "original_result": 611,
+          "parsed": 611,
+          "predicted_token_ids": [
+            21,
+            16,
+            16
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "545",
+          "original_result": 245,
+          "parsed": 545,
+          "predicted_token_ids": [
+            20,
+            19,
+            20
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "627",
+          "original_result": 307,
+          "parsed": 627,
+          "predicted_token_ids": [
+            21,
+            17,
+            22
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "403",
+          "original_result": 403,
+          "parsed": 403,
+          "predicted_token_ids": [
+            19,
+            15,
+            18
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "595",
+          "original_result": 595,
+          "parsed": 595,
+          "predicted_token_ids": [
+            20,
+            24,
+            20
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            24,
+            22,
+            19
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "748",
+          "original_result": 748,
+          "parsed": 748,
+          "predicted_token_ids": [
+            22,
+            19,
+            23
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "919",
+          "original_result": 919,
+          "parsed": 919,
+          "predicted_token_ids": [
+            24,
+            16,
+            24
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "268",
+          "original_result": 268,
+          "parsed": 268,
+          "predicted_token_ids": [
+            17,
+            21,
+            23
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "617",
+          "original_result": 617,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "462",
+          "original_result": 462,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "368",
+          "original_result": 368,
+          "parsed": 368,
+          "predicted_token_ids": [
+            18,
+            21,
+            23
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "673",
+          "original_result": 673,
+          "parsed": 673,
+          "predicted_token_ids": [
+            21,
+            22,
+            18
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "616",
+          "original_result": 616,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "876",
+          "original_result": 876,
+          "parsed": 876,
+          "predicted_token_ids": [
+            23,
+            22,
+            21
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "209",
+          "original_result": 209,
+          "parsed": 209,
+          "predicted_token_ids": [
+            17,
+            15,
+            24
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            16,
+            19,
+            22
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "741",
+          "original_result": 741,
+          "parsed": 741,
+          "predicted_token_ids": [
+            22,
+            19,
+            16
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "485",
+          "original_result": 485,
+          "parsed": 485,
+          "predicted_token_ids": [
+            19,
+            23,
+            20
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "810",
+          "original_result": 810,
+          "parsed": 810,
+          "predicted_token_ids": [
+            23,
+            16,
+            15
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "567",
+          "original_result": 567,
+          "parsed": 567,
+          "predicted_token_ids": [
+            20,
+            21,
+            22
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "568",
+          "original_result": 568,
+          "parsed": 568,
+          "predicted_token_ids": [
+            20,
+            21,
+            23
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "383",
+          "original_result": 383,
+          "parsed": 383,
+          "predicted_token_ids": [
+            18,
+            23,
+            18
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "153",
+          "original_result": 153,
+          "parsed": 153,
+          "predicted_token_ids": [
+            16,
+            20,
+            18
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "835",
+          "original_result": 835,
+          "parsed": 835,
+          "predicted_token_ids": [
+            23,
+            18,
+            20
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "825",
+          "original_result": 825,
+          "parsed": 825,
+          "predicted_token_ids": [
+            23,
+            17,
+            20
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "229",
+          "original_result": 229,
+          "parsed": 229,
+          "predicted_token_ids": [
+            17,
+            17,
+            24
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "989",
+          "original_result": 979,
+          "parsed": 989,
+          "predicted_token_ids": [
+            24,
+            23,
+            24
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "536",
+          "original_result": 536,
+          "parsed": 536,
+          "predicted_token_ids": [
+            20,
+            18,
+            21
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "824",
+          "original_result": 504,
+          "parsed": 824,
+          "predicted_token_ids": [
+            23,
+            17,
+            19
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.03333333333333333,
+        0.0,
+        0.0
+      ],
+      "target_full_result_accuracy": 0.0
+    },
+    "hybrid": {
+      "hard_gate_rate_by_step": [
+        0.03333333507180214,
+        0.03333333507180214,
+        0.02222222276031971
+      ],
+      "mean_relative_norm_by_step": [
+        0.3598068952560425,
+        0.7006617784500122,
+        0.955540657043457
+      ],
+      "original_full_result_accuracy": 0.0,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "101",
+          "original_result": 990,
+          "parsed": 101,
+          "predicted_token_ids": [
+            16,
+            15,
+            16
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "617",
+          "original_result": 506,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "586",
+          "original_result": 475,
+          "parsed": 586,
+          "predicted_token_ids": [
+            20,
+            23,
+            21
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "245",
+          "original_result": 134,
+          "parsed": 245,
+          "predicted_token_ids": [
+            17,
+            19,
+            20
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "650",
+          "original_result": 548,
+          "parsed": 650,
+          "predicted_token_ids": [
+            21,
+            20,
+            15
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "364",
+          "original_result": 253,
+          "parsed": 364,
+          "predicted_token_ids": [
+            18,
+            21,
+            19
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "883",
+          "original_result": 772,
+          "parsed": 883,
+          "predicted_token_ids": [
+            23,
+            23,
+            18
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "837",
+          "original_result": 726,
+          "parsed": 837,
+          "predicted_token_ids": [
+            23,
+            18,
+            22
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "773",
+          "original_result": 662,
+          "parsed": 773,
+          "predicted_token_ids": [
+            22,
+            22,
+            18
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "181",
+          "original_result": 979,
+          "parsed": 181,
+          "predicted_token_ids": [
+            16,
+            23,
+            16
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "270",
+          "original_result": 168,
+          "parsed": 270,
+          "predicted_token_ids": [
+            17,
+            22,
+            15
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "207",
+          "original_result": 196,
+          "parsed": 207,
+          "predicted_token_ids": [
+            17,
+            15,
+            22
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "375",
+          "original_result": 264,
+          "parsed": 375,
+          "predicted_token_ids": [
+            18,
+            22,
+            20
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "582",
+          "original_result": 470,
+          "parsed": 582,
+          "predicted_token_ids": [
+            20,
+            23,
+            17
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "993",
+          "original_result": 882,
+          "parsed": 993,
+          "predicted_token_ids": [
+            24,
+            24,
+            18
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "738",
+          "original_result": 627,
+          "parsed": 738,
+          "predicted_token_ids": [
+            22,
+            18,
+            23
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "244",
+          "original_result": 133,
+          "parsed": 244,
+          "predicted_token_ids": [
+            17,
+            19,
+            19
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "829",
+          "original_result": 717,
+          "parsed": 829,
+          "predicted_token_ids": [
+            23,
+            17,
+            24
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "218",
+          "original_result": 106,
+          "parsed": 218,
+          "predicted_token_ids": [
+            17,
+            16,
+            23
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "240",
+          "original_result": 138,
+          "parsed": 240,
+          "predicted_token_ids": [
+            17,
+            19,
+            15
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "955",
+          "original_result": 844,
+          "parsed": 955,
+          "predicted_token_ids": [
+            24,
+            20,
+            20
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "705",
+          "original_result": 694,
+          "parsed": 705,
+          "predicted_token_ids": [
+            22,
+            15,
+            20
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "842",
+          "original_result": 731,
+          "parsed": 842,
+          "predicted_token_ids": [
+            23,
+            19,
+            17
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "426",
+          "original_result": 315,
+          "parsed": 426,
+          "predicted_token_ids": [
+            19,
+            17,
+            21
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "446",
+          "original_result": 335,
+          "parsed": 446,
+          "predicted_token_ids": [
+            19,
+            19,
+            21
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "188",
+          "original_result": 976,
+          "parsed": 188,
+          "predicted_token_ids": [
+            16,
+            23,
+            23
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "915",
+          "original_result": 804,
+          "parsed": 915,
+          "predicted_token_ids": [
+            24,
+            16,
+            20
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "931",
+          "original_result": 829,
+          "parsed": 931,
+          "predicted_token_ids": [
+            24,
+            18,
+            16
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "182",
+          "original_result": 971,
+          "parsed": 182,
+          "predicted_token_ids": [
+            16,
+            23,
+            17
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "509",
+          "original_result": 497,
+          "parsed": 509,
+          "predicted_token_ids": [
+            20,
+            15,
+            24
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "345",
+          "original_result": 234,
+          "parsed": 345,
+          "predicted_token_ids": [
+            18,
+            19,
+            20
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "632",
+          "original_result": 621,
+          "parsed": 632,
+          "predicted_token_ids": [
+            21,
+            18,
+            17
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "816",
+          "original_result": 705,
+          "parsed": 816,
+          "predicted_token_ids": [
+            23,
+            16,
+            21
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "129",
+          "original_result": 917,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "551",
+          "original_result": 539,
+          "parsed": 551,
+          "predicted_token_ids": [
+            20,
+            20,
+            16
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "462",
+          "original_result": 351,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "516",
+          "original_result": 405,
+          "parsed": 516,
+          "predicted_token_ids": [
+            20,
+            16,
+            21
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "329",
+          "original_result": 217,
+          "parsed": 329,
+          "predicted_token_ids": [
+            18,
+            17,
+            24
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "660",
+          "original_result": 558,
+          "parsed": 660,
+          "predicted_token_ids": [
+            21,
+            21,
+            15
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "354",
+          "original_result": 233,
+          "parsed": 354,
+          "predicted_token_ids": [
+            18,
+            20,
+            19
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "853",
+          "original_result": 732,
+          "parsed": 853,
+          "predicted_token_ids": [
+            23,
+            20,
+            18
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "468",
+          "original_result": 356,
+          "parsed": 468,
+          "predicted_token_ids": [
+            19,
+            21,
+            23
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "563",
+          "original_result": 452,
+          "parsed": 563,
+          "predicted_token_ids": [
+            20,
+            21,
+            18
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "623",
+          "original_result": 512,
+          "parsed": 623,
+          "predicted_token_ids": [
+            21,
+            17,
+            18
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "393",
+          "original_result": 282,
+          "parsed": 393,
+          "predicted_token_ids": [
+            18,
+            24,
+            18
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "436",
+          "original_result": 325,
+          "parsed": 436,
+          "predicted_token_ids": [
+            19,
+            18,
+            21
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "275",
+          "original_result": 154,
+          "parsed": 275,
+          "predicted_token_ids": [
+            17,
+            22,
+            20
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "129",
+          "original_result": 917,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "902",
+          "original_result": 891,
+          "parsed": 902,
+          "predicted_token_ids": [
+            24,
+            15,
+            17
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "200",
+          "original_result": 198,
+          "parsed": 200,
+          "predicted_token_ids": [
+            17,
+            15,
+            15
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "598",
+          "original_result": 486,
+          "parsed": 598,
+          "predicted_token_ids": [
+            20,
+            24,
+            23
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "755",
+          "original_result": 644,
+          "parsed": 755,
+          "predicted_token_ids": [
+            22,
+            20,
+            20
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "475",
+          "original_result": 354,
+          "parsed": 475,
+          "predicted_token_ids": [
+            19,
+            22,
+            20
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "824",
+          "original_result": 713,
+          "parsed": 824,
+          "predicted_token_ids": [
+            23,
+            17,
+            19
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "886",
+          "original_result": 774,
+          "parsed": 886,
+          "predicted_token_ids": [
+            23,
+            23,
+            21
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "107",
+          "original_result": 995,
+          "parsed": 107,
+          "predicted_token_ids": [
+            16,
+            15,
+            22
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "490",
+          "original_result": 378,
+          "parsed": 490,
+          "predicted_token_ids": [
+            19,
+            24,
+            15
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "952",
+          "original_result": 831,
+          "parsed": 952,
+          "predicted_token_ids": [
+            24,
+            20,
+            17
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "528",
+          "original_result": 416,
+          "parsed": 528,
+          "predicted_token_ids": [
+            20,
+            17,
+            23
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "722",
+          "original_result": 611,
+          "parsed": 722,
+          "predicted_token_ids": [
+            22,
+            17,
+            17
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "367",
+          "original_result": 245,
+          "parsed": 367,
+          "predicted_token_ids": [
+            18,
+            21,
+            22
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "419",
+          "original_result": 307,
+          "parsed": 419,
+          "predicted_token_ids": [
+            19,
+            16,
+            24
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "514",
+          "original_result": 403,
+          "parsed": 514,
+          "predicted_token_ids": [
+            20,
+            16,
+            19
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "607",
+          "original_result": 595,
+          "parsed": 607,
+          "predicted_token_ids": [
+            21,
+            15,
+            22
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "196",
+          "original_result": 974,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "860",
+          "original_result": 748,
+          "parsed": 860,
+          "predicted_token_ids": [
+            23,
+            21,
+            15
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "131",
+          "original_result": 919,
+          "parsed": 131,
+          "predicted_token_ids": [
+            16,
+            18,
+            16
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "370",
+          "original_result": 268,
+          "parsed": 370,
+          "predicted_token_ids": [
+            18,
+            22,
+            15
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "739",
+          "original_result": 617,
+          "parsed": 739,
+          "predicted_token_ids": [
+            22,
+            18,
+            24
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "574",
+          "original_result": 462,
+          "parsed": 574,
+          "predicted_token_ids": [
+            20,
+            22,
+            19
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "470",
+          "original_result": 368,
+          "parsed": 470,
+          "predicted_token_ids": [
+            19,
+            22,
+            15
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "794",
+          "original_result": 673,
+          "parsed": 794,
+          "predicted_token_ids": [
+            22,
+            24,
+            19
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "738",
+          "original_result": 616,
+          "parsed": 738,
+          "predicted_token_ids": [
+            22,
+            18,
+            23
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "998",
+          "original_result": 876,
+          "parsed": 998,
+          "predicted_token_ids": [
+            24,
+            24,
+            23
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "311",
+          "original_result": 209,
+          "parsed": 311,
+          "predicted_token_ids": [
+            18,
+            16,
+            16
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "269",
+          "original_result": 147,
+          "parsed": 269,
+          "predicted_token_ids": [
+            17,
+            21,
+            24
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "863",
+          "original_result": 741,
+          "parsed": 863,
+          "predicted_token_ids": [
+            23,
+            21,
+            18
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "597",
+          "original_result": 485,
+          "parsed": 597,
+          "predicted_token_ids": [
+            20,
+            24,
+            22
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "932",
+          "original_result": 810,
+          "parsed": 932,
+          "predicted_token_ids": [
+            24,
+            18,
+            17
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "689",
+          "original_result": 567,
+          "parsed": 689,
+          "predicted_token_ids": [
+            21,
+            23,
+            24
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "681",
+          "original_result": 568,
+          "parsed": 681,
+          "predicted_token_ids": [
+            21,
+            23,
+            16
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "743",
+          "original_result": 621,
+          "parsed": 743,
+          "predicted_token_ids": [
+            22,
+            19,
+            18
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "404",
+          "original_result": 383,
+          "parsed": 404,
+          "predicted_token_ids": [
+            19,
+            15,
+            19
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "274",
+          "original_result": 153,
+          "parsed": 274,
+          "predicted_token_ids": [
+            17,
+            22,
+            19
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "957",
+          "original_result": 835,
+          "parsed": 957,
+          "predicted_token_ids": [
+            24,
+            20,
+            22
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "947",
+          "original_result": 825,
+          "parsed": 947,
+          "predicted_token_ids": [
+            24,
+            19,
+            22
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "341",
+          "original_result": 229,
+          "parsed": 341,
+          "predicted_token_ids": [
+            18,
+            19,
+            16
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "191",
+          "original_result": 979,
+          "parsed": 191,
+          "predicted_token_ids": [
+            16,
+            24,
+            16
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "658",
+          "original_result": 536,
+          "parsed": 658,
+          "predicted_token_ids": [
+            21,
+            20,
+            23
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "616",
+          "original_result": 504,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.9777777777777777,
+        1.0,
+        1.0
+      ],
+      "target_full_result_accuracy": 0.9777777777777777
+    },
+    "identity_hard_gated": {
+      "hard_gate_rate_by_step": [
+        0.9333333373069763,
+        0.9777777791023254,
+        1.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.017864426597952843,
+        0.008263238705694675,
+        0.0
+      ],
+      "original_full_result_accuracy": 1.0,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "990",
+          "original_result": 990,
+          "parsed": 990,
+          "predicted_token_ids": [
+            24,
+            24,
+            15
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "506",
+          "original_result": 506,
+          "parsed": 506,
+          "predicted_token_ids": [
+            20,
+            15,
+            21
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "475",
+          "original_result": 475,
+          "parsed": 475,
+          "predicted_token_ids": [
+            19,
+            22,
+            20
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "134",
+          "original_result": 134,
+          "parsed": 134,
+          "predicted_token_ids": [
+            16,
+            18,
+            19
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "548",
+          "original_result": 548,
+          "parsed": 548,
+          "predicted_token_ids": [
+            20,
+            19,
+            23
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "253",
+          "original_result": 253,
+          "parsed": 253,
+          "predicted_token_ids": [
+            17,
+            20,
+            18
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "772",
+          "original_result": 772,
+          "parsed": 772,
+          "predicted_token_ids": [
+            22,
+            22,
+            17
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "726",
+          "original_result": 726,
+          "parsed": 726,
+          "predicted_token_ids": [
+            22,
+            17,
+            21
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "662",
+          "original_result": 662,
+          "parsed": 662,
+          "predicted_token_ids": [
+            21,
+            21,
+            17
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "979",
+          "original_result": 979,
+          "parsed": 979,
+          "predicted_token_ids": [
+            24,
+            22,
+            24
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "168",
+          "original_result": 168,
+          "parsed": 168,
+          "predicted_token_ids": [
+            16,
+            21,
+            23
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "196",
+          "original_result": 196,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "264",
+          "original_result": 264,
+          "parsed": 264,
+          "predicted_token_ids": [
+            17,
+            21,
+            19
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "470",
+          "original_result": 470,
+          "parsed": 470,
+          "predicted_token_ids": [
+            19,
+            22,
+            15
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            23,
+            23,
+            17
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "627",
+          "original_result": 627,
+          "parsed": 627,
+          "predicted_token_ids": [
+            21,
+            17,
+            22
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "133",
+          "original_result": 133,
+          "parsed": 133,
+          "predicted_token_ids": [
+            16,
+            18,
+            18
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "717",
+          "original_result": 717,
+          "parsed": 717,
+          "predicted_token_ids": [
+            22,
+            16,
+            22
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "106",
+          "original_result": 106,
+          "parsed": 106,
+          "predicted_token_ids": [
+            16,
+            15,
+            21
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "138",
+          "original_result": 138,
+          "parsed": 138,
+          "predicted_token_ids": [
+            16,
+            18,
+            23
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "844",
+          "original_result": 844,
+          "parsed": 844,
+          "predicted_token_ids": [
+            23,
+            19,
+            19
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "694",
+          "original_result": 694,
+          "parsed": 694,
+          "predicted_token_ids": [
+            21,
+            24,
+            19
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "731",
+          "original_result": 731,
+          "parsed": 731,
+          "predicted_token_ids": [
+            22,
+            18,
+            16
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "315",
+          "original_result": 315,
+          "parsed": 315,
+          "predicted_token_ids": [
+            18,
+            16,
+            20
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "335",
+          "original_result": 335,
+          "parsed": 335,
+          "predicted_token_ids": [
+            18,
+            18,
+            20
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "976",
+          "original_result": 976,
+          "parsed": 976,
+          "predicted_token_ids": [
+            24,
+            22,
+            21
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            23,
+            15,
+            19
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "829",
+          "original_result": 829,
+          "parsed": 829,
+          "predicted_token_ids": [
+            23,
+            17,
+            24
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "971",
+          "original_result": 971,
+          "parsed": 971,
+          "predicted_token_ids": [
+            24,
+            22,
+            16
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "497",
+          "original_result": 497,
+          "parsed": 497,
+          "predicted_token_ids": [
+            19,
+            24,
+            22
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "234",
+          "original_result": 234,
+          "parsed": 234,
+          "predicted_token_ids": [
+            17,
+            18,
+            19
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "705",
+          "original_result": 705,
+          "parsed": 705,
+          "predicted_token_ids": [
+            22,
+            15,
+            20
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "539",
+          "original_result": 539,
+          "parsed": 539,
+          "predicted_token_ids": [
+            20,
+            18,
+            24
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "351",
+          "original_result": 351,
+          "parsed": 351,
+          "predicted_token_ids": [
+            18,
+            20,
+            16
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "405",
+          "original_result": 405,
+          "parsed": 405,
+          "predicted_token_ids": [
+            19,
+            15,
+            20
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            17,
+            16,
+            22
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "558",
+          "original_result": 558,
+          "parsed": 558,
+          "predicted_token_ids": [
+            20,
+            20,
+            23
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "233",
+          "original_result": 233,
+          "parsed": 233,
+          "predicted_token_ids": [
+            17,
+            18,
+            18
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "732",
+          "original_result": 732,
+          "parsed": 732,
+          "predicted_token_ids": [
+            22,
+            18,
+            17
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "356",
+          "original_result": 356,
+          "parsed": 356,
+          "predicted_token_ids": [
+            18,
+            20,
+            21
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "452",
+          "original_result": 452,
+          "parsed": 452,
+          "predicted_token_ids": [
+            19,
+            20,
+            17
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "512",
+          "original_result": 512,
+          "parsed": 512,
+          "predicted_token_ids": [
+            20,
+            16,
+            17
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "282",
+          "original_result": 282,
+          "parsed": 282,
+          "predicted_token_ids": [
+            17,
+            23,
+            17
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "325",
+          "original_result": 325,
+          "parsed": 325,
+          "predicted_token_ids": [
+            18,
+            17,
+            20
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "154",
+          "original_result": 154,
+          "parsed": 154,
+          "predicted_token_ids": [
+            16,
+            20,
+            19
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "891",
+          "original_result": 891,
+          "parsed": 891,
+          "predicted_token_ids": [
+            23,
+            24,
+            16
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "198",
+          "original_result": 198,
+          "parsed": 198,
+          "predicted_token_ids": [
+            16,
+            24,
+            23
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "486",
+          "original_result": 486,
+          "parsed": 486,
+          "predicted_token_ids": [
+            19,
+            23,
+            21
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "644",
+          "original_result": 644,
+          "parsed": 644,
+          "predicted_token_ids": [
+            21,
+            19,
+            19
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            18,
+            20,
+            19
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "713",
+          "original_result": 713,
+          "parsed": 713,
+          "predicted_token_ids": [
+            22,
+            16,
+            18
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "774",
+          "original_result": 774,
+          "parsed": 774,
+          "predicted_token_ids": [
+            22,
+            22,
+            19
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "995",
+          "original_result": 995,
+          "parsed": 995,
+          "predicted_token_ids": [
+            24,
+            24,
+            20
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "378",
+          "original_result": 378,
+          "parsed": 378,
+          "predicted_token_ids": [
+            18,
+            22,
+            23
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "831",
+          "original_result": 831,
+          "parsed": 831,
+          "predicted_token_ids": [
+            23,
+            18,
+            16
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "416",
+          "original_result": 416,
+          "parsed": 416,
+          "predicted_token_ids": [
+            19,
+            16,
+            21
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "611",
+          "original_result": 611,
+          "parsed": 611,
+          "predicted_token_ids": [
+            21,
+            16,
+            16
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "245",
+          "original_result": 245,
+          "parsed": 245,
+          "predicted_token_ids": [
+            17,
+            19,
+            20
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "307",
+          "original_result": 307,
+          "parsed": 307,
+          "predicted_token_ids": [
+            18,
+            15,
+            22
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "403",
+          "original_result": 403,
+          "parsed": 403,
+          "predicted_token_ids": [
+            19,
+            15,
+            18
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "595",
+          "original_result": 595,
+          "parsed": 595,
+          "predicted_token_ids": [
+            20,
+            24,
+            20
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            24,
+            22,
+            19
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "748",
+          "original_result": 748,
+          "parsed": 748,
+          "predicted_token_ids": [
+            22,
+            19,
+            23
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "919",
+          "original_result": 919,
+          "parsed": 919,
+          "predicted_token_ids": [
+            24,
+            16,
+            24
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "268",
+          "original_result": 268,
+          "parsed": 268,
+          "predicted_token_ids": [
+            17,
+            21,
+            23
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "617",
+          "original_result": 617,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "462",
+          "original_result": 462,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "368",
+          "original_result": 368,
+          "parsed": 368,
+          "predicted_token_ids": [
+            18,
+            21,
+            23
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "673",
+          "original_result": 673,
+          "parsed": 673,
+          "predicted_token_ids": [
+            21,
+            22,
+            18
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "616",
+          "original_result": 616,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "876",
+          "original_result": 876,
+          "parsed": 876,
+          "predicted_token_ids": [
+            23,
+            22,
+            21
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "209",
+          "original_result": 209,
+          "parsed": 209,
+          "predicted_token_ids": [
+            17,
+            15,
+            24
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            16,
+            19,
+            22
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "741",
+          "original_result": 741,
+          "parsed": 741,
+          "predicted_token_ids": [
+            22,
+            19,
+            16
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "485",
+          "original_result": 485,
+          "parsed": 485,
+          "predicted_token_ids": [
+            19,
+            23,
+            20
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "810",
+          "original_result": 810,
+          "parsed": 810,
+          "predicted_token_ids": [
+            23,
+            16,
+            15
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "567",
+          "original_result": 567,
+          "parsed": 567,
+          "predicted_token_ids": [
+            20,
+            21,
+            22
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "568",
+          "original_result": 568,
+          "parsed": 568,
+          "predicted_token_ids": [
+            20,
+            21,
+            23
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "383",
+          "original_result": 383,
+          "parsed": 383,
+          "predicted_token_ids": [
+            18,
+            23,
+            18
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "153",
+          "original_result": 153,
+          "parsed": 153,
+          "predicted_token_ids": [
+            16,
+            20,
+            18
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "835",
+          "original_result": 835,
+          "parsed": 835,
+          "predicted_token_ids": [
+            23,
+            18,
+            20
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "825",
+          "original_result": 825,
+          "parsed": 825,
+          "predicted_token_ids": [
+            23,
+            17,
+            20
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "229",
+          "original_result": 229,
+          "parsed": 229,
+          "predicted_token_ids": [
+            17,
+            17,
+            24
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "979",
+          "original_result": 979,
+          "parsed": 979,
+          "predicted_token_ids": [
+            24,
+            22,
+            24
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "536",
+          "original_result": 536,
+          "parsed": 536,
+          "predicted_token_ids": [
+            20,
+            18,
+            21
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "504",
+          "original_result": 504,
+          "parsed": 504,
+          "predicted_token_ids": [
+            20,
+            15,
+            19
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_full_result_accuracy": 0.0
+    },
+    "random_norm_matched": {
+      "hard_gate_rate_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.3598068952560425,
+        0.5958635210990906,
+        0.8234617710113525
+      ],
+      "original_full_result_accuracy": 0.8777777777777778,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "990",
+          "original_result": 990,
+          "parsed": 990,
+          "predicted_token_ids": [
+            24,
+            24,
+            15
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "506",
+          "original_result": 506,
+          "parsed": 506,
+          "predicted_token_ids": [
+            20,
+            15,
+            21
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "475",
+          "original_result": 475,
+          "parsed": 475,
+          "predicted_token_ids": [
+            19,
+            22,
+            20
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "134",
+          "original_result": 134,
+          "parsed": 134,
+          "predicted_token_ids": [
+            16,
+            18,
+            19
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "538",
+          "original_result": 548,
+          "parsed": 538,
+          "predicted_token_ids": [
+            20,
+            18,
+            23
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "253",
+          "original_result": 253,
+          "parsed": 253,
+          "predicted_token_ids": [
+            17,
+            20,
+            18
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "772",
+          "original_result": 772,
+          "parsed": 772,
+          "predicted_token_ids": [
+            22,
+            22,
+            17
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "726",
+          "original_result": 726,
+          "parsed": 726,
+          "predicted_token_ids": [
+            22,
+            17,
+            21
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "662",
+          "original_result": 662,
+          "parsed": 662,
+          "predicted_token_ids": [
+            21,
+            21,
+            17
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "979",
+          "original_result": 979,
+          "parsed": 979,
+          "predicted_token_ids": [
+            24,
+            22,
+            24
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "168",
+          "original_result": 168,
+          "parsed": 168,
+          "predicted_token_ids": [
+            16,
+            21,
+            23
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "196",
+          "original_result": 196,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "264",
+          "original_result": 264,
+          "parsed": 264,
+          "predicted_token_ids": [
+            17,
+            21,
+            19
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "660",
+          "original_result": 470,
+          "parsed": 660,
+          "predicted_token_ids": [
+            21,
+            21,
+            15
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            23,
+            23,
+            17
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "627",
+          "original_result": 627,
+          "parsed": 627,
+          "predicted_token_ids": [
+            21,
+            17,
+            22
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "133",
+          "original_result": 133,
+          "parsed": 133,
+          "predicted_token_ids": [
+            16,
+            18,
+            18
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "717",
+          "original_result": 717,
+          "parsed": 717,
+          "predicted_token_ids": [
+            22,
+            16,
+            22
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "29 +",
+          "original_result": 106,
+          "parsed": 29,
+          "predicted_token_ids": [
+            17,
+            24,
+            488
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "138",
+          "original_result": 138,
+          "parsed": 138,
+          "predicted_token_ids": [
+            16,
+            18,
+            23
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "844",
+          "original_result": 844,
+          "parsed": 844,
+          "predicted_token_ids": [
+            23,
+            19,
+            19
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "694",
+          "original_result": 694,
+          "parsed": 694,
+          "predicted_token_ids": [
+            21,
+            24,
+            19
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "731",
+          "original_result": 731,
+          "parsed": 731,
+          "predicted_token_ids": [
+            22,
+            18,
+            16
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "315",
+          "original_result": 315,
+          "parsed": 315,
+          "predicted_token_ids": [
+            18,
+            16,
+            20
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "335",
+          "original_result": 335,
+          "parsed": 335,
+          "predicted_token_ids": [
+            18,
+            18,
+            20
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "976",
+          "original_result": 976,
+          "parsed": 976,
+          "predicted_token_ids": [
+            24,
+            22,
+            21
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "804",
+          "original_result": 804,
+          "parsed": 804,
+          "predicted_token_ids": [
+            23,
+            15,
+            19
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "829",
+          "original_result": 829,
+          "parsed": 829,
+          "predicted_token_ids": [
+            23,
+            17,
+            24
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "971",
+          "original_result": 971,
+          "parsed": 971,
+          "predicted_token_ids": [
+            24,
+            22,
+            16
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "597",
+          "original_result": 497,
+          "parsed": 597,
+          "predicted_token_ids": [
+            20,
+            24,
+            22
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "234",
+          "original_result": 234,
+          "parsed": 234,
+          "predicted_token_ids": [
+            17,
+            18,
+            19
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "605",
+          "original_result": 705,
+          "parsed": 605,
+          "predicted_token_ids": [
+            21,
+            15,
+            20
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "539",
+          "original_result": 539,
+          "parsed": 539,
+          "predicted_token_ids": [
+            20,
+            18,
+            24
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "351",
+          "original_result": 351,
+          "parsed": 351,
+          "predicted_token_ids": [
+            18,
+            20,
+            16
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "405",
+          "original_result": 405,
+          "parsed": 405,
+          "predicted_token_ids": [
+            19,
+            15,
+            20
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            17,
+            16,
+            22
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "558",
+          "original_result": 558,
+          "parsed": 558,
+          "predicted_token_ids": [
+            20,
+            20,
+            23
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "332",
+          "original_result": 233,
+          "parsed": 332,
+          "predicted_token_ids": [
+            18,
+            18,
+            17
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "732",
+          "original_result": 732,
+          "parsed": 732,
+          "predicted_token_ids": [
+            22,
+            18,
+            17
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "356",
+          "original_result": 356,
+          "parsed": 356,
+          "predicted_token_ids": [
+            18,
+            20,
+            21
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "452",
+          "original_result": 452,
+          "parsed": 452,
+          "predicted_token_ids": [
+            19,
+            20,
+            17
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "512",
+          "original_result": 512,
+          "parsed": 512,
+          "predicted_token_ids": [
+            20,
+            16,
+            17
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "382",
+          "original_result": 282,
+          "parsed": 382,
+          "predicted_token_ids": [
+            18,
+            23,
+            17
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "325",
+          "original_result": 325,
+          "parsed": 325,
+          "predicted_token_ids": [
+            18,
+            17,
+            20
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "154",
+          "original_result": 154,
+          "parsed": 154,
+          "predicted_token_ids": [
+            16,
+            20,
+            19
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "917",
+          "original_result": 917,
+          "parsed": 917,
+          "predicted_token_ids": [
+            24,
+            16,
+            22
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "891",
+          "original_result": 891,
+          "parsed": 891,
+          "predicted_token_ids": [
+            23,
+            24,
+            16
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "200",
+          "original_result": 198,
+          "parsed": 200,
+          "predicted_token_ids": [
+            17,
+            15,
+            15
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "486",
+          "original_result": 486,
+          "parsed": 486,
+          "predicted_token_ids": [
+            19,
+            23,
+            21
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "644",
+          "original_result": 644,
+          "parsed": 644,
+          "predicted_token_ids": [
+            21,
+            19,
+            19
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            18,
+            20,
+            19
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "713",
+          "original_result": 713,
+          "parsed": 713,
+          "predicted_token_ids": [
+            22,
+            16,
+            18
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "774",
+          "original_result": 774,
+          "parsed": 774,
+          "predicted_token_ids": [
+            22,
+            22,
+            19
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "995",
+          "original_result": 995,
+          "parsed": 995,
+          "predicted_token_ids": [
+            24,
+            24,
+            20
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "378",
+          "original_result": 378,
+          "parsed": 378,
+          "predicted_token_ids": [
+            18,
+            22,
+            23
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "831",
+          "original_result": 831,
+          "parsed": 831,
+          "predicted_token_ids": [
+            23,
+            18,
+            16
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "416",
+          "original_result": 416,
+          "parsed": 416,
+          "predicted_token_ids": [
+            19,
+            16,
+            21
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "611",
+          "original_result": 611,
+          "parsed": 611,
+          "predicted_token_ids": [
+            21,
+            16,
+            16
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "245",
+          "original_result": 245,
+          "parsed": 245,
+          "predicted_token_ids": [
+            17,
+            19,
+            20
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "272",
+          "original_result": 307,
+          "parsed": 272,
+          "predicted_token_ids": [
+            17,
+            22,
+            17
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "403",
+          "original_result": 403,
+          "parsed": 403,
+          "predicted_token_ids": [
+            19,
+            15,
+            18
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "595",
+          "original_result": 595,
+          "parsed": 595,
+          "predicted_token_ids": [
+            20,
+            24,
+            20
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "974",
+          "original_result": 974,
+          "parsed": 974,
+          "predicted_token_ids": [
+            24,
+            22,
+            19
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "748",
+          "original_result": 748,
+          "parsed": 748,
+          "predicted_token_ids": [
+            22,
+            19,
+            23
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "919",
+          "original_result": 919,
+          "parsed": 919,
+          "predicted_token_ids": [
+            24,
+            16,
+            24
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "268",
+          "original_result": 268,
+          "parsed": 268,
+          "predicted_token_ids": [
+            17,
+            21,
+            23
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "617",
+          "original_result": 617,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "462",
+          "original_result": 462,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "368",
+          "original_result": 368,
+          "parsed": 368,
+          "predicted_token_ids": [
+            18,
+            21,
+            23
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "673",
+          "original_result": 673,
+          "parsed": 673,
+          "predicted_token_ids": [
+            21,
+            22,
+            18
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "616",
+          "original_result": 616,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "876",
+          "original_result": 876,
+          "parsed": 876,
+          "predicted_token_ids": [
+            23,
+            22,
+            21
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "209",
+          "original_result": 209,
+          "parsed": 209,
+          "predicted_token_ids": [
+            17,
+            15,
+            24
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "147",
+          "original_result": 147,
+          "parsed": 147,
+          "predicted_token_ids": [
+            16,
+            19,
+            22
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "741",
+          "original_result": 741,
+          "parsed": 741,
+          "predicted_token_ids": [
+            22,
+            19,
+            16
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "485",
+          "original_result": 485,
+          "parsed": 485,
+          "predicted_token_ids": [
+            19,
+            23,
+            20
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "810",
+          "original_result": 810,
+          "parsed": 810,
+          "predicted_token_ids": [
+            23,
+            16,
+            15
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "567",
+          "original_result": 567,
+          "parsed": 567,
+          "predicted_token_ids": [
+            20,
+            21,
+            22
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "568",
+          "original_result": 568,
+          "parsed": 568,
+          "predicted_token_ids": [
+            20,
+            21,
+            23
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "383",
+          "original_result": 383,
+          "parsed": 383,
+          "predicted_token_ids": [
+            18,
+            23,
+            18
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "153",
+          "original_result": 153,
+          "parsed": 153,
+          "predicted_token_ids": [
+            16,
+            20,
+            18
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "835",
+          "original_result": 835,
+          "parsed": 835,
+          "predicted_token_ids": [
+            23,
+            18,
+            20
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "825",
+          "original_result": 825,
+          "parsed": 825,
+          "predicted_token_ids": [
+            23,
+            17,
+            20
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "229",
+          "original_result": 229,
+          "parsed": 229,
+          "predicted_token_ids": [
+            17,
+            17,
+            24
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "989",
+          "original_result": 979,
+          "parsed": 989,
+          "predicted_token_ids": [
+            24,
+            23,
+            24
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "536",
+          "original_result": 536,
+          "parsed": 536,
+          "predicted_token_ids": [
+            20,
+            18,
+            21
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "404",
+          "original_result": 504,
+          "parsed": 404,
+          "predicted_token_ids": [
+            19,
+            15,
+            19
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.05555555555555555,
+        0.011111111111111112,
+        0.011111111111111112
+      ],
+      "target_full_result_accuracy": 0.011111111111111112
+    },
+    "shuffled_state_norm_matched": {
+      "hard_gate_rate_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.3598068952560425,
+        0.6507765650749207,
+        0.881439208984375
+      ],
+      "original_full_result_accuracy": 0.17777777777777778,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "105",
+          "original_result": 990,
+          "parsed": 105,
+          "predicted_token_ids": [
+            16,
+            15,
+            20
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "506",
+          "original_result": 506,
+          "parsed": 506,
+          "predicted_token_ids": [
+            20,
+            15,
+            21
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "584",
+          "original_result": 475,
+          "parsed": 584,
+          "predicted_token_ids": [
+            20,
+            23,
+            19
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "134",
+          "original_result": 134,
+          "parsed": 134,
+          "predicted_token_ids": [
+            16,
+            18,
+            19
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "748",
+          "original_result": 548,
+          "parsed": 748,
+          "predicted_token_ids": [
+            22,
+            19,
+            23
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "253",
+          "original_result": 253,
+          "parsed": 253,
+          "predicted_token_ids": [
+            17,
+            20,
+            18
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "880",
+          "original_result": 772,
+          "parsed": 880,
+          "predicted_token_ids": [
+            23,
+            23,
+            15
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "827",
+          "original_result": 726,
+          "parsed": 827,
+          "predicted_token_ids": [
+            23,
+            17,
+            22
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "683",
+          "original_result": 662,
+          "parsed": 683,
+          "predicted_token_ids": [
+            21,
+            23,
+            18
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "981",
+          "original_result": 979,
+          "parsed": 981,
+          "predicted_token_ids": [
+            24,
+            23,
+            16
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "218",
+          "original_result": 168,
+          "parsed": 218,
+          "predicted_token_ids": [
+            17,
+            16,
+            23
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "197",
+          "original_result": 196,
+          "parsed": 197,
+          "predicted_token_ids": [
+            16,
+            24,
+            22
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "3     (",
+          "original_result": 264,
+          "parsed": 3,
+          "predicted_token_ids": [
+            18,
+            257,
+            320
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "468",
+          "original_result": 470,
+          "parsed": 468,
+          "predicted_token_ids": [
+            19,
+            21,
+            23
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "882",
+          "original_result": 882,
+          "parsed": 882,
+          "predicted_token_ids": [
+            23,
+            23,
+            17
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "628",
+          "original_result": 627,
+          "parsed": 628,
+          "predicted_token_ids": [
+            21,
+            17,
+            23
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "134",
+          "original_result": 133,
+          "parsed": 134,
+          "predicted_token_ids": [
+            16,
+            18,
+            19
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "719",
+          "original_result": 717,
+          "parsed": 719,
+          "predicted_token_ids": [
+            22,
+            16,
+            24
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "21Sentence",
+          "original_result": 106,
+          "parsed": 21,
+          "predicted_token_ids": [
+            17,
+            16,
+            84564
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "130",
+          "original_result": 138,
+          "parsed": 130,
+          "predicted_token_ids": [
+            16,
+            18,
+            15
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "945",
+          "original_result": 844,
+          "parsed": 945,
+          "predicted_token_ids": [
+            24,
+            19,
+            20
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "694",
+          "original_result": 694,
+          "parsed": 694,
+          "predicted_token_ids": [
+            21,
+            24,
+            19
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "842",
+          "original_result": 731,
+          "parsed": 842,
+          "predicted_token_ids": [
+            23,
+            19,
+            17
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "326",
+          "original_result": 315,
+          "parsed": 326,
+          "predicted_token_ids": [
+            18,
+            17,
+            21
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "346",
+          "original_result": 335,
+          "parsed": 346,
+          "predicted_token_ids": [
+            18,
+            19,
+            21
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "188",
+          "original_result": 976,
+          "parsed": 188,
+          "predicted_token_ids": [
+            16,
+            23,
+            23
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "918",
+          "original_result": 804,
+          "parsed": 918,
+          "predicted_token_ids": [
+            24,
+            16,
+            23
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "821",
+          "original_result": 829,
+          "parsed": 821,
+          "predicted_token_ids": [
+            23,
+            17,
+            16
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "182",
+          "original_result": 971,
+          "parsed": 182,
+          "predicted_token_ids": [
+            16,
+            23,
+            17
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "504",
+          "original_result": 497,
+          "parsed": 504,
+          "predicted_token_ids": [
+            20,
+            15,
+            19
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "234",
+          "original_result": 234,
+          "parsed": 234,
+          "predicted_token_ids": [
+            17,
+            18,
+            19
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "722",
+          "original_result": 621,
+          "parsed": 722,
+          "predicted_token_ids": [
+            22,
+            17,
+            17
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "705",
+          "original_result": 705,
+          "parsed": 705,
+          "predicted_token_ids": [
+            22,
+            15,
+            20
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "128",
+          "original_result": 917,
+          "parsed": 128,
+          "predicted_token_ids": [
+            16,
+            17,
+            23
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "539",
+          "original_result": 539,
+          "parsed": 539,
+          "predicted_token_ids": [
+            20,
+            18,
+            24
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "46afe",
+          "original_result": 351,
+          "parsed": 46,
+          "predicted_token_ids": [
+            19,
+            21,
+            5645
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "505",
+          "original_result": 405,
+          "parsed": 505,
+          "predicted_token_ids": [
+            20,
+            15,
+            20
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "217",
+          "original_result": 217,
+          "parsed": 217,
+          "predicted_token_ids": [
+            17,
+            16,
+            22
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "660",
+          "original_result": 558,
+          "parsed": 660,
+          "predicted_token_ids": [
+            21,
+            21,
+            15
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "352",
+          "original_result": 233,
+          "parsed": 352,
+          "predicted_token_ids": [
+            18,
+            20,
+            17
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "832",
+          "original_result": 732,
+          "parsed": 832,
+          "predicted_token_ids": [
+            23,
+            18,
+            17
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "368",
+          "original_result": 356,
+          "parsed": 368,
+          "predicted_token_ids": [
+            18,
+            21,
+            23
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "462",
+          "original_result": 452,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "513",
+          "original_result": 512,
+          "parsed": 513,
+          "predicted_token_ids": [
+            20,
+            16,
+            18
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "393",
+          "original_result": 282,
+          "parsed": 393,
+          "predicted_token_ids": [
+            18,
+            24,
+            18
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "324",
+          "original_result": 325,
+          "parsed": 324,
+          "predicted_token_ids": [
+            18,
+            17,
+            19
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "154",
+          "original_result": 154,
+          "parsed": 154,
+          "predicted_token_ids": [
+            16,
+            20,
+            19
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "129",
+          "original_result": 917,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "902",
+          "original_result": 891,
+          "parsed": 902,
+          "predicted_token_ids": [
+            24,
+            15,
+            17
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "100",
+          "original_result": 198,
+          "parsed": 100,
+          "predicted_token_ids": [
+            16,
+            15,
+            15
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "488",
+          "original_result": 486,
+          "parsed": 488,
+          "predicted_token_ids": [
+            19,
+            23,
+            23
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "645",
+          "original_result": 644,
+          "parsed": 645,
+          "predicted_token_ids": [
+            21,
+            19,
+            20
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "354",
+          "original_result": 354,
+          "parsed": 354,
+          "predicted_token_ids": [
+            18,
+            20,
+            19
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "889",
+          "original_result": 713,
+          "parsed": 889,
+          "predicted_token_ids": [
+            23,
+            23,
+            24
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "774",
+          "original_result": 774,
+          "parsed": 774,
+          "predicted_token_ids": [
+            22,
+            22,
+            19
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "207",
+          "original_result": 995,
+          "parsed": 207,
+          "predicted_token_ids": [
+            17,
+            15,
+            22
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "370",
+          "original_result": 378,
+          "parsed": 370,
+          "predicted_token_ids": [
+            18,
+            22,
+            15
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "912",
+          "original_result": 831,
+          "parsed": 912,
+          "predicted_token_ids": [
+            24,
+            16,
+            17
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "428",
+          "original_result": 416,
+          "parsed": 428,
+          "predicted_token_ids": [
+            19,
+            17,
+            23
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "742",
+          "original_result": 611,
+          "parsed": 742,
+          "predicted_token_ids": [
+            22,
+            19,
+            17
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "367",
+          "original_result": 245,
+          "parsed": 367,
+          "predicted_token_ids": [
+            18,
+            21,
+            22
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "613",
+          "original_result": 307,
+          "parsed": 613,
+          "predicted_token_ids": [
+            21,
+            16,
+            18
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "404",
+          "original_result": 403,
+          "parsed": 404,
+          "predicted_token_ids": [
+            19,
+            15,
+            19
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "595",
+          "original_result": 595,
+          "parsed": 595,
+          "predicted_token_ids": [
+            20,
+            24,
+            20
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "298",
+          "original_result": 974,
+          "parsed": 298,
+          "predicted_token_ids": [
+            17,
+            24,
+            23
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "740",
+          "original_result": 748,
+          "parsed": 740,
+          "predicted_token_ids": [
+            22,
+            19,
+            15
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "131",
+          "original_result": 919,
+          "parsed": 131,
+          "predicted_token_ids": [
+            16,
+            18,
+            16
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "260",
+          "original_result": 268,
+          "parsed": 260,
+          "predicted_token_ids": [
+            17,
+            21,
+            15
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "617",
+          "original_result": 617,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "518",
+          "original_result": 462,
+          "parsed": 518,
+          "predicted_token_ids": [
+            20,
+            16,
+            23
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "368",
+          "original_result": 368,
+          "parsed": 368,
+          "predicted_token_ids": [
+            18,
+            21,
+            23
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "703",
+          "original_result": 673,
+          "parsed": 703,
+          "predicted_token_ids": [
+            22,
+            15,
+            18
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "53\u96a7",
+          "original_result": 616,
+          "parsed": 53,
+          "predicted_token_ids": [
+            20,
+            18,
+            103024
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "878",
+          "original_result": 876,
+          "parsed": 878,
+          "predicted_token_ids": [
+            23,
+            22,
+            23
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "211",
+          "original_result": 209,
+          "parsed": 211,
+          "predicted_token_ids": [
+            17,
+            16,
+            16
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "169",
+          "original_result": 147,
+          "parsed": 169,
+          "predicted_token_ids": [
+            16,
+            21,
+            24
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "88\u041f\u0435\u0442",
+          "original_result": 741,
+          "parsed": 88,
+          "predicted_token_ids": [
+            23,
+            23,
+            135872
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "487",
+          "original_result": 485,
+          "parsed": 487,
+          "predicted_token_ids": [
+            19,
+            23,
+            22
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "932",
+          "original_result": 810,
+          "parsed": 932,
+          "predicted_token_ids": [
+            24,
+            18,
+            17
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "688",
+          "original_result": 567,
+          "parsed": 688,
+          "predicted_token_ids": [
+            21,
+            23,
+            23
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "621",
+          "original_result": 568,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "621",
+          "original_result": 621,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "304",
+          "original_result": 383,
+          "parsed": 304,
+          "predicted_token_ids": [
+            18,
+            15,
+            19
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "174",
+          "original_result": 153,
+          "parsed": 174,
+          "predicted_token_ids": [
+            16,
+            22,
+            19
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "957",
+          "original_result": 835,
+          "parsed": 957,
+          "predicted_token_ids": [
+            24,
+            20,
+            22
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "84\u6240",
+          "original_result": 825,
+          "parsed": 84,
+          "predicted_token_ids": [
+            23,
+            19,
+            31838
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "221",
+          "original_result": 229,
+          "parsed": 221,
+          "predicted_token_ids": [
+            17,
+            17,
+            16
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "191",
+          "original_result": 979,
+          "parsed": 191,
+          "predicted_token_ids": [
+            16,
+            24,
+            16
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "538",
+          "original_result": 536,
+          "parsed": 538,
+          "predicted_token_ids": [
+            20,
+            18,
+            23
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "514",
+          "original_result": 504,
+          "parsed": 514,
+          "predicted_token_ids": [
+            20,
+            16,
+            19
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.4,
+        0.43333333333333335,
+        0.5222222222222223
+      ],
+      "target_full_result_accuracy": 0.13333333333333333
+    },
+    "shuffled_target_norm_matched": {
+      "hard_gate_rate_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_relative_norm_by_step": [
+        0.3598068654537201,
+        0.670185923576355,
+        0.9615599513053894
+      ],
+      "original_full_result_accuracy": 0.0,
+      "outputs": [
+        {
+          "example_id": "phase2-audit-0000",
+          "generated_text": "617",
+          "original_result": 990,
+          "parsed": 617,
+          "predicted_token_ids": [
+            21,
+            16,
+            22
+          ],
+          "target_result": 101
+        },
+        {
+          "example_id": "phase2-audit-0001",
+          "generated_text": "586",
+          "original_result": 506,
+          "parsed": 586,
+          "predicted_token_ids": [
+            20,
+            23,
+            21
+          ],
+          "target_result": 617
+        },
+        {
+          "example_id": "phase2-audit-0002",
+          "generated_text": "243",
+          "original_result": 475,
+          "parsed": 243,
+          "predicted_token_ids": [
+            17,
+            19,
+            18
+          ],
+          "target_result": 586
+        },
+        {
+          "example_id": "phase2-audit-0003",
+          "generated_text": "150",
+          "original_result": 134,
+          "parsed": 150,
+          "predicted_token_ids": [
+            16,
+            20,
+            15
+          ],
+          "target_result": 245
+        },
+        {
+          "example_id": "phase2-audit-0004",
+          "generated_text": "364",
+          "original_result": 548,
+          "parsed": 364,
+          "predicted_token_ids": [
+            18,
+            21,
+            19
+          ],
+          "target_result": 650
+        },
+        {
+          "example_id": "phase2-audit-0005",
+          "generated_text": "56 +",
+          "original_result": 253,
+          "parsed": 56,
+          "predicted_token_ids": [
+            20,
+            21,
+            488
+          ],
+          "target_result": 364
+        },
+        {
+          "example_id": "phase2-audit-0006",
+          "generated_text": "837",
+          "original_result": 772,
+          "parsed": 837,
+          "predicted_token_ids": [
+            23,
+            18,
+            22
+          ],
+          "target_result": 883
+        },
+        {
+          "example_id": "phase2-audit-0007",
+          "generated_text": "773",
+          "original_result": 726,
+          "parsed": 773,
+          "predicted_token_ids": [
+            22,
+            22,
+            18
+          ],
+          "target_result": 837
+        },
+        {
+          "example_id": "phase2-audit-0008",
+          "generated_text": "181",
+          "original_result": 662,
+          "parsed": 181,
+          "predicted_token_ids": [
+            16,
+            23,
+            16
+          ],
+          "target_result": 773
+        },
+        {
+          "example_id": "phase2-audit-0009",
+          "generated_text": "270",
+          "original_result": 979,
+          "parsed": 270,
+          "predicted_token_ids": [
+            17,
+            22,
+            15
+          ],
+          "target_result": 181
+        },
+        {
+          "example_id": "phase2-audit-0010",
+          "generated_text": "207",
+          "original_result": 168,
+          "parsed": 207,
+          "predicted_token_ids": [
+            17,
+            15,
+            22
+          ],
+          "target_result": 270
+        },
+        {
+          "example_id": "phase2-audit-0011",
+          "generated_text": "275",
+          "original_result": 196,
+          "parsed": 275,
+          "predicted_token_ids": [
+            17,
+            22,
+            20
+          ],
+          "target_result": 207
+        },
+        {
+          "example_id": "phase2-audit-0012",
+          "generated_text": "582",
+          "original_result": 264,
+          "parsed": 582,
+          "predicted_token_ids": [
+            20,
+            23,
+            17
+          ],
+          "target_result": 375
+        },
+        {
+          "example_id": "phase2-audit-0013",
+          "generated_text": "493",
+          "original_result": 470,
+          "parsed": 493,
+          "predicted_token_ids": [
+            19,
+            24,
+            18
+          ],
+          "target_result": 582
+        },
+        {
+          "example_id": "phase2-audit-0014",
+          "generated_text": "738",
+          "original_result": 882,
+          "parsed": 738,
+          "predicted_token_ids": [
+            22,
+            18,
+            23
+          ],
+          "target_result": 993
+        },
+        {
+          "example_id": "phase2-audit-0015",
+          "generated_text": "244",
+          "original_result": 627,
+          "parsed": 244,
+          "predicted_token_ids": [
+            17,
+            19,
+            19
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0016",
+          "generated_text": "129",
+          "original_result": 133,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 244
+        },
+        {
+          "example_id": "phase2-audit-0017",
+          "generated_text": "318",
+          "original_result": 717,
+          "parsed": 318,
+          "predicted_token_ids": [
+            18,
+            16,
+            23
+          ],
+          "target_result": 829
+        },
+        {
+          "example_id": "phase2-audit-0018",
+          "generated_text": "240",
+          "original_result": 106,
+          "parsed": 240,
+          "predicted_token_ids": [
+            17,
+            19,
+            15
+          ],
+          "target_result": 218
+        },
+        {
+          "example_id": "phase2-audit-0019",
+          "generated_text": "155",
+          "original_result": 138,
+          "parsed": 155,
+          "predicted_token_ids": [
+            16,
+            20,
+            20
+          ],
+          "target_result": 240
+        },
+        {
+          "example_id": "phase2-audit-0020",
+          "generated_text": "705",
+          "original_result": 844,
+          "parsed": 705,
+          "predicted_token_ids": [
+            22,
+            15,
+            20
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase2-audit-0021",
+          "generated_text": "842",
+          "original_result": 694,
+          "parsed": 842,
+          "predicted_token_ids": [
+            23,
+            19,
+            17
+          ],
+          "target_result": 705
+        },
+        {
+          "example_id": "phase2-audit-0022",
+          "generated_text": "526",
+          "original_result": 731,
+          "parsed": 526,
+          "predicted_token_ids": [
+            20,
+            17,
+            21
+          ],
+          "target_result": 842
+        },
+        {
+          "example_id": "phase2-audit-0023",
+          "generated_text": "446",
+          "original_result": 315,
+          "parsed": 446,
+          "predicted_token_ids": [
+            19,
+            19,
+            21
+          ],
+          "target_result": 426
+        },
+        {
+          "example_id": "phase2-audit-0024",
+          "generated_text": "188",
+          "original_result": 335,
+          "parsed": 188,
+          "predicted_token_ids": [
+            16,
+            23,
+            23
+          ],
+          "target_result": 446
+        },
+        {
+          "example_id": "phase2-audit-0025",
+          "generated_text": "915",
+          "original_result": 976,
+          "parsed": 915,
+          "predicted_token_ids": [
+            24,
+            16,
+            20
+          ],
+          "target_result": 188
+        },
+        {
+          "example_id": "phase2-audit-0026",
+          "generated_text": "931",
+          "original_result": 804,
+          "parsed": 931,
+          "predicted_token_ids": [
+            24,
+            18,
+            16
+          ],
+          "target_result": 915
+        },
+        {
+          "example_id": "phase2-audit-0027",
+          "generated_text": "182",
+          "original_result": 829,
+          "parsed": 182,
+          "predicted_token_ids": [
+            16,
+            23,
+            17
+          ],
+          "target_result": 931
+        },
+        {
+          "example_id": "phase2-audit-0028",
+          "generated_text": "609",
+          "original_result": 971,
+          "parsed": 609,
+          "predicted_token_ids": [
+            21,
+            15,
+            24
+          ],
+          "target_result": 182
+        },
+        {
+          "example_id": "phase2-audit-0029",
+          "generated_text": "545",
+          "original_result": 497,
+          "parsed": 545,
+          "predicted_token_ids": [
+            20,
+            19,
+            20
+          ],
+          "target_result": 509
+        },
+        {
+          "example_id": "phase2-audit-0030",
+          "generated_text": "432",
+          "original_result": 234,
+          "parsed": 432,
+          "predicted_token_ids": [
+            19,
+            18,
+            17
+          ],
+          "target_result": 345
+        },
+        {
+          "example_id": "phase2-audit-0031",
+          "generated_text": "616",
+          "original_result": 621,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 732
+        },
+        {
+          "example_id": "phase2-audit-0032",
+          "generated_text": "129",
+          "original_result": 705,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 816
+        },
+        {
+          "example_id": "phase2-audit-0033",
+          "generated_text": "751",
+          "original_result": 917,
+          "parsed": 751,
+          "predicted_token_ids": [
+            22,
+            20,
+            16
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0034",
+          "generated_text": "362",
+          "original_result": 539,
+          "parsed": 362,
+          "predicted_token_ids": [
+            18,
+            21,
+            17
+          ],
+          "target_result": 651
+        },
+        {
+          "example_id": "phase2-audit-0035",
+          "generated_text": "516",
+          "original_result": 351,
+          "parsed": 516,
+          "predicted_token_ids": [
+            20,
+            16,
+            21
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase2-audit-0036",
+          "generated_text": "329",
+          "original_result": 405,
+          "parsed": 329,
+          "predicted_token_ids": [
+            18,
+            17,
+            24
+          ],
+          "target_result": 516
+        },
+        {
+          "example_id": "phase2-audit-0037",
+          "generated_text": "260",
+          "original_result": 217,
+          "parsed": 260,
+          "predicted_token_ids": [
+            17,
+            21,
+            15
+          ],
+          "target_result": 329
+        },
+        {
+          "example_id": "phase2-audit-0038",
+          "generated_text": "350",
+          "original_result": 558,
+          "parsed": 350,
+          "predicted_token_ids": [
+            18,
+            20,
+            15
+          ],
+          "target_result": 660
+        },
+        {
+          "example_id": "phase2-audit-0039",
+          "generated_text": "353",
+          "original_result": 233,
+          "parsed": 353,
+          "predicted_token_ids": [
+            18,
+            20,
+            18
+          ],
+          "target_result": 354
+        },
+        {
+          "example_id": "phase2-audit-0040",
+          "generated_text": "468",
+          "original_result": 732,
+          "parsed": 468,
+          "predicted_token_ids": [
+            19,
+            21,
+            23
+          ],
+          "target_result": 853
+        },
+        {
+          "example_id": "phase2-audit-0041",
+          "generated_text": "563",
+          "original_result": 356,
+          "parsed": 563,
+          "predicted_token_ids": [
+            20,
+            21,
+            18
+          ],
+          "target_result": 468
+        },
+        {
+          "example_id": "phase2-audit-0042",
+          "generated_text": "523",
+          "original_result": 452,
+          "parsed": 523,
+          "predicted_token_ids": [
+            20,
+            17,
+            18
+          ],
+          "target_result": 563
+        },
+        {
+          "example_id": "phase2-audit-0043",
+          "generated_text": "393",
+          "original_result": 512,
+          "parsed": 393,
+          "predicted_token_ids": [
+            18,
+            24,
+            18
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase2-audit-0044",
+          "generated_text": "336",
+          "original_result": 282,
+          "parsed": 336,
+          "predicted_token_ids": [
+            18,
+            18,
+            21
+          ],
+          "target_result": 393
+        },
+        {
+          "example_id": "phase2-audit-0045",
+          "generated_text": "275",
+          "original_result": 325,
+          "parsed": 275,
+          "predicted_token_ids": [
+            17,
+            22,
+            20
+          ],
+          "target_result": 436
+        },
+        {
+          "example_id": "phase2-audit-0046",
+          "generated_text": "129",
+          "original_result": 154,
+          "parsed": 129,
+          "predicted_token_ids": [
+            16,
+            17,
+            24
+          ],
+          "target_result": 275
+        },
+        {
+          "example_id": "phase2-audit-0047",
+          "generated_text": "902",
+          "original_result": 917,
+          "parsed": 902,
+          "predicted_token_ids": [
+            24,
+            15,
+            17
+          ],
+          "target_result": 129
+        },
+        {
+          "example_id": "phase2-audit-0048",
+          "generated_text": "400",
+          "original_result": 891,
+          "parsed": 400,
+          "predicted_token_ids": [
+            19,
+            15,
+            15
+          ],
+          "target_result": 902
+        },
+        {
+          "example_id": "phase2-audit-0049",
+          "generated_text": "190",
+          "original_result": 198,
+          "parsed": 190,
+          "predicted_token_ids": [
+            16,
+            24,
+            15
+          ],
+          "target_result": 200
+        },
+        {
+          "example_id": "phase2-audit-0050",
+          "generated_text": "655",
+          "original_result": 486,
+          "parsed": 655,
+          "predicted_token_ids": [
+            21,
+            20,
+            20
+          ],
+          "target_result": 598
+        },
+        {
+          "example_id": "phase2-audit-0051",
+          "generated_text": "475",
+          "original_result": 644,
+          "parsed": 475,
+          "predicted_token_ids": [
+            19,
+            22,
+            20
+          ],
+          "target_result": 755
+        },
+        {
+          "example_id": "phase2-audit-0052",
+          "generated_text": "324",
+          "original_result": 354,
+          "parsed": 324,
+          "predicted_token_ids": [
+            18,
+            17,
+            19
+          ],
+          "target_result": 475
+        },
+        {
+          "example_id": "phase2-audit-0053",
+          "generated_text": "886",
+          "original_result": 713,
+          "parsed": 886,
+          "predicted_token_ids": [
+            23,
+            23,
+            21
+          ],
+          "target_result": 824
+        },
+        {
+          "example_id": "phase2-audit-0054",
+          "generated_text": "107",
+          "original_result": 774,
+          "parsed": 107,
+          "predicted_token_ids": [
+            16,
+            15,
+            22
+          ],
+          "target_result": 886
+        },
+        {
+          "example_id": "phase2-audit-0055",
+          "generated_text": "497",
+          "original_result": 995,
+          "parsed": 497,
+          "predicted_token_ids": [
+            19,
+            24,
+            22
+          ],
+          "target_result": 107
+        },
+        {
+          "example_id": "phase2-audit-0056",
+          "generated_text": "352",
+          "original_result": 378,
+          "parsed": 352,
+          "predicted_token_ids": [
+            18,
+            20,
+            17
+          ],
+          "target_result": 490
+        },
+        {
+          "example_id": "phase2-audit-0057",
+          "generated_text": "628",
+          "original_result": 831,
+          "parsed": 628,
+          "predicted_token_ids": [
+            21,
+            17,
+            23
+          ],
+          "target_result": 952
+        },
+        {
+          "example_id": "phase2-audit-0058",
+          "generated_text": "722",
+          "original_result": 416,
+          "parsed": 722,
+          "predicted_token_ids": [
+            22,
+            17,
+            17
+          ],
+          "target_result": 528
+        },
+        {
+          "example_id": "phase2-audit-0059",
+          "generated_text": "467",
+          "original_result": 611,
+          "parsed": 467,
+          "predicted_token_ids": [
+            19,
+            21,
+            22
+          ],
+          "target_result": 722
+        },
+        {
+          "example_id": "phase2-audit-0060",
+          "generated_text": "419",
+          "original_result": 245,
+          "parsed": 419,
+          "predicted_token_ids": [
+            19,
+            16,
+            24
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase2-audit-0061",
+          "generated_text": "514",
+          "original_result": 307,
+          "parsed": 514,
+          "predicted_token_ids": [
+            20,
+            16,
+            19
+          ],
+          "target_result": 419
+        },
+        {
+          "example_id": "phase2-audit-0062",
+          "generated_text": "607",
+          "original_result": 403,
+          "parsed": 607,
+          "predicted_token_ids": [
+            21,
+            15,
+            22
+          ],
+          "target_result": 514
+        },
+        {
+          "example_id": "phase2-audit-0063",
+          "generated_text": "196",
+          "original_result": 595,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 607
+        },
+        {
+          "example_id": "phase2-audit-0064",
+          "generated_text": "860",
+          "original_result": 974,
+          "parsed": 860,
+          "predicted_token_ids": [
+            23,
+            21,
+            15
+          ],
+          "target_result": 196
+        },
+        {
+          "example_id": "phase2-audit-0065",
+          "generated_text": "131",
+          "original_result": 748,
+          "parsed": 131,
+          "predicted_token_ids": [
+            16,
+            18,
+            16
+          ],
+          "target_result": 860
+        },
+        {
+          "example_id": "phase2-audit-0066",
+          "generated_text": "370",
+          "original_result": 919,
+          "parsed": 370,
+          "predicted_token_ids": [
+            18,
+            22,
+            15
+          ],
+          "target_result": 131
+        },
+        {
+          "example_id": "phase2-audit-0067",
+          "generated_text": "439",
+          "original_result": 268,
+          "parsed": 439,
+          "predicted_token_ids": [
+            19,
+            18,
+            24
+          ],
+          "target_result": 370
+        },
+        {
+          "example_id": "phase2-audit-0068",
+          "generated_text": "474",
+          "original_result": 617,
+          "parsed": 474,
+          "predicted_token_ids": [
+            19,
+            22,
+            19
+          ],
+          "target_result": 739
+        },
+        {
+          "example_id": "phase2-audit-0069",
+          "generated_text": "570",
+          "original_result": 462,
+          "parsed": 570,
+          "predicted_token_ids": [
+            20,
+            22,
+            15
+          ],
+          "target_result": 574
+        },
+        {
+          "example_id": "phase2-audit-0070",
+          "generated_text": "69 +",
+          "original_result": 368,
+          "parsed": 69,
+          "predicted_token_ids": [
+            21,
+            24,
+            488
+          ],
+          "target_result": 470
+        },
+        {
+          "example_id": "phase2-audit-0071",
+          "generated_text": "738",
+          "original_result": 673,
+          "parsed": 738,
+          "predicted_token_ids": [
+            22,
+            18,
+            23
+          ],
+          "target_result": 794
+        },
+        {
+          "example_id": "phase2-audit-0072",
+          "generated_text": "798",
+          "original_result": 616,
+          "parsed": 798,
+          "predicted_token_ids": [
+            22,
+            24,
+            23
+          ],
+          "target_result": 738
+        },
+        {
+          "example_id": "phase2-audit-0073",
+          "generated_text": "311",
+          "original_result": 876,
+          "parsed": 311,
+          "predicted_token_ids": [
+            18,
+            16,
+            16
+          ],
+          "target_result": 998
+        },
+        {
+          "example_id": "phase2-audit-0074",
+          "generated_text": "269",
+          "original_result": 209,
+          "parsed": 269,
+          "predicted_token_ids": [
+            17,
+            21,
+            24
+          ],
+          "target_result": 311
+        },
+        {
+          "example_id": "phase2-audit-0075",
+          "generated_text": "163",
+          "original_result": 147,
+          "parsed": 163,
+          "predicted_token_ids": [
+            16,
+            21,
+            18
+          ],
+          "target_result": 269
+        },
+        {
+          "example_id": "phase2-audit-0076",
+          "generated_text": "597",
+          "original_result": 741,
+          "parsed": 597,
+          "predicted_token_ids": [
+            20,
+            24,
+            22
+          ],
+          "target_result": 863
+        },
+        {
+          "example_id": "phase2-audit-0077",
+          "generated_text": "532",
+          "original_result": 485,
+          "parsed": 532,
+          "predicted_token_ids": [
+            20,
+            18,
+            17
+          ],
+          "target_result": 597
+        },
+        {
+          "example_id": "phase2-audit-0078",
+          "generated_text": "689",
+          "original_result": 810,
+          "parsed": 689,
+          "predicted_token_ids": [
+            21,
+            23,
+            24
+          ],
+          "target_result": 932
+        },
+        {
+          "example_id": "phase2-audit-0079",
+          "generated_text": "681",
+          "original_result": 567,
+          "parsed": 681,
+          "predicted_token_ids": [
+            21,
+            23,
+            16
+          ],
+          "target_result": 689
+        },
+        {
+          "example_id": "phase2-audit-0080",
+          "generated_text": "643",
+          "original_result": 568,
+          "parsed": 643,
+          "predicted_token_ids": [
+            21,
+            19,
+            18
+          ],
+          "target_result": 681
+        },
+        {
+          "example_id": "phase2-audit-0081",
+          "generated_text": "404",
+          "original_result": 621,
+          "parsed": 404,
+          "predicted_token_ids": [
+            19,
+            15,
+            19
+          ],
+          "target_result": 743
+        },
+        {
+          "example_id": "phase2-audit-0082",
+          "generated_text": "274",
+          "original_result": 383,
+          "parsed": 274,
+          "predicted_token_ids": [
+            17,
+            22,
+            19
+          ],
+          "target_result": 404
+        },
+        {
+          "example_id": "phase2-audit-0083",
+          "generated_text": "157",
+          "original_result": 153,
+          "parsed": 157,
+          "predicted_token_ids": [
+            16,
+            20,
+            22
+          ],
+          "target_result": 274
+        },
+        {
+          "example_id": "phase2-audit-0084",
+          "generated_text": "947",
+          "original_result": 835,
+          "parsed": 947,
+          "predicted_token_ids": [
+            24,
+            19,
+            22
+          ],
+          "target_result": 957
+        },
+        {
+          "example_id": "phase2-audit-0085",
+          "generated_text": "441",
+          "original_result": 825,
+          "parsed": 441,
+          "predicted_token_ids": [
+            19,
+            19,
+            16
+          ],
+          "target_result": 947
+        },
+        {
+          "example_id": "phase2-audit-0086",
+          "generated_text": "191",
+          "original_result": 229,
+          "parsed": 191,
+          "predicted_token_ids": [
+            16,
+            24,
+            16
+          ],
+          "target_result": 341
+        },
+        {
+          "example_id": "phase2-audit-0087",
+          "generated_text": "758",
+          "original_result": 979,
+          "parsed": 758,
+          "predicted_token_ids": [
+            22,
+            20,
+            23
+          ],
+          "target_result": 191
+        },
+        {
+          "example_id": "phase2-audit-0088",
+          "generated_text": "616",
+          "original_result": 536,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 658
+        },
+        {
+          "example_id": "phase2-audit-0089",
+          "generated_text": "101",
+          "original_result": 504,
+          "parsed": 101,
+          "predicted_token_ids": [
+            16,
+            15,
+            16
+          ],
+          "target_result": 616
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.2111111111111111,
+        0.1111111111111111,
+        0.13333333333333333
+      ],
+      "target_full_result_accuracy": 0.0
+    }
+  },
+  "config_sha256": "4fbb7aad82ce52be5f83a72d69dcd1e03be6760f453cc72525e20cf92753a9a6",
+  "created_at": "2026-07-28T13:05:40.910813+00:00",
+  "dataset": {
+    "audit_examples_unopened": 0,
+    "development_examples": 90,
+    "evaluation_examples": 90,
+    "evaluation_split": "audit",
+    "fit_examples": 450,
+    "selection_examples": 90,
+    "sha256": "c5ffbdec6160efba1f421ed980e40a215a7233f719e37a2a2d1ff864ca03a9f6"
+  },
+  "elapsed_seconds": 329.8190987499984,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase2-closed-loop-dual-prototype-audit/v1",
+  "sources": {
+    "adapter_result": "results/phase2_balanced_counterfactual_causal_adapter_development.json",
+    "adapter_result_sha256": "01900b9391e6f03358922d2aacadd06695c228af2eb4eb5f3e7357f3afd605bf",
+    "adapter_weights": "artifacts/phase2_balanced_counterfactual_causal_adapter_development.safetensors",
+    "adapter_weights_sha256": "be23dac0cb1d30a1929fc9ee24a839c3c530565f5e7efd3b1505261563c5d7c2",
+    "basis": "artifacts/phase2_tens_delta_basis.safetensors",
+    "basis_sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d",
+    "development_config": "configs/phase2_closed_loop_dual_prototype_development.json",
+    "development_config_sha256": "4100439a712f037af7ee2f0294294651c195feb5e66b46e10514e0d90e3d6908",
+    "development_result": "results/phase2_closed_loop_dual_prototype_development.json",
+    "development_result_sha256": "2058ac08e242be4b0b3f7832400b25c29e6eb4f74eb4cfc171fdb3b10d949cb7",
+    "ones_prototype_result": "results/phase2_ones_prototype_transfer_development.json",
+    "ones_prototype_result_sha256": "b3ab610fb9114c7b0502cceb267602b461695144e37e9318f28fb0f3d250f931",
+    "ones_prototypes": "artifacts/phase2_ones_prototypes.safetensors",
+    "ones_prototypes_sha256": "16064fd1e125e20ef4226b4648cb53e314ab3ee207fd84ee9850662025220db7",
+    "prototype_result": "results/phase2_tens_prototype_writer_development.json",
+    "prototype_result_sha256": "ff882c86a6b96e67bd4b984c7540fa2a0d847b0280edac6035be242e2c7008e1",
+    "prototypes": "artifacts/phase2_tens_prototypes.safetensors",
+    "prototypes_sha256": "42b97d49573333e7817aa3464a4a916c5e26bca3bae675c5b2aaccca71a85f10"
+  },
+  "status": "audit",
+  "target_assignment": {
+    "audit_sha256": "ff602ee80c84f1f175e8f9e2ed30ac90eb894d63859d9e7f0cea6380ecb73a00",
+    "scheme": "balanced_all_digits_changed"
+  },
+  "write": {
+    "hard_gate_all_positions": true,
+    "hidden_state_indices": [
+      23,
+      27,
+      27
+    ],
+    "position_components": [
+      "causal_adapter",
+      "rank16_digit_prototype",
+      "rank16_digit_prototype"
+    ],
+    "scales": [
+      1.0,
+      1.25,
+      2.0
+    ]
+  }
+}
