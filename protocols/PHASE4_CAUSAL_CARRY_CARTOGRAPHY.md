@@ -170,6 +170,21 @@ audit package may now freeze these exact interfaces and use exact-result
 discrimination for operand editing and tens-position discrimination for the
 carry coordinate.
 
+The audit authorization fixes:
+
+- exactly one run and one output path;
+- the split-parameterized engine by SHA-256;
+- all source artifacts, corrected development evidence, dataset, and behavior
+  result by SHA-256;
+- the same layers, scales, random seed, and numerical thresholds as
+  development;
+- exact-result accuracy for the operand gate and tens accuracy for the carry
+  gate;
+- all 45 unfiltered audit quartet IDs and token-region contracts by hash.
+
+The runner refuses an existing output, a different path, a changed engine, a
+non-passing corrected development package, or more than one authorized run.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
