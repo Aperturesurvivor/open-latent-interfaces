@@ -15,6 +15,11 @@ from open_latent_interfaces.dataset import (
     assert_dataset_invariants,
     build_phase0_dataset,
 )
+from open_latent_interfaces.evaluation import (
+    first_digit_token_id,
+    margin_delta,
+    token_metrics,
+)
 from open_latent_interfaces.interventions import intervened_next_token_logits
 from open_latent_interfaces.manifest import (
     environment_manifest,
@@ -67,43 +72,6 @@ def _mask(examples: list[Example], *, split: str, positive_only: bool = False) -
 
 def _model_revision(model: Any) -> str | None:
     return getattr(model.config, "_commit_hash", None)
-
-
-def _first_digit_token_id(tokenizer: Any, value: int) -> int | None:
-    expected = str(value)[0]
-    token_ids = tokenizer.encode(expected, add_special_tokens=False)
-    if len(token_ids) != 1 or tokenizer.decode(token_ids[0]) != expected:
-        return None
-    return int(token_ids[0])
-
-
-def _token_metrics(logits: torch.Tensor, target_ids: torch.Tensor) -> dict[str, float]:
-    rows = torch.arange(logits.shape[0])
-    target_logits = logits[rows, target_ids]
-    ranks = 1 + (logits > target_logits[:, None]).sum(dim=1)
-    return {
-        "top1_exact": float((logits.argmax(dim=1) == target_ids).float().mean()),
-        "mean_target_logit": float(target_logits.mean()),
-        "mean_target_rank": float(ranks.float().mean()),
-        "median_target_rank": float(ranks.float().median()),
-    }
-
-
-def _margin_delta(
-    before: torch.Tensor,
-    after: torch.Tensor,
-    target_ids: torch.Tensor,
-) -> float:
-    rows = torch.arange(before.shape[0])
-    before_target = before[rows, target_ids]
-    after_target = after[rows, target_ids]
-    before_other = before.clone()
-    after_other = after.clone()
-    before_other[rows, target_ids] = -torch.inf
-    after_other[rows, target_ids] = -torch.inf
-    before_margin = before_target - before_other.max(dim=1).values
-    after_margin = after_target - after_other.max(dim=1).values
-    return float((after_margin - before_margin).mean())
 
 
 def _shuffle(values: torch.Tensor, seed: int) -> torch.Tensor:
@@ -245,7 +213,7 @@ def run(args: argparse.Namespace) -> dict[str, object]:
     test_values = best_values[test_positive]
     desired_results = results[test_positive]
     target_ids_and_mask = [
-        _first_digit_token_id(tokenizer, int(example.result)) for example in test_examples
+        first_digit_token_id(tokenizer, int(example.result)) for example in test_examples
     ]
     fit_digit_support = set(leading_digits[fit_positive].tolist())
     test_digit_labels = leading_digits[test_positive]
@@ -317,13 +285,13 @@ def run(args: argparse.Namespace) -> dict[str, object]:
                 deltas=shuffled_deltas,
                 device=device,
             )
-            targeted_margin_delta = _margin_delta(base_logits, graft_logits, target_ids)
-            shuffled_margin_delta = _margin_delta(base_logits, shuffled_logits, target_ids)
+            targeted_margin_delta = margin_delta(base_logits, graft_logits, target_ids)
+            shuffled_margin_delta = margin_delta(base_logits, shuffled_logits, target_ids)
             strength_records[str(strength)] = {
                 "delta_norm_mean": float(deltas.norm(dim=1).mean()),
                 "activation_norm_mean": float(eligible_values.norm(dim=1).mean()),
-                "targeted": _token_metrics(graft_logits, target_ids),
-                "shuffled_target_control": _token_metrics(shuffled_logits, target_ids),
+                "targeted": token_metrics(graft_logits, target_ids),
+                "shuffled_target_control": token_metrics(shuffled_logits, target_ids),
                 "targeted_margin_delta": targeted_margin_delta,
                 "shuffled_margin_delta": shuffled_margin_delta,
                 "targeted_minus_shuffled_margin_delta": (
@@ -345,7 +313,7 @@ def run(args: argparse.Namespace) -> dict[str, object]:
                 final_sum_probe.predict(test_values),
                 desired_results,
             ),
-            "base": _token_metrics(base_logits, target_ids),
+            "base": token_metrics(base_logits, target_ids),
             "strength_sweep": strength_records,
             "pilot_selected_strength": chosen_strength,
             "selection_warning": (

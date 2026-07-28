@@ -72,11 +72,25 @@ uv run oli-phase0 \
 Read [the Phase 0 protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md) before
 interpreting the output.
 
+Phase 0.1 uses a separate development/frozen-audit workflow with balanced
+leading digits and template families that never cross splits:
+
+```bash
+uv run oli-phase01 develop
+# Review and commit configs/phase01_frozen.json before opening the audit.
+uv run oli-phase01 audit --config configs/phase01_frozen.json
+```
+
+Read the
+[Phase 0.1 protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md) before running
+either stage.
+
 ## Research map
 
 - [Research program](docs/RESEARCH_PROGRAM.md)
 - [Prior art and claims boundary](docs/PRIOR_ART_AND_CLAIMS.md)
 - [Phase 0 pilot protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md)
+- [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 
 ## Upstream foundations
