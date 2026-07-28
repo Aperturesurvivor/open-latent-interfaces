@@ -107,6 +107,7 @@ either stage.
 - [Phase 0 pilot protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md)
 - [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
 - [Phase 1A J-lens development protocol](protocols/PHASE1_JLENS_DEVELOPMENT.md)
+- [Arithmetic capability gate](protocols/CAPABILITY_GATE.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
 - [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md)

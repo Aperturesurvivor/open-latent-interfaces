@@ -1,0 +1,25 @@
+{
+  "audit_authorized": false,
+  "dataset": {
+    "audit_pairs": 8,
+    "development_pairs": 12,
+    "seed": 20260728,
+    "sha256": "3383f0d019c19749f4cb1bcb5d13085ab5ade2b797681087663c5f1a95eb8c53"
+  },
+  "generation": {
+    "batch_size": 32,
+    "do_sample": false,
+    "max_input_tokens": 128,
+    "max_new_tokens": 8
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "schema_version": "oli.capability-sweep-config/v1",
+  "selection_rule": {
+    "aggregate_exact_accuracy": 0.9,
+    "preference": "hardest passing regime",
+    "worst_cell_exact_accuracy": 0.8
+  }
+}
