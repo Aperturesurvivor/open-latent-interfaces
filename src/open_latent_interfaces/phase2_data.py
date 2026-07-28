@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import random
+from collections import Counter
 from dataclasses import asdict, dataclass
 from typing import Literal
 
@@ -168,3 +169,67 @@ def phase2_addition_sha256(examples: list[Phase2Addition]) -> str:
     payload = [example.to_dict() for example in examples]
     encoded = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
     return hashlib.sha256(encoded).hexdigest()
+
+
+def balanced_counterfactual_results(
+    examples: list[Phase2Addition],
+) -> list[int]:
+    """Assign balanced synthetic targets with every result digit changed."""
+    if not examples:
+        return []
+    rendered = [str(example.result) for example in examples]
+    if any(len(result) != 3 for result in rendered):
+        raise ValueError("counterfactual targets require three-digit results")
+
+    assigned = [["", "", ""] for _ in examples]
+    for position, digits in enumerate((range(1, 10), range(10), range(10))):
+        classes = list(digits)
+        if len(examples) % len(classes):
+            raise ValueError(
+                f"example count must be divisible by {len(classes)} "
+                f"at position {position}"
+            )
+        quota = len(examples) // len(classes)
+        target_pool = [digit for digit in classes for _ in range(quota)]
+        ordered_indices = sorted(
+            range(len(examples)),
+            key=lambda index: (
+                int(rendered[index][position]),
+                examples[index].example_id,
+            ),
+        )
+        originals = [
+            int(rendered[index][position]) for index in ordered_indices
+        ]
+        rotated = None
+        for shift in range(len(target_pool)):
+            candidate = target_pool[shift:] + target_pool[:shift]
+            if all(
+                original != target
+                for original, target in zip(originals, candidate, strict=True)
+            ):
+                rotated = candidate
+                break
+        if rotated is None:
+            raise ValueError(
+                f"no balanced counterfactual assignment at position {position}"
+            )
+        for index, target in zip(ordered_indices, rotated, strict=True):
+            assigned[index][position] = str(target)
+
+    targets = [int("".join(digits)) for digits in assigned]
+    for position, classes in enumerate((range(1, 10), range(10), range(10))):
+        counts = Counter(int(str(target)[position]) for target in targets)
+        expected = len(examples) // len(classes)
+        if counts != Counter({digit: expected for digit in classes}):
+            raise AssertionError(
+                f"counterfactual targets are imbalanced at position {position}"
+            )
+        if any(
+            str(example.result)[position] == str(target)[position]
+            for example, target in zip(examples, targets, strict=True)
+        ):
+            raise AssertionError(
+                f"counterfactual target retained digit at position {position}"
+            )
+    return targets

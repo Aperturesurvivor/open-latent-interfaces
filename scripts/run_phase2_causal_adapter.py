@@ -24,9 +24,27 @@ from open_latent_interfaces.activations import ActivationCapture, last_nonpaddin
 from open_latent_interfaces.adapter import load_online_adapter
 from open_latent_interfaces.interventions import online_adapter_intervention
 from open_latent_interfaces.phase2_data import (
+    balanced_counterfactual_results,
     build_phase2_additions,
     phase2_addition_sha256,
 )
+
+
+def experiment_targets(
+    examples: list[Any],
+    config: dict[str, Any],
+) -> list[int]:
+    scheme = config.get("target_scheme", "matched_donor")
+    if scheme == "matched_donor":
+        return target_results(examples)
+    if scheme == "balanced_all_digits_changed":
+        return balanced_counterfactual_results(examples)
+    raise ValueError(f"unknown target scheme: {scheme}")
+
+
+def result_list_sha256(results: list[int]) -> str:
+    payload = json.dumps(results, separators=(",", ":")).encode()
+    return hashlib.sha256(payload).hexdigest()
 
 
 def encode(tokenizer: Any, prompts: list[str], device: torch.device) -> dict[str, Any]:
@@ -335,6 +353,19 @@ def main() -> None:
     fit = [example for example in examples if example.split == "fit"]
     selection = [example for example in examples if example.split == "selection"]
     development = [example for example in examples if example.split == "development"]
+    fit_targets = experiment_targets(fit, config)
+    selection_targets = experiment_targets(selection, config)
+    development_targets = experiment_targets(development, config)
+    target_hashes = {
+        "fit": result_list_sha256(fit_targets),
+        "selection": result_list_sha256(selection_targets),
+        "development": result_list_sha256(development_targets),
+    }
+    if (
+        "target_sha256" in config
+        and target_hashes != config["target_sha256"]
+    ):
+        raise SystemExit("counterfactual target hash mismatch")
     device = torch.device(args.device)
     tokenizer = AutoTokenizer.from_pretrained(
         previous["model"]["id"], revision=previous["model"]["revision"]
@@ -372,12 +403,10 @@ def main() -> None:
             for template in config["fit_templates"]
         ]
     fit_originals = [example.result for example in fit]
-    fit_targets = target_results(fit)
     selected_adapters = []
     histories = []
     selections = []
     selection_prompts = render_prompts(tokenizer, selection)
-    selection_targets = target_results(selection)
     for step in range(3):
         initial = load_online_adapter(config["initial_weights"], step=step)
         if config.get("train_delta_basis", False):
@@ -411,7 +440,6 @@ def main() -> None:
         selections.append(details)
     weights_hash = save_online_adapters(args.weights_output, selected_adapters)
     development_prompts = render_prompts(tokenizer, development)
-    development_targets = target_results(development)
     conditions = (
         "base",
         "adapter",
@@ -443,18 +471,26 @@ def main() -> None:
     }
     report = {
         "schema_version": (
-            "oli.phase2-learned-basis-causal-adapter/v1"
-            if config.get("train_delta_basis", False)
+            "oli.phase2-balanced-counterfactual-causal-adapter/v1"
+            if config.get("target_scheme") == "balanced_all_digits_changed"
             else (
-                "oli.phase2-multitemplate-causal-adapter/v1"
-                if prompt_views
-                else "oli.phase2-causal-adapter/v1"
+                "oli.phase2-learned-basis-causal-adapter/v1"
+                if config.get("train_delta_basis", False)
+                else (
+                    "oli.phase2-multitemplate-causal-adapter/v1"
+                    if prompt_views
+                    else "oli.phase2-causal-adapter/v1"
+                )
             )
         ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": previous["model"],
         "dataset": previous["dataset"],
+        "target_assignment": {
+            "scheme": config.get("target_scheme", "matched_donor"),
+            "sha256": target_hashes,
+        },
         "training": histories,
         "selection": selections,
         "weights_path": str(args.weights_output),

@@ -1,0 +1,33 @@
+{
+  "adapter_learning_rate": 0.0001,
+  "audit_authorized": false,
+  "base_model_batch_size": 4,
+  "causal_epochs": 3,
+  "fit_templates": [
+    "Calculate {a} + {b}. Reply with only the integer.",
+    "Add {a} and {b}. Return only the integer.",
+    "Determine the total of {a} and {b}. Return only the integer.",
+    "Solve {a} plus {b}. Give only the integer."
+  ],
+  "identity_ce_weight": 1.0,
+  "identity_kl_weight": 1.0,
+  "initial_result": "results/phase2_learned_basis_causal_adapter_development.json",
+  "initial_result_sha256": "92c4c8494ea1d66a7ed7d3885207436b011024fabef504c4cc7833905d523293",
+  "initial_weights": "artifacts/phase2_learned_basis_causal_adapter_development.safetensors",
+  "initial_weights_sha256": "d0fa911d2d95e4b5efc299f830a4ecc966bd94d5dec9368ec60042c9c508adb0",
+  "norm_cap": 0.8,
+  "norm_loss_weight": 0.05,
+  "orthogonality_weight": 0.01,
+  "random_control_seed": 20260821,
+  "scales": [0.5, 1.0],
+  "schema_version": "oli.phase2-balanced-counterfactual-causal-adapter-config/v1",
+  "target_scheme": "balanced_all_digits_changed",
+  "target_sha256": {
+    "development": "9113b3aac8e32681b1eeaa9f668a7941d0206daa78ad2eb9a3d092b870fdc803",
+    "fit": "34b4eeebd44e633fcc25ecc2ab7e6b9150ce937022d79940bc64bb80a92ce58c",
+    "selection": "e634189d51047698cb103b7e48b1acb6707164f987f99f8706b0ad553f844098"
+  },
+  "train_delta_basis": true,
+  "training_seed": 20260820,
+  "view_kl_weight": 0.1
+}
