@@ -319,6 +319,24 @@ tensors are retained as negative evidence. This nonpass authorizes a
 separately frozen prompt-local suffix-compiler fallback using the compiler
 family that passed for the leading digit.
 
+## Frozen prompt-local suffix-compiler fallback
+
+`configs/phase13_smollm2_suffix_compiler_selection.json` freezes the authorized
+fallback before observing any suffix-compiler result. It holds the boundary at
+hidden-state index 24 and independently scans desired margins 4, 8, and 16
+with relative-norm caps 0.25, 0.5, and 0.75 for the tens and ones positions.
+
+For each position, separate target, identity, and rotated wrong-digit
+Jacobians are computed through the frozen model suffix. Target interventions
+must meet the unchanged 90% target and identity, 50-point control-advantage,
+100% digit-token, and 0.75 mean-relative-norm gates against both wrong-target
+and random norm-matched controls. Position-specific margin and cap choices are
+allowed, but both positions must pass.
+
+This fallback changes the writer family based on a preserved prospective
+nonpass; it does not relax any causal gate, reuse the failed prototype tensor,
+or expose development data.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
