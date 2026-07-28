@@ -1,0 +1,46 @@
+{
+  "audit_authorized": true,
+  "audit_output": "results/phase3_phi_closed_loop_audit.json",
+  "audit_targets_sha256": "c2a7b3919c551cdcc3e71b69cf83e2514d58643b0d256325128365163c745459",
+  "base_model_batch_size": 8,
+  "basis": "artifacts/phase3_phi_native_bases.safetensors",
+  "basis_sha256": "33fc5a9dc0e326620769416973a167dc6b370ed18fd1407864f1e539ef449199",
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "dataset_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "development_config": "configs/phase3_phi_closed_loop_development.json",
+  "development_config_sha256": "aef162b2cb42c208771ff073306ccd8846344d83634b0eea9d3ed3a956dc82c9",
+  "development_result": "results/phase3_phi_closed_loop_development.json",
+  "development_result_sha256": "d093e92925fbe0a850bd37808a3ade4550875210a4fc60ffb874bb55c3a0b28c",
+  "engine": "scripts/run_phase3_closed_loop_development.py",
+  "engine_sha256": "b2493842ad2201789e0f14f568b209ff05a93373b097a13a9bbfa2c397d95dff",
+  "evaluation_split": "audit",
+  "gate": {
+    "minimum_control_advantage": 0.25,
+    "minimum_exact_accuracy": 0.5,
+    "minimum_identity_accuracy": 0.9,
+    "minimum_position_accuracy": 0.7
+  },
+  "hidden_state_indices": {
+    "0": 24,
+    "1": 30,
+    "2": 30
+  },
+  "leading_prototype": "artifacts/phase3_phi_leading_prototype_v2.safetensors",
+  "leading_prototype_sha256": "3a0623d8f077da61bad8aa5e32ca3e2b9a561f4c0168884e1805aac631aec1b0",
+  "leading_result": "results/phase3_phi_leading_prototype_rank_selection_v2.json",
+  "leading_result_sha256": "cf3c3be1ba5f11d1b461f91e98fe2f5c951c55f92b3ddc5111da5fe78ac638c9",
+  "maximum_audit_runs": 1,
+  "norm_cap": 1.0,
+  "random_control_seed": 20260731,
+  "runner_sha256": "78d838a200da53c60213b39a1ce5d771fa2422efe81695d1f581a9db1bba66f3",
+  "scales": {
+    "0": 1.0,
+    "1": 1.25,
+    "2": 1.25
+  },
+  "schema_version": "oli.phase3-closed-loop-audit-config/v1",
+  "suffix_prototype": "artifacts/phase3_phi_digit_prototypes.safetensors",
+  "suffix_prototype_sha256": "cae12daf7b94a9c685e00244b1e039c2d80267ce660a9af9e859518bd983b552",
+  "suffix_result": "results/phase3_phi_prototype_selection.json",
+  "suffix_result_sha256": "891ae9a9228455f76c00ab4220ceb3a8de58e41f3033a1ee336f9f0f3efb4a44"
+}
