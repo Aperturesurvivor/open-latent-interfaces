@@ -196,3 +196,34 @@ exposed evaluation to all 180 Phase 7 development examples and adds a
 
 No model, reader, compiler, suffix tensor, layer, scale, rank, or norm setting
 is changed by this refinement.
+
+### Refined integrated outcome
+
+The 180-example refinement again produced perfect integrated task output but
+remained a formal non-pass:
+
+- result:
+  `results/phase11_qwen_hybrid_graft_development_refined.json`
+- result SHA-256:
+  `1cb71017f850c050c017fd27727ef579ccfcd445e1187aa2a31d799174027264`
+- reader and deterministic compute: 180/180
+- latent and oracle hybrid output: 180/180 exact, all positions 180/180
+- base: 165/180 exact
+- recovered base errors: latent 15/15, random 1/15, wrong-target 5/15
+- preserved base-correct cases: 165/165
+- shuffled semantic target following: 179/180
+- shuffled norm-matched random target following: 7/180
+- shuffled target-following advantage: 172/180
+
+Fifteen of sixteen checks passed. The only failure was the absolute
+wrong-target base-error-recovery ceiling of 25%: the observed value was 5/15.
+The already frozen comparative check passed: intended recovery exceeded
+wrong-target recovery by 10/15, above the required 50 percentage points.
+
+Inspection of immutable rows shows why the absolute ceiling is unstable. For
+example, when the base emitted 500 for a true result of 600, the norm-matched
+direction aimed at the wrong target 711 crossed the adjacent 600 boundary but
+did not reach 711. Counting that as semantic wrong-target success conflates an
+undershooting control with the intended mechanism. Any correction must be
+measurement-only, preserve this non-pass, remove only the redundant absolute
+ceiling, retain the comparative recovery check, and precede a fresh audit.
