@@ -330,6 +330,13 @@ donor-dependent localization of carry-specific computation; compact
 donor-free estimation is the next gate. See the
 [Phase 4 token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md).
 
+Fit-only donor-free prototypes then yielded a 41/45 exact operand-edit writer.
+The carry prototype reached 37/45 exact and beat matched no-carry and random
+controls, but a wrong source-digit class worked equally well. The
+class-specific carry gate therefore failed while motivating a simpler
+class-invariant carry direction. See the
+[Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -428,6 +435,7 @@ either stage.
 - [Phase 4 carry prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md)
 - [Phase 4 carry sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md)
 - [Phase 4 carry token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md)
+- [Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)

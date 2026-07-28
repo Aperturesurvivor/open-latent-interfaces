@@ -121,6 +121,13 @@ matched no-carry class prototype, a wrong-class carry prototype, and an
 isotropic control. Rank selection is authorized only if the corresponding
 full-width donor-free writer passes.
 
+The operand prototype passed, while the carry prototype failed only the
+wrong-class advantage: wrong source-digit carry prototypes generalized as
+well as matched ones. This result is preserved as a class-specific non-pass.
+A bounded follow-up may test the simpler class-invariant mean carry vector
+against universal matched no-carry and isotropic controls before any carry
+rank selection.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
