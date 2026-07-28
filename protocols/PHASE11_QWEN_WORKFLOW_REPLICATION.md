@@ -276,3 +276,40 @@ The audit requires at least 95% latent/oracle exact and per-position accuracy,
 70-point semantic shuffled-target advantage over matched noise.
 
 No audit result exists at the time this boundary is frozen.
+
+## One-shot audit outcome
+
+The sole authorized audit run completed and did not pass:
+
+- result: `results/phase11_qwen_hybrid_graft_audit.json`
+- result SHA-256:
+  `1840165adbcc0083fb937fa8407fe64ca23dc3a51de14bd14b3cc423ee61d692`
+- audit runs: 1
+- reader and deterministic compute: 90/90
+- latent and oracle hybrid output: 90/90 exact, all positions 90/90
+- base: 85/90 exact
+- recovered base errors: latent 5/5, random 1/5, wrong-target 1/5
+- preserved base-correct cases: 85/85
+- shuffled semantic target following: 70/90
+- shuffled norm-matched random target following: 0/90
+- shuffled target-following advantage: 70/90
+
+Eighteen of nineteen checks passed. The only failure was the frozen 90%
+shuffled-target-following requirement; observed accuracy was 77.8%. This
+threshold is meaningful and will not be corrected post hoc.
+
+The failure localizes primarily to the leading compiler under arbitrary
+counterfactual targets on novel templates:
+
+- leading shuffled-target accuracy: 72/90
+- tens shuffled-target accuracy: 90/90
+- ones shuffled-target accuracy: 88/90
+- 18 of 20 full-result failures differed only at the leading position
+- failures occurred across all three new template families
+
+The frozen system is therefore strongly validated for latent reading,
+deterministic addition, and correction/preservation of true task outputs, but
+the two-step leading compiler is not template-robust enough to support the
+broader deterministic arbitrary-write claim. Phase 11 remains a transparent
+non-passing replication audit. No rerun, threshold correction, or Phase 11
+package is authorized.
