@@ -6,7 +6,7 @@ The operand-reader interface decodes decimal digit values from frozen model
 hidden states at externally located operand-token positions. It is the first
 audited read bridge in the repository.
 
-The audited Phi and Qwen readers both use:
+The audited Phi, Qwen, and SmolLM2 readers all use:
 
 - hidden-state index 1;
 - one full-width native-state centroid per decimal digit;
@@ -35,7 +35,7 @@ predicted_digits = reader.predict(selected_hidden_states)
 ```
 
 `selected_hidden_states` has shape `[digit_tokens, residual_width]`—3072 for
-Phi and 1536 for Qwen—and must contain
+Phi, 1536 for Qwen, and 2048 for SmolLM2—and must contain
 states captured at hidden-state index 1 in the order declared by the locator
 contract.
 
@@ -52,6 +52,10 @@ oli-operand-reader \
 
 oli-operand-reader \
   manifests/qwen25-15b-operand-reader-v1.json \
+  --root .
+
+oli-operand-reader \
+  manifests/smollm2-17b-operand-reader-v1.json \
   --root .
 ```
 
@@ -77,12 +81,18 @@ digits, with 0/180 for the rotated-label control. It then decoded 90/90 unseen
 operand pairs and 498/498 digits in the pair- and template-disjoint Phase 12
 one-shot hybrid audit.
 
+The independently fitted SmolLM2 reader selected at the earliest eligible
+hidden-state boundary with 90/90 pairs and 499/499 digits, versus 0/90 pairs
+under the rotated-label control. It decoded 90/90 unseen operand pairs in the
+pair- and template-disjoint Phase 13 one-shot compiler-graft audit.
+
 Schema v2 represents correction-free evidence as a typed source map. The
 runtime remains backward-compatible with the Phi v1 manifest.
 
 ## Claim boundary
 
 The manifests establish token-local decimal digit decoding under an external
-operand-span locator for one frozen revision each of Phi and Qwen. They do not
-autonomously discover operands, infer roles from unrestricted free-form text,
-expose hidden chain of thought, or transfer centroids between models.
+operand-span locator for one frozen revision each of Phi, Qwen, and SmolLM2.
+They do not autonomously discover operands, infer roles from unrestricted
+free-form text, expose hidden chain of thought, or transfer centroids between
+models.

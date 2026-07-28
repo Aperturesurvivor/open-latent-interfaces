@@ -1,0 +1,128 @@
+{
+  "claim_boundary": [
+    "Validated only on HuggingFaceTB/SmolLM2-1.7B-Instruct at the named revision.",
+    "Validated for two-operand, three-digit integer addition under the frozen Answer= output contract.",
+    "An external semantic locator supplies operand token spans.",
+    "The deterministic host adder is externally invoked; the model is not claimed to call it naturally.",
+    "All three writer positions are target-conditioned output-side residual compilers, not universal semantic math directions.",
+    "A compact native suffix-coordinate search was preserved as a nonpass before the prompt-local compiler fallback was selected.",
+    "Phi, Qwen, and SmolLM2 audits replicate the workflow across three model families; no tensor, boundary, or parameter portability is claimed.",
+    "The interface does not decode natural-language chain of thought, identify math neurons, or establish an any-model deterministic reasoning implant."
+  ],
+  "deterministic_mechanism": {
+    "input_contract": [
+      "decoded_operand_a",
+      "decoded_operand_b"
+    ],
+    "operation": "a + b",
+    "output_contract": "integer in [100, 999]",
+    "type": "host_integer_addition"
+  },
+  "evidence": {
+    "audit_runs": 1,
+    "minimum_audit_exact_accuracy": 0.9,
+    "minimum_audit_reader_pair_accuracy": 0.98,
+    "minimum_base_correct_preservation": 0.98,
+    "minimum_base_error_recovery": 0.8,
+    "minimum_shuffled_target_accuracy": 0.9,
+    "minimum_shuffled_target_advantage_over_random": 0.7,
+    "sources": {
+      "audit_config": {
+        "path": "configs/phase13_smollm2_compiler_graft_audit.json",
+        "sha256": "72ecc37ac889858c87c8db3a99e29d5235f37671dc842993aff2919d1fd80b8f"
+      },
+      "audit_dataset_config": {
+        "path": "configs/phase13_smollm2_compiler_graft_audit_dataset_frozen.json",
+        "sha256": "76d89283b36aeaf552667e361359d9cc038aca93a701419d65ab854f54c0e8f7"
+      },
+      "audit_result": {
+        "path": "results/phase13_smollm2_compiler_graft_audit.json",
+        "sha256": "b630522727aff690bd40a66633798da308f1ba30edc19c3912873ea2324881fb"
+      },
+      "development_config": {
+        "path": "configs/phase13_smollm2_compiler_graft_development.json",
+        "sha256": "4f45a7c5f509960d6f0dac1df8d04b5da86f5bfbe6ba1dd92fa495b331af29ea"
+      },
+      "development_result": {
+        "path": "results/phase13_smollm2_compiler_graft_development.json",
+        "sha256": "77119f7935fa2a1cdb17b8dae4ee3a819d812eaebfd386a6a7ea81f79d16f901"
+      },
+      "leading_selection_result": {
+        "path": "results/phase13_smollm2_leading_compiler_selection.json",
+        "sha256": "4c08f6ba45f9d58f04ec1693c49461863290d6750534ac9880f5ab05d88f49f8"
+      },
+      "native_suffix_nonpass_result": {
+        "path": "results/phase13_smollm2_suffix_prototype_selection.json",
+        "sha256": "6c08e5e8b6a137c3f7c7b680fc109d61c0d008394ab249a920c5e0a1fd5b7004"
+      },
+      "reader_selection_result": {
+        "path": "results/phase13_smollm2_operand_reader_selection.json",
+        "sha256": "f37b0a41ccc53d8964c10dd2abc1a8a3a6dd3e4eef8c257d4c985b8a8d4de1c8"
+      },
+      "suffix_selection_result": {
+        "path": "results/phase13_smollm2_suffix_compiler_selection.json",
+        "sha256": "12ff7e4a042efc90cc8adeb29c1dcc485b14b55b1ee1fc7c099a4e9ae0ca4ade"
+      }
+    }
+  },
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "name": "smollm2-17b-compiler-arithmetic-graft-v1",
+  "prompt_contract": {
+    "assistant_prefix": "Answer=",
+    "locator": "external_semantic_operand_spans",
+    "output": "exactly three decimal digit tokens"
+  },
+  "reader": {
+    "hidden_state_index": 1,
+    "manifest": {
+      "path": "manifests/smollm2-17b-operand-reader-v1.json",
+      "sha256": "e3fdd6f9a8534999477a81afa50077fc8de9beb27bbdfe855dc796b0445f1450",
+      "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase13-smollm2-compiler-graft-audit-v1/smollm2-17b-operand-reader-v1.json"
+    }
+  },
+  "representation": {
+    "residual_width": 2048
+  },
+  "schema_version": "oli.compiler-graft-interface/v1",
+  "writer": {
+    "candidate_token_ids": {
+      "0": 32,
+      "1": 33,
+      "2": 34,
+      "3": 35,
+      "4": 36,
+      "5": 37,
+      "6": 38,
+      "7": 39,
+      "8": 40,
+      "9": 41
+    },
+    "implementation": {
+      "path": "src/open_latent_interfaces/compiler_writer.py",
+      "sha256": "e167c685e237ab5fac4492631bb6f7a877076c0c972547148ac9e656b7fe72a2",
+      "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase13-smollm2-compiler-graft-audit-v1/compiler_writer.py"
+    },
+    "kind": "sequential_prompt_local_margin_compiler",
+    "positions": {
+      "0": {
+        "desired_margin": 8.0,
+        "hidden_state_index": 24,
+        "norm_cap": 0.25
+      },
+      "1": {
+        "desired_margin": 4.0,
+        "hidden_state_index": 24,
+        "norm_cap": 0.25
+      },
+      "2": {
+        "desired_margin": 8.0,
+        "hidden_state_index": 24,
+        "norm_cap": 0.25
+      }
+    },
+    "steps_per_position": 1
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-latent-interfaces.org/schemas/compiler-graft-interface-v1.schema.json",
+  "title": "Open Latent Interfaces Compiler Graft Interface v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "model",
+    "representation",
+    "prompt_contract",
+    "reader",
+    "deterministic_mechanism",
+    "writer",
+    "evidence",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "oli.compiler-graft-interface/v1"},
+    "name": {"type": "string", "minLength": 1},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1}
+      }
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["residual_width"],
+      "properties": {
+        "residual_width": {"type": "integer", "minimum": 1}
+      }
+    },
+    "prompt_contract": {
+      "type": "object",
+      "required": ["assistant_prefix", "locator", "output"]
+    },
+    "reader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hidden_state_index", "manifest"],
+      "properties": {
+        "hidden_state_index": {"type": "integer", "minimum": 1},
+        "manifest": {"$ref": "#/$defs/fileReference"}
+      }
+    },
+    "deterministic_mechanism": {
+      "type": "object",
+      "required": ["type", "operation", "input_contract", "output_contract"]
+    },
+    "writer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "steps_per_position",
+        "candidate_token_ids",
+        "implementation",
+        "positions"
+      ],
+      "properties": {
+        "kind": {"const": "sequential_prompt_local_margin_compiler"},
+        "steps_per_position": {"const": 1},
+        "candidate_token_ids": {
+          "type": "object",
+          "required": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+          "additionalProperties": {"type": "integer", "minimum": 0}
+        },
+        "implementation": {"$ref": "#/$defs/fileReference"},
+        "positions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["0", "1", "2"],
+          "properties": {
+            "0": {"$ref": "#/$defs/compilerPosition"},
+            "1": {"$ref": "#/$defs/compilerPosition"},
+            "2": {"$ref": "#/$defs/compilerPosition"}
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "audit_runs",
+        "minimum_audit_exact_accuracy",
+        "minimum_audit_reader_pair_accuracy",
+        "minimum_base_error_recovery",
+        "minimum_base_correct_preservation",
+        "minimum_shuffled_target_accuracy",
+        "minimum_shuffled_target_advantage_over_random",
+        "sources"
+      ],
+      "properties": {
+        "audit_runs": {"const": 1},
+        "minimum_audit_exact_accuracy": {"$ref": "#/$defs/rate"},
+        "minimum_audit_reader_pair_accuracy": {"$ref": "#/$defs/rate"},
+        "minimum_base_error_recovery": {"$ref": "#/$defs/rate"},
+        "minimum_base_correct_preservation": {"$ref": "#/$defs/rate"},
+        "minimum_shuffled_target_accuracy": {"$ref": "#/$defs/rate"},
+        "minimum_shuffled_target_advantage_over_random": {
+          "$ref": "#/$defs/rate"
+        },
+        "sources": {
+          "type": "object",
+          "required": [
+            "audit_config",
+            "audit_dataset_config",
+            "audit_result",
+            "development_config",
+            "development_result",
+            "leading_selection_result",
+            "native_suffix_nonpass_result",
+            "reader_selection_result",
+            "suffix_selection_result"
+          ],
+          "additionalProperties": {"$ref": "#/$defs/fileReference"}
+        }
+      }
+    },
+    "claim_boundary": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "fileReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "url": {"type": "string", "format": "uri"}
+      }
+    },
+    "compilerPosition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hidden_state_index", "desired_margin", "norm_cap"],
+      "properties": {
+        "hidden_state_index": {"type": "integer", "minimum": 1},
+        "desired_margin": {"type": "number", "exclusiveMinimum": 0},
+        "norm_cap": {"type": "number", "exclusiveMinimum": 0}
+      }
+    }
+  }
+}

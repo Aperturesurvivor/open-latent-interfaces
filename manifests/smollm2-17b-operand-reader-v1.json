@@ -1,0 +1,61 @@
+{
+  "claim_boundary": [
+    "Validated only on HuggingFaceTB/SmolLM2-1.7B-Instruct at the named revision.",
+    "Validated for decimal operands in the frozen three-digit-addition workflow and its pair- and template-disjoint Phase 13 audit.",
+    "An external semantic locator supplies ordered operand token spans; autonomous operand discovery is not claimed.",
+    "Digit values are decoded from hidden states and are not read from token IDs or prompt text.",
+    "The interface does not expose natural-language chain of thought or an unrestricted mathematical state."
+  ],
+  "evidence": {
+    "audit_runs": 1,
+    "minimum_audit_pair_accuracy": 0.98,
+    "reader_audit_gate_passed": true,
+    "sources": {
+      "audit_config": {
+        "path": "configs/phase13_smollm2_compiler_graft_audit.json",
+        "sha256": "72ecc37ac889858c87c8db3a99e29d5235f37671dc842993aff2919d1fd80b8f"
+      },
+      "audit_dataset_config": {
+        "path": "configs/phase13_smollm2_compiler_graft_audit_dataset_frozen.json",
+        "sha256": "76d89283b36aeaf552667e361359d9cc038aca93a701419d65ab854f54c0e8f7"
+      },
+      "audit_result": {
+        "path": "results/phase13_smollm2_compiler_graft_audit.json",
+        "sha256": "b630522727aff690bd40a66633798da308f1ba30edc19c3912873ea2324881fb"
+      },
+      "selection_config": {
+        "path": "configs/phase13_smollm2_operand_reader_selection.json",
+        "sha256": "cdb2b17bb4690855ebf244b4c08064e98d975012ea252e92c1b908bf3887e958"
+      },
+      "selection_result": {
+        "path": "results/phase13_smollm2_operand_reader_selection.json",
+        "sha256": "f37b0a41ccc53d8964c10dd2abc1a8a3a6dd3e4eef8c257d4c985b8a8d4de1c8"
+      }
+    }
+  },
+  "locator": {
+    "contract": "caller supplies ordered decimal token positions for operand A and operand B; every character must occupy exactly one token",
+    "type": "external_semantic_operand_spans"
+  },
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "name": "smollm2-17b-operand-reader-v1",
+  "reader": {
+    "decision_rule": "nearest full-width native-state centroid by squared Euclidean distance",
+    "hidden_state_index": 1,
+    "tensors": {
+      "centroids_key": "digit_centroids",
+      "classes_key": "digit_classes",
+      "counts_key": "fit_class_counts",
+      "path": "artifacts/phase13_smollm2_operand_reader.safetensors",
+      "sha256": "ccbf156d079df6a13d9b4f4c8fe3a7fb6e6d9e66338c27b9034ce94b462d38ab",
+      "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase13-smollm2-compiler-graft-audit-v1/phase13_smollm2_operand_reader.safetensors"
+    }
+  },
+  "representation": {
+    "residual_width": 2048
+  },
+  "schema_version": "oli.operand-reader-interface/v2"
+}

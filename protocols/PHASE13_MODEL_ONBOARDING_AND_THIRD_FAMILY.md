@@ -451,6 +451,30 @@ The audit must preserve its first result whether it passes or does not pass.
 No threshold, component, intervention setting, dataset row, or control seed
 may be changed after the audit result is observed.
 
+## One-shot audit outcome
+
+The first and only authorized run passed all 17 prospective checks. The exact
+result is preserved at
+`results/phase13_smollm2_compiler_graft_audit.json`, SHA-256
+`b630522727aff690bd40a66633798da308f1ba30edc19c3912873ea2324881fb`.
+
+- reader and deterministic compute: 90 / 90
+- base exact: 33 / 90
+- oracle and latent compiler-graft exact: 90 / 90
+- repaired base errors: 57 / 57
+- preserved base-correct examples: 33 / 33
+- random and wrong-target base-error recovery: 1 / 57 and 2 / 57
+- shuffled requested-target following: 83 / 90
+- shuffled-random requested-target following: 0 / 90
+- shuffled true-result exact: 0 / 90
+- latent per-position, parse, and digit-token rates: 100%
+
+The audit seal was committed at `55c816a`; the first result was committed
+separately at `1e1290c`. The passing audit closes the Phase 13 third-family
+workflow-portability milestone. It does not establish tensor portability,
+natural chain-of-thought access, autonomous invocation, identified math
+neurons, cross-operation generality, or an any-model proof.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:

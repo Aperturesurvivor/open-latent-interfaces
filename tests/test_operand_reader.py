@@ -69,3 +69,17 @@ def test_audited_qwen_operand_reader_manifest() -> None:
     assert manifest.hidden_state_index == 1
     assert reader.classes.tolist() == list(range(10))
     assert reader.centroids.shape == (10, 1536)
+
+
+def test_audited_smollm2_operand_reader_manifest() -> None:
+    root = Path(__file__).parents[1]
+    manifest = OperandReaderManifest.load(
+        root / "manifests/smollm2-17b-operand-reader-v1.json"
+    )
+    manifest.verify(root)
+    reader = manifest.load_reader(root)
+    assert manifest.schema_version == "oli.operand-reader-interface/v2"
+    assert manifest.model_id == "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+    assert manifest.hidden_state_index == 1
+    assert reader.classes.tolist() == list(range(10))
+    assert reader.centroids.shape == (10, 2048)

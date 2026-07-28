@@ -487,6 +487,21 @@ block-to-logit differentiability before any model-specific interface search.
 See the [model-onboarding guide](docs/MODEL_ONBOARDING.md) and
 [third-family protocol](protocols/PHASE13_MODEL_ONBOARDING_AND_THIRD_FAMILY.md).
 
+The frozen Phase 13 workflow then passed its single fresh audit on
+SmolLM2-1.7B-Instruct: 90/90 operand reads, deterministic sums, and final
+answers; all 57 base errors repaired; all 33 base-correct answers preserved;
+and 83/90 arbitrary shuffled targets followed versus 0/90 for the equal-norm
+random control. A compact native suffix-coordinate search first failed and was
+preserved as negative evidence; the workflow adapted by selecting prompt-local
+compilers for all three output positions. See the
+[Phase 13 audit summary](PHASE13_SMOLLM2_COMPILER_GRAFT_AUDIT_SUMMARY.md) and
+[typed compiler-graft manifest](manifests/smollm2-17b-compiler-arithmetic-graft-v1.json).
+
+Phi, Qwen, and SmolLM2 now establish a three-family workflow-portability
+milestone. They do not establish portable tensors, natural chain-of-thought
+readout, autonomous invocation, identified “math neurons,” or an any-model
+proof.
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -617,6 +632,7 @@ either stage.
 - [Phase 12 Qwen compiler-hardening protocol](protocols/PHASE12_QWEN_COMPILER_HARDENING.md)
 - [Phase 12 Qwen hybrid-graft audit summary](PHASE12_QWEN_HYBRID_GRAFT_AUDIT_SUMMARY.md)
 - [Phase 13 model-onboarding and third-family protocol](protocols/PHASE13_MODEL_ONBOARDING_AND_THIRD_FAMILY.md)
+- [Phase 13 SmolLM2 compiler-graft audit summary](PHASE13_SMOLLM2_COMPILER_GRAFT_AUDIT_SUMMARY.md)
 - [Model-onboarding compatibility guide](docs/MODEL_ONBOARDING.md)
 - [Model-onboarding v1 schema](schemas/model-onboarding-v1.schema.json)
 - [Hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md)
@@ -624,10 +640,13 @@ either stage.
 - [Audited Phi operand-reader manifest](manifests/phi35-mini-operand-reader-v1.json)
 - [Audited Qwen operand-reader manifest](manifests/qwen25-15b-operand-reader-v1.json)
 - [Audited Qwen hybrid-graft manifest](manifests/qwen25-15b-hybrid-arithmetic-graft-v1.json)
+- [Audited SmolLM2 operand-reader manifest](manifests/smollm2-17b-operand-reader-v1.json)
+- [Audited SmolLM2 compiler-graft manifest](manifests/smollm2-17b-compiler-arithmetic-graft-v1.json)
 - [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Operand-reader interface v2 schema](schemas/operand-reader-interface-v2.schema.json)
 - [Hybrid-graft interface v2 schema](schemas/hybrid-graft-interface-v2.schema.json)
+- [Compiler-graft interface v1 schema](schemas/compiler-graft-interface-v1.schema.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
