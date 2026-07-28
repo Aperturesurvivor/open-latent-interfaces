@@ -1,0 +1,126 @@
+{
+  "created_at": "2026-07-28T07:13:48.198550+00:00",
+  "dataset": {
+    "config": "wikitext-2-raw-v1",
+    "id": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "split": "train",
+    "text_field": "text"
+  },
+  "fit": {
+    "dim_batch": 8,
+    "max_seq_len": 64,
+    "skip_first": 16,
+    "source_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "target_layer": 27
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "prompts": [
+    {
+      "row_index": 23317,
+      "text_sha256": "876c7b45cb68bbee086dd7613a21f8a93f4d62067351c47b9578e773b9d428d6",
+      "token_count": 64
+    },
+    {
+      "row_index": 14784,
+      "text_sha256": "a3613ed99889424980567c795ad5fa54de273f906a7d2187e834ecdcfc7eae0e",
+      "token_count": 55
+    },
+    {
+      "row_index": 4109,
+      "text_sha256": "686e64f28f62facbcb825cac777f28f22f0722da3bf885cc10e57ecfb71a3dcf",
+      "token_count": 41
+    },
+    {
+      "row_index": 12973,
+      "text_sha256": "d3265e90918ff3854381bf8bfff592ddf8889e0f63a74ca94c3f5a4ba2adaa61",
+      "token_count": 56
+    },
+    {
+      "row_index": 1900,
+      "text_sha256": "42179daee07f784cb73f186aa755e696a489dfa575ccde200b5c80388c19cc0a",
+      "token_count": 61
+    },
+    {
+      "row_index": 18893,
+      "text_sha256": "eaeb09d6bfe9236f259d8c6541674d5813ef508d8541ad858cc1277c11030c62",
+      "token_count": 57
+    },
+    {
+      "row_index": 26093,
+      "text_sha256": "0d10cfbc63b699a12e425a4fb5445cf8f1fbb8f8703d8e28bf20140f1df91b11",
+      "token_count": 43
+    },
+    {
+      "row_index": 33449,
+      "text_sha256": "e65d34f574261dc716abd58278231e5c1636f4a32f5aef8c5ad62f5c3cbd4d94",
+      "token_count": 42
+    },
+    {
+      "row_index": 21082,
+      "text_sha256": "3b5fa28df421a4381e2f0ac782e1a007d54d1963b3995c935e3cb09b9aa688d0",
+      "token_count": 50
+    },
+    {
+      "row_index": 19385,
+      "text_sha256": "a93ef147d4fa8b01d0a76363a5868b25d39dadc6cc02e629499a7a2cc6583b77",
+      "token_count": 52
+    },
+    {
+      "row_index": 6606,
+      "text_sha256": "24b5c934de2a18f16cb735f806042413523a37468e4a0a6974be5a88de466bdf",
+      "token_count": 57
+    },
+    {
+      "row_index": 19399,
+      "text_sha256": "6e72f16e3be058745dd8aec6f5ca00c0ae0e52354f6b4648b46e883788945fe6",
+      "token_count": 42
+    }
+  ],
+  "purpose": "phase1-tier-a-development",
+  "schema_version": "oli.jlens-fit-selection/v1",
+  "selection": {
+    "eligible_rows": 1134,
+    "max_tokens": 64,
+    "min_tokens": 40,
+    "n_prompts": 12,
+    "seed": 20260729,
+    "selected_rows_sha256": "ec21742117de3ea077daa0d39dc9e346e770dff5c790b15760e7d0ab18f63553"
+  },
+  "upstream": {
+    "license": "Apache-2.0",
+    "repository": "https://github.com/anthropics/jacobian-lens",
+    "revision": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  }
+}
