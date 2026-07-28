@@ -45,6 +45,16 @@ def test_binary_probe_separates_synthetic_classes() -> None:
     assert metrics["auc"] > 0.9
 
 
+def test_binary_probe_calibrates_imbalanced_training_threshold() -> None:
+    values = torch.tensor(
+        [[-3.0], [-2.0], [-1.0], [-0.5], [0.5], [1.0], [2.0], [3.0]]
+    )
+    labels = torch.tensor([0, 0, 0, 0, 0, 0, 1, 1])
+    probe = BinaryRidgeProbe.fit(values, labels, l2=0.1)
+    predictions = probe.predict(values)
+    assert torch.equal(predictions, labels)
+
+
 def test_categorical_probe_shift_reaches_requested_margin() -> None:
     generator = torch.Generator().manual_seed(7)
     labels = torch.arange(120) % 3

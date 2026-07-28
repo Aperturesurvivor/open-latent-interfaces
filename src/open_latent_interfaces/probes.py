@@ -142,6 +142,7 @@ class ScalarRidgeProbe:
 class BinaryRidgeProbe:
     weights: torch.Tensor
     bias: torch.Tensor
+    threshold: torch.Tensor
     standardizer: Standardizer
 
     @classmethod
@@ -154,10 +155,43 @@ class BinaryRidgeProbe:
     ) -> BinaryRidgeProbe:
         signed = labels.float().reshape(-1) * 2 - 1
         weights, bias, standardizer = _ridge_weights(values.float(), signed, l2=l2)
-        return cls(weights=weights[:, 0], bias=bias[0], standardizer=standardizer)
+        raw_scores = standardizer.transform(values.float()) @ weights[:, 0] + bias[0]
+        sorted_scores = torch.sort(torch.unique(raw_scores)).values
+        if len(sorted_scores) == 1:
+            candidates = sorted_scores
+        else:
+            candidates = torch.cat(
+                (
+                    sorted_scores[:1] - 1e-6,
+                    (sorted_scores[:-1] + sorted_scores[1:]) / 2,
+                    sorted_scores[-1:] + 1e-6,
+                )
+            )
+        positives = labels.reshape(-1) == 1
+        negatives = ~positives
+        best_score: tuple[float, float, float] | None = None
+        best_threshold: torch.Tensor | None = None
+        for candidate in candidates:
+            predictions = raw_scores >= candidate
+            true_positive_rate = (predictions[positives]).float().mean()
+            true_negative_rate = (~predictions[negatives]).float().mean()
+            balanced = float((true_positive_rate + true_negative_rate) / 2)
+            accuracy = float((predictions == positives).float().mean())
+            score = (balanced, accuracy, -float(candidate.abs()))
+            if best_score is None or score > best_score:
+                best_score = score
+                best_threshold = candidate
+        assert best_threshold is not None
+        return cls(
+            weights=weights[:, 0],
+            bias=bias[0],
+            threshold=best_threshold,
+            standardizer=standardizer,
+        )
 
     def score(self, values: torch.Tensor) -> torch.Tensor:
-        return self.standardizer.transform(values.float()) @ self.weights + self.bias
+        raw = self.standardizer.transform(values.float()) @ self.weights + self.bias
+        return raw - self.threshold
 
     def predict(self, values: torch.Tensor) -> torch.Tensor:
         return (self.score(values) >= 0).long()
