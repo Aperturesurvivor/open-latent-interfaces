@@ -108,6 +108,15 @@ remaining transport is recipient-conditioned rather than a class-mean digit
 vector. See the
 [paired-transport summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md).
 
+A 480-pair conditional bridge then predicted low-rank transport from the
+recipient state and desired digit. It reached 41/45 leading-digit transfer,
+18/45 and 22/45 at later positions, and 6/45 exact results. Shuffling recipient
+states reduced exact transfer to 0/45, while conditional transport cut later
+intervention norms from 135–241% to 54–59%. Recipient conditioning is therefore
+a causal part of the write path, but next-digit input alone remains
+under-specified for reliable composition. See the
+[conditional-transport summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -177,6 +186,7 @@ either stage.
 - [Phase 1D stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md)
 - [Phase 1E donor-free typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md)
 - [Phase 1F paired-transport writer summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md)
+- [Phase 1G conditional-transport bridge summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
