@@ -121,3 +121,27 @@ The separate Phase 12 development gate passed:
 All frozen checks passed. Phase 12 may therefore construct one new audit using
 pairs and templates disjoint from Phase 11, Phase 12 selection, and Phase 12
 development. The development result itself is not audit evidence.
+
+## Frozen one-shot audit
+
+The authorized audit is now sealed before model evaluation:
+
+- dataset config:
+  `configs/phase12_qwen_hybrid_graft_audit_dataset_frozen.json`
+- audit config: `configs/phase12_qwen_hybrid_graft_audit.json`
+- dataset SHA-256:
+  `4f2e4181d368e45bd4ef7846569eb7c06de47c03730e388693149264d48f0bb5`
+- 90 new operand pairs, with zero overlap through Phase 12 development
+- three new prompt templates, balanced at 30 examples each
+- balanced leading, tens, ones, and carry labels
+- fixed reader at hidden-state index 1
+- fixed three-step leading compiler at hidden-state index 23
+- fixed audited suffix writer at hidden-state index 27
+- exactly one authorized run and a non-overwritable result path
+
+The audit retains the development thresholds, including at least 95% exact
+true-task output, at least 90% shuffled semantic target following, no more than
+15% shuffled random target following, and at least 70 percentage points of
+semantic target-following advantage. A preflight verified every frozen hash,
+token position, token contract, artifact, and development linkage without
+loading the model or evaluating an audit example.

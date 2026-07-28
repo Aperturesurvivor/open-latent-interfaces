@@ -38,14 +38,24 @@ from open_latent_interfaces.phase11_audit_data import (
     PHASE11_AUDIT_TEMPLATES,
     build_phase11_audit,
     phase11_audit_sha256,
-    prior_dataset_hashes,
+)
+from open_latent_interfaces.phase11_audit_data import (
+    prior_dataset_hashes as phase11_prior_dataset_hashes,
+)
+from open_latent_interfaces.phase12_audit_data import (
+    PHASE12_AUDIT_TEMPLATES,
+    build_phase12_audit,
+    phase12_audit_sha256,
+)
+from open_latent_interfaces.phase12_audit_data import (
+    prior_dataset_hashes as phase12_prior_dataset_hashes,
 )
 from open_latent_interfaces.prefill import verify_decimal_digit_contract
 
 
-def template_sha256() -> str:
+def template_sha256(templates: tuple[str, ...]) -> str:
     encoded = json.dumps(
-        PHASE11_AUDIT_TEMPLATES,
+        templates,
         separators=(",", ":"),
     ).encode()
     return hashlib.sha256(encoded).hexdigest()
@@ -185,6 +195,11 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--device", default="mps")
     parser.add_argument("--dtype", choices=("float16", "float32"), default="float16")
+    parser.add_argument(
+        "--preflight-only",
+        action="store_true",
+        help="verify every frozen input without loading the model or auditing",
+    )
     args = parser.parse_args()
     if args.output.exists():
         raise SystemExit("refusing to overwrite one-shot audit result")
@@ -201,7 +216,7 @@ def main() -> None:
     for dependency, expected_hash in config["code_dependencies"].items():
         verify_sha256(Path(dependency), expected_hash)
 
-    source_names = (
+    source_names = [
         "dataset_config",
         "dataset_generator",
         "reader_selection_result",
@@ -215,9 +230,18 @@ def main() -> None:
         "suffix_basis_artifact",
         "development_config",
         "development_result",
+    ]
+    correction_names = [
         "development_correction_config",
         "development_correction",
-    )
+    ]
+    correction_configured = any(name in config for name in correction_names)
+    if correction_configured and not all(
+        name in config for name in correction_names
+    ):
+        raise SystemExit("development correction sources are incomplete")
+    if correction_configured:
+        source_names.extend(correction_names)
     paths = {name: Path(config[name]) for name in source_names}
     for name, path in paths.items():
         verify_sha256(path, config[f"{name}_sha256"])
@@ -229,31 +253,34 @@ def main() -> None:
     suffix_manifest = json.loads(paths["suffix_manifest"].read_text())
     development_config = json.loads(paths["development_config"].read_text())
     development_result = json.loads(paths["development_result"].read_text())
-    development_correction = json.loads(
-        paths["development_correction"].read_text()
-    )
     if dataset_config.get("audit_authorized", True):
         raise SystemExit("audit dataset was not frozen sealed")
     if not reader_selection["passes"]:
         raise SystemExit("reader source did not pass")
     if not compiler_selection["selection"]["passes"]:
         raise SystemExit("leading compiler source did not pass")
-    if development_result["passes"]:
-        raise SystemExit("correction must preserve an original non-pass")
-    if not development_correction["passes"]:
-        raise SystemExit("corrected development gate did not pass")
     if development_result["config_sha256"] != config[
         "development_config_sha256"
     ]:
         raise SystemExit("development result/config mismatch")
-    if development_correction["original"]["result_sha256"] != config[
-        "development_result_sha256"
-    ]:
-        raise SystemExit("development correction/result mismatch")
-    if development_correction["original"]["config_sha256"] != config[
-        "development_config_sha256"
-    ]:
-        raise SystemExit("development correction/config mismatch")
+    if correction_configured:
+        development_correction = json.loads(
+            paths["development_correction"].read_text()
+        )
+        if development_result["passes"]:
+            raise SystemExit("correction must preserve an original non-pass")
+        if not development_correction["passes"]:
+            raise SystemExit("corrected development gate did not pass")
+        if development_correction["original"]["result_sha256"] != config[
+            "development_result_sha256"
+        ]:
+            raise SystemExit("development correction/result mismatch")
+        if development_correction["original"]["config_sha256"] != config[
+            "development_config_sha256"
+        ]:
+            raise SystemExit("development correction/config mismatch")
+    elif not development_result["passes"]:
+        raise SystemExit("uncorrected development result did not pass")
     locked = (
         "reader_hidden_state_index",
         "reader_selection_result_sha256",
@@ -308,8 +335,24 @@ def main() -> None:
     ]:
         raise SystemExit("suffix basis changed")
 
-    examples = build_phase11_audit(**dataset_config["dataset"]["parameters"])
-    if phase11_audit_sha256(examples) != dataset_config["dataset"]["sha256"]:
+    audit_dataset_kind = config.get("audit_dataset_kind", "phase11")
+    if audit_dataset_kind == "phase11":
+        templates = PHASE11_AUDIT_TEMPLATES
+        examples = build_phase11_audit(
+            **dataset_config["dataset"]["parameters"]
+        )
+        dataset_hash = phase11_audit_sha256(examples)
+        prior_hashes = phase11_prior_dataset_hashes()
+    elif audit_dataset_kind == "phase12":
+        templates = PHASE12_AUDIT_TEMPLATES
+        examples = build_phase12_audit(
+            **dataset_config["dataset"]["parameters"]
+        )
+        dataset_hash = phase12_audit_sha256(examples)
+        prior_hashes = phase12_prior_dataset_hashes()
+    else:
+        raise SystemExit(f"unsupported audit dataset kind: {audit_dataset_kind}")
+    if dataset_hash != dataset_config["dataset"]["sha256"]:
         raise SystemExit("fresh audit dataset hash mismatch")
     if value_sha256([row.example_id for row in examples]) != config[
         "audit_examples_sha256"
@@ -319,11 +362,13 @@ def main() -> None:
         "canonical_pairs_sha256"
     ]:
         raise SystemExit("audit canonical-pair hash mismatch")
-    if prior_dataset_hashes() != dataset_config["dataset"][
+    if prior_hashes != dataset_config["dataset"][
         "prior_dataset_hashes"
     ]:
         raise SystemExit("prior dataset universe changed")
-    if template_sha256() != dataset_config["dataset"]["template_sha256"]:
+    if template_sha256(templates) != dataset_config["dataset"][
+        "template_sha256"
+    ]:
         raise SystemExit("audit template hash mismatch")
 
     model_config = dataset_config["model"]
@@ -365,6 +410,9 @@ def main() -> None:
         1: load_file(str(paths["tens_prototype_artifact"]))["digit"].float(),
         2: load_file(str(paths["ones_prototype_artifact"]))["digit"].float(),
     }
+    if args.preflight_only:
+        print("audit preflight passed; no model evaluation was performed")
+        return
 
     device = torch.device(args.device)
     model = AutoModelForCausalLM.from_pretrained(
@@ -547,7 +595,10 @@ def main() -> None:
         suffix_norm_cap=config["suffix_writer"]["norm_cap"],
     )
     report = {
-        "schema_version": "oli.phase11-qwen-hybrid-graft-audit/v1",
+        "schema_version": config.get(
+            "result_schema_version",
+            "oli.phase11-qwen-hybrid-graft-audit/v1",
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "one_shot_audit",
         "audit_runs": 1,
@@ -596,10 +647,14 @@ def main() -> None:
             "dtype": args.dtype,
         },
         "elapsed_seconds": time.perf_counter() - started,
-        "claim_boundary": (
-            "One-shot pair- and template-disjoint Qwen audit of latent operand "
-            "decoding, external deterministic addition, iterative leading-token "
-            "compilation, and previously audited native suffix writing."
+        "claim_boundary": config.get(
+            "claim_boundary",
+            (
+                "One-shot pair- and template-disjoint Qwen audit of latent "
+                "operand decoding, external deterministic addition, iterative "
+                "leading-token compilation, and previously audited native "
+                "suffix writing."
+            ),
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
