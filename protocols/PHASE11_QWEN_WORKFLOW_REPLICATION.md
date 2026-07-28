@@ -109,3 +109,10 @@ This is a non-passing selection result, not a failed audit. The deterministic
 fallback parameters now form the fixed input to a separate bounded iterative
 relinearization selection. That stage may select only the iteration count; it
 may not reopen the layer, margin, or norm-cap search.
+
+The iterative stage is frozen in
+`configs/phase11_qwen_iterative_leading_compiler.json`. It holds hidden-state
+index 23, desired margin 16, and norm cap 0.25 fixed, then evaluates cumulative
+relinearization depths 1 through 4. The earliest depth satisfying the unchanged
+gate must be selected. Target, wrong-digit, and random-norm controls are
+recomputed at every depth; the identity compiler remains a single step.
