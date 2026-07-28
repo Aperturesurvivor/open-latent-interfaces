@@ -53,6 +53,13 @@ The untouched model itself scored 7/72 at that boundary, so the next gate is a
 capability sweep before causal cartography. See the
 [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md).
 
+The follow-up capability gate moved to frozen Qwen2.5-1.5B-Instruct and an
+instruction-aligned prompt contract. Its preselected mixed three-digit regime
+passed 48/48 exact frozen-audit conditions across three templates and raw/chat
+presentation. This establishes the behavioral envelope for Phase 1, not a
+latent-mechanism claim. See the
+[capability audit](CAPABILITY_GATE_V2_AUDIT.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -110,6 +117,7 @@ either stage.
 - [Arithmetic capability gate](protocols/CAPABILITY_GATE.md)
 - [Capability gate v1 results](CAPABILITY_GATE_V1_RESULTS.md)
 - [Capability gate v2 development](CAPABILITY_GATE_V2_DEVELOPMENT.md)
+- [Capability gate v2 frozen audit](CAPABILITY_GATE_V2_AUDIT.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
 - [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md)
