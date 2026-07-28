@@ -263,6 +263,13 @@ next-digit control in Phi: 90/90 at hidden index 24 for the leading digit and
 and donor removal remain open. See the
 [Phase 3 native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md).
 
+Fit-only SVD then compressed Phi's native transports to rank 8 for the leading
+position and a shared rank-32 suffix basis. The suffix basis was learned only
+from tens transports yet reached 90/90 target digits at the ones position,
+versus at most 12/90 for matched controls. This retains donor-dependent
+coefficients and is not yet a donor-free controller. See the
+[Phase 3 causal-rank summary](PHASE3_PHI_DELTA_RANK_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -352,6 +359,7 @@ either stage.
 - [Phi-3.5 cross-model capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md)
 - [Phase 3 Phi prefill behavior summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md)
 - [Phase 3 Phi native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md)
+- [Phase 3 Phi causal-rank summary](PHASE3_PHI_DELTA_RANK_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
