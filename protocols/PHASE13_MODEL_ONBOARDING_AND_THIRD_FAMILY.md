@@ -239,6 +239,26 @@ exact pairs at index 22. This supports the narrow interpretation that
 token-local operand identity is readily decodable early in SmolLM2 under the
 external token locator.
 
+## Frozen leading-compiler selection
+
+`configs/phase13_smollm2_leading_compiler_selection.json` prospectively
+freezes a prompt-local leading-digit compiler scan over hidden-state indices
+12, 16, 20, 23, and 24. Each candidate differentiates the requested decimal
+token margin through the frozen model suffix. The scan crosses desired margins
+4, 8, and 16 with relative-norm caps 0.25, 0.5, and 0.75.
+
+The same 90 selection examples receive balanced counterfactual three-digit
+targets whose every digit differs from the natural result. A configuration
+passes only with at least 90% target and identity accuracy, at least
+50 percentage points of advantage over both a norm-matched wrong-digit
+compiler and a norm-matched random update, 100% digit-token output, and mean
+relative norm no greater than 0.75. Passing configurations are ordered by
+lowest observed mean relative norm, then lower cap, margin, and boundary.
+
+This is write-side selection evidence only. It does not use the fitted reader
+tensor, establish a suffix writer, test deterministic arithmetic, or expose
+the held development split.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
