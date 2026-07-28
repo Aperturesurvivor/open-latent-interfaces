@@ -145,3 +145,28 @@ true-task output, at least 90% shuffled semantic target following, no more than
 semantic target-following advantage. A preflight verified every frozen hash,
 token position, token contract, artifact, and development linkage without
 loading the model or evaluating an audit example.
+
+## One-shot audit outcome
+
+The single authorized audit passed every frozen check:
+
+- result: `results/phase12_qwen_hybrid_graft_audit.json`
+- result SHA-256:
+  `9318e4e564a4e8f3cf37e00f0292d4f2c3ad11ec08e0446023cf483aec197ffc`
+- reader: 90/90 operand pairs and 498/498 operand digits
+- deterministic addition: 90/90
+- latent and oracle hybrid output: 90/90 exact
+- base model: 59/90 exact
+- recovered base errors: latent 31/31, random 1/31, wrong-target 2/31
+- preserved base-correct outputs: 59/59
+- shuffled semantic target following: 85/90
+- shuffled position accuracy: 86/90 leading, 90/90 tens, 89/90 ones
+- shuffled random target following: 1/90
+- shuffled semantic advantage over random: 84/90, or 93.3 percentage points
+- shuffled true-task output: 0/90
+
+All 19 checks passed on the first and only run. This supports a
+pair- and template-disjoint Qwen replication of the complete latent-read,
+deterministic-addition, hybrid-write workflow at the stated three-digit
+arithmetic boundary. It does not establish a universal model-independent
+interface or a general deterministic reasoning implant.
