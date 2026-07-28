@@ -69,6 +69,32 @@ class LocalMarginPlan:
         return deltas
 
 
+@dataclass(frozen=True)
+class IterativeMarginTrace:
+    """Cumulative residual updates after each prompt-local relinearization."""
+
+    cumulative_deltas: tuple[torch.Tensor, ...]
+    base_recipient_states: torch.Tensor
+
+
+def project_relative_norm(
+    deltas: torch.Tensor,
+    reference_states: torch.Tensor,
+    *,
+    max_relative_norm: float,
+) -> torch.Tensor:
+    """Project row-wise updates onto a relative-L2 ball."""
+
+    if max_relative_norm <= 0:
+        raise ValueError("max_relative_norm must be positive")
+    if deltas.shape != reference_states.shape or deltas.ndim != 2:
+        raise ValueError("deltas and reference_states must share a 2D shape")
+    maximum = max_relative_norm * reference_states.norm(dim=1).clamp_min(1e-12)
+    norms = deltas.norm(dim=1).clamp_min(1e-12)
+    factors = torch.minimum(torch.ones_like(norms), maximum / norms)
+    return deltas * factors[:, None]
+
+
 def compile_local_margin_plan(
     model: Any,
     tokenizer: Any,
@@ -79,6 +105,7 @@ def compile_local_margin_plan(
     candidate_token_ids: torch.Tensor,
     device: torch.device | str,
     batch_size: int = 4,
+    preexisting_deltas: torch.Tensor | None = None,
 ) -> LocalMarginPlan:
     """Differentiate a requested next-token margin at one residual boundary.
 
@@ -93,6 +120,11 @@ def compile_local_margin_plan(
         raise ValueError("batch_size must be positive")
     if len(prompts) != int(target_token_ids.numel()):
         raise ValueError("one target token id is required per prompt")
+    if preexisting_deltas is not None:
+        if preexisting_deltas.ndim != 2:
+            raise ValueError("preexisting_deltas must have shape [prompts, width]")
+        if preexisting_deltas.shape[0] != len(prompts):
+            raise ValueError("one preexisting delta is required per prompt")
     if candidate_token_ids.ndim != 1 or candidate_token_ids.numel() < 2:
         raise ValueError("candidate_token_ids must contain at least two ids")
     if any(parameter.requires_grad for parameter in model.parameters()):
@@ -133,15 +165,29 @@ def compile_local_margin_plan(
         positions = last_nonpadding_positions(encoded["attention_mask"])
         rows = torch.arange(stop - start, device=device)
         captured: dict[str, torch.Tensor] = {}
+        batch_preexisting = (
+            None
+            if preexisting_deltas is None
+            else preexisting_deltas[start:stop]
+        )
 
         def capture_leaf(
             _module: Any,
             _inputs: tuple[Any, ...],
             output: Any,
             captured_store: dict[str, torch.Tensor] = captured,
+            row_indices: torch.Tensor = rows,
+            token_positions: torch.Tensor = positions,
+            existing: torch.Tensor | None = batch_preexisting,
         ) -> Any:
             hidden = output[0] if isinstance(output, tuple) else output
-            leaf = hidden.detach().requires_grad_(True)
+            leaf = hidden.detach().clone()
+            if existing is not None:
+                leaf[row_indices, token_positions] += existing.to(
+                    device=leaf.device,
+                    dtype=leaf.dtype,
+                )
+            leaf.requires_grad_(True)
             captured_store["hidden"] = leaf
             return _replace_hidden(output, leaf)
 
@@ -193,4 +239,58 @@ def compile_local_margin_plan(
         current_margins=torch.cat(margin_rows),
         margin_gradients=torch.cat(gradient_rows),
         hard_gate=torch.cat(gate_rows).bool(),
+    )
+
+
+def compile_iterative_margin_deltas(
+    model: Any,
+    tokenizer: Any,
+    prompts: list[str],
+    *,
+    hidden_state_index: int,
+    target_token_ids: torch.Tensor,
+    candidate_token_ids: torch.Tensor,
+    desired_margin: float,
+    iterations: int,
+    max_relative_norm: float,
+    device: torch.device | str,
+    batch_size: int = 4,
+) -> IterativeMarginTrace:
+    """Relinearize and update until the frozen iteration budget is exhausted."""
+
+    if iterations < 1:
+        raise ValueError("iterations must be positive")
+    cumulative: torch.Tensor | None = None
+    base_states: torch.Tensor | None = None
+    trace = []
+    for _ in range(iterations):
+        plan = compile_local_margin_plan(
+            model,
+            tokenizer,
+            prompts,
+            hidden_state_index=hidden_state_index,
+            target_token_ids=target_token_ids,
+            candidate_token_ids=candidate_token_ids,
+            device=device,
+            batch_size=batch_size,
+            preexisting_deltas=cumulative,
+        )
+        if base_states is None:
+            base_states = plan.recipient_states
+            cumulative = torch.zeros_like(base_states)
+        assert cumulative is not None
+        step = plan.deltas(
+            desired_margin=desired_margin,
+            max_relative_norm=None,
+        )
+        cumulative = project_relative_norm(
+            cumulative + step,
+            base_states,
+            max_relative_norm=max_relative_norm,
+        )
+        trace.append(cumulative.clone())
+    assert base_states is not None
+    return IterativeMarginTrace(
+        cumulative_deltas=tuple(trace),
+        base_recipient_states=base_states,
     )
