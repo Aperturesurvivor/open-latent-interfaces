@@ -100,3 +100,24 @@ The gate requires:
 
 No Phase 12 audit may be generated unless this separate integration gate
 passes.
+
+## Integrated development outcome
+
+The separate Phase 12 development gate passed:
+
+- result: `results/phase12_qwen_hybrid_graft_development.json`
+- result SHA-256:
+  `55b20af26f71368e33ec97b21688088c9fe28050e4e871f9a731de254ee40c16`
+- reader and deterministic compute: 90/90
+- latent and oracle true-task output: 90/90
+- base: 82/90
+- recovered base errors: latent 8/8, random 0/8, wrong-target 1/8
+- preserved base-correct outputs: 82/82
+- shuffled semantic target following: 86/90
+- shuffled random target following: 0/90
+- shuffled target-following advantage: 86/90
+- shuffled position accuracy: 88/90 leading, 90/90 tens, 88/90 ones
+
+All frozen checks passed. Phase 12 may therefore construct one new audit using
+pairs and templates disjoint from Phase 11, Phase 12 selection, and Phase 12
+development. The development result itself is not audit evidence.
