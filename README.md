@@ -19,7 +19,8 @@ be trained, then frozen for inference.
 
 ## Current status
 
-**Phase 0 engineering pilot.** The repository currently contains:
+**Phase 0.1 completed; Phase 1 infrastructure underway.** The repository
+currently contains:
 
 - deterministic addition/contrast dataset generation with split-disjoint
   operand pairs;
@@ -27,6 +28,10 @@ be trained, then frozen for inference.
 - ridge route and scalar-value probes;
 - temporary residual interventions at an explicit hidden-state boundary;
 - a probe-defined, oracle-result write-path diagnostic;
+- optional, dependency-light adapters for the released NLA and Jacobian-lens
+  systems;
+- a provenance-rich interpretability artifact schema that requires independent
+  corroboration before an explanation can be marked as evidence;
 - tests, a research ladder, a protocol, and a claims boundary.
 
 No NLA has been trained here. No deterministic graft has passed an end-to-end
@@ -95,6 +100,8 @@ either stage.
 - [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
+- [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
+- [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
 ## Upstream foundations
 

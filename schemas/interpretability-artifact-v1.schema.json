@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Aperturesurvivor/open-latent-interfaces/schemas/interpretability-artifact-v1.schema.json",
+  "title": "Open Latent Interfaces interpretability artifact v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_id",
+    "created_at",
+    "example_id",
+    "site",
+    "method",
+    "observation",
+    "reconstruction",
+    "corroboration",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "oli.interpretability-artifact/v1"
+    },
+    "artifact_id": {
+      "$ref": "#/$defs/sha256"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "example_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_model",
+        "target_model_revision",
+        "hidden_state_index",
+        "token_position",
+        "activation_sha256"
+      ],
+      "properties": {
+        "target_model": {"type": "string", "minLength": 1},
+        "target_model_revision": {"type": "string", "minLength": 1},
+        "hidden_state_index": {"type": "integer", "minimum": 0},
+        "token_position": {"type": "integer"},
+        "activation_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "method": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "implementation",
+        "repository",
+        "revision",
+        "license",
+        "checkpoint",
+        "checkpoint_revision"
+      ],
+      "properties": {
+        "family": {"type": "string", "minLength": 1},
+        "implementation": {"type": "string", "minLength": 1},
+        "repository": {"type": "string", "format": "uri"},
+        "revision": {"$ref": "#/$defs/commit"},
+        "license": {"type": "string", "minLength": 1},
+        "checkpoint": {"type": ["string", "null"]},
+        "checkpoint_revision": {"type": ["string", "null"]}
+      }
+    },
+    "observation": {
+      "type": "object"
+    },
+    "reconstruction": {
+      "type": ["object", "null"]
+    },
+    "corroboration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "artifact_ids", "method_families", "note"],
+      "properties": {
+        "status": {
+          "enum": ["hypothesis", "corroborated", "contradicted", "inconclusive"]
+        },
+        "artifact_ids": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/sha256"}
+        },
+        "method_families": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        },
+        "note": {"type": ["string", "null"]}
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    }
+  }
+}
