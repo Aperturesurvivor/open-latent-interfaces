@@ -162,6 +162,14 @@ constraint to remove is the frozen donor-PCA output basis, which may exclude
 low-variance causal suffix directions. See the
 [multitemplate causal summary](PHASE2_MULTITEMPLATE_CAUSAL_SUMMARY.md).
 
+Jointly learning that output basis under causal loss improved suffix transfer
+to 44/90 and 39/90, exact targets to 21/90, and identity preservation to the
+90% gate, while keeping intervention norms below 36%. This is the strongest
+compressed writer so far, but it still cannot advance to audit. The next bias
+to remove is donor target selection, which deliberately minimized suffix
+differences and leaves causal suffix labels insufficiently counterfactual. See
+the [learned-basis summary](PHASE2_LEARNED_BASIS_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -238,6 +246,7 @@ either stage.
 - [Phase 2 scaled-adapter development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md)
 - [Phase 2 causal-adapter development summary](PHASE2_CAUSAL_ADAPTER_SUMMARY.md)
 - [Phase 2 multitemplate causal summary](PHASE2_MULTITEMPLATE_CAUSAL_SUMMARY.md)
+- [Phase 2 learned-basis causal summary](PHASE2_LEARNED_BASIS_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

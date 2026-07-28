@@ -443,9 +443,13 @@ def main() -> None:
     }
     report = {
         "schema_version": (
-            "oli.phase2-multitemplate-causal-adapter/v1"
-            if prompt_views
-            else "oli.phase2-causal-adapter/v1"
+            "oli.phase2-learned-basis-causal-adapter/v1"
+            if config.get("train_delta_basis", False)
+            else (
+                "oli.phase2-multitemplate-causal-adapter/v1"
+                if prompt_views
+                else "oli.phase2-causal-adapter/v1"
+            )
         ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
