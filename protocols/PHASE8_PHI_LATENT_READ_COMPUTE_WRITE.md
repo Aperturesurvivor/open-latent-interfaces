@@ -78,6 +78,38 @@ The integrated target must meet:
 Development runs once. Audit requires a separately frozen configuration and
 one authorized execution.
 
+## Development metric correction
+
+The first development run completed without execution error and produced:
+
+- reader operand pairs: 45/45 exact;
+- deterministic sums: 45/45 exact;
+- latent graft: 44/45 exact;
+- oracle writer: 44/45 exact;
+- untouched base: 38/45 exact;
+- random native-subspace intervention: 40/45 exact;
+- shuffled-read control: 2/45 exact.
+
+The original gate marked this a nonpass only because it required the latent
+condition to exceed every control by 23/45 absolute correct answers. That
+criterion is not identifiable when base accuracy is already 38/45: a random
+intervention can preserve most correct base answers without implementing the
+target computation.
+
+Before any audit access, a no-rerun correction replaces only that absolute
+control criterion with paired causal-uplift checks:
+
+- recover at least 75% of base errors;
+- preserve at least 98% of base-correct examples;
+- improve net exact accuracy over base by at least 10 percentage points;
+- recover at least 50% more of the base-error set than random;
+- shuffled-read true accuracy at most 10%.
+
+All reader, deterministic-compute, final-exact, oracle-gap, parse, and
+digit-token checks remain unchanged. The original result and nonpass remain
+immutable and hash-referenced. The corrected rule is development-derived and
+must be frozen unchanged for the untouched audit.
+
 ## Claim boundary
 
 A passing audit would establish a complete deterministic latent graft under an

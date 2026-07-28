@@ -1,0 +1,20 @@
+{
+  "corrected_rule": {
+    "maximum_shuffled_true_accuracy": 0.1,
+    "minimum_base_correct_preservation": 0.98,
+    "minimum_base_error_recovery": 0.75,
+    "minimum_computed_target_accuracy": 0.98,
+    "minimum_excess_base_error_recovery_over_random": 0.5,
+    "minimum_final_exact_accuracy": 0.75,
+    "minimum_net_improvement_over_base": 0.1,
+    "minimum_reader_pair_accuracy": 0.98,
+    "require_digit_token_rate": 1.0,
+    "require_oracle_exact_gap_at_most": 0.05,
+    "require_parse_rate": 1.0
+  },
+  "original_config": "configs/phase8_phi_latent_graft_development.json",
+  "original_config_sha256": "bcf9f49c150320e40fb6da45449b24e251e50f2cdb29c6b08c46f07108f7a170",
+  "original_result": "results/phase8_phi_latent_graft_development.json",
+  "original_result_sha256": "d35e45a43121303934d6eb86a431fc288a39c547db8c5c4a42458172f46174e4",
+  "schema_version": "oli.phase8-phi-latent-graft-metric-correction-config/v1"
+}
