@@ -373,7 +373,9 @@ API. The 74 KB artifact contains four source-digit operand vectors and one
 universal rank-one carry vector, with model revision, semantic token selectors,
 scales, and evidence hashes declared separately. See the
 [arithmetic-coordinate interface](docs/ARITHMETIC_COORDINATE_INTERFACE.md) and
-[audited manifest](manifests/phi35-mini-arithmetic-coordinates-v1.json).
+[audited manifest](manifests/phi35-mini-arithmetic-coordinates-v1.json). The
+verified tensor package is published in the
+[`phase4-phi-arithmetic-coordinate-audit-v1` release](https://github.com/Aperturesurvivor/open-latent-interfaces/releases/tag/phase4-phi-arithmetic-coordinate-audit-v1).
 
 ## Why this is separate from ordinary activation steering
 

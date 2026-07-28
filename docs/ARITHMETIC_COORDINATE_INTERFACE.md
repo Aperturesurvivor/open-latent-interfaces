@@ -96,6 +96,8 @@ The sealed audit used 45 unfiltered quartets:
 
 The package is 74,448 bytes and contains five tensors. Its SHA-256 is
 `9479f3652d6b250a8ff6ae375edfe87c801c8c899dd8c962c204acdb13eb79c4`.
+It is published in the
+[`phase4-phi-arithmetic-coordinate-audit-v1` release](https://github.com/Aperturesurvivor/open-latent-interfaces/releases/tag/phase4-phi-arithmetic-coordinate-audit-v1).
 
 ## Workflow portability
 
