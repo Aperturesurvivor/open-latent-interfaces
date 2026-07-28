@@ -1,0 +1,34 @@
+{
+  "base_model_batch_size": 4,
+  "behavior_result": "results/phase9_phi_wide_writer_behavior_development.json",
+  "behavior_result_sha256": "5c9347fe50df45146cadcb0938478911d4c402f0fd28612f94bfab5bd1a8ea8e",
+  "compiler_batch_size": 2,
+  "compiler_module": "src/open_latent_interfaces/causal_compiler.py",
+  "compiler_module_sha256": "d8d986648eb0b005f27f5df1e1ab9b7176a3d1486a72ba637bcb9136c041fdf2",
+  "dataset_config": "configs/phase8_phi_latent_graft_dataset_frozen.json",
+  "dataset_config_sha256": "2cefb24b966ff9423dbb04be6b97f7633da09b0d64b894302ca8acf856c21aa2",
+  "desired_margins": [
+    1.0,
+    2.0,
+    4.0,
+    8.0,
+    12.0,
+    16.0,
+    24.0,
+    32.0
+  ],
+  "hidden_state_index": 24,
+  "norm_cap": 1.0,
+  "random_control_seed": 20261202,
+  "runner_sha256": "cecc93f5ac45333b813ffe49f4b1cbdc6aa2f2a4fc44b01f7a89941820e7f1ec",
+  "schema_version": "oli.phase9b-leading-causal-compiler-config/v1",
+  "selection_examples_sha256": "cbead14468b1088afabccded879e82a6b6681d6e0762304b6356fa3b9e7aa461",
+  "selection_rule": {
+    "maximum_mean_relative_norm": 0.75,
+    "minimum_control_advantage": 0.5,
+    "minimum_identity_accuracy": 0.9,
+    "minimum_target_accuracy": 0.9,
+    "require_digit_token_rate": true
+  },
+  "selection_targets_sha256": "afdb5503d936dcc4df8bdb3c6fabdf6e5a2ac26b16c9c8e0e99a61d6e6e03b91"
+}
