@@ -389,6 +389,11 @@ effect appeared at index 16 but remained a unit-scale non-pass at 11/45 target
 tens versus 2/45 matched no-carry. See the
 [Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md).
 
+A bounded scale-only follow-up then passed the fixed Qwen carry context at
+scale 2.0: 26/45 target tens versus 7/45 matched no-carry and 0/45 random.
+Scale 2.0 was the smallest passing candidate. See the
+[Phase 5 Qwen carry-scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -498,6 +503,7 @@ either stage.
 - [Phase 5 Qwen arithmetic-state replication protocol](protocols/PHASE5_QWEN_ARITHMETIC_STATE_REPLICATION.md)
 - [Phase 5 Qwen carry-behavior summary](PHASE5_QWEN_CARRY_BEHAVIOR_SUMMARY.md)
 - [Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md)
+- [Phase 5 Qwen carry-context scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)

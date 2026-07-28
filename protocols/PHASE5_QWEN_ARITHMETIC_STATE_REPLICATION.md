@@ -73,3 +73,9 @@ A scale-only follow-up may keep index 16 and the exact carry-context,
 matched-no-carry, and isotropic vectors fixed while evaluating a precommitted
 bounded scale grid. It may not rescan layers, change token regions, filter
 selection, or open development.
+
+The scale-only follow-up selected scale 2.0 as the smallest passing value:
+26/45 target tens against 7/45 matched no-carry and 0/45 random. Qwen
+donor-free fitting is therefore fixed at operand index 12 and carry-context
+index 16. Fit data may determine class prototypes; selection may choose only
+from a frozen scale grid and matched controls.
