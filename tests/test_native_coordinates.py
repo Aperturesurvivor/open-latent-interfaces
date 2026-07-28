@@ -89,6 +89,30 @@ def test_manifest_loads_audited_interface() -> None:
     assert (ones.rank, ones.residual_width, ones.scale) == (16, 1536, 2.0)
 
 
+def test_v2_manifest_supports_position_specific_bases() -> None:
+    root = Path(__file__).parents[1]
+    manifest = NativeCoordinateManifest.load(
+        root / "manifests/phi35-mini-next-digit-interface-v1.json"
+    )
+    manifest.verify(root)
+    assert manifest.schema_version == "oli.native-coordinate-interface/v2"
+    assert manifest.model_id == "microsoft/Phi-3.5-mini-instruct"
+    assert manifest.assistant_prefix == "Answer="
+    assert set(manifest.positions) == {0, 1, 2}
+    leading = manifest.load_writer(0, root=root)
+    tens = manifest.load_writer(1, root=root)
+    ones = manifest.load_writer(2, root=root)
+    assert (leading.rank, leading.residual_width, leading.scale) == (
+        32,
+        3072,
+        1.0,
+    )
+    assert (tens.rank, tens.residual_width, tens.scale) == (32, 3072, 1.25)
+    assert (ones.rank, ones.residual_width, ones.scale) == (32, 3072, 1.25)
+    assert not torch.equal(leading.basis, tens.basis)
+    assert torch.equal(tens.basis, ones.basis)
+
+
 def test_manifest_verification_rejects_bad_artifact_hash(tmp_path: Path) -> None:
     basis_path = tmp_path / "basis.safetensors"
     prototype_path = tmp_path / "prototypes.safetensors"

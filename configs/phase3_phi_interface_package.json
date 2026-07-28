@@ -1,0 +1,11 @@
+{
+  "audit_result": "results/phase3_phi_closed_loop_audit.json",
+  "audit_sha256": "36f02acbe6203df608d88401a819f989786ce658b63e6119e9e1adaac58d61ea",
+  "basis": "artifacts/phase3_phi_native_bases.safetensors",
+  "basis_sha256": "33fc5a9dc0e326620769416973a167dc6b370ed18fd1407864f1e539ef449199",
+  "leading_prototype": "artifacts/phase3_phi_leading_prototype_v2.safetensors",
+  "leading_sha256": "3a0623d8f077da61bad8aa5e32ca3e2b9a561f4c0168884e1805aac631aec1b0",
+  "schema_version": "oli.phase3-interface-package-config/v1",
+  "suffix_prototype": "artifacts/phase3_phi_digit_prototypes.safetensors",
+  "suffix_sha256": "cae12daf7b94a9c685e00244b1e039c2d80267ce660a9af9e859518bd983b552"
+}

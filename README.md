@@ -393,6 +393,8 @@ either stage.
 - [Phase 3 Phi closed-loop development summary](PHASE3_PHI_CLOSED_LOOP_DEVELOPMENT_SUMMARY.md)
 - [Phase 3 Phi one-shot audit summary](PHASE3_PHI_AUDIT_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
+- [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
+- [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

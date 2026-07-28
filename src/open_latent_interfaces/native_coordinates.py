@@ -173,6 +173,7 @@ class ArtifactReference:
     path: str
     sha256: str
     key: str
+    url: str | None = None
 
     @classmethod
     def from_dict(cls, value: dict[str, Any]) -> ArtifactReference:
@@ -186,6 +187,7 @@ class ArtifactReference:
             path=str(value["path"]),
             sha256=digest,
             key=str(value["key"]),
+            url=None if "url" not in value else str(value["url"]),
         )
 
     def verify(self, root: Path) -> Path:
@@ -205,24 +207,39 @@ class NativeCoordinatePosition:
     norm_cap: float
     rank: int
     prototypes: ArtifactReference
+    basis: ArtifactReference | None = None
 
 
 @dataclass(frozen=True)
 class NativeCoordinateManifest:
+    schema_version: str
     name: str
     model_id: str
     model_revision: str
     residual_width: int
-    basis: ArtifactReference
+    basis: ArtifactReference | None
     positions: dict[int, NativeCoordinatePosition]
     evidence: dict[str, Any]
+    assistant_prefix: str | None = None
 
     @classmethod
     def from_dict(cls, value: dict[str, Any]) -> NativeCoordinateManifest:
-        if value.get("schema_version") != "oli.native-coordinate-interface/v1":
+        schema_version = value.get("schema_version")
+        if schema_version not in (
+            "oli.native-coordinate-interface/v1",
+            "oli.native-coordinate-interface/v2",
+        ):
             raise ValueError("unsupported native-coordinate manifest schema")
         model = value["model"]
         representation = value["representation"]
+        if schema_version == "oli.native-coordinate-interface/v1":
+            default_basis = ArtifactReference.from_dict(representation["basis"])
+        else:
+            default_basis = (
+                None
+                if "default_basis" not in representation
+                else ArtifactReference.from_dict(representation["default_basis"])
+            )
         positions = {}
         for key, row in value["positions"].items():
             position = int(key)
@@ -235,17 +252,32 @@ class NativeCoordinateManifest:
                 norm_cap=float(row["norm_cap"]),
                 rank=int(row["rank"]),
                 prototypes=ArtifactReference.from_dict(row["prototypes"]),
+                basis=(
+                    None
+                    if "basis" not in row
+                    else ArtifactReference.from_dict(row["basis"])
+                ),
             )
+            if positions[position].basis is None and default_basis is None:
+                raise ValueError(
+                    f"position {position} has no basis and no default basis"
+                )
         if not positions:
             raise ValueError("manifest requires at least one coordinate position")
         return cls(
+            schema_version=str(schema_version),
             name=str(value["name"]),
             model_id=str(model["id"]),
             model_revision=str(model["revision"]),
             residual_width=int(representation["residual_width"]),
-            basis=ArtifactReference.from_dict(representation["basis"]),
+            basis=default_basis,
             positions=positions,
             evidence=dict(value["evidence"]),
+            assistant_prefix=(
+                None
+                if "assistant_prefix" not in value.get("controller", {})
+                else str(value["controller"]["assistant_prefix"])
+            ),
         )
 
     @classmethod
@@ -253,14 +285,21 @@ class NativeCoordinateManifest:
         return cls.from_dict(json.loads(path.read_text()))
 
     def verify(self, root: Path) -> None:
-        basis_path = self.basis.verify(root)
-        tensors = load_file(str(basis_path))
-        if self.basis.key not in tensors:
-            raise ValueError(f"missing basis tensor: {self.basis.key}")
-        basis = tensors[self.basis.key]
-        if basis.ndim != 2 or basis.shape[1] != self.residual_width:
-            raise ValueError("basis tensor does not match manifest residual width")
         for position in self.positions.values():
+            basis_reference = position.basis or self.basis
+            if basis_reference is None:
+                raise ValueError(
+                    f"position {position.answer_position} has no basis"
+                )
+            basis_path = basis_reference.verify(root)
+            tensors = load_file(str(basis_path))
+            if basis_reference.key not in tensors:
+                raise ValueError(f"missing basis tensor: {basis_reference.key}")
+            basis = tensors[basis_reference.key]
+            if basis.ndim != 2 or basis.shape[1] != self.residual_width:
+                raise ValueError(
+                    "basis tensor does not match manifest residual width"
+                )
             prototype_path = position.prototypes.verify(root)
             prototype_tensors = load_file(str(prototype_path))
             if position.prototypes.key not in prototype_tensors:
@@ -297,13 +336,16 @@ class NativeCoordinateManifest:
             raise KeyError(f"no interface for answer position {answer_position}")
         self.verify(root)
         position = self.positions[answer_position]
+        basis_reference = position.basis or self.basis
+        if basis_reference is None:
+            raise ValueError(f"position {answer_position} has no basis")
         return NativeCoordinateWriter.from_artifacts(
-            basis_path=root / self.basis.path,
+            basis_path=root / basis_reference.path,
             prototype_path=root / position.prototypes.path,
             rank=position.rank,
             scale=position.scale,
             norm_cap=position.norm_cap,
-            basis_key=self.basis.key,
+            basis_key=basis_reference.key,
             prototype_key=position.prototypes.key,
         )
 

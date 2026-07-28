@@ -15,7 +15,8 @@ Phase 2 one-shot audit:
 
 The API is independent of a particular model width, layer count, class count,
 or answer position. Model-specific facts live in a declarative manifest and
-hashed tensor artifacts.
+hashed tensor artifacts. Manifest v2 supports a different causal basis at each
+answer position while preserving v1's shared-basis contract.
 
 ## Equation
 
@@ -41,10 +42,10 @@ from open_latent_interfaces import NativeCoordinateManifest
 
 root = Path(".")
 manifest = NativeCoordinateManifest.load(
-    root / "manifests/qwen25-15b-next-digit-interface-v1.json"
+    root / "manifests/phi35-mini-next-digit-interface-v1.json"
 )
 manifest.verify(root)
-writer = manifest.load_writer(1, root=root)
+writer = manifest.load_writer(0, root=root)
 
 write = writer.write(
     states,
@@ -99,6 +100,8 @@ Validation checks:
 
 The JSON Schema is
 [`schemas/native-coordinate-interface-v1.schema.json`](../schemas/native-coordinate-interface-v1.schema.json).
+The position-specific v2 contract is
+[`schemas/native-coordinate-interface-v2.schema.json`](../schemas/native-coordinate-interface-v2.schema.json).
 
 ## Audited Qwen interface
 
@@ -115,6 +118,23 @@ The first manifest declares:
 
 Position zero is recorded as an external causal-adapter component because it
 has not yet been converted to the shared coordinate interface.
+
+## Audited Phi interface
+
+The v2 Phi manifest declares:
+
+- model: `microsoft/Phi-3.5-mini-instruct`;
+- residual width: 3072;
+- leading basis: rank 32 at hidden index 24, scale 1.0;
+- shared suffix basis: rank 32 at hidden index 30, scale 1.25;
+- explicit assistant-prefix token contract: `Answer=`;
+- one-shot audit result: 70/90 exact complete targets;
+- all three answer positions implemented as native-coordinate writers.
+
+The compact 791 KB tensor package is available from the
+[`phase3-phi-native-coordinate-audit-v1` release](https://github.com/Aperturesurvivor/open-latent-interfaces/releases/tag/phase3-phi-native-coordinate-audit-v1).
+Its SHA-256 is recorded independently in every position's basis and prototype
+reference.
 
 ## Claim boundary
 
