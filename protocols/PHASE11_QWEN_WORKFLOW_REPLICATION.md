@@ -234,3 +234,16 @@ permitted to load a model. It verifies the immutable result and config hashes,
 requires `wrong_target_recovery` to be the only failed check, removes only that
 absolute ceiling, and rechecks the unchanged 50-point paired recovery
 advantage. Every other development check remains unchanged.
+
+The measurement-only correction passed:
+
+- result: `results/phase11_qwen_hybrid_graft_gate_correction.json`
+- result SHA-256:
+  `2bb7a6b086cef32f068226eaa0f8d3ec9b281e805eceaed742e00bace85808a0`
+- model inference performed: none
+- unchanged intended-vs-wrong recovery advantage: 10/15
+- unchanged semantic-vs-random shuffled-target advantage: 172/180
+- corrected development checks: 15/15
+
+This authorizes construction of a fresh Qwen audit boundary. It does not itself
+constitute audit evidence or a cross-model replication claim.
