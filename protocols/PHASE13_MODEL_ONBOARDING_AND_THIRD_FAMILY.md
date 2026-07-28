@@ -411,6 +411,25 @@ residual compiler, with both identity preservation and causal target
 specificity. It authorizes generation and freezing of one new pair- and
 template-disjoint audit dataset. It is not itself audit evidence.
 
+## Fresh one-shot audit corpus
+
+`configs/phase13_smollm2_compiler_graft_audit_dataset_frozen.json` defines the
+only Phase 13 audit corpus:
+
+- 90 examples from seed 20261318;
+- three wholly new prompt templates;
+- no canonical operand-pair overlap with any prior dataset through all 270
+  Phase 13 discovery/development examples;
+- ten examples per leading digit and nine per tens and ones digit;
+- 45 examples with and without an ones carry;
+- dataset SHA-256:
+  `dc6639045ad4b536e7ab8e12ca622518550a0e079e747c7c20e5c0a83706460b`.
+
+The dataset config remains unauthorized by itself. Exactly one audit run may
+occur only after a separate audit config binds this corpus, the passing
+development result, the unchanged sequential compiler engine, every selected
+component, all rendered/token-location hashes, and a one-run limit.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
