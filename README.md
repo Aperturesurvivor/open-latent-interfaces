@@ -277,6 +277,13 @@ The suffix configuration is locked while a bounded leading-rank follow-up
 tests whether class averaging needs more coordinates than donor transport. See
 the [Phase 3 prototype summary](PHASE3_PHI_PROTOTYPE_SELECTION_SUMMARY.md).
 
+The bounded leading-rank follow-up selected rank 32 and scale 1.0, reaching
+75/90 target and 89/90 identity leading digits with a 100% digit-token rate.
+An exact-count correction showed that rank 16 reached the 63/90 accuracy floor
+but emitted one non-digit token, so rank 32 remained the smallest complete
+pass. See the
+[leading-rank summary](PHASE3_PHI_LEADING_PROTOTYPE_RANK_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -368,6 +375,7 @@ either stage.
 - [Phase 3 Phi native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md)
 - [Phase 3 Phi causal-rank summary](PHASE3_PHI_DELTA_RANK_SUMMARY.md)
 - [Phase 3 Phi prototype-selection summary](PHASE3_PHI_PROTOTYPE_SELECTION_SUMMARY.md)
+- [Phase 3 Phi leading-prototype rank summary](PHASE3_PHI_LEADING_PROTOTYPE_RANK_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
