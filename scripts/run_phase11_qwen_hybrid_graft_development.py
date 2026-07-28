@@ -37,6 +37,13 @@ from open_latent_interfaces.phase7_data import (
     build_phase7_carry_quartets,
     phase7_carry_sha256,
 )
+from open_latent_interfaces.phase12_data import (
+    build_phase12_examples,
+    phase12_sha256,
+)
+from open_latent_interfaces.phase12_data import (
+    prior_dataset_hashes as phase12_prior_dataset_hashes,
+)
 from open_latent_interfaces.prefill import verify_decimal_digit_contract
 
 
@@ -143,8 +150,6 @@ def development_gate(
         >= rule["minimum_base_correct_preservation"],
         "net_improvement": latent_paired["net_exact_improvement_rate"]
         >= rule["minimum_net_improvement_over_base"],
-        "wrong_target_recovery": wrong_paired["base_error_recovery"]
-        <= rule["maximum_wrong_target_base_error_recovery"],
         "excess_recovery_over_wrong": excess_wrong
         >= rule["minimum_excess_base_error_recovery_over_wrong_target"],
         "shuffled_true_control": shuffled["true_result_accuracy"]
@@ -165,6 +170,16 @@ def development_gate(
             or latent["digit_token_rate"] == 1.0
         ),
     }
+    if "minimum_excess_base_error_recovery_over_random" in rule:
+        checks["excess_recovery_over_random"] = (
+            excess_random
+            >= rule["minimum_excess_base_error_recovery_over_random"]
+        )
+    if "maximum_wrong_target_base_error_recovery" in rule:
+        checks["wrong_target_recovery"] = (
+            wrong_paired["base_error_recovery"]
+            <= rule["maximum_wrong_target_base_error_recovery"]
+        )
     return {
         "checks": checks,
         "passes": all(checks.values()),
@@ -191,22 +206,21 @@ def main() -> None:
     runner_hash = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     if runner_hash != config["runner_sha256"]:
         raise SystemExit("hybrid-graft runner hash mismatch")
-    paths = {
-        name: Path(config[name])
-        for name in (
+    source_names = [
             "dataset_config",
             "reader_selection_result",
             "reader_artifact",
             "compiler_selection_result",
             "compiler_module",
-            "initial_development_result",
             "suffix_manifest",
             "suffix_audit_result",
             "tens_prototype_artifact",
             "ones_prototype_artifact",
             "suffix_basis_artifact",
-        )
-    }
+    ]
+    if "initial_development_result" in config:
+        source_names.append("initial_development_result")
+    paths = {name: Path(config[name]) for name in source_names}
     for name, path in paths.items():
         verify_sha256(path, config[f"{name}_sha256"])
     for dependency, expected_hash in config["code_dependencies"].items():
@@ -216,9 +230,6 @@ def main() -> None:
     compiler_selection = json.loads(
         paths["compiler_selection_result"].read_text()
     )
-    initial_development = json.loads(
-        paths["initial_development_result"].read_text()
-    )
     suffix_manifest = json.loads(paths["suffix_manifest"].read_text())
     if dataset_config.get("audit_authorized", False):
         raise SystemExit("hybrid development requires a sealed audit")
@@ -226,8 +237,14 @@ def main() -> None:
         raise SystemExit("operand reader source did not pass")
     if not compiler_selection["selection"]["passes"]:
         raise SystemExit("leading compiler source did not pass")
-    if initial_development["passes"]:
-        raise SystemExit("refinement requires a non-passing initial development")
+    if "initial_development_result" in paths:
+        initial_development = json.loads(
+            paths["initial_development_result"].read_text()
+        )
+        if initial_development["passes"]:
+            raise SystemExit(
+                "refinement requires a non-passing initial development"
+            )
     if (
         compiler_selection["selection"]["iterations"]
         != config["leading_compiler"]["iterations"]
@@ -266,18 +283,29 @@ def main() -> None:
     ]:
         raise SystemExit("suffix basis changed")
 
-    examples = build_phase7_carry_quartets(
-        **dataset_config["dataset"]["parameters"]
-    )
-    dataset_hash = phase7_carry_sha256(examples)
+    if config.get("dataset_kind", "phase7") == "phase12":
+        examples = build_phase12_examples(
+            **dataset_config["dataset"]["parameters"]
+        )
+        dataset_hash = phase12_sha256(examples)
+        if phase12_prior_dataset_hashes() != dataset_config["dataset"][
+            "prior_dataset_hashes"
+        ]:
+            raise SystemExit("Phase 12 prior universe changed")
+        selected = [row for row in examples if row.split == "development"]
+    else:
+        examples = build_phase7_carry_quartets(
+            **dataset_config["dataset"]["parameters"]
+        )
+        dataset_hash = phase7_carry_sha256(examples)
+        selected = [
+            row
+            for row in examples
+            if row.split == "development"
+            and row.variant in set(config["development_variants"])
+        ]
     if dataset_hash != dataset_config["dataset"]["sha256"]:
-        raise SystemExit("Phase 11 dataset hash mismatch")
-    selected = [
-        row
-        for row in examples
-        if row.split == "development"
-        and row.variant in set(config["development_variants"])
-    ]
+        raise SystemExit("development dataset hash mismatch")
     if value_sha256([row.example_id for row in selected]) != config[
         "development_examples_sha256"
     ]:
@@ -497,12 +525,15 @@ def main() -> None:
         rule=config["development_rule"],
     )
     report = {
-        "schema_version": "oli.phase11-qwen-hybrid-graft-development/v1",
+        "schema_version": config.get(
+            "result_schema_version",
+            "oli.phase11-qwen-hybrid-graft-development/v1",
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": model_config,
         "dataset_sha256": dataset_hash,
-        "evaluation_split": "development",
+        "evaluation_split": config.get("evaluation_split", "development"),
         "reader": {
             "hidden_state_index": reader_index,
             "metrics": read_metrics,
@@ -538,8 +569,12 @@ def main() -> None:
         },
         "elapsed_seconds": time.perf_counter() - started,
         "claim_boundary": (
-            "Exposed Qwen development-only latent operand read, deterministic "
-            "addition, iterative leading write, and audited native suffix write."
+            config.get(
+                "claim_boundary",
+                "Exposed Qwen development-only latent operand read, "
+                "deterministic addition, iterative leading write, and "
+                "audited native suffix write.",
+            )
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

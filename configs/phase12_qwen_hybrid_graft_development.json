@@ -1,0 +1,97 @@
+{
+  "base_model_batch_size": 8,
+  "claim_boundary": "Exposed Phase 12 Qwen development-only validation of the prospectively selected three-step leading compiler with the frozen reader, deterministic addition, and audited suffix writer.",
+  "code_dependencies": {
+    "scripts/run_phase3_closed_loop_development.py": "b2493842ad2201789e0f14f568b209ff05a93373b097a13a9bbfa2c397d95dff",
+    "scripts/run_phase3_native_boundary.py": "81a71204a8ee610858888dd92ee6acfd1cfeb4bee886ac900fce078532df6576",
+    "scripts/run_phase3_prototype_selection.py": "3f0ba5fbcf34745c19d47827ea7d611c67b54e829d439e705f760f768ff19c4e",
+    "scripts/run_phase4_carry_sequence_boundary.py": "490cfa9d094831dbe8abb0f1acad7cfeb9496a94004624f48f8680400d1b5955",
+    "scripts/run_phase8_latent_graft.py": "5ba76bf1878c586148f2526d16766042bd09b92d2b09edf6a516d775b15a69e2",
+    "scripts/run_phase8_operand_reader_selection.py": "39f1f92e186c75fdbb01bab740b985e50ed59bef35768cdc3a09a3e424cd80b0",
+    "scripts/run_phase9d_hybrid_graft_development.py": "470aa3e25ae5d074616de408f07a26d08ac47311e7b502fedd2b1bcd21d4ac08",
+    "src/open_latent_interfaces/activations.py": "f89d5732161c78e75ccef6d0af9a7402adbf869ddc32e53468d61467021e0ed1",
+    "src/open_latent_interfaces/capability.py": "c2f6e3cf41491d7e85ce96ee8818b8d5824ec395ce11cf644ac1012afb35adb5",
+    "src/open_latent_interfaces/causal_compiler.py": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d",
+    "src/open_latent_interfaces/evaluation.py": "eef69e91a6f7c816656e6a1b2db335518459907cd8f1075fd85b1014506870c1",
+    "src/open_latent_interfaces/interventions.py": "e5d129e1cdf2d46a6ce0f193341c9dbe6780328f15db7d5b8bda71f198005894",
+    "src/open_latent_interfaces/operand_reader.py": "1610f0aa1ee95d1ca688ca3127df3aab30aa39e821f2d8b42768ab0064753ef3",
+    "src/open_latent_interfaces/phase12_data.py": "39fa219c1fafca1e47bff5925807815c209e5764b0a5eac6e13d607208f6ae88",
+    "src/open_latent_interfaces/phase7_data.py": "053a1db49d46085d2a44658b9efa378c54413b4f1151ca0ea6ec8663377f0159",
+    "src/open_latent_interfaces/prefill.py": "20b9a61ac20211f7ab3ede301d9ce58d72210d7110c47ce202e817cc57f961bc"
+  },
+  "compiler_batch_size": 4,
+  "compiler_module": "src/open_latent_interfaces/causal_compiler.py",
+  "compiler_module_sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d",
+  "compiler_selection_result": "results/phase12_qwen_compiler_robustness_selection.json",
+  "compiler_selection_result_sha256": "0726da399a0b17ba50daed6c2d80b196d2a40882a445b9f6fdca287bb1e9b7f0",
+  "dataset_config": "configs/phase12_qwen_compiler_robustness_dataset_frozen.json",
+  "dataset_config_sha256": "2ffff61d9b957a78150921ce475b2c95014916b9e8e28c4bea80cad15e8ef3d2",
+  "dataset_kind": "phase12",
+  "development_examples_sha256": "d0f04ef843196bcfb18c668944c4efca7b88e7fd282fc60876baffd032024129",
+  "development_rule": {
+    "maximum_oracle_exact_gap": 0.03,
+    "maximum_shuffled_random_target_accuracy": 0.15,
+    "maximum_shuffled_true_accuracy": 0.15,
+    "minimum_base_correct_preservation": 0.98,
+    "minimum_base_error_recovery": 0.8,
+    "minimum_computed_target_accuracy": 0.98,
+    "minimum_excess_base_error_recovery_over_random": 0.5,
+    "minimum_excess_base_error_recovery_over_wrong_target": 0.5,
+    "minimum_final_exact_accuracy": 0.95,
+    "minimum_net_improvement_over_base": 0.0,
+    "minimum_position_accuracy": 0.95,
+    "minimum_reader_pair_accuracy": 0.98,
+    "minimum_shuffled_target_accuracy": 0.9,
+    "minimum_shuffled_target_advantage_over_random": 0.7,
+    "require_digit_token_rate": true,
+    "require_parse_rate": true
+  },
+  "development_token_contract_sha256": "5386e3678d935129ac0a9c30fe540c2acb0bbefc46de6591ad4babb3cb341745",
+  "evaluation_split": "phase12-development",
+  "leading_compiler": {
+    "desired_margin": 16.0,
+    "hidden_state_index": 23,
+    "iterations": 3,
+    "norm_cap": 0.25
+  },
+  "ones_prototype_artifact": "artifacts/phase2_ones_prototypes.safetensors",
+  "ones_prototype_artifact_sha256": "16064fd1e125e20ef4226b4648cb53e314ab3ee207fd84ee9850662025220db7",
+  "random_control_seed": 20261309,
+  "reader_artifact": "artifacts/phase11_qwen_operand_reader.safetensors",
+  "reader_artifact_sha256": "654b47ba8b09e72979cca97f0e872dc49d8bfe112ca0f7a1bce0091006f55954",
+  "reader_hidden_state_index": 1,
+  "reader_selection_result": "results/phase11_qwen_operand_reader_selection.json",
+  "reader_selection_result_sha256": "968fcac02c0bcf912a37a258b22b2178cc48cd7c2bfea37a2d8eef8c3b484309",
+  "result_schema_version": "oli.phase12-qwen-hybrid-graft-development/v1",
+  "runner_sha256": "ecdefa111f5d5dd2ade1fd3cd6bb8a62d7aadabd1608d2d094afec30397ff624",
+  "schema_version": "oli.phase12-qwen-hybrid-graft-development-config/v1",
+  "suffix_audit_result": "results/phase2_closed_loop_dual_prototype_audit.json",
+  "suffix_audit_result_sha256": "3412f243b9ce0f8951a06dc5ac5f834858394c51264df898b93c67301e09c647",
+  "suffix_basis_artifact": "artifacts/phase2_tens_delta_basis.safetensors",
+  "suffix_basis_artifact_sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d",
+  "suffix_manifest": "manifests/qwen25-15b-next-digit-interface-v1.json",
+  "suffix_manifest_sha256": "55845eaedc0d382ecf56364bb943104aa34367f2ac4168ab9e0d28eeaa9c565b",
+  "suffix_writer": {
+    "hidden_state_index": 27,
+    "norm_cap": 1.0,
+    "positions": {
+      "1": {
+        "norm_cap": 1.0,
+        "rank": 16,
+        "scale": 1.25
+      },
+      "2": {
+        "norm_cap": 1.0,
+        "rank": 16,
+        "scale": 2.0
+      }
+    },
+    "rank": 16,
+    "scales": {
+      "1": 1.25,
+      "2": 2.0
+    }
+  },
+  "tens_prototype_artifact": "artifacts/phase2_tens_prototypes.safetensors",
+  "tens_prototype_artifact_sha256": "42b97d49573333e7817aa3464a4a916c5e26bca3bae675c5b2aaccca71a85f10"
+}
