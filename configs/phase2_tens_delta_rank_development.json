@@ -1,0 +1,28 @@
+{
+  "audit_authorized": false,
+  "base_model_batch_size": 4,
+  "dataset_config": "configs/phase2_dataset_frozen.json",
+  "dataset_config_sha256": "c689e2e627c07c1a18e104ac05e9f32826ca5ace3f45493ea00445724b4fd71c",
+  "donor_assignment_sha256": {
+    "development_targeted": "9c9d91b3e12d74592c6231923c81e7ae75ce8a64545f1f28c40b54dc92b22250",
+    "development_wrong_tens": "adef6c36ea77a84914442f1ec53f4824afa80aa560b29c81b095205d7fb6dbba",
+    "fit_targeted": "f8006c9798bf1d6fbafa8c1f1dbe716bcf60f2981b549b72862fed0eac3d88ff",
+    "fit_wrong_tens": "b3db9226e66de550707348ebe90ec41d95d1df95219c7b37da75ca08bdfc30b7",
+    "selection_targeted": "fe529bcd2afc22e75a67cfaaa4a8d68321124210cba194395883fa1836266481",
+    "selection_wrong_tens": "190e826fc6d4e5b3266be8c6bbfd7965d1b4a3eeed50d1f8cdae12d59df939b1"
+  },
+  "hidden_state_index": 27,
+  "random_control_seed": 20260824,
+  "ranks": [8, 16, 32, 64, 128, 256, 450],
+  "schema_version": "oli.phase2-tens-delta-rank-config/v1",
+  "selection_max_relative_norm": 1.0,
+  "selection_min_control_advantage": 0.25,
+  "selection_min_target_accuracy": 0.7,
+  "source_result": "results/phase2_tens_native_boundary_development.json",
+  "source_result_sha256": "4033ef607c14b71a4ec9233bff285300c84be4386df61ceb78b3c395ceddcd22",
+  "target_sha256": {
+    "development": "9113b3aac8e32681b1eeaa9f668a7941d0206daa78ad2eb9a3d092b870fdc803",
+    "fit": "34b4eeebd44e633fcc25ecc2ab7e6b9150ce937022d79940bc64bb80a92ce58c",
+    "selection": "e634189d51047698cb103b7e48b1acb6707164f987f99f8706b0ad553f844098"
+  }
+}
