@@ -1,0 +1,19 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "parameters": {
+      "audit_quartets_per_digit": 5,
+      "development_quartets_per_digit": 5,
+      "fit_quartets_per_digit": 20,
+      "seed": 20260801,
+      "selection_quartets_per_digit": 5
+    },
+    "sha256": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574"
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "schema_version": "oli.phase4-carry-dataset-config/v1"
+}
