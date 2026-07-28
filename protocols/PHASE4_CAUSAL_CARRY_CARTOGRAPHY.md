@@ -109,6 +109,18 @@ former reached 39/45 exact targets against 0/45 random; the latter reached
 update and 1/45 random. Subsequent compact estimation must use only the 127
 behavior-correct fit quartets and these preselected token/boundary pairs.
 
+Before rank compression, a frozen donor-free viability gate fits one
+full-width mean transport vector per source-digit class from the 127 eligible
+fit quartets. The operand writer uses the changed digit at index 1. The carry
+writer uses the contextualized second-operand digit at index 13. Source digits
+1–4 have 24–41 eligible examples each.
+
+Selection tests scales 0.5, 1.0, and 1.5. The operand prototype must outperform
+wrong-class and isotropic controls. The carry prototype must outperform the
+matched no-carry class prototype, a wrong-class carry prototype, and an
+isotropic control. Rank selection is authorized only if the corresponding
+full-width donor-free writer passes.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
