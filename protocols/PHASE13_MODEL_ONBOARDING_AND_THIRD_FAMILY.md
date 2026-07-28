@@ -337,6 +337,27 @@ This fallback changes the writer family based on a preserved prospective
 nonpass; it does not relax any causal gate, reuse the failed prototype tensor,
 or expose development data.
 
+The frozen fallback completed once and passed both suffix positions:
+
+- result: `results/phase13_smollm2_suffix_compiler_selection.json`
+- result SHA-256:
+  `12ff7e4a042efc90cc8adeb29c1dcc485b14b55b1ee1fc7c099a4e9ae0ca4ade`
+- hidden-state index: 24
+- tens selection: margin 4.0, cap 0.25, one iteration
+- tens target / identity: 83 / 90 and 90 / 90
+- tens wrong-target / random controls: 14 / 90 and 5 / 90
+- tens wrong-digit alignment: 70 / 90
+- tens mean target relative norm: 0.0530
+- ones selection: margin 8.0, cap 0.25, one iteration
+- ones target / identity: 90 / 90 and 90 / 90
+- ones wrong-target / random controls: 4 / 90 and 3 / 90
+- ones wrong-digit alignment: 86 / 90
+- ones mean target relative norm: 0.0928
+
+Together with the passed leading compiler and operand reader, this completes
+component selection. The next authorized step is one integrated development
+run on the previously held Phase 13 development split.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
