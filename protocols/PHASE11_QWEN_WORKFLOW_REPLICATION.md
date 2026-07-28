@@ -52,3 +52,21 @@ pass their own exposed selection gates.
    pair- and template-disjoint Qwen audit.
 
 No Qwen audit claim is open at this stage.
+
+## Reader selection outcome
+
+The frozen selection run passed:
+
+- result: `results/phase11_qwen_operand_reader_selection.json`
+- result SHA-256:
+  `968fcac02c0bcf912a37a258b22b2178cc48cd7c2bfea37a2d8eef8c3b484309`
+- selected hidden-state index: 1 (the earliest passing candidate)
+- held-out target accuracy: 180/180 operand pairs and 988/988 digits
+- rotated-label control: 0/180 operand pairs and 0/988 digits
+- reader artifact:
+  `artifacts/phase11_qwen_operand_reader.safetensors`
+- artifact SHA-256:
+  `654b47ba8b09e72979cca97f0e872dc49d8bfe112ca0f7a1bce0091006f55954`
+
+Indices 4 and 8 also passed, but were not selected under the precommitted
+earliest-passing rule. This remains a selection-only result.
