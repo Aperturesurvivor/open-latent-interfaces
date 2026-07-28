@@ -1,0 +1,13 @@
+{
+  "audit_config": "configs/phase4_phi_donor_free_audit.json",
+  "audit_config_sha256": "c7856a84020b2390e70874364aa3847abc0930d77b032aba4f4c0f4da757c8c6",
+  "audit_result": "results/phase4_phi_donor_free_audit.json",
+  "audit_result_sha256": "c66f97b794e2be62fc5b3cbe46a2ca6e08ddc4593ca80aebfe709456d8d9efc9",
+  "class_prototype_artifact": "artifacts/phase4_phi_donor_free_class_prototypes.safetensors",
+  "class_prototype_artifact_sha256": "fb58ac55f804945d060e077a44a32861da0bd1b719ef0d3709e37da7fe615227",
+  "development_correction": "results/phase4_phi_development_metric_correction.json",
+  "development_correction_sha256": "8fd2b91d89fcb266ba20e7edd50a1e9c671be26c0b3ae88564c9ca1947e12555",
+  "schema_version": "oli.arithmetic-coordinate-package-config/v1",
+  "universal_carry_artifact": "artifacts/phase4_phi_universal_carry.safetensors",
+  "universal_carry_artifact_sha256": "f4f7488e232b45c49567d02e7ea1bfffe85086542e94afc4ccee1e38cbd6bdd3"
+}
