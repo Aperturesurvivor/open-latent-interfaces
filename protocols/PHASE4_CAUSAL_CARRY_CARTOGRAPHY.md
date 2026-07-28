@@ -128,6 +128,12 @@ A bounded follow-up may test the simpler class-invariant mean carry vector
 against universal matched no-carry and isotropic controls before any carry
 rank selection.
 
+The class-invariant follow-up uses the fit-count-weighted mean of the four
+already frozen carry prototypes. It introduces no new fitted weights. Scales
+0.5, 1.0, and 1.5 are evaluated on selection against the equally aggregated
+matched no-carry vector and an isotropic norm-matched vector. Rank compression
+remains unauthorized unless this universal writer passes.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
