@@ -1,0 +1,54 @@
+{
+  "artifact_output": "artifacts/phase13_smollm2_operand_reader.safetensors",
+  "base_model_batch_size": 8,
+  "candidate_hidden_state_indices": [
+    1,
+    4,
+    7,
+    10,
+    13,
+    16,
+    19,
+    22
+  ],
+  "capability_result": "results/phase13_smollm2_capability.json",
+  "capability_result_sha256": "4a14ae740969d6405abfe76b89f73eb490a02865ba8772a14d251b7d676321b7",
+  "claim_boundary": "Fresh SmolLM2 fit/selection reader discovery only; no writer, integrated, development, audit, or cross-model tensor claim.",
+  "code_dependencies": {
+    "scripts/run_phase3_native_boundary.py": "81a71204a8ee610858888dd92ee6acfd1cfeb4bee886ac900fce078532df6576",
+    "scripts/run_phase4_carry_sequence_boundary.py": "490cfa9d094831dbe8abb0f1acad7cfeb9496a94004624f48f8680400d1b5955",
+    "scripts/run_phase8_operand_reader_selection.py": "39f1f92e186c75fdbb01bab740b985e50ed59bef35768cdc3a09a3e424cd80b0",
+    "src/open_latent_interfaces/activations.py": "3668dcdf696e85fe4a60b2a65e46f725360ef4290e4968ebab1f6820a74427e8",
+    "src/open_latent_interfaces/operand_reader.py": "3d86b55effdc3a127d9c7ce62399e7da0352a449a20b24e48e480b169e76f293",
+    "src/open_latent_interfaces/phase13_data.py": "efdf8b07a96ff5f0053251cf38766b7299cf96a026d01974af16d1140d8fd970",
+    "src/open_latent_interfaces/prefill.py": "20b9a61ac20211f7ab3ede301d9ce58d72210d7110c47ce202e817cc57f961bc"
+  },
+  "dataset_config": "configs/phase13_smollm2_discovery_dataset_frozen.json",
+  "dataset_config_sha256": "2f3c163fa884b274392896f60272879fa617adcc239e8bcf9445b4cb3d55fc76",
+  "digit_token_ids_sha256": "6f594caf82b74137f29c6a4e2fe4080d930a132c0b6870058e56b2b81642bea3",
+  "expected_hidden_state_count": 25,
+  "fit_examples_sha256": "b2a643a74589cb61dd377507f01ce8d0a8a95a53ca1028bfed04ebd9f32dad73",
+  "fit_rendered_prompts_sha256": "da7d12afa66b0655c90e6db0c66c5f3d23f70162455b29df3598dfe5e94de636",
+  "fit_token_contract_sha256": "71851bacac9ac618a7a2bdecd9b4c6f21c19da23d08b3f2a435f963eb66e1e0a",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "onboarding_result": "results/model_onboarding_smollm2_17b_candidate_live.json",
+  "onboarding_result_sha256": "ba62b638b81b2f70c73597d20496af1aee9836630e05a58574731cfa23151df1",
+  "output": "results/phase13_smollm2_operand_reader_selection.json",
+  "runner": "scripts/run_phase13_smollm2_reader_selection.py",
+  "runner_sha256": "34198a283efa993eda29e123cc21a6bbee9c7a11b967b5b712741ce77f308306",
+  "schema_version": "oli.phase13-smollm2-operand-reader-selection-config/v1",
+  "selection_examples_sha256": "9fc1013a07befd8a87059c596748f20cf512308666e561f3e0d3e0a572ef4512",
+  "selection_rendered_prompts_sha256": "a025c946e8b8e1fa84f3dc5eda3157fdf6dc75743784006f3665068c765b855e",
+  "selection_rule": {
+    "maximum_rotated_pair_accuracy": 0.05,
+    "minimum_digit_accuracy": 0.995,
+    "minimum_operand_a_accuracy": 0.98,
+    "minimum_operand_b_accuracy": 0.98,
+    "minimum_pair_accuracy": 0.98
+  },
+  "selection_token_contract_sha256": "fc5127dcdc98bcd8e9fd85c6d4b6a89504322fe08609de70d320a46eee2d69eb",
+  "status": "frozen_before_first_run"
+}

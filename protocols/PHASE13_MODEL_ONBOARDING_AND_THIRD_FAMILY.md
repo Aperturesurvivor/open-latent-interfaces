@@ -203,6 +203,23 @@ The frozen baseline was invoked once and preserved:
 The low baseline creates a meaningful repair opportunity, but it supplies no
 evidence that a latent reader or writer exists.
 
+## Frozen operand-reader selection
+
+`configs/phase13_smollm2_operand_reader_selection.json` freezes the reader
+search before any candidate boundary is evaluated. It fits independent
+nearest-centroid digit readers at hidden-state indices 1, 4, 7, 10, 13, 16,
+19, and 22 using only the fit split, then evaluates them on the selection
+split. The earliest candidate passes only if it reaches:
+
+- at least 99.5% digit accuracy;
+- at least 98% exact accuracy for operand A, operand B, and the pair;
+- no more than 5% exact-pair accuracy after rotating every decoded digit label.
+
+The selected artifact is newly fitted from SmolLM2 activations. No historical
+reader tensor or historical winning layer is loaded. A reader pass advances
+component discovery but is not evidence of arithmetic computation, writing,
+an integrated graft, development generalization, or audit success.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
