@@ -109,3 +109,9 @@ The bounded interpolation grid is 1.6, 1.7, 1.8, and 1.9. It references and
 requires the immutable first-grid non-pass, rebuilds the same weighted vector
 from the same fit artifact, and uses a fresh isotropic seed without changing
 its norm or gate role.
+
+The interpolation passed at scale 1.6 with 24/45 target tens against 10/45
+matched no-carry and 0/45 random. The universal artifact hash was unchanged.
+One-shot Qwen development is authorized with operand index 12, scale 1.0 and
+carry-context index 16, scale 1.6. Operand discrimination uses exact-result
+accuracy; carry discrimination uses tens-position accuracy.

@@ -406,6 +406,10 @@ the matched no-carry control too strongly. A single interpolation-only
 follow-up is permitted before rejecting the universal-vector hypothesis. See
 the [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md).
 
+The one authorized interpolation then passed at scale 1.6: 24/45 target tens
+versus 10/45 matched no-carry and 0/45 random. The universal tensor hash was
+unchanged, and scale 1.6 is fixed for untouched Qwen development.
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
