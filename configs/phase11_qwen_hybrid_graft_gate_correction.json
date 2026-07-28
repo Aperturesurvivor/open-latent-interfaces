@@ -1,0 +1,15 @@
+{
+  "corrected_rule": {
+    "minimum_excess_base_error_recovery_over_wrong_target": 0.5,
+    "removed_check": {
+      "maximum_wrong_target_base_error_recovery": 0.25
+    },
+    "rationale": "The absolute ceiling is redundant with the retained paired recovery-advantage check and treats an undershooting norm-matched wrong direction as semantic control success."
+  },
+  "original_config": "configs/phase11_qwen_hybrid_graft_development_refined.json",
+  "original_config_sha256": "f6ece512ded784ee06996148a42db97e2d28d5f0710c1ddc65d20a5220a5d80c",
+  "original_result": "results/phase11_qwen_hybrid_graft_development_refined.json",
+  "original_result_sha256": "1cb71017f850c050c017fd27727ef579ccfcd445e1187aa2a31d799174027264",
+  "runner_sha256": "7136a601576ab6fecdf26a0d706dc69ce9a3dbb3f0734bf0f7a5131b392e0bb6",
+  "schema_version": "oli.phase11-qwen-hybrid-graft-gate-correction-config/v1"
+}

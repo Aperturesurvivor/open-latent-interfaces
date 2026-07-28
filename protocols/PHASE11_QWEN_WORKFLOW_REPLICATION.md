@@ -227,3 +227,10 @@ did not reach 711. Counting that as semantic wrong-target success conflates an
 undershooting control with the intended mechanism. Any correction must be
 measurement-only, preserve this non-pass, remove only the redundant absolute
 ceiling, retain the comparative recovery check, and precede a fresh audit.
+
+That correction is frozen in
+`configs/phase11_qwen_hybrid_graft_gate_correction.json`. Its runner is not
+permitted to load a model. It verifies the immutable result and config hashes,
+requires `wrong_target_recovery` to be the only failed check, removes only that
+absolute ceiling, and rechecks the unchanged 50-point paired recovery
+advantage. Every other development check remains unchanged.
