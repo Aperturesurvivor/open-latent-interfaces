@@ -313,6 +313,14 @@ cached downstream effects rather than assumed to reside in one terminal prompt
 vector. See the
 [Phase 4 prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md).
 
+Full-prompt transport then revealed a strong generic operand-update route:
+both the carry-pair and matched no-carry `+1` sequence deltas produced up to
+39/45 correct target results, while the random control remained at 1/45. The
+carry difference-in-differences residual reached 29/45 target tens digits but
+did not outperform the matched `+1` control. This is causal evidence for an
+early operand-update interface, not yet for an isolated carry coordinate. See
+the [Phase 4 sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -409,6 +417,7 @@ either stage.
 - [Phase 3 Phi one-shot audit summary](PHASE3_PHI_AUDIT_SUMMARY.md)
 - [Phase 4 carry-quartet behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md)
 - [Phase 4 carry prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md)
+- [Phase 4 carry sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
