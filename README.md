@@ -19,7 +19,8 @@ be trained, then frozen for inference.
 
 ## Current status
 
-**Phase 0.1 completed; Phase 1 infrastructure underway.** The repository
+**A first deterministic native-coordinate interface has passed a sealed
+one-shot audit; cross-family replication is underway.** The repository
 currently contains:
 
 - deterministic addition/contrast dataset generation with split-disjoint
@@ -30,12 +31,16 @@ currently contains:
 - a probe-defined, oracle-result write-path diagnostic;
 - optional, dependency-light adapters for the released NLA and Jacobian-lens
   systems;
+- a donor-free rank-16 digit-write interface with fit-derived coordinate
+  prototypes;
+- a model-agnostic interface manifest, runtime API, and validation schema;
 - a provenance-rich interpretability artifact schema that requires independent
   corroboration before an explanation can be marked as evidence;
 - tests, a research ladder, a protocol, and a claims boundary.
 
-No NLA has been trained here. No deterministic graft has passed an end-to-end
-audit. Probe decodability is not treated as causal use.
+No NLA has been trained here. One narrow answer-channel graft has passed an
+end-to-end audit on one model and task; this is not yet a model-general
+reasoning implant. Probe decodability is not treated as causal use.
 
 The first Qwen2.5-0.5B pilot was an infrastructure success and a scientific
 non-pass. Phase 0.1 then removed digit imbalance and template leakage, committed
@@ -238,6 +243,13 @@ reached 90/90, identity reached 90/90, and the strongest exact control reached
 12/90. Every frozen audit gate passed. See the
 [one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md).
 
+For cross-family replication, Phi-3.5-mini-instruct then passed a frozen
+behavioral screen on 179/180 native-chat development conditions. All five
+addition regimes cleared the precommitted aggregate and worst-template gates.
+This establishes only that Phi is a valid experimental target; its latent
+interface has not yet been mapped. See the
+[Phi-3.5 capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -324,6 +336,7 @@ either stage.
 - [Phase 2 cross-position ones prototype summary](PHASE2_ONES_PROTOTYPE_TRANSFER_SUMMARY.md)
 - [Phase 2 closed-loop dual-prototype summary](PHASE2_CLOSED_LOOP_DUAL_PROTOTYPE_SUMMARY.md)
 - [Phase 2 one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md)
+- [Phi-3.5 cross-model capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
