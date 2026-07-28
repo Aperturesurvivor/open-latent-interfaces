@@ -391,3 +391,87 @@ def build_full_result_transport_design(
         features=features,
         deltas=deltas,
     )
+
+
+@dataclass(frozen=True)
+class LocalTransportDictionary:
+    """Digit-restricted nearest-state dictionary of native transports."""
+
+    state_mean: torch.Tensor
+    state_basis: torch.Tensor
+    score_scale: torch.Tensor
+    training_scores: torch.Tensor
+    training_digits: torch.Tensor
+    delta_basis: torch.Tensor
+    training_delta_coefficients: torch.Tensor
+
+    def predict(
+        self,
+        states: torch.Tensor,
+        target_digits: torch.Tensor,
+        *,
+        neighbors: int,
+        transport_rank: int,
+    ) -> torch.Tensor:
+        if states.ndim != 2 or target_digits.shape != (states.shape[0],):
+            raise ValueError("states and target digits must align")
+        if neighbors < 1:
+            raise ValueError("neighbors must be positive")
+        if transport_rank < 1 or transport_rank > self.delta_basis.shape[0]:
+            raise ValueError("transport rank is outside the fitted basis")
+        scores = ((states - self.state_mean) @ self.state_basis.T) / self.score_scale
+        predictions = []
+        for score, digit in zip(scores, target_digits, strict=True):
+            matches = torch.nonzero(
+                self.training_digits == digit,
+                as_tuple=False,
+            ).flatten()
+            if matches.numel() < neighbors:
+                raise ValueError(f"only {matches.numel()} neighbors for digit {digit}")
+            distances = ((self.training_scores[matches] - score) ** 2).sum(dim=1)
+            nearest = matches[distances.topk(neighbors, largest=False).indices]
+            coefficients = self.training_delta_coefficients[
+                nearest, :transport_rank
+            ].mean(dim=0)
+            predictions.append(coefficients @ self.delta_basis[:transport_rank])
+        return torch.stack(predictions)
+
+
+def build_local_transport_dictionary(
+    states: torch.Tensor,
+    deltas: torch.Tensor,
+    digits: torch.Tensor,
+    *,
+    state_rank: int,
+    max_transport_rank: int,
+) -> LocalTransportDictionary:
+    """Build a PCA-indexed dictionary without fitting a parametric map."""
+
+    if states.ndim != 2 or deltas.shape != states.shape:
+        raise ValueError("states and deltas must be aligned matrices")
+    if digits.shape != (states.shape[0],):
+        raise ValueError("one target digit is required per row")
+    if state_rank < 1 or state_rank > min(states.shape):
+        raise ValueError("state rank is outside the available state matrix")
+    if max_transport_rank < 1 or max_transport_rank > min(deltas.shape):
+        raise ValueError("transport rank is outside the available delta matrix")
+    state_mean = states.mean(dim=0)
+    _, _, full_state_basis = torch.linalg.svd(
+        states - state_mean,
+        full_matrices=False,
+    )
+    state_basis = full_state_basis[:state_rank]
+    raw_scores = (states - state_mean) @ state_basis.T
+    score_scale = raw_scores.std(dim=0).clamp_min(1e-6)
+    training_scores = raw_scores / score_scale
+    _, _, full_delta_basis = torch.linalg.svd(deltas, full_matrices=False)
+    delta_basis = full_delta_basis[:max_transport_rank]
+    return LocalTransportDictionary(
+        state_mean=state_mean,
+        state_basis=state_basis,
+        score_scale=score_scale,
+        training_scores=training_scores,
+        training_digits=digits.clone(),
+        delta_basis=delta_basis,
+        training_delta_coefficients=deltas @ delta_basis.T,
+    )

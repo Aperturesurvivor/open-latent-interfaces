@@ -4,6 +4,7 @@ import torch
 from open_latent_interfaces.typed_writer import (
     build_conditional_transport_design,
     build_full_result_transport_design,
+    build_local_transport_dictionary,
     encode_three_digit_results,
     fit_digit_subspace,
     fit_transport_subspace,
@@ -125,3 +126,41 @@ def test_full_result_transport_learns_state_result_interaction() -> None:
     model = design.fit(transport_rank=2, ridge=1e-5)
     predicted = model.predict(states, results)
     assert torch.allclose(predicted, deltas, atol=2e-3)
+
+
+def test_local_transport_retrieves_only_matching_digit() -> None:
+    states = torch.tensor(
+        [
+            [-2.0, 0.0],
+            [-1.0, 0.0],
+            [1.0, 0.0],
+            [2.0, 0.0],
+        ]
+    )
+    digits = torch.tensor([0, 1, 0, 1])
+    deltas = torch.tensor(
+        [
+            [10.0, 0.0],
+            [0.0, 20.0],
+            [30.0, 0.0],
+            [0.0, 40.0],
+        ]
+    )
+    dictionary = build_local_transport_dictionary(
+        states,
+        deltas,
+        digits,
+        state_rank=1,
+        max_transport_rank=2,
+    )
+    predicted = dictionary.predict(
+        torch.tensor([[-1.8, 0.0], [1.8, 0.0]]),
+        torch.tensor([0, 1]),
+        neighbors=1,
+        transport_rank=2,
+    )
+    assert torch.allclose(
+        predicted,
+        torch.tensor([[10.0, 0.0], [0.0, 40.0]]),
+        atol=1e-4,
+    )

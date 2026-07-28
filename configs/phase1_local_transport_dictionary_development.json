@@ -1,0 +1,16 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "donors_per_fit_recipient": 8,
+  "fit_examples": 60,
+  "full_result_transport": "results/phase1_full_result_transport_bridge_development.json",
+  "full_result_transport_sha256": "d52ff92bb93c0b253f943424b9c3edd7b215235c79145718aa3d77593746344c",
+  "hidden_state_index": 23,
+  "neighbor_counts": [1, 3, 5, 10],
+  "random_seed": 20260808,
+  "scales": [0.5, 1.0, 2.0],
+  "schema_version": "oli.phase1-local-transport-dictionary-config/v1",
+  "selection_examples": 30,
+  "state_rank": 32,
+  "transport_ranks": [8, 16, 32, 64]
+}
