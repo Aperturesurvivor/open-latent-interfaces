@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "all_parameters_frozen": true,
+    "architecture": true,
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_size": true,
+    "hidden_state_convention": true,
+    "model_type": true,
+    "next_token_logits": true,
+    "num_hidden_layers": true,
+    "operand_locator": true,
+    "single_token_decimal_digits": true,
+    "vocab_size": true
+  },
+  "claim_boundary": "Compatibility only: a pass authorizes model-specific discovery but is not evidence that a latent reader or writer exists.",
+  "created_at": "2026-07-28T20:57:22.636928+00:00",
+  "elapsed_seconds": 31.96635629198863,
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.13.0",
+    "transformers": "4.57.6"
+  },
+  "error": null,
+  "mode": "live",
+  "model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "observed": {
+    "architectures": [
+      "LlamaForCausalLM"
+    ],
+    "candidate_reader_hidden_state_indices": [
+      1,
+      4,
+      7,
+      10,
+      13,
+      16,
+      19,
+      22
+    ],
+    "decoder_block_count": 24,
+    "decoder_block_path": [
+      "model",
+      "layers"
+    ],
+    "device": "mps",
+    "digit_token_ids": {
+      "0": 32,
+      "1": 33,
+      "2": 34,
+      "3": 35,
+      "4": 36,
+      "5": 37,
+      "6": 38,
+      "7": 39,
+      "8": 40,
+      "9": 41
+    },
+    "dtype": "float16",
+    "gradient_probe_hidden_state_index": 12,
+    "gradient_probe_norm": 0.6534693241119385,
+    "hidden_size": 2048,
+    "hidden_state_count": 25,
+    "hidden_state_widths": [
+      2048
+    ],
+    "model_class": "LlamaForCausalLM",
+    "model_type": "llama",
+    "num_hidden_layers": 24,
+    "operand_positions": {
+      "operand_a": [
+        26,
+        27,
+        28
+      ],
+      "operand_b": [
+        31,
+        32,
+        33
+      ]
+    },
+    "rendered_probe": "<|im_start|>system\nYou are a helpful AI assistant named SmolLM, trained by Hugging Face<|im_end|>\n<|im_start|>user\nAdd 137 and 248. Respond with only Answer=<integer>.<|im_end|>\n<|im_start|>assistant\nAnswer=",
+    "tokenizer_class": "GPT2TokenizerFast",
+    "tokenizer_is_fast": true,
+    "vocab_size": 49152
+  },
+  "passes": true,
+  "runner_sha256": "b63e5385c173f2575eb2cee32a851cfc61d8c998348ba33cf2a251692754aeaa",
+  "schema_version": "oli.model-onboarding-result/v1",
+  "spec_sha256": "a8b47ea4aecd90491f04f63369937e0f73f5a0ae1450c7e5cc6b54457c0c5f81",
+  "status": "compatibility_preflight"
+}

@@ -132,6 +132,30 @@ closed for this replication, while tokenization-general grafts remain a
 separate future workflow extension. The predeclared SmolLM2 fallback may
 proceed under a separately frozen activation record.
 
+## SmolLM2 compatibility outcome
+
+The fallback activation was frozen in
+`configs/phase13_smollm2_fallback_activation_frozen.json` before the live
+preflight. SmolLM2 passed all 15 checks on its one authorized live run:
+
+- result: `results/model_onboarding_smollm2_17b_candidate_live.json`
+- result SHA-256:
+  `ba62b638b81b2f70c73597d20496af1aee9836630e05a58574731cfa23151df1`
+- model: `HuggingFaceTB/SmolLM2-1.7B-Instruct`
+- revision: `31b70e2e869a7173562077fd711b654946d38674`
+- architecture: `LlamaForCausalLM`, `model_type=llama`
+- decoder path: `model.layers`
+- decoder blocks / hidden states: 24 / 25
+- residual width: 2048
+- contextual digit IDs: 32 through 41
+- candidate reader hidden-state indices: 1, 4, 7, 10, 13, 16, 19, 22
+- gradient probe: hidden-state index 12, norm 0.6535
+- every model parameter frozen
+
+This pass authorizes fresh SmolLM2-specific discovery. It is not evidence that
+the operand reader, leading compiler, suffix writer, or integrated graft will
+pass.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
