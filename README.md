@@ -138,6 +138,15 @@ capability-gate and Phase 1 operand pair. The next bridge is a bottlenecked
 nonlinear adapter trained from multiple native transports per fit recipient.
 See the [Phase 2 scaled-adapter protocol](protocols/PHASE2_SCALED_ADAPTER.md).
 
+The first scaled adapter used 1,800 targeted transports plus 450 identity rows
+per position and a three-seed nonlinear ensemble. On development it reached
+68/90 leading digits and 12/90 exact target results with all intervention norms
+below one residual norm. It nevertheless failed exactness, later-position,
+control-advantage, and preservation gates, so the 90-example audit remains
+sealed. The evidence now favors training against causal downstream token loss
+rather than imitating full donor states. See the
+[Phase 2 development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -211,6 +220,7 @@ either stage.
 - [Phase 1G conditional-transport bridge summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md)
 - [Phase 1H full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md)
 - [Phase 1I local-transport dictionary summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md)
+- [Phase 2 scaled-adapter development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
