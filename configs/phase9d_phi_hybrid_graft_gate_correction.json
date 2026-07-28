@@ -1,0 +1,15 @@
+{
+  "corrected_rule": {
+    "maximum_wrong_target_base_error_recovery": 0.25,
+    "minimum_excess_base_error_recovery_over_wrong_target": 0.5,
+    "removed_check": {
+      "maximum_wrong_target_true_accuracy": 0.25
+    }
+  },
+  "original_config": "configs/phase9d_phi_hybrid_graft_development.json",
+  "original_config_sha256": "05caec1a98234551aebfce59f737f39df2a0e0aae7ee4a231fec57aadc5a188b",
+  "original_result": "results/phase9d_phi_hybrid_graft_development.json",
+  "original_result_sha256": "a41a28814499e0eaf0c3190d0aba5ade98070c2b35bd63d070d8216257fad02a",
+  "runner_sha256": "50e4f1f7738f1e16fc1334f169c823402e4b4d4bddc383878e9cb131c5e7d653",
+  "schema_version": "oli.phase9d-hybrid-graft-gate-correction-config/v1"
+}
