@@ -67,3 +67,28 @@ def random_norm_matched(
     directions = torch.randn(shape, generator=generator)
     return norm_match(directions, target_norms)
 
+
+def select_bounded_candidate(
+    rows: list[dict[str, Any]],
+    *,
+    max_relative_norm: float,
+) -> dict[str, Any]:
+    """Select the strongest accuracy row that satisfies both norm ceilings."""
+    eligible = [
+        row
+        for row in rows
+        if row["mean_target_relative_norm"] <= max_relative_norm
+        and row["mean_identity_relative_norm"] <= max_relative_norm
+    ]
+    if not eligible:
+        raise ValueError("no candidate satisfies the relative-norm ceiling")
+    return max(
+        eligible,
+        key=lambda row: (
+            row["minimum_accuracy"],
+            row["target_token_accuracy"],
+            row["identity_token_accuracy"],
+            -row["mean_target_relative_norm"],
+            -row["mean_identity_relative_norm"],
+        ),
+    )
