@@ -298,6 +298,13 @@ control. This independently reproduces the donor-free native-coordinate
 workflow in a second model family, while using different boundaries and ranks.
 See the [Phase 3 audit summary](PHASE3_PHI_AUDIT_SUMMARY.md).
 
+Phase 4 now begins internal carry cartography with matched +1 arithmetic
+quartets. Its first behavior gate was a documented non-pass on fit
+(641/720 rows and 127/180 complete quartets), while unfiltered selection and
+development passed. The corpus was retained; fit-only estimation may use the
+127 fully correct quartets, but selection and development cannot be filtered.
+See the [Phase 4 behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -392,6 +399,7 @@ either stage.
 - [Phase 3 Phi leading-prototype rank summary](PHASE3_PHI_LEADING_PROTOTYPE_RANK_SUMMARY.md)
 - [Phase 3 Phi closed-loop development summary](PHASE3_PHI_CLOSED_LOOP_DEVELOPMENT_SUMMARY.md)
 - [Phase 3 Phi one-shot audit summary](PHASE3_PHI_AUDIT_SUMMARY.md)
+- [Phase 4 carry-quartet behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)

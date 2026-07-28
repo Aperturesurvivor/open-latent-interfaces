@@ -51,6 +51,17 @@ computation more narrowly than an ordinary clean/corrupt pair.
 8. Validate a compact intervention on untouched development before authorizing
    any audit.
 
+## Fit-eligibility amendment after the behavior non-pass
+
+The original behavior gate was executed once and failed on fit while selection
+and development passed. The dataset and result are preserved. Subsequent
+fit-only representation estimation may use only quartets whose four untouched
+answers were all correct, provided at least 100 eligible fit quartets remain.
+
+Selection and development may not be filtered. Every causal report must retain
+the original behavior non-pass and report complete unfiltered selection
+metrics. This amendment does not authorize audit access.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
