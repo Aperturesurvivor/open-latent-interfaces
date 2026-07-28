@@ -135,3 +135,23 @@ Iterations 3 and 4 reached 90/90 target accuracy, but were not selected because
 iteration 2 already passed. The complete Qwen leading compiler is therefore:
 hidden-state index 23, desired margin 16, relative-norm cap 0.25, and two
 relinearization steps.
+
+## Integrated development boundary
+
+The complete exposed development pipeline is frozen in
+`configs/phase11_qwen_hybrid_graft_development.json`.
+
+It binds:
+
+- the newly selected index-1 Qwen operand reader;
+- deterministic host integer addition;
+- the newly selected index-23, margin-16, cap-0.25, two-step leading compiler;
+- Qwen's previously audited index-27 rank-16 suffix basis;
+- the audited tens prototype at scale 1.25 and ones prototype at scale 2.0.
+
+The evaluation uses the 45 pair-disjoint Phase 7 development carry-base
+examples. Advancement requires accurate latent reading and host computation,
+at least 90% full-result and per-position accuracy, preservation of base-correct
+cases, recovery of base errors beyond random and wrong-target controls, and
+successful target-following under a shuffled semantic control. No audit may be
+authorized from component-level results alone.
