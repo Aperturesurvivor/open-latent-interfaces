@@ -7,7 +7,10 @@ from open_latent_interfaces.activations import (
     ActivationCapture,
     last_nonpadding_positions,
 )
-from open_latent_interfaces.interventions import intervened_next_token_logits
+from open_latent_interfaces.interventions import (
+    intervened_next_token_logits,
+    one_shot_last_token_addition_hook,
+)
 
 
 class FakeTokenizer:
@@ -96,3 +99,14 @@ def test_intervention_adds_delta_at_selected_boundary() -> None:
     )
     expected = model.head(delta)
     assert torch.allclose(moved - base, expected, atol=1e-6)
+
+
+def test_one_shot_hook_changes_only_first_forward() -> None:
+    mask = torch.tensor([[1, 1, 1]])
+    delta = torch.ones(1, 4)
+    hook = one_shot_last_token_addition_hook(delta, mask)
+    hidden = torch.zeros(1, 3, 4)
+    first = hook(None, (), (hidden,))[0]
+    second = hook(None, (), (hidden,))[0]
+    assert torch.equal(first[0, -1], torch.ones(4))
+    assert torch.equal(second, hidden)

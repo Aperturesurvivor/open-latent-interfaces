@@ -1,0 +1,20 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "hidden_state_indices": [
+    14,
+    18,
+    21,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "max_new_tokens": 8,
+  "probe_config": "configs/phase1_probe_development.json",
+  "probe_config_sha256": "8e7deccf81e6a12b7bdd3dfa5f2d14f8ea90a9160664f6d7b99452541e63f7bb",
+  "random_seed": 20260802,
+  "schema_version": "oli.phase1-native-donor-patch-config/v1"
+}
