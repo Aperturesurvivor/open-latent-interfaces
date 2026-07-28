@@ -212,6 +212,14 @@ inference. This is the first deterministic native-coordinate implant in the
 project. See the
 [tens prototype-writer summary](PHASE2_TENS_PROTOTYPE_WRITER_SUMMARY.md).
 
+Composing that implant with the existing donor-free leading and ones writers
+then produced 49/90 exact balanced counterfactual results in closed loop.
+Leading and tens digits reached 87/90 and 90/90; identity preservation reached
+90/90; exact matched controls reached at most 5/90. Exactness, control,
+preservation, norm, and parse gates all passed. Only the existing ones writer,
+at 51/90, remains below the per-position gate. See the
+[closed-loop hybrid summary](PHASE2_CLOSED_LOOP_HYBRID_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -294,6 +302,7 @@ either stage.
 - [Phase 2 tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md)
 - [Phase 2 tens native-delta rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md)
 - [Phase 2 donor-free tens prototype summary](PHASE2_TENS_PROTOTYPE_WRITER_SUMMARY.md)
+- [Phase 2 closed-loop hybrid summary](PHASE2_CLOSED_LOOP_HYBRID_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
