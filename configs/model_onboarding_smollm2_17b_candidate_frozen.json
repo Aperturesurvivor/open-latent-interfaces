@@ -1,0 +1,57 @@
+{
+  "claim_boundary": [
+    "This specification authorizes one compatibility preflight on the named frozen SmolLM2 revision.",
+    "SmolLM2 is the prospectively ranked fallback after OLMo failed the unchanged metadata token-composition gate.",
+    "The compatibility prompt is not selection, development, or audit data for a latent interface.",
+    "A pass authorizes model-specific discovery only; it does not establish a reader, writer, reasoning channel, or deterministic graft."
+  ],
+  "compatibility": {
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_state_convention": true,
+    "single_token_decimal_digits": true
+  },
+  "evidence": {
+    "sources": {
+      "fallback_activation": {
+        "path": "configs/phase13_smollm2_fallback_activation_frozen.json",
+        "sha256": "d15704ba75291d3c088e9d71ffd1f4c887f16b3235f8fa0587200a3d4e9567b3"
+      }
+    },
+    "status": "prospective_candidate"
+  },
+  "model": {
+    "expected": {
+      "architectures": [
+        "LlamaForCausalLM"
+      ],
+      "hidden_size": 2048,
+      "model_type": "llama",
+      "num_hidden_layers": 24,
+      "vocab_size": 49152
+    },
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "name": "smollm2-17b-third-family-candidate",
+  "schema_version": "oli.model-onboarding/v1",
+  "task_contract": {
+    "assistant_prefix": "Answer=",
+    "probe": {
+      "operand_a": 137,
+      "operand_b": 248,
+      "target": 385,
+      "user_prompt": "Add 137 and 248. Respond with only Answer=<integer>."
+    },
+    "probe_results": [
+      100,
+      237,
+      580,
+      999
+    ],
+    "result_width": 3
+  }
+}

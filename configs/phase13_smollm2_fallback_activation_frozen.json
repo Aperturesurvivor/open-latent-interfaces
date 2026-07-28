@@ -1,0 +1,22 @@
+{
+  "activation_reason": "The first-ranked OLMo candidate failed the frozen metadata gate because three-digit results do not compose from contextual digit tokens. No OLMo model weights were loaded.",
+  "fallback_model": {
+    "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674"
+  },
+  "onboarding": {
+    "maximum_live_preflight_runs": 1,
+    "output": "results/model_onboarding_smollm2_17b_candidate_live.json",
+    "spec": "configs/model_onboarding_smollm2_17b_candidate_frozen.json"
+  },
+  "original_candidate_selection": {
+    "path": "configs/phase13_third_family_candidate_selection_frozen.json",
+    "sha256": "e064c4a12be361f225ed85529727111922508f6d7778f54892a134260438e508"
+  },
+  "original_candidate_metadata_result": {
+    "path": "results/model_onboarding_olmo2_1b_candidate_metadata.json",
+    "sha256": "1f394aa3cf2a22e85c610184c268133dd673b033f2314ace05c7a9f4151a0227"
+  },
+  "schema_version": "oli.phase13-fallback-activation/v1",
+  "status": "frozen_before_fallback_preflight"
+}

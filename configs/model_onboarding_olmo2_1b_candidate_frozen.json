@@ -1,0 +1,56 @@
+{
+  "claim_boundary": [
+    "This specification authorizes one compatibility preflight on the named frozen OLMo revision.",
+    "The compatibility prompt is not selection, development, or audit data for a latent interface.",
+    "A pass authorizes model-specific discovery only; it does not establish a reader, writer, reasoning channel, or deterministic graft."
+  ],
+  "compatibility": {
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_state_convention": true,
+    "single_token_decimal_digits": true
+  },
+  "evidence": {
+    "sources": {
+      "candidate_selection": {
+        "path": "configs/phase13_third_family_candidate_selection_frozen.json",
+        "sha256": "e064c4a12be361f225ed85529727111922508f6d7778f54892a134260438e508"
+      }
+    },
+    "status": "prospective_candidate"
+  },
+  "model": {
+    "expected": {
+      "architectures": [
+        "Olmo2ForCausalLM"
+      ],
+      "hidden_size": 2048,
+      "model_type": "olmo2",
+      "num_hidden_layers": 16,
+      "vocab_size": 100352
+    },
+    "id": "allenai/OLMo-2-0425-1B-Instruct",
+    "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e"
+  },
+  "name": "olmo2-0425-1b-third-family-candidate",
+  "schema_version": "oli.model-onboarding/v1",
+  "task_contract": {
+    "assistant_prefix": "Answer=",
+    "probe": {
+      "operand_a": 137,
+      "operand_b": 248,
+      "target": 385,
+      "user_prompt": "Add 137 and 248. Respond with only Answer=<integer>."
+    },
+    "probe_results": [
+      100,
+      237,
+      580,
+      999
+    ],
+    "result_width": 3
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "catalog_observed_at": "2026-07-28",
+  "catalog_sources": [
+    "https://huggingface.co/allenai/OLMo-2-0425-1B-Instruct",
+    "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  ],
+  "onboarding": {
+    "maximum_live_preflight_runs": 1,
+    "output": "results/model_onboarding_olmo2_1b_candidate_live.json",
+    "spec": "configs/model_onboarding_olmo2_1b_candidate_frozen.json"
+  },
+  "ordered_candidates": [
+    {
+      "architectures": [
+        "Olmo2ForCausalLM"
+      ],
+      "gated": false,
+      "hidden_size": 2048,
+      "id": "allenai/OLMo-2-0425-1B-Instruct",
+      "license": "apache-2.0",
+      "model_type": "olmo2",
+      "num_hidden_layers": 16,
+      "parameter_count": 1484916736,
+      "private": false,
+      "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e",
+      "selection_reason": "First eligible candidate: distinct olmo2 architecture, smallest shortlist model, ungated Apache-2.0 weights, instruction chat template, native Transformers support, and unusually complete public training artifacts.",
+      "vocab_size": 100352
+    },
+    {
+      "architectures": [
+        "LlamaForCausalLM"
+      ],
+      "gated": false,
+      "hidden_size": 2048,
+      "id": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+      "license": "apache-2.0",
+      "model_type": "llama",
+      "num_hidden_layers": 24,
+      "parameter_count": 1711376384,
+      "private": false,
+      "revision": "31b70e2e869a7173562077fd711b654946d38674",
+      "selection_reason": "Eligible frozen fallback, ranked second because the broadly used llama architecture adds less architectural diversity than olmo2.",
+      "vocab_size": 49152
+    }
+  ],
+  "selected_model": {
+    "id": "allenai/OLMo-2-0425-1B-Instruct",
+    "revision": "48d788eca847d4d7548f375ad03d3c9312f6139e"
+  },
+  "selection_rule": {
+    "architecture_exclusions": [
+      "phi3",
+      "qwen2"
+    ],
+    "maximum_parameter_count": 4000000000,
+    "require_exact_revision": true,
+    "require_fast_tokenizer": true,
+    "require_instruction_chat_template": true,
+    "require_open_license": true,
+    "require_public_ungated_weights": true,
+    "tie_breakers": [
+      "greater architecture diversity",
+      "smaller parameter count",
+      "more complete public training artifacts"
+    ]
+  },
+  "selection_status": "frozen_before_live_preflight",
+  "schema_version": "oli.phase13-third-family-candidate-selection/v1"
+}

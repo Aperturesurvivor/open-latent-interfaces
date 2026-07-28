@@ -101,6 +101,37 @@ Candidate ordering and the evidence used to select it must be committed before
 any task-specific activation capture. A failed compatibility preflight closes
 that candidate without parameter or prompt tuning.
 
+## Candidate selection and OLMo closure
+
+The ordered candidate selection was frozen in
+`configs/phase13_third_family_candidate_selection_frozen.json`:
+
+1. `allenai/OLMo-2-0425-1B-Instruct`, revision
+   `48d788eca847d4d7548f375ad03d3c9312f6139e`;
+2. `HuggingFaceTB/SmolLM2-1.7B-Instruct`, revision
+   `31b70e2e869a7173562077fd711b654946d38674`.
+
+OLMo ranked first because its `olmo2` architecture provides greater diversity,
+its 1.485-billion-parameter size is smaller, and its Apache-2.0 release
+includes extensive public training artifacts.
+
+OLMo closed at metadata preflight:
+
+- result: `results/model_onboarding_olmo2_1b_candidate_metadata.json`
+- result SHA-256:
+  `1f394aa3cf2a22e85c610184c268133dd673b033f2314ace05c7a9f4151a0227`
+- no model weights were loaded;
+- individual digits were stable one-token continuations;
+- tested three-digit strings were merged into single tokens instead of
+  composing from those digit tokens (`100` → 1041, `237` → 14590,
+  `580` → 18216, `999` → 5500).
+
+This is a real incompatibility with the frozen three-step decimal writer
+contract. The contract is not relaxed after observing the result. OLMo is
+closed for this replication, while tokenization-general grafts remain a
+separate future workflow extension. The predeclared SmolLM2 fallback may
+proceed under a separately frozen activation record.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
