@@ -196,6 +196,46 @@ class BinaryRidgeProbe:
     def predict(self, values: torch.Tensor) -> torch.Tensor:
         return (self.score(values) >= 0).long()
 
+    def raw_direction(self) -> torch.Tensor:
+        """Return the activation-space covector for the calibrated score."""
+
+        return self.standardizer.inverse_direction(self.weights)
+
+    def minimal_label_shift(
+        self,
+        values: torch.Tensor,
+        desired_labels: torch.Tensor,
+        *,
+        margin: float = 1.0,
+        strength: float = 1.0,
+        max_relative_norm: float | None = 0.25,
+    ) -> torch.Tensor:
+        """Minimum-L2 shift that moves the calibrated score toward a label."""
+
+        values = values.float()
+        desired_labels = desired_labels.long().reshape(-1)
+        if desired_labels.shape[0] != values.shape[0]:
+            raise ValueError("one desired label is required per activation")
+        if bool(((desired_labels < 0) | (desired_labels > 1)).any()):
+            raise ValueError("binary desired labels must be zero or one")
+        desired_scores = torch.where(
+            desired_labels == 1,
+            torch.full_like(desired_labels, margin, dtype=torch.float),
+            torch.full_like(desired_labels, -margin, dtype=torch.float),
+        )
+        required = (desired_scores - self.score(values)) * strength
+        direction = self.raw_direction()
+        denominator = direction.square().sum().clamp_min(1e-12)
+        deltas = required[:, None] * direction[None, :] / denominator
+        if max_relative_norm is not None:
+            if max_relative_norm <= 0:
+                raise ValueError("max_relative_norm must be positive or None")
+            maximum = max_relative_norm * values.norm(dim=1).clamp_min(1e-12)
+            norms = deltas.norm(dim=1).clamp_min(1e-12)
+            scales = torch.minimum(torch.ones_like(norms), maximum / norms)
+            deltas = deltas * scales[:, None]
+        return deltas
+
 
 @dataclass(frozen=True)
 class CategoricalRidgeProbe:

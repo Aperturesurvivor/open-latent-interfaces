@@ -1,0 +1,16 @@
+{
+  "audit_authorized": false,
+  "hidden_state_index": 21,
+  "max_relative_norm": 0.25,
+  "probe_config": "configs/phase1_probe_development.json",
+  "probe_config_sha256": "8e7deccf81e6a12b7bdd3dfa5f2d14f8ea90a9160664f6d7b99452541e63f7bb",
+  "probe_margin": 1.0,
+  "random_seed": 20260801,
+  "schema_version": "oli.phase1-carry-intervention-config/v1",
+  "strengths": [
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ]
+}

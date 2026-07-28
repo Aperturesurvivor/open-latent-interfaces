@@ -55,6 +55,21 @@ def test_binary_probe_calibrates_imbalanced_training_threshold() -> None:
     assert torch.equal(predictions, labels)
 
 
+def test_binary_minimal_shift_moves_scores_to_desired_margin() -> None:
+    values = torch.tensor(
+        [[-2.0, 0.0], [-1.0, 0.1], [1.0, -0.1], [2.0, 0.0]]
+    )
+    labels = torch.tensor([0, 0, 1, 1])
+    probe = BinaryRidgeProbe.fit(values, labels, l2=0.1)
+    desired = 1 - labels
+    deltas = probe.minimal_label_shift(
+        values, desired, margin=0.5, max_relative_norm=None
+    )
+    shifted_scores = probe.score(values + deltas)
+    assert torch.all(shifted_scores[desired == 1] >= 0.49)
+    assert torch.all(shifted_scores[desired == 0] <= -0.49)
+
+
 def test_categorical_probe_shift_reaches_requested_margin() -> None:
     generator = torch.Generator().manual_seed(7)
     labels = torch.arange(120) % 3
