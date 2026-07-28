@@ -53,7 +53,8 @@ def fit_position_prototypes(
     coordinates = states @ basis.T
     prototypes = torch.empty((10, basis.shape[0]))
     counts = torch.zeros(10, dtype=torch.long)
-    for digit in range(10):
+    allowed_digits = range(1, 10) if position == 0 else range(10)
+    for digit in allowed_digits:
         mask = torch.tensor(
             [int(str(result)[position]) == digit for result in natural_results]
         )
