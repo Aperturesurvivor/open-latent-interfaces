@@ -17,6 +17,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from open_latent_interfaces.activations import ActivationCapture
 from open_latent_interfaces.capability import parse_first_integer
+from open_latent_interfaces.donors import choose_donors
 from open_latent_interfaces.evaluation import norm_match, random_norm_matched
 from open_latent_interfaces.interventions import (
     intervened_generate,
@@ -26,45 +27,6 @@ from open_latent_interfaces.phase1_data import (
     build_phase1_additions,
     phase1_addition_sha256,
 )
-
-
-def donor_distance(recipient: Any, donor: Any) -> tuple[int, int, int]:
-    return (
-        abs((recipient.result % 100) - (donor.result % 100)),
-        int(recipient.ones_carry != donor.ones_carry)
-        + int(recipient.tens_carry != donor.tens_carry),
-        abs(recipient.operand_a - donor.operand_a)
-        + abs(recipient.operand_b - donor.operand_b),
-    )
-
-
-def choose_donors(examples: list[Any]) -> tuple[list[int], list[int]]:
-    targeted = []
-    same_leading = []
-    for recipient_index, recipient in enumerate(examples):
-        original_digit = int(str(recipient.result)[0])
-        desired_digit = original_digit % 9 + 1
-        target_candidates = [
-            (index, donor)
-            for index, donor in enumerate(examples)
-            if int(str(donor.result)[0]) == desired_digit
-        ]
-        same_candidates = [
-            (index, donor)
-            for index, donor in enumerate(examples)
-            if index != recipient_index and int(str(donor.result)[0]) == original_digit
-        ]
-        targeted.append(
-            min(target_candidates, key=lambda item: donor_distance(recipient, item[1]))[
-                0
-            ]
-        )
-        same_leading.append(
-            min(same_candidates, key=lambda item: donor_distance(recipient, item[1]))[
-                0
-            ]
-        )
-    return targeted, same_leading
 
 
 def digit_metrics(
