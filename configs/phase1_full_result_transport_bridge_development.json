@@ -1,0 +1,16 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "conditional_result": "results/phase1_conditional_transport_bridge_development.json",
+  "conditional_result_sha256": "ac9af12cd19b02fc980d7356b90c140446328bd41e6b08538c01bbf39798c55c",
+  "donors_per_fit_recipient": 8,
+  "fit_examples": 60,
+  "hidden_state_index": 23,
+  "random_seed": 20260807,
+  "ridge_values": [1.0, 10.0, 100.0],
+  "scales": [0.5, 1.0, 2.0],
+  "schema_version": "oli.phase1-full-result-transport-bridge-config/v1",
+  "selection_examples": 30,
+  "state_rank": 16,
+  "transport_ranks": [8, 16, 32]
+}

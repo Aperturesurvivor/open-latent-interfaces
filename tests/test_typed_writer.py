@@ -3,6 +3,8 @@ import torch
 
 from open_latent_interfaces.typed_writer import (
     build_conditional_transport_design,
+    build_full_result_transport_design,
+    encode_three_digit_results,
     fit_digit_subspace,
     fit_transport_subspace,
 )
@@ -88,3 +90,38 @@ def test_conditional_transport_learns_state_digit_interaction() -> None:
     model = design.fit(transport_rank=2, ridge=1e-5)
     predicted = model.predict(states, digits)
     assert torch.allclose(predicted, deltas, atol=1e-3)
+
+
+def test_three_digit_result_encoding_is_position_specific() -> None:
+    encoded = encode_three_digit_results(torch.tensor([105, 150]))
+    assert encoded.shape == (2, 29)
+    assert encoded.sum(dim=1).tolist() == [3.0, 3.0]
+    assert not torch.equal(encoded[0], encoded[1])
+    with pytest.raises(ValueError, match="three-digit"):
+        encode_three_digit_results(torch.tensor([99]))
+
+
+def test_full_result_transport_learns_state_result_interaction() -> None:
+    values = torch.linspace(-2.0, 2.0, 90)
+    states = torch.stack((values, torch.ones_like(values)), dim=1)
+    hundreds = torch.tensor([(index % 9) + 1 for index in range(90)])
+    tens = torch.tensor([(index * 3) % 10 for index in range(90)])
+    ones = torch.tensor([(index * 7) % 10 for index in range(90)])
+    results = hundreds * 100 + tens * 10 + ones
+    deltas = torch.stack(
+        (
+            values * hundreds + tens,
+            values * ones + hundreds,
+        ),
+        dim=1,
+    )
+    design = build_full_result_transport_design(
+        states,
+        deltas,
+        results,
+        state_rank=1,
+        max_transport_rank=2,
+    )
+    model = design.fit(transport_rank=2, ridge=1e-5)
+    predicted = model.predict(states, results)
+    assert torch.allclose(predicted, deltas, atol=2e-3)
