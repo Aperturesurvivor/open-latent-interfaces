@@ -277,6 +277,28 @@ language-model head. This localizes a reliable leading-digit write interface;
 it does not show that the same boundary or parameters work at later answer
 positions.
 
+## Frozen native suffix-prototype selection
+
+`configs/phase13_smollm2_suffix_prototype_selection.json` freezes the primary
+suffix-writer experiment before observing suffix interventions. At
+hidden-state index 24, it:
+
+- captures teacher-forced fit states for the tens and ones positions;
+- computes ten fit-only digit centroids per position;
+- derives separate native rank-9 subspaces by SVD of the centered centroids;
+- tests ranks 4, 8, and 9, scales 0.5 through 3.0, and relative-norm caps
+  0.25, 0.5, and 0.75;
+- evaluates balanced counterfactual targets and natural-result identity
+  targets on the selection split;
+- compares against rotated wrong-digit and random subspace updates matched to
+  each target update's norm.
+
+Each suffix position must independently meet the same 90% target and identity,
+50-point control-advantage, 100% digit-token, and 0.75 mean-relative-norm
+gates. The prototype tensors are fitted only from SmolLM2 Phase 13 fit
+activations. A nonpass must be preserved before any prompt-local suffix
+compiler fallback is authorized.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
