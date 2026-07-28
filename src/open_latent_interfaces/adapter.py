@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import torch
+from safetensors.torch import load_file
 from torch import nn
 
 
@@ -19,6 +20,94 @@ class TransportMLP(nn.Module):
 
     def forward(self, features: torch.Tensor) -> torch.Tensor:
         return self.network(features)
+
+
+class OnlineTransportEnsemble(nn.Module):
+    """Differentiable ensemble injected into a frozen model forward pass."""
+
+    def __init__(
+        self,
+        projection: AdapterProjection,
+        members: list[TransportMLP],
+        transport_rank: int,
+    ) -> None:
+        super().__init__()
+        self.members = nn.ModuleList(members)
+        self.transport_rank = transport_rank
+        self.register_buffer("state_mean", projection.state_mean)
+        self.register_buffer("state_basis", projection.state_basis)
+        self.register_buffer("state_scale", projection.state_scale)
+        self.register_buffer(
+            "delta_basis",
+            projection.delta_basis[:transport_rank],
+        )
+        self.register_buffer(
+            "coefficient_scale",
+            projection.coefficient_scale[:transport_rank],
+        )
+
+    def forward(
+        self,
+        states: torch.Tensor,
+        target_digits: torch.Tensor,
+    ) -> torch.Tensor:
+        states = states.float()
+        scores = ((states - self.state_mean) @ self.state_basis.T) / self.state_scale
+        one_hot = torch.nn.functional.one_hot(
+            target_digits,
+            num_classes=10,
+        ).float()
+        features = torch.cat((scores, one_hot), dim=1)
+        standardized = torch.stack([member(features) for member in self.members]).mean(
+            dim=0
+        )
+        coefficients = standardized * self.coefficient_scale
+        return coefficients @ self.delta_basis
+
+    @torch.inference_mode()
+    def predict(
+        self,
+        states: torch.Tensor,
+        target_digits: torch.Tensor,
+    ) -> torch.Tensor:
+        device = next(self.parameters()).device
+        return self(states.to(device), target_digits.to(device)).float().cpu()
+
+
+def load_online_adapter(
+    path: str,
+    *,
+    step: int,
+    member_count: int = 3,
+) -> OnlineTransportEnsemble:
+    tensors = load_file(path)
+    prefix = f"step{step}"
+    projection = AdapterProjection(
+        state_mean=tensors[f"{prefix}.projection.state_mean"],
+        state_basis=tensors[f"{prefix}.projection.state_basis"],
+        state_scale=tensors[f"{prefix}.projection.state_scale"],
+        delta_basis=tensors[f"{prefix}.projection.delta_basis"],
+        coefficient_scale=tensors[f"{prefix}.projection.coefficient_scale"],
+    )
+    members = []
+    transport_rank = 0
+    for member_index in range(member_count):
+        member_prefix = f"{prefix}.member{member_index}.model"
+        first_weight = tensors[f"{member_prefix}.network.0.weight"]
+        second_weight = tensors[f"{member_prefix}.network.2.weight"]
+        hidden_width = first_weight.shape[0]
+        transport_rank = second_weight.shape[0]
+        member = TransportMLP(first_weight.shape[1], hidden_width, transport_rank)
+        member.load_state_dict(
+            {
+                "network.0.weight": first_weight,
+                "network.0.bias": tensors[f"{member_prefix}.network.0.bias"],
+                "network.2.weight": second_weight,
+                "network.2.bias": tensors[f"{member_prefix}.network.2.bias"],
+            }
+        )
+        members.append(member)
+    return OnlineTransportEnsemble(projection, members, transport_rank)
 
 
 @dataclass(frozen=True)

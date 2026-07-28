@@ -12,6 +12,68 @@ from open_latent_interfaces.activations import (
 )
 
 
+class OnlineAdapterHook:
+    """Apply a trainable adapter to the final active token in each row."""
+
+    def __init__(
+        self,
+        adapter: Any,
+        target_digits: torch.Tensor,
+        attention_mask: torch.Tensor,
+        *,
+        scale: float,
+        norm_cap: float,
+    ) -> None:
+        self.adapter = adapter
+        self.target_digits = target_digits
+        self.attention_mask = attention_mask
+        self.scale = scale
+        self.norm_cap = norm_cap
+        self.applied_delta: torch.Tensor | None = None
+        self.recipient_states: torch.Tensor | None = None
+
+    def __call__(self, _module: Any, _inputs: tuple[Any, ...], output: Any) -> Any:
+        hidden = output[0] if isinstance(output, tuple) else output
+        positions = last_nonpadding_positions(self.attention_mask)
+        rows = torch.arange(hidden.shape[0], device=hidden.device)
+        recipient = hidden[rows, positions]
+        delta = self.adapter(recipient, self.target_digits.to(hidden.device)) * self.scale
+        maximum = recipient.float().norm(dim=1) * self.norm_cap
+        factor = (maximum / delta.norm(dim=1).clamp_min(1e-12)).clamp(max=1.0)
+        delta = delta * factor[:, None]
+        modified = hidden.clone()
+        modified[rows, positions] += delta.to(hidden.dtype)
+        self.applied_delta = delta
+        self.recipient_states = recipient
+        return _replace_hidden(output, modified)
+
+
+@contextmanager
+def online_adapter_intervention(
+    model: Any,
+    *,
+    hidden_state_index: int,
+    adapter: Any,
+    target_digits: torch.Tensor,
+    attention_mask: torch.Tensor,
+    scale: float,
+    norm_cap: float,
+):
+    blocks = resolve_decoder_blocks(model)
+    hook = OnlineAdapterHook(
+        adapter,
+        target_digits,
+        attention_mask,
+        scale=scale,
+        norm_cap=norm_cap,
+    )
+    handle = blocks[hidden_state_index - 1].register_forward_hook(hook)
+    try:
+        yield hook
+    finally:
+        handle.remove()
+
+
 def _replace_hidden(output: Any, replacement: torch.Tensor) -> Any:
     if isinstance(output, torch.Tensor):
         return replacement
