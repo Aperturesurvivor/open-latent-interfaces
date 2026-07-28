@@ -1,0 +1,26 @@
+{
+  "base_model_batch_size": 4,
+  "dataset_config": "configs/phase8_phi_latent_graft_dataset_frozen.json",
+  "dataset_config_sha256": "2cefb24b966ff9423dbb04be6b97f7633da09b0d64b894302ca8acf856c21aa2",
+  "development_examples_sha256": "5e7ac01f45abc2aac95a721c8a0d1cecfa6d98af4ba8d81ac121e54e26d31bf2",
+  "development_rule": {
+    "maximum_oracle_exact_gap": 0.05,
+    "minimum_computed_target_accuracy": 0.98,
+    "minimum_control_advantage": 0.5,
+    "minimum_final_exact_accuracy": 0.75,
+    "minimum_reader_pair_accuracy": 0.98,
+    "require_digit_token_rate": 1.0,
+    "require_parse_rate": 1.0
+  },
+  "development_token_contract_sha256": "91faffe03c994685817909a83bc1419354853b0b53cd30c180624144ba3b2fb9",
+  "evaluation_split": "development",
+  "random_control_seed": 20261101,
+  "reader_artifact": "artifacts/phase8_phi_operand_reader.safetensors",
+  "reader_artifact_sha256": "58f84aeda73713e9eb2e8ed0347639fc84f60273ad69557d7718b096cd6ac0c0",
+  "reader_hidden_state_index": 1,
+  "reader_selection_result": "results/phase8_phi_operand_reader_selection.json",
+  "reader_selection_result_sha256": "ab2f8bb2c0f028e5b1b771cb907965d2efae95a18744644cb67e51dd487938d2",
+  "schema_version": "oli.phase8-phi-latent-graft-development-config/v1",
+  "writer_manifest": "manifests/phi35-mini-next-digit-interface-v1.json",
+  "writer_manifest_sha256": "505fd784326a82cdb3dc65a37fde4d987ad2c4d5414459541107f6d6332c9f05"
+}
