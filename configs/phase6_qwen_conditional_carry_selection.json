@@ -1,0 +1,41 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase6_qwen_conditional_carry_behavior_development.json",
+  "behavior_result_sha256": "94e91c8e3f353fa3360e3abf73102674ce8f5d89b8488123aeecf7a2e43d66f4",
+  "carry_context_hidden_state_index": 16,
+  "dataset_config": "configs/phase6_qwen_conditional_carry_dataset_frozen.json",
+  "dataset_config_sha256": "301a02c7d02b77563102304fa37fac81a2d2dc876c32c71f6d93723183ba39e8",
+  "eligible_fit_quartets_sha256": "82e6a1be9b3daa132ed1eb10ccc1fbcbe1c92934a89f861f16ce9c5257889f96",
+  "fit_cross_validation_folds": 5,
+  "random_control_seed": 20260911,
+  "ridge_values": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "scales": [
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "schema_version": "oli.phase6-qwen-conditional-carry-selection-config/v1",
+  "selection_quartets_sha256": "db943b2d8fada560ffe68c943caba838f0cefadb60ab2e24bda423108076db03",
+  "selection_rule": {
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": true
+  },
+  "state_ranks": [
+    8,
+    16,
+    32
+  ],
+  "token_region_contract_sha256": "aab534e8596666721c0ece3123e27a949cd9adf43c551b795a5b40442054f00d",
+  "transport_ranks": [
+    4,
+    8,
+    16,
+    32
+  ]
+}

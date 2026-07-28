@@ -35,15 +35,19 @@ For each behavior-eligible fit quartet:
 A matched no-carry bridge is fitted with the same architecture from control
 base/increment pairs. It is a causal control, not part of the target writer.
 
-## Frozen selection grid
+## Frozen model grid
 
 - recipient-state ranks: 8, 16, 32
 - transport ranks: 4, 8, 16, 32
 - ridge penalties: 1, 10, 100
 - output scales: 0.75, 1.0, 1.25, 1.5
 
-The smallest-rank, smallest-norm candidate is preferred among candidates with
-equal target accuracy and control advantage.
+Architecture is chosen without touching selection outputs: deterministic
+five-fold, quartet-grouped cross-validation on eligible fit rows minimizes
+normalized carry-delta reconstruction error. Ties prefer lower state rank,
+lower transport rank, then stronger regularization. The selected architecture
+is refitted on all eligible fit rows. Only the four output scales are tested
+causally on selection.
 
 ## Controls
 
