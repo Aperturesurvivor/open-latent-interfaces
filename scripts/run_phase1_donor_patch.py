@@ -208,8 +208,12 @@ def main() -> None:
         [development[index].result for index in targeted_indices]
     )
     original_results = torch.tensor([example.result for example in development])
-    target_digits = torch.tensor([int(str(value)[0]) for value in target_results])
-    original_digits = torch.tensor([int(str(value)[0]) for value in original_results])
+    target_digits = torch.tensor(
+        [int(str(int(value))[0]) for value in target_results]
+    )
+    original_digits = torch.tensor(
+        [int(str(int(value))[0]) for value in original_results]
+    )
     digit_token_ids = torch.tensor(
         [
             int(tokenizer(str(digit), add_special_tokens=False)["input_ids"][0])
