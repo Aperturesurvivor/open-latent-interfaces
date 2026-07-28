@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fit and evaluate donor-free native-coordinate tens prototypes."""
+"""Fit and evaluate donor-free native-coordinate digit prototypes."""
 
 from __future__ import annotations
 
@@ -68,11 +68,12 @@ def fit_prototypes(
     *,
     config: dict[str, Any],
 ) -> tuple[dict[str, torch.Tensor], dict[str, str]]:
+    answer_position = config.get("answer_position", 1)
     all_states = []
     all_results = []
     for template in config["fit_templates"]:
         prompts = [
-            prompt + str(example.result)[0]
+            prompt + str(example.result)[:answer_position]
             for prompt, example in zip(
                 render_template(tokenizer, examples, template),
                 examples,
@@ -92,20 +93,35 @@ def fit_prototypes(
     digit_counts = torch.empty(10, dtype=torch.long)
     for value in range(10):
         mask = torch.tensor(
-            [int(str(result)[1]) == value for result in all_results]
+            [
+                int(str(result)[answer_position]) == value
+                for result in all_results
+            ]
         )
         digit[value] = coordinates[mask].mean(dim=0)
         digit_counts[value] = int(mask.sum())
-    prefix = torch.empty((90, basis.shape[0]))
-    prefix_counts = torch.empty(90, dtype=torch.long)
-    for value in range(10, 100):
-        mask = torch.tensor(
-            [int(str(result)[:2]) == value for result in all_results]
-        )
-        if not bool(mask.any()):
-            raise ValueError(f"missing fit prototype for prefix {value}")
-        prefix[value - 10] = coordinates[mask].mean(dim=0)
-        prefix_counts[value - 10] = int(mask.sum())
+    prototypes = {
+        "digit": digit,
+        "digit_counts": digit_counts,
+    }
+    if "prefix" in config["methods"]:
+        prefix_start = 10**answer_position
+        prefix_stop = min(10 ** (answer_position + 1), 999)
+        prefix = torch.empty((prefix_stop - prefix_start, basis.shape[0]))
+        prefix_counts = torch.empty(prefix_stop - prefix_start, dtype=torch.long)
+        for value in range(prefix_start, prefix_stop):
+            mask = torch.tensor(
+                [
+                    int(str(result)[: answer_position + 1]) == value
+                    for result in all_results
+                ]
+            )
+            if not bool(mask.any()):
+                raise ValueError(f"missing fit prototype for prefix {value}")
+            prefix[value - prefix_start] = coordinates[mask].mean(dim=0)
+            prefix_counts[value - prefix_start] = int(mask.sum())
+        prototypes["prefix"] = prefix
+        prototypes["prefix_counts"] = prefix_counts
     hashes = {
         "states": hashlib.sha256(
             stacked.contiguous().numpy().tobytes()
@@ -114,12 +130,7 @@ def fit_prototypes(
             coordinates.contiguous().numpy().tobytes()
         ).hexdigest(),
     }
-    return {
-        "digit": digit,
-        "digit_counts": digit_counts,
-        "prefix": prefix,
-        "prefix_counts": prefix_counts,
-    }, hashes
+    return prototypes, hashes
 
 
 def capture_context(
@@ -130,8 +141,9 @@ def capture_context(
     *,
     config: dict[str, Any],
 ) -> tuple[list[str], torch.Tensor, torch.Tensor]:
+    answer_position = config.get("answer_position", 1)
     prompts = [
-        prompt + str(result)[0]
+        prompt + str(result)[:answer_position]
         for prompt, result in zip(
             render_prompts(tokenizer, examples),
             results,
@@ -156,8 +168,15 @@ def capture_context(
     return prompts, states, base_logits
 
 
-def requested_ids(tokenizer: Any, results: list[int]) -> torch.Tensor:
-    return torch.tensor([row[1] for row in result_token_ids(tokenizer, results)])
+def requested_ids(
+    tokenizer: Any,
+    results: list[int],
+    *,
+    answer_position: int,
+) -> torch.Tensor:
+    return torch.tensor(
+        [row[answer_position] for row in result_token_ids(tokenizer, results)]
+    )
 
 
 def prototype_delta(
@@ -167,11 +186,20 @@ def prototype_delta(
     basis: torch.Tensor,
     *,
     method: str,
+    answer_position: int = 1,
 ) -> torch.Tensor:
     if method == "digit":
-        indices = torch.tensor([int(str(result)[1]) for result in results])
+        indices = torch.tensor(
+            [int(str(result)[answer_position]) for result in results]
+        )
     elif method == "prefix":
-        indices = torch.tensor([int(str(result)[:2]) - 10 for result in results])
+        prefix_start = 10**answer_position
+        indices = torch.tensor(
+            [
+                int(str(result)[: answer_position + 1]) - prefix_start
+                for result in results
+            ]
+        )
     else:
         raise ValueError(f"unknown prototype method: {method}")
     desired = prototypes[method][indices]
@@ -210,7 +238,12 @@ def evaluate_delta(
     device: torch.device,
     include_outputs: bool,
 ) -> dict[str, Any]:
-    expected = requested_ids(tokenizer, results)
+    answer_position = config.get("answer_position", 1)
+    expected = requested_ids(
+        tokenizer,
+        results,
+        answer_position=answer_position,
+    )
     logits = predict_with_delta(
         model,
         tokenizer,
@@ -230,12 +263,15 @@ def evaluate_delta(
         for token_id in predicted
     ) / len(predicted)
     if include_outputs:
+        requested_name = (
+            "requested_tens" if answer_position == 1 else "requested_ones"
+        )
         metrics["outputs"] = [
             {
                 "example_id": example.example_id,
                 "original_result": example.result,
                 "requested_result": result,
-                "requested_tens": int(str(result)[1]),
+                requested_name: int(str(result)[answer_position]),
                 "predicted_token_id": int(token_id),
                 "predicted_text": tokenizer.decode([int(token_id)]),
             }
@@ -262,11 +298,20 @@ def selection_rows(
     config: dict[str, Any],
     device: torch.device,
 ) -> list[dict[str, Any]]:
+    answer_position = config.get("answer_position", 1)
     target_prompts, target_states, target_base = target_context
     identity_prompts, identity_states, identity_base = identity_context
     originals = [example.result for example in examples]
-    target_ids = requested_ids(tokenizer, targets)
-    identity_ids = requested_ids(tokenizer, originals)
+    target_ids = requested_ids(
+        tokenizer,
+        targets,
+        answer_position=answer_position,
+    )
+    identity_ids = requested_ids(
+        tokenizer,
+        originals,
+        answer_position=answer_position,
+    )
     rows = []
     for method in config["methods"]:
         raw_target = prototype_delta(
@@ -275,6 +320,7 @@ def selection_rows(
             prototypes,
             basis,
             method=method,
+            answer_position=answer_position,
         )
         raw_identity = prototype_delta(
             identity_states,
@@ -282,6 +328,7 @@ def selection_rows(
             prototypes,
             basis,
             method=method,
+            answer_position=answer_position,
         )
         for scale in config["scales"]:
             target_delta = scale_and_gate(
@@ -405,6 +452,7 @@ def main() -> None:
         parameter.requires_grad_(False)
     capture = ActivationCapture(model, tokenizer, device=device)
     started = time.perf_counter()
+    answer_position = config.get("answer_position", 1)
     basis = load_file(str(basis_path))["delta_basis"][: config["rank"]].float()
     prototypes, fit_hashes = fit_prototypes(
         capture,
@@ -465,14 +513,23 @@ def main() -> None:
     )
     method = selected["method"]
     scale = selected["scale"]
-    target_ids = requested_ids(tokenizer, split_targets["development"])
-    identity_ids = requested_ids(tokenizer, originals)
+    target_ids = requested_ids(
+        tokenizer,
+        split_targets["development"],
+        answer_position=answer_position,
+    )
+    identity_ids = requested_ids(
+        tokenizer,
+        originals,
+        answer_position=answer_position,
+    )
     raw_target = prototype_delta(
         target_states,
         split_targets["development"],
         prototypes,
         basis,
         method=method,
+        answer_position=answer_position,
     )
     targeted = scale_and_gate(
         raw_target,
@@ -488,6 +545,7 @@ def main() -> None:
         prototypes,
         basis,
         method=method,
+        answer_position=answer_position,
     )
     identity_delta = scale_and_gate(
         raw_identity,
@@ -500,7 +558,9 @@ def main() -> None:
     wrong_results = []
     for target in split_targets["development"]:
         digits = list(str(target))
-        digits[1] = str((int(digits[1]) + 1) % 10)
+        digits[answer_position] = str(
+            (int(digits[answer_position]) + 1) % 10
+        )
         wrong_results.append(int("".join(digits)))
     wrong = prototype_delta(
         target_states,
@@ -508,6 +568,7 @@ def main() -> None:
         prototypes,
         basis,
         method=method,
+        answer_position=answer_position,
     )
     wrong = norm_match(wrong, targeted.norm(dim=1))
     shuffled_results = (
@@ -520,6 +581,7 @@ def main() -> None:
         prototypes,
         basis,
         method=method,
+        answer_position=answer_position,
     )
     shuffled = norm_match(shuffled, targeted.norm(dim=1))
     generator = torch.Generator().manual_seed(config["random_control_seed"])
@@ -532,6 +594,11 @@ def main() -> None:
         targeted.norm(dim=1),
     )
     zeros = torch.zeros_like(targeted)
+    wrong_condition = (
+        "wrong_tens_norm_matched"
+        if answer_position == 1
+        else "wrong_ones_norm_matched"
+    )
     development_conditions = {
         "base": evaluate_delta(
             model,
@@ -553,18 +620,6 @@ def main() -> None:
             split_targets["development"],
             target_states,
             targeted,
-            config=config,
-            device=device,
-            include_outputs=True,
-        ),
-        "wrong_tens_norm_matched": evaluate_delta(
-            model,
-            tokenizer,
-            target_prompts,
-            development,
-            split_targets["development"],
-            target_states,
-            wrong,
             config=config,
             device=device,
             include_outputs=True,
@@ -606,8 +661,24 @@ def main() -> None:
             include_outputs=True,
         ),
     }
+    development_conditions[wrong_condition] = evaluate_delta(
+        model,
+        tokenizer,
+        target_prompts,
+        development,
+        split_targets["development"],
+        target_states,
+        wrong,
+        config=config,
+        device=device,
+        include_outputs=True,
+    )
     report = {
-        "schema_version": "oli.phase2-tens-prototype-writer/v1",
+        "schema_version": (
+            "oli.phase2-tens-prototype-writer/v1"
+            if answer_position == 1
+            else "oli.phase2-ones-prototype-writer/v1"
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": source["model"],
@@ -623,6 +694,7 @@ def main() -> None:
             "sha256": target_hashes,
         },
         "fit": {
+            "answer_position": answer_position,
             "templates": config["fit_templates"],
             "examples_per_template": len(fit),
             "activation_sha256": fit_hashes,
@@ -652,7 +724,7 @@ def main() -> None:
         },
         "elapsed_seconds": time.perf_counter() - started,
         "claim_boundary": (
-            "Teacher-forced donor-free tens writer using fit-derived prototypes; "
+            "Teacher-forced donor-free digit writer using fit-derived prototypes; "
             "closed-loop composition and audit remain untested."
         ),
     }
