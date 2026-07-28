@@ -87,6 +87,21 @@ carry-specific claim still requires the difference-in-differences condition
 to pass its absolute threshold and outperform both matched controls. Generated
 tokens remain unpatched so the experiment cannot teacher-force the answer.
 
+The resulting full-sequence selection map found a strong generic `+1` route
+but no carry-specific advantage. A bounded follow-up therefore tests three
+causal regions at indices 1, 5, 9, and 13:
+
+1. the single changed first-operand digit token;
+2. the single second-operand digit that distinguishes the carry and control
+   contexts;
+3. every downstream token after that carry-context digit.
+
+Each region is evaluated separately. The generic changed-token gate uses an
+isotropic region-matched control. Carry-context and downstream-tail gates must
+outperform both their matched no-carry `+1` regional delta and an isotropic
+region-matched control. Token identities, changed positions, context
+positions, and sequence lengths are hash-locked before selection is opened.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.

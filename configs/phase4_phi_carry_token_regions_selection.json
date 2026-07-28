@@ -1,0 +1,31 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase4_phi_carry_behavior_development.json",
+  "behavior_result_sha256": "6e74201cce34f283b044c9245b82455e3082873bb7a3f9e6cb72151c90d713a5",
+  "dataset_config": "configs/phase4_carry_dataset_frozen.json",
+  "dataset_config_sha256": "7f26b24b0af75a35039d7058830ba2187f7bfe4cad819fdbaed2876eda3a07fd",
+  "hidden_state_indices": [
+    1,
+    5,
+    9,
+    13
+  ],
+  "minimum_eligible_fit_quartets": 100,
+  "parent_result": "results/phase4_phi_carry_sequence_boundary_selection.json",
+  "parent_result_sha256": "656a4df1e9f20bd0ba7639d819f1113b3b87c84dc75887832dcec6c7beea603e",
+  "random_control_seed": 20260804,
+  "schema_version": "oli.phase4-carry-token-regions-config/v1",
+  "selection_quartets_sha256": "26397804c70da8d6b2d32e58724f80435d94690e90d7037890d63a883f0d780b",
+  "selection_rule": {
+    "generic_minimum_tens_accuracy": 0.7,
+    "minimum_control_advantage": 0.25,
+    "specific_minimum_tens_accuracy": 0.5,
+    "score_order": [
+      "target_tens_accuracy",
+      "control_advantage",
+      "target_full_accuracy",
+      "earlier_boundary"
+    ]
+  },
+  "token_region_contract_sha256": "3e3fe80eca60e3b20c881a4c0d7d9d1c2c95c6e741c18fd9a72012fb50feb7b7"
+}
