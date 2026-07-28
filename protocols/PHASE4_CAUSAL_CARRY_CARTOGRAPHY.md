@@ -102,6 +102,13 @@ outperform both their matched no-carry `+1` regional delta and an isotropic
 region-matched control. Token identities, changed positions, context
 positions, and sequence lengths are hash-locked before selection is opened.
 
+The regional selection result fixed hidden-state index 1 for the generic
+changed-operand interface and index 13 for the carry-context interface. The
+former reached 39/45 exact targets against 0/45 random; the latter reached
+32/45 target tens digits against 17/45 for the matched no-carry regional
+update and 1/45 random. Subsequent compact estimation must use only the 127
+behavior-correct fit quartets and these preselected token/boundary pairs.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.

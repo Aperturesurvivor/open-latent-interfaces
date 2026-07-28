@@ -321,6 +321,15 @@ did not outperform the matched `+1` control. This is causal evidence for an
 early operand-update interface, not yet for an isolated carry coordinate. See
 the [Phase 4 sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md).
 
+Token-region localization then separated two causal interfaces. A single
+changed first-operand digit at hidden-state index 1 produced 39/45 exact
+carried answers versus 0/45 for its random control. A single contextualized
+second-operand ones digit at index 13 produced 32/45 target tens digits versus
+17/45 for the matched no-carry update and 1/45 random. This is a
+donor-dependent localization of carry-specific computation; compact
+donor-free estimation is the next gate. See the
+[Phase 4 token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -418,6 +427,7 @@ either stage.
 - [Phase 4 carry-quartet behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md)
 - [Phase 4 carry prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md)
 - [Phase 4 carry sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md)
+- [Phase 4 carry token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
