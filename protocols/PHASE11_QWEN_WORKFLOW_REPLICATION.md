@@ -155,3 +155,30 @@ at least 90% full-result and per-position accuracy, preservation of base-correct
 cases, recovery of base errors beyond random and wrong-target controls, and
 successful target-following under a shuffled semantic control. No audit may be
 authorized from component-level results alone.
+
+### Initial integrated outcome
+
+The 45-example integrated pipeline produced perfect task output but did not
+pass its advancement gate:
+
+- result: `results/phase11_qwen_hybrid_graft_development.json`
+- result SHA-256:
+  `940aaadc940ff35e0dbecab2c4834e8d80a6c8f660197c692ab5825b473bf64c`
+- reader: 45/45 operand pairs
+- deterministic compute: 45/45 sums
+- latent and oracle hybrid output: 45/45 exact, with 45/45 at every position
+- base: 44/45 exact
+- shuffled semantic target following: 45/45; shuffled true accuracy: 2/45
+- preserved base-correct cases: 44/44
+- recovered base errors: latent 1/1, wrong-target 0/1, random 1/1
+
+The sole failing check was excess base-error recovery over the norm-matched
+random condition. Because the base model supplied only one error and the random
+condition happened to repair it, this comparison has a denominator of one and
+cannot support advancement. The result remains a transparent non-pass.
+
+Before any audit authorization, a new exposed integration stage must compare
+semantic shuffled-target following against a norm-matched random intervention
+aimed at the same shuffled target set. This directly tests causal target
+specificity over every example rather than relying on a single naturally
+occurring base error.
