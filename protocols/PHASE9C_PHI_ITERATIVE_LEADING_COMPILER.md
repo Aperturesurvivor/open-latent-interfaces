@@ -56,3 +56,25 @@ a transcript of reasoning, or transfer to another model. Any integrated or
 generalization claim requires a newly generated, pair-disjoint, one-shot
 audit.
 
+## Frozen selection outcome
+
+The iterative compiler passed at the smallest eligible depth, three:
+
+| Iterations | Target | Identity | Wrong control | Random control | Mean relative norm | Pass |
+|---:|---:|---:|---:|---:|---:|:---:|
+| 1 | 77/180 | 180/180 | 6/180 | 1/180 | 0.0772 | no |
+| 2 | 161/180 | 180/180 | 13/180 | 1/180 | 0.0971 | no |
+| 3 | 180/180 | 180/180 | 7/180 | 1/180 | 0.0973 | yes |
+| 4 | 180/180 | 180/180 | 7/180 | 1/180 | 0.0973 | yes |
+
+The identical third- and fourth-step target results and norms confirm that the
+hard gate applied no further update after success. At the selected depth, the
+target advantage over the stronger control is `0.9611`.
+
+The complete write-once result is
+`results/phase9c_phi_iterative_leading_compiler_selection.json`, with SHA-256
+`6776b9e315e6ceb56e3e61019774b9520e8ee2f7f85aa895907d117342b26447`.
+
+This passes only the exposed selection gate. The selected implementation is
+fixed at hidden index 24, margin 8.0, three relinearizations, and cumulative
+norm cap 0.75 for any subsequent development or new audit.
