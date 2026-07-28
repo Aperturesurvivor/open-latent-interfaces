@@ -73,3 +73,37 @@ This run reuses an already exposed development split. A pass permits freezing
 a new pair-disjoint audit only; it does not repair, repeat, or supersede the
 closed Phase 8 audit.
 
+## Frozen run outcome
+
+The write-once development run produced:
+
+- reader pair accuracy: `45/45`;
+- deterministic computed-target accuracy: `45/45`;
+- latent and oracle hybrid output: `45/45`;
+- base output: `38/45`;
+- latent recovery of base errors: `7/7`;
+- latent preservation of base-correct rows: `38/38`;
+- random-control recovery of base errors: `0/7`;
+- shuffled-target output matching its requested target: `45/45`;
+- shuffled-target true accuracy: `2/45`.
+
+The original gate nevertheless recorded a non-pass because wrong-target true
+accuracy was `38/45`, above the frozen maximum `0.25`. The wrong-target
+condition recovered `0/7` base errors and preserved `38/38` base-correct rows.
+This is the expected consequence of norm-matching against a hard-gated target
+update: target-update norm is zero on already-correct rows, so the
+wrong-target control also applies zero there. Absolute true accuracy therefore
+measures base preservation rather than wrong-direction recovery.
+
+The original result is immutable at
+`results/phase9d_phi_hybrid_graft_development.json`, SHA-256
+`a41a28814499e0eaf0c3190d0aba5ade98070c2b35bd63d070d8216257fad02a`.
+
+A correction, if performed, must not rerun the model or change any output. It
+may replace only the structurally mismatched absolute wrong-target check with
+paired checks frozen against the existing rows:
+
+- wrong-target base-error recovery at most 0.25;
+- latent recovery advantage over wrong-target at least 0.50.
+
+The original non-pass remains part of the record.
