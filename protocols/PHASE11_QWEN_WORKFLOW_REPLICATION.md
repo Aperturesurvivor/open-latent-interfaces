@@ -70,3 +70,22 @@ The frozen selection run passed:
 
 Indices 4 and 8 also passed, but were not selected under the precommitted
 earliest-passing rule. This remains a selection-only result.
+
+## Leading compiler selection boundary
+
+The Qwen leading-digit writer search is frozen before execution in
+`configs/phase11_qwen_leading_compiler_selection.json`.
+
+It uses 90 exposed selection examples (the carry-base and control-base members)
+and independently searches:
+
+- hidden-state indices 12, 16, 20, 23, and 24;
+- desired margins 4, 8, and 16;
+- relative-norm caps 0.25, 0.5, and 0.75;
+- one prompt-local Jacobian compilation step.
+
+A passing one-step result selects an iteration budget of one. If no candidate
+passes the precommitted target, identity, control-advantage, digit-token, and
+relative-norm gates, bounded iterative relinearization must be frozen as a new
+exposed selection stage. The later audited Qwen suffix boundary at index 27 is
+not loaded or evaluated during this search.
