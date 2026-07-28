@@ -299,6 +299,26 @@ gates. The prototype tensors are fitted only from SmolLM2 Phase 13 fit
 activations. A nonpass must be preserved before any prompt-local suffix
 compiler fallback is authorized.
 
+The frozen native-prototype scan completed once and did not pass:
+
+- result: `results/phase13_smollm2_suffix_prototype_selection.json`
+- result SHA-256:
+  `6c08e5e8b6a137c3f7c7b680fc109d61c0d008394ab249a920c5e0a1fd5b7004`
+- artifact: `artifacts/phase13_smollm2_suffix_prototypes.safetensors`
+- artifact SHA-256:
+  `7d020bac531c9c4932c2d334a54443ab5540e0e22257c3505e4eddd3d6b4a406`
+- best tens target / identity: 8 / 90 and 73 / 90
+- best tens control advantage: 2.2 percentage points
+- best ones target / identity: 6 / 90 and 87 / 90
+- best ones control advantage: 3.3 percentage points
+
+The failure is broad across every declared rank, scale, and cap. Compact
+fit-centroid subspaces at the final residual boundary do not provide a causal
+SmolLM2 suffix writer under this protocol. The result and independently fitted
+tensors are retained as negative evidence. This nonpass authorizes a
+separately frozen prompt-local suffix-compiler fallback using the compiler
+family that passed for the leading digit.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
