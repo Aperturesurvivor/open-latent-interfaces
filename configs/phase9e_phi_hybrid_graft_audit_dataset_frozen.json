@@ -1,0 +1,77 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "audit_examples_sha256": "fb1d6fa21e4ea762a6f6d67589eda88f6493d59e3204a25de7dbe6e4bd268e5c",
+    "canonical_pairs_sha256": "f83211e26f61544b66952eeb75524666aab30e08c89aa6cd44b6303f4238d365",
+    "generator": "src/open_latent_interfaces/phase9e_data.py",
+    "generator_sha256": "cc668cbdf4b2540ba63341923ca4ad2e6badda17d8502209331a0b92d014f37e",
+    "parameters": {
+      "seed": 20261205
+    },
+    "prior_dataset_hashes": {
+      "phase3": "5a8783160f8add9bf551a8de3207b1b5a5c9ac763638250d00cd6de1807bf941",
+      "phase4": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574",
+      "phase6": "86fc17da6fa3856068a66adb0641ab63da9c82a2d9c53cb5c983ff20f27e8cd4",
+      "phase7": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a"
+    },
+    "sha256": "8f598a3a1891aae5bd3f4c12cb8ad4b3c08347fffc4dfc3969986f6a6ae54c0e",
+    "size": 90,
+    "template_sha256": "8591cdd6ebaae5c7530da7f9674b507a81ae817c6a4915386da6cbadb84f0445"
+  },
+  "distribution": {
+    "leading_digit_counts": {
+      "1": 10,
+      "2": 10,
+      "3": 10,
+      "4": 10,
+      "5": 10,
+      "6": 10,
+      "7": 10,
+      "8": 10,
+      "9": 10
+    },
+    "ones_carry_counts": {
+      "0": 45,
+      "1": 45
+    },
+    "ones_digit_counts": {
+      "0": 9,
+      "1": 9,
+      "2": 9,
+      "3": 9,
+      "4": 9,
+      "5": 9,
+      "6": 9,
+      "7": 9,
+      "8": 9,
+      "9": 9
+    },
+    "template_counts": {
+      "phase9e-audit-0": 30,
+      "phase9e-audit-1": 30,
+      "phase9e-audit-2": 30
+    },
+    "tens_carry_counts": {
+      "0": 43,
+      "1": 47
+    },
+    "tens_digit_counts": {
+      "0": 9,
+      "1": 9,
+      "2": 9,
+      "3": 9,
+      "4": 9,
+      "5": 9,
+      "6": 9,
+      "7": 9,
+      "8": 9,
+      "9": 9
+    }
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "schema_version": "oli.phase9e-phi-hybrid-graft-audit-dataset/v1"
+}
