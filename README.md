@@ -270,6 +270,13 @@ versus at most 12/90 for matched controls. This retains donor-dependent
 coefficients and is not yet a donor-free controller. See the
 [Phase 3 causal-rank summary](PHASE3_PHI_DELTA_RANK_SUMMARY.md).
 
+Donor-free class prototypes then produced a partial pass. The shared rank-32
+suffix interface reached 90/90 target and 90/90 identity digits at both tens
+and ones, but the rank-8 leading prototype reached only 54/90 target digits.
+The suffix configuration is locked while a bounded leading-rank follow-up
+tests whether class averaging needs more coordinates than donor transport. See
+the [Phase 3 prototype summary](PHASE3_PHI_PROTOTYPE_SELECTION_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -360,6 +367,7 @@ either stage.
 - [Phase 3 Phi prefill behavior summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md)
 - [Phase 3 Phi native-boundary summary](PHASE3_PHI_NATIVE_BOUNDARY_SUMMARY.md)
 - [Phase 3 Phi causal-rank summary](PHASE3_PHI_DELTA_RANK_SUMMARY.md)
+- [Phase 3 Phi prototype-selection summary](PHASE3_PHI_PROTOTYPE_SELECTION_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
