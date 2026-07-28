@@ -1,0 +1,17 @@
+{
+  "dataset_config": "configs/phase8_phi_latent_graft_dataset_frozen.json",
+  "dataset_phase": 7,
+  "gate": {
+    "minimum_complete_quartet_accuracy": 0.5,
+    "minimum_row_accuracy": 0.75
+  },
+  "generation": {
+    "batch_size": 4,
+    "max_input_tokens": 256
+  },
+  "schema_version": "oli.phase9-phi-wide-writer-behavior-config/v1",
+  "splits": [
+    "fit",
+    "selection"
+  ]
+}
