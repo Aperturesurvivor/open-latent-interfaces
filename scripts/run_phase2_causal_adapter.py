@@ -91,6 +91,7 @@ def train_step_adapter(
             "identity_ce": 0.0,
             "kl": 0.0,
             "view_kl": 0.0,
+            "orthogonality": 0.0,
         }
         seen = 0
         adapter.train()
@@ -198,11 +199,15 @@ def train_step_adapter(
                 target_hook.applied_delta.norm(dim=1)
                 / target_hook.recipient_states.float().norm(dim=1)
             ).mean()
+            gram = adapter.delta_basis @ adapter.delta_basis.T
+            identity = torch.eye(gram.shape[0], device=gram.device)
+            orthogonality = ((gram - identity) ** 2).mean()
             loss = target_ce
             loss = loss + config["identity_ce_weight"] * identity_ce
             loss = loss + config["identity_kl_weight"] * kl
             loss = loss + config.get("view_kl_weight", 0.0) * view_kl
             loss = loss + config["norm_loss_weight"] * relative_norm
+            loss = loss + config.get("orthogonality_weight", 0.0) * orthogonality
             optimizer.zero_grad(set_to_none=True)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(adapter.parameters(), 1.0)
@@ -214,6 +219,7 @@ def train_step_adapter(
                 ("identity_ce", identity_ce),
                 ("kl", kl),
                 ("view_kl", view_kl),
+                ("orthogonality", orthogonality),
             ):
                 totals[name] += float(value.detach()) * count
             seen += count
@@ -374,6 +380,8 @@ def main() -> None:
     selection_targets = target_results(selection)
     for step in range(3):
         initial = load_online_adapter(config["initial_weights"], step=step)
+        if config.get("train_delta_basis", False):
+            initial.make_basis_trainable()
         checkpoints, history = train_step_adapter(
             step,
             initial,

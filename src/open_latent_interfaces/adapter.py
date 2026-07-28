@@ -64,6 +64,12 @@ class OnlineTransportEnsemble(nn.Module):
         coefficients = standardized * self.coefficient_scale
         return coefficients @ self.delta_basis
 
+    def make_basis_trainable(self) -> None:
+        if isinstance(self.delta_basis, nn.Parameter):
+            return
+        basis = self._buffers.pop("delta_basis")
+        self.register_parameter("delta_basis", nn.Parameter(basis))
+
     @torch.inference_mode()
     def predict(
         self,

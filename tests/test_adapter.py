@@ -79,3 +79,18 @@ def test_online_adapter_hook_is_differentiable_and_norm_capped() -> None:
     assert bool((ratios <= 0.50001).all())
     modified.sum().backward()
     assert all(parameter.grad is not None for parameter in adapter.parameters())
+
+
+def test_online_adapter_can_train_output_basis() -> None:
+    projection = prepare_adapter_projection(
+        torch.randn(20, 4),
+        torch.randn(20, 4),
+        state_rank=2,
+        max_transport_rank=2,
+    )
+    adapter = OnlineTransportEnsemble(projection, [TransportMLP(12, 8, 2)], 2)
+    adapter.make_basis_trainable()
+    output = adapter(torch.randn(3, 4), torch.tensor([1, 2, 3]))
+    output.square().mean().backward()
+    assert isinstance(adapter.delta_basis, torch.nn.Parameter)
+    assert adapter.delta_basis.grad is not None
