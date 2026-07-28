@@ -37,3 +37,17 @@ A corrected pass can authorize a new, independently generated audit protocol.
 It cannot convert this exposed development split into audit evidence, and the
 original non-pass remains authoritative under its original thresholds.
 
+## Correction outcome
+
+The no-rerun correction passed. The immutable paired measurements were:
+
+- latent base-error recovery: `7/7` (`1.0`);
+- wrong-target base-error recovery: `0/7` (`0.0`);
+- latent recovery advantage: `1.0`;
+- wrong-target preservation of base-correct rows: `38/38` (`1.0`).
+
+Every retained original check and both replacement checks passed. The
+correction result is
+`results/phase9d_phi_hybrid_graft_gate_correction.json`, SHA-256
+`07038f7f834774df0f505e8a9b85859fb1c752d01fc5e8c6251e698f581e757b`.
+
