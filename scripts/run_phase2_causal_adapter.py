@@ -193,11 +193,14 @@ def select_checkpoint(
     rows = []
     adapters = []
     for epoch, candidate in enumerate(candidate_map, start=1):
+        checkpoint = checkpoints[epoch - 1]
+        hidden_width = checkpoint.members[0].network[0].out_features
+        transport_rank = checkpoint.transport_rank
         selected, details = select_adapters(
             model,
             tokenizer,
             capture,
-            [candidate],
+            [{(hidden_width, transport_rank): candidate[(0, epoch)]}],
             examples=examples,
             prompts=prompts,
             targets=targets,

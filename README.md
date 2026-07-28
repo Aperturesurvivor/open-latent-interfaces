@@ -147,6 +147,14 @@ sealed. The evidence now favors training against causal downstream token loss
 rather than imitating full donor states. See the
 [Phase 2 development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md).
 
+Direct causal fine-tuning through the frozen downstream model then improved
+leading-digit transfer to 84/90, exact targets to 17/90, and identity
+preservation to 72/90 while keeping norms at 36%, 23%, and 30%. Later-position
+accuracy remained 36/90 and 31/90, so four advancement gates still failed.
+Selection behavior localizes the next problem to template-conditioned suffix
+geometry; the audit remains sealed. See the
+[causal-adapter summary](PHASE2_CAUSAL_ADAPTER_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -221,6 +229,7 @@ either stage.
 - [Phase 1H full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md)
 - [Phase 1I local-transport dictionary summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md)
 - [Phase 2 scaled-adapter development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md)
+- [Phase 2 causal-adapter development summary](PHASE2_CAUSAL_ADAPTER_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
