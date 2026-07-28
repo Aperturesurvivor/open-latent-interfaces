@@ -75,6 +75,14 @@ boundary, but flipping its probe score on 100% of examples produced no
 counterfactual hundreds-digit effect and matched random controls. See the
 [probe and causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md).
 
+A native full-residual donor patch then found the first causal write boundary:
+at hidden state 23 / decoder block 22, targeted donors changed the next leading
+digit on 42/45 examples versus 1/45 random and 2/45 shuffled controls.
+Generated answers became the donor's leading digit plus the recipient's
+original suffix on 38/45 examples. This is a causal, internal, sequential
+digit-write interface—not yet a compact or full-result graft. See the
+[native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -140,6 +148,7 @@ either stage.
 - [Phase 1A lab notebook](PHASE1A_LAB_NOTEBOOK.md)
 - [Phase 1B J-lens development summary](PHASE1B_JLENS_SUMMARY.md)
 - [Phase 1B probe and carry-causality summary](PHASE1B_PROBE_CAUSAL_SUMMARY.md)
+- [Phase 1C native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

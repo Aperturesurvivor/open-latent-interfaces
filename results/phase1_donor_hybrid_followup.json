@@ -1,0 +1,505 @@
+{
+  "claim_boundary": "Full residual replacement is an on-manifold donor diagnostic but transfers many variables at once. It localizes causal state without identifying a minimal typed write direction.",
+  "config_sha256": "bdde0e561f5d3f0cf6c4987f88c2092fc95baf30fc0d6169c0104daa0b0661ce",
+  "created_at": "2026-07-28T08:05:59.321421+00:00",
+  "dataset": {
+    "audit_examples_unopened": 45,
+    "development_examples": 45,
+    "sha256": "33bde4a417cbde662295c3c69265b17dc8160aa110ae8090f5e74819f1e6c7b4"
+  },
+  "donor_selection": {
+    "map": [
+      {
+        "recipient_id": "phase1-development-000",
+        "recipient_result": 688,
+        "same_leading_donor_id": "phase1-development-043",
+        "same_leading_donor_result": 687,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-001",
+        "recipient_result": 441,
+        "same_leading_donor_id": "phase1-development-005",
+        "same_leading_donor_result": 462,
+        "target_donor_id": "phase1-development-028",
+        "target_donor_result": 539
+      },
+      {
+        "recipient_id": "phase1-development-002",
+        "recipient_result": 768,
+        "same_leading_donor_id": "phase1-development-008",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-036",
+        "target_donor_result": 870
+      },
+      {
+        "recipient_id": "phase1-development-003",
+        "recipient_result": 214,
+        "same_leading_donor_id": "phase1-development-025",
+        "same_leading_donor_result": 248,
+        "target_donor_id": "phase1-development-024",
+        "target_donor_result": 325
+      },
+      {
+        "recipient_id": "phase1-development-004",
+        "recipient_result": 367,
+        "same_leading_donor_id": "phase1-development-042",
+        "same_leading_donor_result": 364,
+        "target_donor_id": "phase1-development-017",
+        "target_donor_result": 471
+      },
+      {
+        "recipient_id": "phase1-development-005",
+        "recipient_result": 462,
+        "same_leading_donor_id": "phase1-development-017",
+        "same_leading_donor_result": 471,
+        "target_donor_id": "phase1-development-044",
+        "target_donor_result": 575
+      },
+      {
+        "recipient_id": "phase1-development-006",
+        "recipient_result": 840,
+        "same_leading_donor_id": "phase1-development-032",
+        "same_leading_donor_result": 847,
+        "target_donor_id": "phase1-development-018",
+        "target_donor_result": 928
+      },
+      {
+        "recipient_id": "phase1-development-007",
+        "recipient_result": 150,
+        "same_leading_donor_id": "phase1-development-033",
+        "same_leading_donor_result": 133,
+        "target_donor_id": "phase1-development-035",
+        "target_donor_result": 251
+      },
+      {
+        "recipient_id": "phase1-development-008",
+        "recipient_result": 747,
+        "same_leading_donor_id": "phase1-development-031",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-032",
+        "target_donor_result": 847
+      },
+      {
+        "recipient_id": "phase1-development-009",
+        "recipient_result": 881,
+        "same_leading_donor_id": "phase1-development-036",
+        "same_leading_donor_result": 870,
+        "target_donor_id": "phase1-development-015",
+        "target_donor_result": 961
+      },
+      {
+        "recipient_id": "phase1-development-010",
+        "recipient_result": 103,
+        "same_leading_donor_id": "phase1-development-039",
+        "same_leading_donor_result": 109,
+        "target_donor_id": "phase1-development-003",
+        "target_donor_result": 214
+      },
+      {
+        "recipient_id": "phase1-development-011",
+        "recipient_result": 350,
+        "same_leading_donor_id": "phase1-development-042",
+        "same_leading_donor_result": 364,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-012",
+        "recipient_result": 535,
+        "same_leading_donor_id": "phase1-development-028",
+        "same_leading_donor_result": 539,
+        "target_donor_id": "phase1-development-038",
+        "target_donor_result": 623
+      },
+      {
+        "recipient_id": "phase1-development-013",
+        "recipient_result": 252,
+        "same_leading_donor_id": "phase1-development-035",
+        "same_leading_donor_result": 251,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-014",
+        "recipient_result": 955,
+        "same_leading_donor_id": "phase1-development-030",
+        "same_leading_donor_result": 958,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-015",
+        "recipient_result": 961,
+        "same_leading_donor_id": "phase1-development-030",
+        "same_leading_donor_result": 958,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-016",
+        "recipient_result": 291,
+        "same_leading_donor_id": "phase1-development-013",
+        "same_leading_donor_result": 252,
+        "target_donor_id": "phase1-development-004",
+        "target_donor_result": 367
+      },
+      {
+        "recipient_id": "phase1-development-017",
+        "recipient_result": 471,
+        "same_leading_donor_id": "phase1-development-005",
+        "same_leading_donor_result": 462,
+        "target_donor_id": "phase1-development-044",
+        "target_donor_result": 575
+      },
+      {
+        "recipient_id": "phase1-development-018",
+        "recipient_result": 928,
+        "same_leading_donor_id": "phase1-development-029",
+        "same_leading_donor_result": 906,
+        "target_donor_id": "phase1-development-033",
+        "target_donor_result": 133
+      },
+      {
+        "recipient_id": "phase1-development-019",
+        "recipient_result": 696,
+        "same_leading_donor_id": "phase1-development-000",
+        "same_leading_donor_result": 688,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-020",
+        "recipient_result": 404,
+        "same_leading_donor_id": "phase1-development-001",
+        "same_leading_donor_result": 441,
+        "target_donor_id": "phase1-development-012",
+        "target_donor_result": 535
+      },
+      {
+        "recipient_id": "phase1-development-021",
+        "recipient_result": 616,
+        "same_leading_donor_id": "phase1-development-038",
+        "same_leading_donor_result": 623,
+        "target_donor_id": "phase1-development-023",
+        "target_donor_result": 721
+      },
+      {
+        "recipient_id": "phase1-development-022",
+        "recipient_result": 335,
+        "same_leading_donor_id": "phase1-development-024",
+        "same_leading_donor_result": 325,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-023",
+        "recipient_result": 721,
+        "same_leading_donor_id": "phase1-development-027",
+        "same_leading_donor_result": 730,
+        "target_donor_id": "phase1-development-006",
+        "target_donor_result": 840
+      },
+      {
+        "recipient_id": "phase1-development-024",
+        "recipient_result": 325,
+        "same_leading_donor_id": "phase1-development-022",
+        "same_leading_donor_result": 335,
+        "target_donor_id": "phase1-development-001",
+        "target_donor_result": 441
+      },
+      {
+        "recipient_id": "phase1-development-025",
+        "recipient_result": 248,
+        "same_leading_donor_id": "phase1-development-035",
+        "same_leading_donor_result": 251,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-026",
+        "recipient_result": 800,
+        "same_leading_donor_id": "phase1-development-006",
+        "same_leading_donor_result": 840,
+        "target_donor_id": "phase1-development-029",
+        "target_donor_result": 906
+      },
+      {
+        "recipient_id": "phase1-development-027",
+        "recipient_result": 730,
+        "same_leading_donor_id": "phase1-development-023",
+        "same_leading_donor_result": 721,
+        "target_donor_id": "phase1-development-006",
+        "target_donor_result": 840
+      },
+      {
+        "recipient_id": "phase1-development-028",
+        "recipient_result": 539,
+        "same_leading_donor_id": "phase1-development-012",
+        "same_leading_donor_result": 535,
+        "target_donor_id": "phase1-development-038",
+        "target_donor_result": 623
+      },
+      {
+        "recipient_id": "phase1-development-029",
+        "recipient_result": 906,
+        "same_leading_donor_id": "phase1-development-018",
+        "same_leading_donor_result": 928,
+        "target_donor_id": "phase1-development-039",
+        "target_donor_result": 109
+      },
+      {
+        "recipient_id": "phase1-development-030",
+        "recipient_result": 958,
+        "same_leading_donor_id": "phase1-development-014",
+        "same_leading_donor_result": 955,
+        "target_donor_id": "phase1-development-007",
+        "target_donor_result": 150
+      },
+      {
+        "recipient_id": "phase1-development-031",
+        "recipient_result": 747,
+        "same_leading_donor_id": "phase1-development-008",
+        "same_leading_donor_result": 747,
+        "target_donor_id": "phase1-development-032",
+        "target_donor_result": 847
+      },
+      {
+        "recipient_id": "phase1-development-032",
+        "recipient_result": 847,
+        "same_leading_donor_id": "phase1-development-006",
+        "same_leading_donor_result": 840,
+        "target_donor_id": "phase1-development-014",
+        "target_donor_result": 955
+      },
+      {
+        "recipient_id": "phase1-development-033",
+        "recipient_result": 133,
+        "same_leading_donor_id": "phase1-development-007",
+        "same_leading_donor_result": 150,
+        "target_donor_id": "phase1-development-025",
+        "target_donor_result": 248
+      },
+      {
+        "recipient_id": "phase1-development-034",
+        "recipient_result": 483,
+        "same_leading_donor_id": "phase1-development-017",
+        "same_leading_donor_result": 471,
+        "target_donor_id": "phase1-development-037",
+        "target_donor_result": 576
+      },
+      {
+        "recipient_id": "phase1-development-035",
+        "recipient_result": 251,
+        "same_leading_donor_id": "phase1-development-013",
+        "same_leading_donor_result": 252,
+        "target_donor_id": "phase1-development-011",
+        "target_donor_result": 350
+      },
+      {
+        "recipient_id": "phase1-development-036",
+        "recipient_result": 870,
+        "same_leading_donor_id": "phase1-development-009",
+        "same_leading_donor_result": 881,
+        "target_donor_id": "phase1-development-015",
+        "target_donor_result": 961
+      },
+      {
+        "recipient_id": "phase1-development-037",
+        "recipient_result": 576,
+        "same_leading_donor_id": "phase1-development-044",
+        "same_leading_donor_result": 575,
+        "target_donor_id": "phase1-development-043",
+        "target_donor_result": 687
+      },
+      {
+        "recipient_id": "phase1-development-038",
+        "recipient_result": 623,
+        "same_leading_donor_id": "phase1-development-021",
+        "same_leading_donor_result": 616,
+        "target_donor_id": "phase1-development-023",
+        "target_donor_result": 721
+      },
+      {
+        "recipient_id": "phase1-development-039",
+        "recipient_result": 109,
+        "same_leading_donor_id": "phase1-development-010",
+        "same_leading_donor_result": 103,
+        "target_donor_id": "phase1-development-003",
+        "target_donor_result": 214
+      },
+      {
+        "recipient_id": "phase1-development-040",
+        "recipient_result": 595,
+        "same_leading_donor_id": "phase1-development-037",
+        "same_leading_donor_result": 576,
+        "target_donor_id": "phase1-development-019",
+        "target_donor_result": 696
+      },
+      {
+        "recipient_id": "phase1-development-041",
+        "recipient_result": 196,
+        "same_leading_donor_id": "phase1-development-007",
+        "same_leading_donor_result": 150,
+        "target_donor_id": "phase1-development-016",
+        "target_donor_result": 291
+      },
+      {
+        "recipient_id": "phase1-development-042",
+        "recipient_result": 364,
+        "same_leading_donor_id": "phase1-development-004",
+        "same_leading_donor_result": 367,
+        "target_donor_id": "phase1-development-005",
+        "target_donor_result": 462
+      },
+      {
+        "recipient_id": "phase1-development-043",
+        "recipient_result": 687,
+        "same_leading_donor_id": "phase1-development-000",
+        "same_leading_donor_result": 688,
+        "target_donor_id": "phase1-development-002",
+        "target_donor_result": 768
+      },
+      {
+        "recipient_id": "phase1-development-044",
+        "recipient_result": 575,
+        "same_leading_donor_id": "phase1-development-037",
+        "same_leading_donor_result": 576,
+        "target_donor_id": "phase1-development-043",
+        "target_donor_result": 687
+      }
+    ],
+    "matching": "suffix distance, carry mismatch count, operand distance",
+    "target_digit": "cyclic next leading digit 1-9",
+    "template_matched": true
+  },
+  "elapsed_seconds": 73.399580624995,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layers": {
+    "23": {
+      "conditions": {
+        "base": {
+          "mean_delta_norm": 0.0,
+          "mean_relative_norm": 0.0,
+          "metrics": {
+            "generated_hybrid_exact": 0.0,
+            "generated_original_exact": 0.9555555555555556,
+            "generated_original_suffix_accuracy": 1.0,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.0,
+            "generated_target_leading_digit_accuracy": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -14.643576622009277,
+            "original_digit_accuracy": 0.9555555582046509,
+            "original_mean_digit_margin": 12.861632347106934,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -14.846354484558105
+          }
+        },
+        "random_norm_matched": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283344626426697,
+          "metrics": {
+            "generated_hybrid_exact": 0.0,
+            "generated_original_exact": 0.8444444444444444,
+            "generated_original_suffix_accuracy": 0.9777777777777777,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.0,
+            "generated_target_leading_digit_accuracy": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -11.896528244018555,
+            "original_digit_accuracy": 0.8666666746139526,
+            "original_mean_digit_margin": 8.32204818725586,
+            "target_digit_accuracy": 0.02222222276031971,
+            "target_mean_digit_margin": -12.400346755981445
+          }
+        },
+        "same_leading_native": {
+          "mean_delta_norm": 63.19243621826172,
+          "mean_relative_norm": 0.5374929904937744,
+          "metrics": {
+            "generated_hybrid_exact": 0.0,
+            "generated_original_exact": 0.9777777777777777,
+            "generated_original_suffix_accuracy": 1.0,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.0,
+            "generated_target_leading_digit_accuracy": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -15.114062309265137,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 13.813020706176758,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -15.133159637451172
+          }
+        },
+        "same_leading_norm_matched": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283345222473145,
+          "metrics": {
+            "generated_hybrid_exact": 0.0,
+            "generated_original_exact": 0.9777777777777777,
+            "generated_original_suffix_accuracy": 1.0,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.0,
+            "generated_target_leading_digit_accuracy": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -13.439409255981445,
+            "original_digit_accuracy": 0.9777777791023254,
+            "original_mean_digit_margin": 11.55555534362793,
+            "target_digit_accuracy": 0.0,
+            "target_mean_digit_margin": -13.629687309265137
+          }
+        },
+        "shuffled_donor_norm_matched": {
+          "mean_delta_norm": 72.30009460449219,
+          "mean_relative_norm": 0.6166548132896423,
+          "metrics": {
+            "generated_hybrid_exact": 0.0,
+            "generated_original_exact": 0.06666666666666667,
+            "generated_original_suffix_accuracy": 0.6222222222222222,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.0,
+            "generated_target_leading_digit_accuracy": 0.0,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": -0.35642361640930176,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.290277481079102,
+            "target_digit_accuracy": 0.04444444552063942,
+            "target_mean_digit_margin": -15.005728721618652
+          }
+        },
+        "targeted_donor": {
+          "mean_delta_norm": 73.72293090820312,
+          "mean_relative_norm": 0.6283344626426697,
+          "metrics": {
+            "generated_hybrid_exact": 0.8444444444444444,
+            "generated_original_exact": 0.022222222222222223,
+            "generated_original_suffix_accuracy": 0.9333333333333333,
+            "generated_target_donor_suffix_accuracy": 0.044444444444444446,
+            "generated_target_exact": 0.044444444444444446,
+            "generated_target_leading_digit_accuracy": 0.8444444444444444,
+            "generation_parse_rate": 1.0,
+            "mean_target_minus_original_logit": 14.89305591583252,
+            "original_digit_accuracy": 0.06666667014360428,
+            "original_mean_digit_margin": -14.89305591583252,
+            "target_digit_accuracy": 0.9333333373069763,
+            "target_mean_digit_margin": 12.822569847106934
+          }
+        }
+      },
+      "decoder_block": 22
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase1-native-donor-patch/v1",
+  "status": "development_only"
+}
