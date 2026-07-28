@@ -1,0 +1,25 @@
+{
+  "adapter_learning_rate": 0.0002,
+  "audit_authorized": false,
+  "base_model_batch_size": 4,
+  "causal_epochs": 3,
+  "fit_templates": [
+    "Calculate {a} + {b}. Reply with only the integer.",
+    "Add {a} and {b}. Return only the integer.",
+    "Determine the total of {a} and {b}. Return only the integer.",
+    "Solve {a} plus {b}. Give only the integer."
+  ],
+  "identity_ce_weight": 1.0,
+  "identity_kl_weight": 1.0,
+  "initial_result": "results/phase2_causal_adapter_development.json",
+  "initial_result_sha256": "64614f883f124fdf71c841525e5c3f6e3a21a4b477040c9471659724eb27c3d3",
+  "initial_weights": "artifacts/phase2_causal_adapter_development.safetensors",
+  "initial_weights_sha256": "a8557a237d46d3602ecc61999582135f91b16e0934c212e98e19f1a9179d83e8",
+  "norm_cap": 0.8,
+  "norm_loss_weight": 0.05,
+  "random_control_seed": 20260817,
+  "scales": [0.5, 1.0],
+  "schema_version": "oli.phase2-multitemplate-causal-adapter-config/v1",
+  "training_seed": 20260816,
+  "view_kl_weight": 0.1
+}

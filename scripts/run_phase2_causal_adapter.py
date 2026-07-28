@@ -63,6 +63,7 @@ def train_step_adapter(
     tokenizer: Any,
     *,
     prompts: list[str],
+    prompt_views: list[list[str]] | None,
     original_results: list[int],
     targets: list[int],
     config: dict[str, Any],
@@ -78,13 +79,24 @@ def train_step_adapter(
     checkpoints = []
     history = []
     for epoch in range(config["causal_epochs"]):
+        primary_prompts = prompts
+        secondary_prompts = None
+        if prompt_views:
+            primary_prompts = prompt_views[epoch % len(prompt_views)]
+            secondary_prompts = prompt_views[(epoch + 1) % len(prompt_views)]
         permutation = torch.randperm(len(prompts), generator=generator).tolist()
-        totals = {"loss": 0.0, "target_ce": 0.0, "identity_ce": 0.0, "kl": 0.0}
+        totals = {
+            "loss": 0.0,
+            "target_ce": 0.0,
+            "identity_ce": 0.0,
+            "kl": 0.0,
+            "view_kl": 0.0,
+        }
         seen = 0
         adapter.train()
         for start in range(0, len(prompts), config["base_model_batch_size"]):
             indices = permutation[start : start + config["base_model_batch_size"]]
-            batch_prompts = [prompts[index] for index in indices]
+            batch_prompts = [primary_prompts[index] for index in indices]
             batch_targets = [targets[index] for index in indices]
             batch_originals = [original_results[index] for index in indices]
             target_prompts = [
@@ -115,6 +127,50 @@ def train_step_adapter(
                 norm_cap=config["norm_cap"],
             ) as target_hook:
                 target_logits = next_logits(model, target_encoded)
+            view_kl = torch.zeros((), device=device)
+            if secondary_prompts is not None:
+                second_prompts = [
+                    secondary_prompts[index] + str(targets[index])[:step]
+                    for index in indices
+                ]
+                second_encoded = encode(tokenizer, second_prompts, device)
+                with online_adapter_intervention(
+                    model,
+                    hidden_state_index=23,
+                    adapter=adapter,
+                    target_digits=target_digits,
+                    attention_mask=second_encoded["attention_mask"],
+                    scale=1.0,
+                    norm_cap=config["norm_cap"],
+                ):
+                    second_logits = next_logits(model, second_encoded)
+                target_ce = 0.5 * (
+                    functional.cross_entropy(
+                        target_logits,
+                        expected_ids(tokenizer, batch_targets, step, device),
+                    )
+                    + functional.cross_entropy(
+                        second_logits,
+                        expected_ids(tokenizer, batch_targets, step, device),
+                    )
+                )
+                view_kl = 0.5 * (
+                    functional.kl_div(
+                        functional.log_softmax(target_logits, dim=-1),
+                        functional.softmax(second_logits.detach(), dim=-1),
+                        reduction="batchmean",
+                    )
+                    + functional.kl_div(
+                        functional.log_softmax(second_logits, dim=-1),
+                        functional.softmax(target_logits.detach(), dim=-1),
+                        reduction="batchmean",
+                    )
+                )
+            else:
+                target_ce = functional.cross_entropy(
+                    target_logits,
+                    expected_ids(tokenizer, batch_targets, step, device),
+                )
             with torch.no_grad():
                 base_identity_logits = next_logits(model, identity_encoded)
             with online_adapter_intervention(
@@ -127,10 +183,6 @@ def train_step_adapter(
                 norm_cap=config["norm_cap"],
             ):
                 identity_logits = next_logits(model, identity_encoded)
-            target_ce = functional.cross_entropy(
-                target_logits,
-                expected_ids(tokenizer, batch_targets, step, device),
-            )
             identity_ce = functional.cross_entropy(
                 identity_logits,
                 expected_ids(tokenizer, batch_originals, step, device),
@@ -149,6 +201,7 @@ def train_step_adapter(
             loss = target_ce
             loss = loss + config["identity_ce_weight"] * identity_ce
             loss = loss + config["identity_kl_weight"] * kl
+            loss = loss + config.get("view_kl_weight", 0.0) * view_kl
             loss = loss + config["norm_loss_weight"] * relative_norm
             optimizer.zero_grad(set_to_none=True)
             loss.backward()
@@ -160,6 +213,7 @@ def train_step_adapter(
                 ("target_ce", target_ce),
                 ("identity_ce", identity_ce),
                 ("kl", kl),
+                ("view_kl", view_kl),
             ):
                 totals[name] += float(value.detach()) * count
             seen += count
@@ -290,6 +344,15 @@ def main() -> None:
     capture = ActivationCapture(model, tokenizer, device=device)
     started = time.perf_counter()
     fit_prompts = render_prompts(tokenizer, fit)
+    prompt_views = None
+    if "fit_templates" in config:
+        prompt_views = [
+            [
+                template.format(a=example.operand_a, b=example.operand_b)
+                for example in fit
+            ]
+            for template in config["fit_templates"]
+        ]
     fit_originals = [example.result for example in fit]
     fit_targets = target_results(fit)
     selected_adapters = []
@@ -305,6 +368,7 @@ def main() -> None:
             model,
             tokenizer,
             prompts=fit_prompts,
+            prompt_views=prompt_views,
             original_results=fit_originals,
             targets=fit_targets,
             config=config,
@@ -358,7 +422,11 @@ def main() -> None:
         for index, condition in enumerate(conditions)
     }
     report = {
-        "schema_version": "oli.phase2-causal-adapter/v1",
+        "schema_version": (
+            "oli.phase2-multitemplate-causal-adapter/v1"
+            if prompt_views
+            else "oli.phase2-causal-adapter/v1"
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": previous["model"],
