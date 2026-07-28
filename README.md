@@ -220,6 +220,14 @@ preservation, norm, and parse gates all passed. Only the existing ones writer,
 at 51/90, remains below the per-position gate. See the
 [closed-loop hybrid summary](PHASE2_CLOSED_LOOP_HYBRID_SUMMARY.md).
 
+The same rank-16 basis then transferred unchanged to the ones position.
+Fit-derived ones prototypes achieved 90/90 target and 90/90 identity digits on
+development, versus at most 14/90 for matched controls. Only the ten prototype
+vectors changed; the causal basis, boundary, and deterministic controller were
+shared. This identifies a reusable late-layer next-digit interface spanning
+multiple autoregressive positions. See the
+[ones transfer summary](PHASE2_ONES_PROTOTYPE_TRANSFER_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -303,6 +311,7 @@ either stage.
 - [Phase 2 tens native-delta rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md)
 - [Phase 2 donor-free tens prototype summary](PHASE2_TENS_PROTOTYPE_WRITER_SUMMARY.md)
 - [Phase 2 closed-loop hybrid summary](PHASE2_CLOSED_LOOP_HYBRID_SUMMARY.md)
+- [Phase 2 cross-position ones prototype summary](PHASE2_ONES_PROTOTYPE_TRANSFER_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
