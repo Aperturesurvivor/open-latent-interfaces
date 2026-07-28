@@ -99,6 +99,15 @@ not generalize. This partial pass localizes the next problem: counterfactual
 prefixes require contextual state transport in addition to digit encoding. See
 the [typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md).
 
+A paired low-rank transport writer then learned from recipient/donor states
+that already shared the target prefix. It improved second-digit transfer from
+7/45 to 17/45 and complete targets from 2/45 to 5/45, but required later
+interventions of 135–241% of residual norm and remained far below the 38/45
+full-donor result. This supports contextual repair while showing that the
+remaining transport is recipient-conditioned rather than a class-mean digit
+vector. See the
+[paired-transport summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -167,6 +176,7 @@ either stage.
 - [Phase 1C native donor-write summary](PHASE1C_NATIVE_WRITE_SUMMARY.md)
 - [Phase 1D stepwise native-write summary](PHASE1D_STEPWISE_NATIVE_WRITE_SUMMARY.md)
 - [Phase 1E donor-free typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md)
+- [Phase 1F paired-transport writer summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

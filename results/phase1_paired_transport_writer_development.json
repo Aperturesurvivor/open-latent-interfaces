@@ -1,0 +1,3381 @@
+{
+  "claim_boundary": "Development-only mean paired transports do not establish an audited or model-general deterministic graft.",
+  "conditions": {
+    "base": {
+      "mean_relative_norm_by_step": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "original_full_result_accuracy": 0.9555555555555556,
+      "outputs": [
+        {
+          "example_id": "phase1-development-000",
+          "generated_text": "688",
+          "original_result": 688,
+          "parsed": 688,
+          "predicted_token_ids": [
+            21,
+            23,
+            23
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-001",
+          "generated_text": "441",
+          "original_result": 441,
+          "parsed": 441,
+          "predicted_token_ids": [
+            19,
+            19,
+            16
+          ],
+          "target_result": 539
+        },
+        {
+          "example_id": "phase1-development-002",
+          "generated_text": "768",
+          "original_result": 768,
+          "parsed": 768,
+          "predicted_token_ids": [
+            22,
+            21,
+            23
+          ],
+          "target_result": 870
+        },
+        {
+          "example_id": "phase1-development-003",
+          "generated_text": "114",
+          "original_result": 214,
+          "parsed": 114,
+          "predicted_token_ids": [
+            16,
+            16,
+            19
+          ],
+          "target_result": 325
+        },
+        {
+          "example_id": "phase1-development-004",
+          "generated_text": "367",
+          "original_result": 367,
+          "parsed": 367,
+          "predicted_token_ids": [
+            18,
+            21,
+            22
+          ],
+          "target_result": 471
+        },
+        {
+          "example_id": "phase1-development-005",
+          "generated_text": "462",
+          "original_result": 462,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-006",
+          "generated_text": "840",
+          "original_result": 840,
+          "parsed": 840,
+          "predicted_token_ids": [
+            23,
+            19,
+            15
+          ],
+          "target_result": 928
+        },
+        {
+          "example_id": "phase1-development-007",
+          "generated_text": "150",
+          "original_result": 150,
+          "parsed": 150,
+          "predicted_token_ids": [
+            16,
+            20,
+            15
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase1-development-008",
+          "generated_text": "747",
+          "original_result": 747,
+          "parsed": 747,
+          "predicted_token_ids": [
+            22,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-009",
+          "generated_text": "881",
+          "original_result": 881,
+          "parsed": 881,
+          "predicted_token_ids": [
+            23,
+            23,
+            16
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-010",
+          "generated_text": "103",
+          "original_result": 103,
+          "parsed": 103,
+          "predicted_token_ids": [
+            16,
+            15,
+            18
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-011",
+          "generated_text": "350",
+          "original_result": 350,
+          "parsed": 350,
+          "predicted_token_ids": [
+            18,
+            20,
+            15
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-012",
+          "generated_text": "535",
+          "original_result": 535,
+          "parsed": 535,
+          "predicted_token_ids": [
+            20,
+            18,
+            20
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-013",
+          "generated_text": "252",
+          "original_result": 252,
+          "parsed": 252,
+          "predicted_token_ids": [
+            17,
+            20,
+            17
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-014",
+          "generated_text": "955",
+          "original_result": 955,
+          "parsed": 955,
+          "predicted_token_ids": [
+            24,
+            20,
+            20
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-015",
+          "generated_text": "961",
+          "original_result": 961,
+          "parsed": 961,
+          "predicted_token_ids": [
+            24,
+            21,
+            16
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-016",
+          "generated_text": "291",
+          "original_result": 291,
+          "parsed": 291,
+          "predicted_token_ids": [
+            17,
+            24,
+            16
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase1-development-017",
+          "generated_text": "471",
+          "original_result": 471,
+          "parsed": 471,
+          "predicted_token_ids": [
+            19,
+            22,
+            16
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-018",
+          "generated_text": "928",
+          "original_result": 928,
+          "parsed": 928,
+          "predicted_token_ids": [
+            24,
+            17,
+            23
+          ],
+          "target_result": 133
+        },
+        {
+          "example_id": "phase1-development-019",
+          "generated_text": "696",
+          "original_result": 696,
+          "parsed": 696,
+          "predicted_token_ids": [
+            21,
+            24,
+            21
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-020",
+          "generated_text": "404",
+          "original_result": 404,
+          "parsed": 404,
+          "predicted_token_ids": [
+            19,
+            15,
+            19
+          ],
+          "target_result": 535
+        },
+        {
+          "example_id": "phase1-development-021",
+          "generated_text": "616",
+          "original_result": 616,
+          "parsed": 616,
+          "predicted_token_ids": [
+            21,
+            16,
+            21
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-022",
+          "generated_text": "335",
+          "original_result": 335,
+          "parsed": 335,
+          "predicted_token_ids": [
+            18,
+            18,
+            20
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-023",
+          "generated_text": "721",
+          "original_result": 721,
+          "parsed": 721,
+          "predicted_token_ids": [
+            22,
+            17,
+            16
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-024",
+          "generated_text": "325",
+          "original_result": 325,
+          "parsed": 325,
+          "predicted_token_ids": [
+            18,
+            17,
+            20
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-025",
+          "generated_text": "248",
+          "original_result": 248,
+          "parsed": 248,
+          "predicted_token_ids": [
+            17,
+            19,
+            23
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-026",
+          "generated_text": "800",
+          "original_result": 800,
+          "parsed": 800,
+          "predicted_token_ids": [
+            23,
+            15,
+            15
+          ],
+          "target_result": 906
+        },
+        {
+          "example_id": "phase1-development-027",
+          "generated_text": "730",
+          "original_result": 730,
+          "parsed": 730,
+          "predicted_token_ids": [
+            22,
+            18,
+            15
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-028",
+          "generated_text": "539",
+          "original_result": 539,
+          "parsed": 539,
+          "predicted_token_ids": [
+            20,
+            18,
+            24
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-029",
+          "generated_text": "806",
+          "original_result": 906,
+          "parsed": 806,
+          "predicted_token_ids": [
+            23,
+            15,
+            21
+          ],
+          "target_result": 109
+        },
+        {
+          "example_id": "phase1-development-030",
+          "generated_text": "958",
+          "original_result": 958,
+          "parsed": 958,
+          "predicted_token_ids": [
+            24,
+            20,
+            23
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-031",
+          "generated_text": "747",
+          "original_result": 747,
+          "parsed": 747,
+          "predicted_token_ids": [
+            22,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-032",
+          "generated_text": "847",
+          "original_result": 847,
+          "parsed": 847,
+          "predicted_token_ids": [
+            23,
+            19,
+            22
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase1-development-033",
+          "generated_text": "133",
+          "original_result": 133,
+          "parsed": 133,
+          "predicted_token_ids": [
+            16,
+            18,
+            18
+          ],
+          "target_result": 248
+        },
+        {
+          "example_id": "phase1-development-034",
+          "generated_text": "483",
+          "original_result": 483,
+          "parsed": 483,
+          "predicted_token_ids": [
+            19,
+            23,
+            18
+          ],
+          "target_result": 576
+        },
+        {
+          "example_id": "phase1-development-035",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            17,
+            20,
+            16
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-036",
+          "generated_text": "870",
+          "original_result": 870,
+          "parsed": 870,
+          "predicted_token_ids": [
+            23,
+            22,
+            15
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-037",
+          "generated_text": "576",
+          "original_result": 576,
+          "parsed": 576,
+          "predicted_token_ids": [
+            20,
+            22,
+            21
+          ],
+          "target_result": 687
+        },
+        {
+          "example_id": "phase1-development-038",
+          "generated_text": "623",
+          "original_result": 623,
+          "parsed": 623,
+          "predicted_token_ids": [
+            21,
+            17,
+            18
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-039",
+          "generated_text": "109",
+          "original_result": 109,
+          "parsed": 109,
+          "predicted_token_ids": [
+            16,
+            15,
+            24
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-040",
+          "generated_text": "595",
+          "original_result": 595,
+          "parsed": 595,
+          "predicted_token_ids": [
+            20,
+            24,
+            20
+          ],
+          "target_result": 696
+        },
+        {
+          "example_id": "phase1-development-041",
+          "generated_text": "196",
+          "original_result": 196,
+          "parsed": 196,
+          "predicted_token_ids": [
+            16,
+            24,
+            21
+          ],
+          "target_result": 291
+        },
+        {
+          "example_id": "phase1-development-042",
+          "generated_text": "364",
+          "original_result": 364,
+          "parsed": 364,
+          "predicted_token_ids": [
+            18,
+            21,
+            19
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase1-development-043",
+          "generated_text": "687",
+          "original_result": 687,
+          "parsed": 687,
+          "predicted_token_ids": [
+            21,
+            23,
+            22
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-044",
+          "generated_text": "575",
+          "original_result": 575,
+          "parsed": 575,
+          "predicted_token_ids": [
+            20,
+            22,
+            20
+          ],
+          "target_result": 687
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.0,
+        0.3111111111111111,
+        0.1111111111111111
+      ],
+      "target_full_result_accuracy": 0.0
+    },
+    "paired_transport": {
+      "mean_relative_norm_by_step": [
+        0.7398032546043396,
+        1.3523629903793335,
+        2.4070839881896973
+      ],
+      "original_full_result_accuracy": 0.0,
+      "outputs": [
+        {
+          "example_id": "phase1-development-000",
+          "generated_text": "760",
+          "original_result": 688,
+          "parsed": 760,
+          "predicted_token_ids": [
+            22,
+            21,
+            15
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-001",
+          "generated_text": "6\\:9",
+          "original_result": 441,
+          "parsed": 6,
+          "predicted_token_ids": [
+            21,
+            65923,
+            24
+          ],
+          "target_result": 539
+        },
+        {
+          "example_id": "phase1-development-002",
+          "generated_text": "810",
+          "original_result": 768,
+          "parsed": 810,
+          "predicted_token_ids": [
+            23,
+            16,
+            15
+          ],
+          "target_result": 870
+        },
+        {
+          "example_id": "phase1-development-003",
+          "generated_text": "349",
+          "original_result": 214,
+          "parsed": 349,
+          "predicted_token_ids": [
+            18,
+            19,
+            24
+          ],
+          "target_result": 325
+        },
+        {
+          "example_id": "phase1-development-004",
+          "generated_text": "40antes",
+          "original_result": 367,
+          "parsed": 40,
+          "predicted_token_ids": [
+            19,
+            15,
+            15477
+          ],
+          "target_result": 471
+        },
+        {
+          "example_id": "phase1-development-005",
+          "generated_text": "569",
+          "original_result": 462,
+          "parsed": 569,
+          "predicted_token_ids": [
+            20,
+            21,
+            24
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-006",
+          "generated_text": "890",
+          "original_result": 840,
+          "parsed": 890,
+          "predicted_token_ids": [
+            23,
+            24,
+            15
+          ],
+          "target_result": 928
+        },
+        {
+          "example_id": "phase1-development-007",
+          "generated_text": "30antes",
+          "original_result": 150,
+          "parsed": 30,
+          "predicted_token_ids": [
+            18,
+            15,
+            15477
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase1-development-008",
+          "generated_text": "847",
+          "original_result": 747,
+          "parsed": 847,
+          "predicted_token_ids": [
+            23,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-009",
+          "generated_text": "92antes",
+          "original_result": 881,
+          "parsed": 92,
+          "predicted_token_ids": [
+            24,
+            17,
+            15477
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-010",
+          "generated_text": "20 +",
+          "original_result": 103,
+          "parsed": 20,
+          "predicted_token_ids": [
+            17,
+            15,
+            488
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-011",
+          "generated_text": "44antes",
+          "original_result": 350,
+          "parsed": 44,
+          "predicted_token_ids": [
+            19,
+            19,
+            15477
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-012",
+          "generated_text": "707",
+          "original_result": 535,
+          "parsed": 707,
+          "predicted_token_ids": [
+            22,
+            15,
+            22
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-013",
+          "generated_text": "345",
+          "original_result": 252,
+          "parsed": 345,
+          "predicted_token_ids": [
+            18,
+            19,
+            20
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-014",
+          "generated_text": "890",
+          "original_result": 955,
+          "parsed": 890,
+          "predicted_token_ids": [
+            23,
+            24,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-015",
+          "generated_text": "850",
+          "original_result": 961,
+          "parsed": 850,
+          "predicted_token_ids": [
+            23,
+            20,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-016",
+          "generated_text": "317",
+          "original_result": 291,
+          "parsed": 317,
+          "predicted_token_ids": [
+            18,
+            16,
+            22
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase1-development-017",
+          "generated_text": "571",
+          "original_result": 471,
+          "parsed": 571,
+          "predicted_token_ids": [
+            20,
+            22,
+            16
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-018",
+          "generated_text": "8\u9102\ufffd",
+          "original_result": 928,
+          "parsed": 8,
+          "predicted_token_ids": [
+            23,
+            107088,
+            79888
+          ],
+          "target_result": 133
+        },
+        {
+          "example_id": "phase1-development-019",
+          "generated_text": "730",
+          "original_result": 696,
+          "parsed": 730,
+          "predicted_token_ids": [
+            22,
+            18,
+            15
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-020",
+          "generated_text": "621",
+          "original_result": 404,
+          "parsed": 621,
+          "predicted_token_ids": [
+            21,
+            17,
+            16
+          ],
+          "target_result": 535
+        },
+        {
+          "example_id": "phase1-development-021",
+          "generated_text": "79antes",
+          "original_result": 616,
+          "parsed": 79,
+          "predicted_token_ids": [
+            22,
+            24,
+            15477
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-022",
+          "generated_text": "44antes",
+          "original_result": 335,
+          "parsed": 44,
+          "predicted_token_ids": [
+            19,
+            19,
+            15477
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-023",
+          "generated_text": "940",
+          "original_result": 721,
+          "parsed": 940,
+          "predicted_token_ids": [
+            24,
+            19,
+            15
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-024",
+          "generated_text": "44antes",
+          "original_result": 325,
+          "parsed": 44,
+          "predicted_token_ids": [
+            19,
+            19,
+            15477
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-025",
+          "generated_text": "340",
+          "original_result": 248,
+          "parsed": 340,
+          "predicted_token_ids": [
+            18,
+            19,
+            15
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-026",
+          "generated_text": "9\u8fc7\u5b57",
+          "original_result": 800,
+          "parsed": 9,
+          "predicted_token_ids": [
+            24,
+            38182,
+            18600
+          ],
+          "target_result": 906
+        },
+        {
+          "example_id": "phase1-development-027",
+          "generated_text": "840",
+          "original_result": 730,
+          "parsed": 840,
+          "predicted_token_ids": [
+            23,
+            19,
+            15
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-028",
+          "generated_text": "707",
+          "original_result": 539,
+          "parsed": 707,
+          "predicted_token_ids": [
+            22,
+            15,
+            22
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-029",
+          "generated_text": "889",
+          "original_result": 906,
+          "parsed": 889,
+          "predicted_token_ids": [
+            23,
+            23,
+            24
+          ],
+          "target_result": 109
+        },
+        {
+          "example_id": "phase1-development-030",
+          "generated_text": "890",
+          "original_result": 958,
+          "parsed": 890,
+          "predicted_token_ids": [
+            23,
+            24,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-031",
+          "generated_text": "847",
+          "original_result": 747,
+          "parsed": 847,
+          "predicted_token_ids": [
+            23,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-032",
+          "generated_text": "941",
+          "original_result": 847,
+          "parsed": 941,
+          "predicted_token_ids": [
+            24,
+            19,
+            16
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase1-development-033",
+          "generated_text": "280",
+          "original_result": 133,
+          "parsed": 280,
+          "predicted_token_ids": [
+            17,
+            23,
+            15
+          ],
+          "target_result": 248
+        },
+        {
+          "example_id": "phase1-development-034",
+          "generated_text": "5*9",
+          "original_result": 483,
+          "parsed": 5,
+          "predicted_token_ids": [
+            20,
+            9,
+            24
+          ],
+          "target_result": 576
+        },
+        {
+          "example_id": "phase1-development-035",
+          "generated_text": "350",
+          "original_result": 251,
+          "parsed": 350,
+          "predicted_token_ids": [
+            18,
+            20,
+            15
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-036",
+          "generated_text": "96antes",
+          "original_result": 870,
+          "parsed": 96,
+          "predicted_token_ids": [
+            24,
+            21,
+            15477
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-037",
+          "generated_text": "687",
+          "original_result": 576,
+          "parsed": 687,
+          "predicted_token_ids": [
+            21,
+            23,
+            22
+          ],
+          "target_result": 687
+        },
+        {
+          "example_id": "phase1-development-038",
+          "generated_text": "71antes",
+          "original_result": 623,
+          "parsed": 71,
+          "predicted_token_ids": [
+            22,
+            16,
+            15477
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-039",
+          "generated_text": "20 +",
+          "original_result": 109,
+          "parsed": 20,
+          "predicted_token_ids": [
+            17,
+            15,
+            488
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-040",
+          "generated_text": "699",
+          "original_result": 595,
+          "parsed": 699,
+          "predicted_token_ids": [
+            21,
+            24,
+            24
+          ],
+          "target_result": 696
+        },
+        {
+          "example_id": "phase1-development-041",
+          "generated_text": "29antes",
+          "original_result": 196,
+          "parsed": 29,
+          "predicted_token_ids": [
+            17,
+            24,
+            15477
+          ],
+          "target_result": 291
+        },
+        {
+          "example_id": "phase1-development-042",
+          "generated_text": "40AppBundle",
+          "original_result": 364,
+          "parsed": 40,
+          "predicted_token_ids": [
+            19,
+            15,
+            72888
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase1-development-043",
+          "generated_text": "460",
+          "original_result": 687,
+          "parsed": 460,
+          "predicted_token_ids": [
+            19,
+            21,
+            15
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-044",
+          "generated_text": "587",
+          "original_result": 575,
+          "parsed": 587,
+          "predicted_token_ids": [
+            20,
+            23,
+            22
+          ],
+          "target_result": 687
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.6888888888888889,
+        0.37777777777777777,
+        0.3333333333333333
+      ],
+      "target_full_result_accuracy": 0.1111111111111111
+    },
+    "random_norm_matched": {
+      "mean_relative_norm_by_step": [
+        0.7398032546043396,
+        1.324744462966919,
+        2.369732141494751
+      ],
+      "original_full_result_accuracy": 0.08888888888888889,
+      "outputs": [
+        {
+          "example_id": "phase1-development-000",
+          "generated_text": "78 survive",
+          "original_result": 688,
+          "parsed": 78,
+          "predicted_token_ids": [
+            22,
+            23,
+            17697
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-001",
+          "generated_text": "48 Hope",
+          "original_result": 441,
+          "parsed": 48,
+          "predicted_token_ids": [
+            19,
+            23,
+            17758
+          ],
+          "target_result": 539
+        },
+        {
+          "example_id": "phase1-development-002",
+          "generated_text": "76              ",
+          "original_result": 768,
+          "parsed": 76,
+          "predicted_token_ids": [
+            22,
+            21,
+            2290
+          ],
+          "target_result": 870
+        },
+        {
+          "example_id": "phase1-development-003",
+          "generated_text": "25 \ufffd",
+          "original_result": 214,
+          "parsed": 25,
+          "predicted_token_ids": [
+            17,
+            20,
+            83002
+          ],
+          "target_result": 325
+        },
+        {
+          "example_id": "phase1-development-004",
+          "generated_text": "36\u304c\u3067\u304d",
+          "original_result": 367,
+          "parsed": 36,
+          "predicted_token_ids": [
+            18,
+            21,
+            135576
+          ],
+          "target_result": 471
+        },
+        {
+          "example_id": "phase1-development-005",
+          "generated_text": "462",
+          "original_result": 462,
+          "parsed": 462,
+          "predicted_token_ids": [
+            19,
+            21,
+            17
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-006",
+          "generated_text": "802",
+          "original_result": 840,
+          "parsed": 802,
+          "predicted_token_ids": [
+            23,
+            15,
+            17
+          ],
+          "target_result": 928
+        },
+        {
+          "example_id": "phase1-development-007",
+          "generated_text": "150",
+          "original_result": 150,
+          "parsed": 150,
+          "predicted_token_ids": [
+            16,
+            20,
+            15
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase1-development-008",
+          "generated_text": "723",
+          "original_result": 747,
+          "parsed": 723,
+          "predicted_token_ids": [
+            22,
+            17,
+            18
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-009",
+          "generated_text": "81 **",
+          "original_result": 881,
+          "parsed": 81,
+          "predicted_token_ids": [
+            23,
+            16,
+            3070
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-010",
+          "generated_text": "10athed",
+          "original_result": 103,
+          "parsed": 10,
+          "predicted_token_ids": [
+            16,
+            15,
+            69637
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-011",
+          "generated_text": "3 word\u00e1",
+          "original_result": 350,
+          "parsed": 3,
+          "predicted_token_ids": [
+            18,
+            3409,
+            1953
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-012",
+          "generated_text": "536",
+          "original_result": 535,
+          "parsed": 536,
+          "predicted_token_ids": [
+            20,
+            18,
+            21
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-013",
+          "generated_text": "252",
+          "original_result": 252,
+          "parsed": 252,
+          "predicted_token_ids": [
+            17,
+            20,
+            17
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-014",
+          "generated_text": "951",
+          "original_result": 955,
+          "parsed": 951,
+          "predicted_token_ids": [
+            24,
+            20,
+            16
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-015",
+          "generated_text": "960",
+          "original_result": 961,
+          "parsed": 960,
+          "predicted_token_ids": [
+            24,
+            21,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-016",
+          "generated_text": "291",
+          "original_result": 291,
+          "parsed": 291,
+          "predicted_token_ids": [
+            17,
+            24,
+            16
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase1-development-017",
+          "generated_text": "477",
+          "original_result": 471,
+          "parsed": 477,
+          "predicted_token_ids": [
+            19,
+            22,
+            22
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-018",
+          "generated_text": "959",
+          "original_result": 928,
+          "parsed": 959,
+          "predicted_token_ids": [
+            24,
+            20,
+            24
+          ],
+          "target_result": 133
+        },
+        {
+          "example_id": "phase1-development-019",
+          "generated_text": "698",
+          "original_result": 696,
+          "parsed": 698,
+          "predicted_token_ids": [
+            21,
+            24,
+            23
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-020",
+          "generated_text": "400",
+          "original_result": 404,
+          "parsed": 400,
+          "predicted_token_ids": [
+            19,
+            15,
+            15
+          ],
+          "target_result": 535
+        },
+        {
+          "example_id": "phase1-development-021",
+          "generated_text": "61 SPF",
+          "original_result": 616,
+          "parsed": 61,
+          "predicted_token_ids": [
+            21,
+            16,
+            86748
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-022",
+          "generated_text": "39Division",
+          "original_result": 335,
+          "parsed": 39,
+          "predicted_token_ids": [
+            18,
+            24,
+            51237
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-023",
+          "generated_text": "716",
+          "original_result": 721,
+          "parsed": 716,
+          "predicted_token_ids": [
+            22,
+            16,
+            21
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-024",
+          "generated_text": "3. ",
+          "original_result": 325,
+          "parsed": 3,
+          "predicted_token_ids": [
+            18,
+            13,
+            220
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-025",
+          "generated_text": "241",
+          "original_result": 248,
+          "parsed": 241,
+          "predicted_token_ids": [
+            17,
+            19,
+            16
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-026",
+          "generated_text": "7.7",
+          "original_result": 800,
+          "parsed": 7,
+          "predicted_token_ids": [
+            22,
+            13,
+            22
+          ],
+          "target_result": 906
+        },
+        {
+          "example_id": "phase1-development-027",
+          "generated_text": "7sForObject",
+          "original_result": 730,
+          "parsed": 7,
+          "predicted_token_ids": [
+            22,
+            82,
+            94604
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-028",
+          "generated_text": "529",
+          "original_result": 539,
+          "parsed": 529,
+          "predicted_token_ids": [
+            20,
+            17,
+            24
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-029",
+          "generated_text": "614",
+          "original_result": 906,
+          "parsed": 614,
+          "predicted_token_ids": [
+            21,
+            16,
+            19
+          ],
+          "target_result": 109
+        },
+        {
+          "example_id": "phase1-development-030",
+          "generated_text": "104",
+          "original_result": 958,
+          "parsed": 104,
+          "predicted_token_ids": [
+            16,
+            15,
+            19
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-031",
+          "generated_text": "7.2",
+          "original_result": 747,
+          "parsed": 7,
+          "predicted_token_ids": [
+            22,
+            13,
+            17
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-032",
+          "generated_text": "84\u8fd8",
+          "original_result": 847,
+          "parsed": 84,
+          "predicted_token_ids": [
+            23,
+            19,
+            97706
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase1-development-033",
+          "generated_text": "1 **-",
+          "original_result": 133,
+          "parsed": 1,
+          "predicted_token_ids": [
+            16,
+            3070,
+            12
+          ],
+          "target_result": 248
+        },
+        {
+          "example_id": "phase1-development-034",
+          "generated_text": "487",
+          "original_result": 483,
+          "parsed": 487,
+          "predicted_token_ids": [
+            19,
+            23,
+            22
+          ],
+          "target_result": 576
+        },
+        {
+          "example_id": "phase1-development-035",
+          "generated_text": "250",
+          "original_result": 251,
+          "parsed": 250,
+          "predicted_token_ids": [
+            17,
+            20,
+            15
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-036",
+          "generated_text": "86\u55f7",
+          "original_result": 870,
+          "parsed": 86,
+          "predicted_token_ids": [
+            23,
+            21,
+            121176
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-037",
+          "generated_text": "51.statusText",
+          "original_result": 576,
+          "parsed": 51,
+          "predicted_token_ids": [
+            20,
+            16,
+            74684
+          ],
+          "target_result": 687
+        },
+        {
+          "example_id": "phase1-development-038",
+          "generated_text": "62iber",
+          "original_result": 623,
+          "parsed": 62,
+          "predicted_token_ids": [
+            21,
+            17,
+            8629
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-039",
+          "generated_text": "10inance",
+          "original_result": 109,
+          "parsed": 10,
+          "predicted_token_ids": [
+            16,
+            15,
+            24387
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-040",
+          "generated_text": "502",
+          "original_result": 595,
+          "parsed": 502,
+          "predicted_token_ids": [
+            20,
+            15,
+            17
+          ],
+          "target_result": 696
+        },
+        {
+          "example_id": "phase1-development-041",
+          "generated_text": "15 totaling",
+          "original_result": 196,
+          "parsed": 15,
+          "predicted_token_ids": [
+            16,
+            20,
+            81123
+          ],
+          "target_result": 291
+        },
+        {
+          "example_id": "phase1-development-042",
+          "generated_text": "36 therefore",
+          "original_result": 364,
+          "parsed": 36,
+          "predicted_token_ids": [
+            18,
+            21,
+            8916
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase1-development-043",
+          "generated_text": "646",
+          "original_result": 687,
+          "parsed": 646,
+          "predicted_token_ids": [
+            21,
+            19,
+            21
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-044",
+          "generated_text": "502",
+          "original_result": 575,
+          "parsed": 502,
+          "predicted_token_ids": [
+            20,
+            15,
+            17
+          ],
+          "target_result": 687
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.044444444444444446,
+        0.2,
+        0.06666666666666667
+      ],
+      "target_full_result_accuracy": 0.0
+    },
+    "same_digit": {
+      "mean_relative_norm_by_step": [
+        0.7415257692337036,
+        1.4499691724777222,
+        2.3298187255859375
+      ],
+      "original_full_result_accuracy": 0.13333333333333333,
+      "outputs": [
+        {
+          "example_id": "phase1-development-000",
+          "generated_text": "780",
+          "original_result": 688,
+          "parsed": 780,
+          "predicted_token_ids": [
+            22,
+            23,
+            15
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-001",
+          "generated_text": "54antes",
+          "original_result": 441,
+          "parsed": 54,
+          "predicted_token_ids": [
+            20,
+            19,
+            15477
+          ],
+          "target_result": 539
+        },
+        {
+          "example_id": "phase1-development-002",
+          "generated_text": "760",
+          "original_result": 768,
+          "parsed": 760,
+          "predicted_token_ids": [
+            22,
+            21,
+            15
+          ],
+          "target_result": 870
+        },
+        {
+          "example_id": "phase1-development-003",
+          "generated_text": "20.__",
+          "original_result": 214,
+          "parsed": 20,
+          "predicted_token_ids": [
+            17,
+            15,
+            4847
+          ],
+          "target_result": 325
+        },
+        {
+          "example_id": "phase1-development-004",
+          "generated_text": "367",
+          "original_result": 367,
+          "parsed": 367,
+          "predicted_token_ids": [
+            18,
+            21,
+            22
+          ],
+          "target_result": 471
+        },
+        {
+          "example_id": "phase1-development-005",
+          "generated_text": "46AppBundle",
+          "original_result": 462,
+          "parsed": 46,
+          "predicted_token_ids": [
+            19,
+            21,
+            72888
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-006",
+          "generated_text": "840",
+          "original_result": 840,
+          "parsed": 840,
+          "predicted_token_ids": [
+            23,
+            19,
+            15
+          ],
+          "target_result": 928
+        },
+        {
+          "example_id": "phase1-development-007",
+          "generated_text": "80.",
+          "original_result": 150,
+          "parsed": 80,
+          "predicted_token_ids": [
+            23,
+            15,
+            13
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase1-development-008",
+          "generated_text": "747",
+          "original_result": 747,
+          "parsed": 747,
+          "predicted_token_ids": [
+            22,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-009",
+          "generated_text": "88antes",
+          "original_result": 881,
+          "parsed": 88,
+          "predicted_token_ids": [
+            23,
+            23,
+            15477
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-010",
+          "generated_text": "887",
+          "original_result": 103,
+          "parsed": 887,
+          "predicted_token_ids": [
+            23,
+            23,
+            22
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-011",
+          "generated_text": "350",
+          "original_result": 350,
+          "parsed": 350,
+          "predicted_token_ids": [
+            18,
+            20,
+            15
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-012",
+          "generated_text": "53allon",
+          "original_result": 535,
+          "parsed": 53,
+          "predicted_token_ids": [
+            20,
+            18,
+            92414
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-013",
+          "generated_text": "24lij",
+          "original_result": 252,
+          "parsed": 24,
+          "predicted_token_ids": [
+            17,
+            19,
+            22953
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-014",
+          "generated_text": "109",
+          "original_result": 955,
+          "parsed": 109,
+          "predicted_token_ids": [
+            16,
+            15,
+            24
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-015",
+          "generated_text": "10antes",
+          "original_result": 961,
+          "parsed": 10,
+          "predicted_token_ids": [
+            16,
+            15,
+            15477
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-016",
+          "generated_text": "29antes",
+          "original_result": 291,
+          "parsed": 29,
+          "predicted_token_ids": [
+            17,
+            24,
+            15477
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase1-development-017",
+          "generated_text": "47antes",
+          "original_result": 471,
+          "parsed": 47,
+          "predicted_token_ids": [
+            19,
+            22,
+            15477
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-018",
+          "generated_text": "980",
+          "original_result": 928,
+          "parsed": 980,
+          "predicted_token_ids": [
+            24,
+            23,
+            15
+          ],
+          "target_result": 133
+        },
+        {
+          "example_id": "phase1-development-019",
+          "generated_text": "799",
+          "original_result": 696,
+          "parsed": 799,
+          "predicted_token_ids": [
+            22,
+            24,
+            24
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-020",
+          "generated_text": "48.__",
+          "original_result": 404,
+          "parsed": 48,
+          "predicted_token_ids": [
+            19,
+            23,
+            4847
+          ],
+          "target_result": 535
+        },
+        {
+          "example_id": "phase1-development-021",
+          "generated_text": "619",
+          "original_result": 616,
+          "parsed": 619,
+          "predicted_token_ids": [
+            21,
+            16,
+            24
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-022",
+          "generated_text": "329",
+          "original_result": 335,
+          "parsed": 329,
+          "predicted_token_ids": [
+            18,
+            17,
+            24
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-023",
+          "generated_text": "71antes",
+          "original_result": 721,
+          "parsed": 71,
+          "predicted_token_ids": [
+            22,
+            16,
+            15477
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-024",
+          "generated_text": "33allon",
+          "original_result": 325,
+          "parsed": 33,
+          "predicted_token_ids": [
+            18,
+            18,
+            92414
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-025",
+          "generated_text": "240",
+          "original_result": 248,
+          "parsed": 240,
+          "predicted_token_ids": [
+            17,
+            19,
+            15
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-026",
+          "generated_text": "8\u8fc75",
+          "original_result": 800,
+          "parsed": 8,
+          "predicted_token_ids": [
+            23,
+            38182,
+            20
+          ],
+          "target_result": 906
+        },
+        {
+          "example_id": "phase1-development-027",
+          "generated_text": "720",
+          "original_result": 730,
+          "parsed": 720,
+          "predicted_token_ids": [
+            22,
+            17,
+            15
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-028",
+          "generated_text": "529",
+          "original_result": 539,
+          "parsed": 529,
+          "predicted_token_ids": [
+            20,
+            17,
+            24
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-029",
+          "generated_text": "989",
+          "original_result": 906,
+          "parsed": 989,
+          "predicted_token_ids": [
+            24,
+            23,
+            24
+          ],
+          "target_result": 109
+        },
+        {
+          "example_id": "phase1-development-030",
+          "generated_text": "900",
+          "original_result": 958,
+          "parsed": 900,
+          "predicted_token_ids": [
+            24,
+            15,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-031",
+          "generated_text": "747",
+          "original_result": 747,
+          "parsed": 747,
+          "predicted_token_ids": [
+            22,
+            19,
+            22
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-032",
+          "generated_text": "847",
+          "original_result": 847,
+          "parsed": 847,
+          "predicted_token_ids": [
+            23,
+            19,
+            22
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase1-development-033",
+          "generated_text": "8moduleName+",
+          "original_result": 133,
+          "parsed": 8,
+          "predicted_token_ids": [
+            23,
+            73340,
+            10
+          ],
+          "target_result": 248
+        },
+        {
+          "example_id": "phase1-development-034",
+          "generated_text": "687",
+          "original_result": 483,
+          "parsed": 687,
+          "predicted_token_ids": [
+            21,
+            23,
+            22
+          ],
+          "target_result": 576
+        },
+        {
+          "example_id": "phase1-development-035",
+          "generated_text": "25antes",
+          "original_result": 251,
+          "parsed": 25,
+          "predicted_token_ids": [
+            17,
+            20,
+            15477
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-036",
+          "generated_text": "860",
+          "original_result": 870,
+          "parsed": 860,
+          "predicted_token_ids": [
+            23,
+            21,
+            15
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-037",
+          "generated_text": "579",
+          "original_result": 576,
+          "parsed": 579,
+          "predicted_token_ids": [
+            20,
+            22,
+            24
+          ],
+          "target_result": 687
+        },
+        {
+          "example_id": "phase1-development-038",
+          "generated_text": "697",
+          "original_result": 623,
+          "parsed": 697,
+          "predicted_token_ids": [
+            21,
+            24,
+            22
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-039",
+          "generated_text": "817",
+          "original_result": 109,
+          "parsed": 817,
+          "predicted_token_ids": [
+            23,
+            16,
+            22
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-040",
+          "generated_text": "59allon",
+          "original_result": 595,
+          "parsed": 59,
+          "predicted_token_ids": [
+            20,
+            24,
+            92414
+          ],
+          "target_result": 696
+        },
+        {
+          "example_id": "phase1-development-041",
+          "generated_text": "899",
+          "original_result": 196,
+          "parsed": 899,
+          "predicted_token_ids": [
+            23,
+            24,
+            24
+          ],
+          "target_result": 291
+        },
+        {
+          "example_id": "phase1-development-042",
+          "generated_text": "36.__",
+          "original_result": 364,
+          "parsed": 36,
+          "predicted_token_ids": [
+            18,
+            21,
+            4847
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase1-development-043",
+          "generated_text": "787",
+          "original_result": 687,
+          "parsed": 787,
+          "predicted_token_ids": [
+            22,
+            23,
+            22
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-044",
+          "generated_text": "569",
+          "original_result": 575,
+          "parsed": 569,
+          "predicted_token_ids": [
+            20,
+            21,
+            24
+          ],
+          "target_result": 687
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.13333333333333333,
+        0.2222222222222222,
+        0.15555555555555556
+      ],
+      "target_full_result_accuracy": 0.0
+    },
+    "shuffled_target_norm_matched": {
+      "mean_relative_norm_by_step": [
+        0.7398032546043396,
+        1.3356964588165283,
+        2.3977177143096924
+      ],
+      "original_full_result_accuracy": 0.022222222222222223,
+      "outputs": [
+        {
+          "example_id": "phase1-development-000",
+          "generated_text": "639",
+          "original_result": 688,
+          "parsed": 639,
+          "predicted_token_ids": [
+            21,
+            18,
+            24
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-001",
+          "generated_text": "375",
+          "original_result": 441,
+          "parsed": 375,
+          "predicted_token_ids": [
+            18,
+            22,
+            20
+          ],
+          "target_result": 539
+        },
+        {
+          "example_id": "phase1-development-002",
+          "generated_text": "559",
+          "original_result": 768,
+          "parsed": 559,
+          "predicted_token_ids": [
+            20,
+            20,
+            24
+          ],
+          "target_result": 870
+        },
+        {
+          "example_id": "phase1-development-003",
+          "generated_text": "47antes",
+          "original_result": 214,
+          "parsed": 47,
+          "predicted_token_ids": [
+            19,
+            22,
+            15477
+          ],
+          "target_result": 325
+        },
+        {
+          "example_id": "phase1-development-004",
+          "generated_text": "67allon",
+          "original_result": 367,
+          "parsed": 67,
+          "predicted_token_ids": [
+            21,
+            22,
+            92414
+          ],
+          "target_result": 471
+        },
+        {
+          "example_id": "phase1-development-005",
+          "generated_text": "420",
+          "original_result": 462,
+          "parsed": 420,
+          "predicted_token_ids": [
+            19,
+            17,
+            15
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-006",
+          "generated_text": "250",
+          "original_result": 840,
+          "parsed": 250,
+          "predicted_token_ids": [
+            17,
+            20,
+            15
+          ],
+          "target_result": 928
+        },
+        {
+          "example_id": "phase1-development-007",
+          "generated_text": "147",
+          "original_result": 150,
+          "parsed": 147,
+          "predicted_token_ids": [
+            16,
+            19,
+            22
+          ],
+          "target_result": 251
+        },
+        {
+          "example_id": "phase1-development-008",
+          "generated_text": "161",
+          "original_result": 747,
+          "parsed": 161,
+          "predicted_token_ids": [
+            16,
+            21,
+            16
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-009",
+          "generated_text": "23.__",
+          "original_result": 881,
+          "parsed": 23,
+          "predicted_token_ids": [
+            17,
+            18,
+            4847
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-010",
+          "generated_text": "94antes",
+          "original_result": 103,
+          "parsed": 94,
+          "predicted_token_ids": [
+            24,
+            19,
+            15477
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-011",
+          "generated_text": "69 m\u00e9",
+          "original_result": 350,
+          "parsed": 69,
+          "predicted_token_ids": [
+            21,
+            24,
+            31018
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-012",
+          "generated_text": "550",
+          "original_result": 535,
+          "parsed": 550,
+          "predicted_token_ids": [
+            20,
+            20,
+            15
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-013",
+          "generated_text": "840",
+          "original_result": 252,
+          "parsed": 840,
+          "predicted_token_ids": [
+            23,
+            19,
+            15
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-014",
+          "generated_text": "890",
+          "original_result": 955,
+          "parsed": 890,
+          "predicted_token_ids": [
+            23,
+            24,
+            15
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-015",
+          "generated_text": "547",
+          "original_result": 961,
+          "parsed": 547,
+          "predicted_token_ids": [
+            20,
+            19,
+            22
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-016",
+          "generated_text": "469",
+          "original_result": 291,
+          "parsed": 469,
+          "predicted_token_ids": [
+            19,
+            21,
+            24
+          ],
+          "target_result": 367
+        },
+        {
+          "example_id": "phase1-development-017",
+          "generated_text": "827",
+          "original_result": 471,
+          "parsed": 827,
+          "predicted_token_ids": [
+            23,
+            17,
+            22
+          ],
+          "target_result": 575
+        },
+        {
+          "example_id": "phase1-development-018",
+          "generated_text": "460",
+          "original_result": 928,
+          "parsed": 460,
+          "predicted_token_ids": [
+            19,
+            21,
+            15
+          ],
+          "target_result": 133
+        },
+        {
+          "example_id": "phase1-development-019",
+          "generated_text": "629",
+          "original_result": 696,
+          "parsed": 629,
+          "predicted_token_ids": [
+            21,
+            17,
+            24
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-020",
+          "generated_text": "398",
+          "original_result": 404,
+          "parsed": 398,
+          "predicted_token_ids": [
+            18,
+            24,
+            23
+          ],
+          "target_result": 535
+        },
+        {
+          "example_id": "phase1-development-021",
+          "generated_text": "64antes",
+          "original_result": 616,
+          "parsed": 64,
+          "predicted_token_ids": [
+            21,
+            19,
+            15477
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-022",
+          "generated_text": "245",
+          "original_result": 335,
+          "parsed": 245,
+          "predicted_token_ids": [
+            17,
+            19,
+            20
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-023",
+          "generated_text": "541",
+          "original_result": 721,
+          "parsed": 541,
+          "predicted_token_ids": [
+            20,
+            19,
+            16
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-024",
+          "generated_text": "345",
+          "original_result": 325,
+          "parsed": 345,
+          "predicted_token_ids": [
+            18,
+            19,
+            20
+          ],
+          "target_result": 441
+        },
+        {
+          "example_id": "phase1-development-025",
+          "generated_text": "229",
+          "original_result": 248,
+          "parsed": 229,
+          "predicted_token_ids": [
+            17,
+            17,
+            24
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-026",
+          "generated_text": "840",
+          "original_result": 800,
+          "parsed": 840,
+          "predicted_token_ids": [
+            23,
+            19,
+            15
+          ],
+          "target_result": 906
+        },
+        {
+          "example_id": "phase1-development-027",
+          "generated_text": "795",
+          "original_result": 730,
+          "parsed": 795,
+          "predicted_token_ids": [
+            22,
+            24,
+            20
+          ],
+          "target_result": 840
+        },
+        {
+          "example_id": "phase1-development-028",
+          "generated_text": "509",
+          "original_result": 539,
+          "parsed": 509,
+          "predicted_token_ids": [
+            20,
+            15,
+            24
+          ],
+          "target_result": 623
+        },
+        {
+          "example_id": "phase1-development-029",
+          "generated_text": "845",
+          "original_result": 906,
+          "parsed": 845,
+          "predicted_token_ids": [
+            23,
+            19,
+            20
+          ],
+          "target_result": 109
+        },
+        {
+          "example_id": "phase1-development-030",
+          "generated_text": "857",
+          "original_result": 958,
+          "parsed": 857,
+          "predicted_token_ids": [
+            23,
+            20,
+            22
+          ],
+          "target_result": 150
+        },
+        {
+          "example_id": "phase1-development-031",
+          "generated_text": "849",
+          "original_result": 747,
+          "parsed": 849,
+          "predicted_token_ids": [
+            23,
+            19,
+            24
+          ],
+          "target_result": 847
+        },
+        {
+          "example_id": "phase1-development-032",
+          "generated_text": "240",
+          "original_result": 847,
+          "parsed": 240,
+          "predicted_token_ids": [
+            17,
+            19,
+            15
+          ],
+          "target_result": 955
+        },
+        {
+          "example_id": "phase1-development-033",
+          "generated_text": "179",
+          "original_result": 133,
+          "parsed": 179,
+          "predicted_token_ids": [
+            16,
+            22,
+            24
+          ],
+          "target_result": 248
+        },
+        {
+          "example_id": "phase1-development-034",
+          "generated_text": "460",
+          "original_result": 483,
+          "parsed": 460,
+          "predicted_token_ids": [
+            19,
+            21,
+            15
+          ],
+          "target_result": 576
+        },
+        {
+          "example_id": "phase1-development-035",
+          "generated_text": "251",
+          "original_result": 251,
+          "parsed": 251,
+          "predicted_token_ids": [
+            17,
+            20,
+            16
+          ],
+          "target_result": 350
+        },
+        {
+          "example_id": "phase1-development-036",
+          "generated_text": "885",
+          "original_result": 870,
+          "parsed": 885,
+          "predicted_token_ids": [
+            23,
+            23,
+            20
+          ],
+          "target_result": 961
+        },
+        {
+          "example_id": "phase1-development-037",
+          "generated_text": "680",
+          "original_result": 576,
+          "parsed": 680,
+          "predicted_token_ids": [
+            21,
+            23,
+            15
+          ],
+          "target_result": 687
+        },
+        {
+          "example_id": "phase1-development-038",
+          "generated_text": "23.__",
+          "original_result": 623,
+          "parsed": 23,
+          "predicted_token_ids": [
+            17,
+            18,
+            4847
+          ],
+          "target_result": 721
+        },
+        {
+          "example_id": "phase1-development-039",
+          "generated_text": "10\u6a21\u8303",
+          "original_result": 109,
+          "parsed": 10,
+          "predicted_token_ids": [
+            16,
+            15,
+            107398
+          ],
+          "target_result": 214
+        },
+        {
+          "example_id": "phase1-development-040",
+          "generated_text": "593",
+          "original_result": 595,
+          "parsed": 593,
+          "predicted_token_ids": [
+            20,
+            24,
+            18
+          ],
+          "target_result": 696
+        },
+        {
+          "example_id": "phase1-development-041",
+          "generated_text": "46\ufffd",
+          "original_result": 196,
+          "parsed": 46,
+          "predicted_token_ids": [
+            19,
+            21,
+            111
+          ],
+          "target_result": 291
+        },
+        {
+          "example_id": "phase1-development-042",
+          "generated_text": "36\u5858",
+          "original_result": 364,
+          "parsed": 36,
+          "predicted_token_ids": [
+            18,
+            21,
+            104679
+          ],
+          "target_result": 462
+        },
+        {
+          "example_id": "phase1-development-043",
+          "generated_text": "787",
+          "original_result": 687,
+          "parsed": 787,
+          "predicted_token_ids": [
+            22,
+            23,
+            22
+          ],
+          "target_result": 768
+        },
+        {
+          "example_id": "phase1-development-044",
+          "generated_text": "568",
+          "original_result": 575,
+          "parsed": 568,
+          "predicted_token_ids": [
+            20,
+            21,
+            23
+          ],
+          "target_result": 687
+        }
+      ],
+      "parse_rate": 1.0,
+      "step_target_token_accuracy": [
+        0.06666666666666667,
+        0.24444444444444444,
+        0.044444444444444446
+      ],
+      "target_full_result_accuracy": 0.0
+    }
+  },
+  "config_sha256": "c8908a7c8955b176bf04699db8f1d16d08eac25b7768e37c95d37a493cd8e62c",
+  "created_at": "2026-07-28T08:28:21.665634+00:00",
+  "dataset": {
+    "audit_examples_unopened": 45,
+    "development_examples": 45,
+    "fit_examples": 60,
+    "selection_examples": 30,
+    "sha256": "33bde4a417cbde662295c3c69265b17dc8160aa110ae8090f5e74819f1e6c7b4"
+  },
+  "elapsed_seconds": 251.57717458299885,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "prior_results": {
+    "full_donor_exact_accuracy": 0.8444444444444444,
+    "typed_writer_artifact": "results/phase1_typed_digit_writer_development.json",
+    "typed_writer_exact_accuracy": 0.044444444444444446,
+    "typed_writer_sha256": "e07b60455091d448b1e2b41f21a9d8e48e6819ad7d31a9db06d96bb053b4b629"
+  },
+  "schema_version": "oli.phase1-paired-transport-writer/v1",
+  "status": "development_only",
+  "writer": {
+    "decoder_block": 22,
+    "fit": [
+      {
+        "available_rank": 9,
+        "classes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "mean_full_transport_relative_norm": 0.6471484303474426,
+        "prototype_singular_values": [
+          82.5729751586914,
+          57.30950927734375,
+          46.17694854736328,
+          42.16062927246094,
+          39.55426788330078,
+          35.13783645629883,
+          32.20633316040039,
+          23.148313522338867,
+          16.737329483032227
+        ],
+        "step": 0
+      },
+      {
+        "available_rank": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "mean_full_transport_relative_norm": 0.6608123183250427,
+        "prototype_singular_values": [
+          76.73409271240234,
+          61.84043502807617,
+          55.45705795288086,
+          48.79731369018555,
+          40.58024597167969,
+          33.73393249511719,
+          31.354877471923828,
+          20.58060646057129,
+          17.20913314819336,
+          13.589489936828613
+        ],
+        "step": 1
+      },
+      {
+        "available_rank": 10,
+        "classes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "mean_full_transport_relative_norm": 0.555742621421814,
+        "prototype_singular_values": [
+          65.0458755493164,
+          55.85109329223633,
+          47.67810821533203,
+          43.741668701171875,
+          28.72149658203125,
+          25.932546615600586,
+          21.81879425048828,
+          18.864965438842773,
+          16.92612648010254,
+          14.538771629333496
+        ],
+        "step": 2
+      }
+    ],
+    "hidden_state_index": 23,
+    "inference_inputs": [
+      "desired next digit"
+    ],
+    "live_donor_required": false,
+    "selection": [
+      {
+        "candidates": [
+          {
+            "mean_relative_norm": 0.08015695214271545,
+            "rank": 1,
+            "scale": 0.5,
+            "target_token_accuracy": 0.0
+          },
+          {
+            "mean_relative_norm": 0.1603139042854309,
+            "rank": 1,
+            "scale": 1.0,
+            "target_token_accuracy": 0.13333333333333333
+          },
+          {
+            "mean_relative_norm": 0.3206278085708618,
+            "rank": 1,
+            "scale": 2.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 0.6412556171417236,
+            "rank": 1,
+            "scale": 4.0,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 1.2825112342834473,
+            "rank": 1,
+            "scale": 8.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 2.5650224685668945,
+            "rank": 1,
+            "scale": 16.0,
+            "target_token_accuracy": 0.0
+          },
+          {
+            "mean_relative_norm": 0.12533213198184967,
+            "rank": 2,
+            "scale": 0.5,
+            "target_token_accuracy": 0.03333333333333333
+          },
+          {
+            "mean_relative_norm": 0.25066426396369934,
+            "rank": 2,
+            "scale": 1.0,
+            "target_token_accuracy": 0.13333333333333333
+          },
+          {
+            "mean_relative_norm": 0.5013285279273987,
+            "rank": 2,
+            "scale": 2.0,
+            "target_token_accuracy": 0.43333333333333335
+          },
+          {
+            "mean_relative_norm": 1.0026570558547974,
+            "rank": 2,
+            "scale": 4.0,
+            "target_token_accuracy": 0.3
+          },
+          {
+            "mean_relative_norm": 2.0053141117095947,
+            "rank": 2,
+            "scale": 8.0,
+            "target_token_accuracy": 0.26666666666666666
+          },
+          {
+            "mean_relative_norm": 4.0106282234191895,
+            "rank": 2,
+            "scale": 16.0,
+            "target_token_accuracy": 0.06666666666666667
+          },
+          {
+            "mean_relative_norm": 0.1537914276123047,
+            "rank": 4,
+            "scale": 0.5,
+            "target_token_accuracy": 0.13333333333333333
+          },
+          {
+            "mean_relative_norm": 0.3075828552246094,
+            "rank": 4,
+            "scale": 1.0,
+            "target_token_accuracy": 0.3333333333333333
+          },
+          {
+            "mean_relative_norm": 0.6151657104492188,
+            "rank": 4,
+            "scale": 2.0,
+            "target_token_accuracy": 0.5666666666666667
+          },
+          {
+            "mean_relative_norm": 1.2303314208984375,
+            "rank": 4,
+            "scale": 4.0,
+            "target_token_accuracy": 0.5
+          },
+          {
+            "mean_relative_norm": 2.460662841796875,
+            "rank": 4,
+            "scale": 8.0,
+            "target_token_accuracy": 0.3
+          },
+          {
+            "mean_relative_norm": 4.92132568359375,
+            "rank": 4,
+            "scale": 16.0,
+            "target_token_accuracy": 0.3333333333333333
+          },
+          {
+            "mean_relative_norm": 0.18363772332668304,
+            "rank": 8,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.3672754466533661,
+            "rank": 8,
+            "scale": 1.0,
+            "target_token_accuracy": 0.4666666666666667
+          },
+          {
+            "mean_relative_norm": 0.7345508933067322,
+            "rank": 8,
+            "scale": 2.0,
+            "target_token_accuracy": 0.6333333333333333
+          },
+          {
+            "mean_relative_norm": 1.4691017866134644,
+            "rank": 8,
+            "scale": 4.0,
+            "target_token_accuracy": 0.4666666666666667
+          },
+          {
+            "mean_relative_norm": 2.9382035732269287,
+            "rank": 8,
+            "scale": 8.0,
+            "target_token_accuracy": 0.4
+          },
+          {
+            "mean_relative_norm": 5.876407146453857,
+            "rank": 8,
+            "scale": 16.0,
+            "target_token_accuracy": 0.23333333333333334
+          }
+        ],
+        "selected": {
+          "mean_relative_norm": 0.7345508933067322,
+          "rank": 8,
+          "scale": 2.0,
+          "target_token_accuracy": 0.6333333333333333
+        },
+        "step": 0
+      },
+      {
+        "candidates": [
+          {
+            "mean_relative_norm": 0.10123774409294128,
+            "rank": 1,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.20247548818588257,
+            "rank": 1,
+            "scale": 1.0,
+            "target_token_accuracy": 0.13333333333333333
+          },
+          {
+            "mean_relative_norm": 0.40495097637176514,
+            "rank": 1,
+            "scale": 2.0,
+            "target_token_accuracy": 0.13333333333333333
+          },
+          {
+            "mean_relative_norm": 0.8099019527435303,
+            "rank": 1,
+            "scale": 4.0,
+            "target_token_accuracy": 0.0
+          },
+          {
+            "mean_relative_norm": 1.6198039054870605,
+            "rank": 1,
+            "scale": 8.0,
+            "target_token_accuracy": 0.03333333333333333
+          },
+          {
+            "mean_relative_norm": 3.239607810974121,
+            "rank": 1,
+            "scale": 16.0,
+            "target_token_accuracy": 0.06666666666666667
+          },
+          {
+            "mean_relative_norm": 0.1381649523973465,
+            "rank": 2,
+            "scale": 0.5,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.276329904794693,
+            "rank": 2,
+            "scale": 1.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 0.552659809589386,
+            "rank": 2,
+            "scale": 2.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 1.105319619178772,
+            "rank": 2,
+            "scale": 4.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 2.210639238357544,
+            "rank": 2,
+            "scale": 8.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 4.421278476715088,
+            "rank": 2,
+            "scale": 16.0,
+            "target_token_accuracy": 0.06666666666666667
+          },
+          {
+            "mean_relative_norm": 0.18602755665779114,
+            "rank": 4,
+            "scale": 0.5,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.3720551133155823,
+            "rank": 4,
+            "scale": 1.0,
+            "target_token_accuracy": 0.26666666666666666
+          },
+          {
+            "mean_relative_norm": 0.7441102266311646,
+            "rank": 4,
+            "scale": 2.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 1.488220453262329,
+            "rank": 4,
+            "scale": 4.0,
+            "target_token_accuracy": 0.3
+          },
+          {
+            "mean_relative_norm": 2.976440906524658,
+            "rank": 4,
+            "scale": 8.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 5.952881813049316,
+            "rank": 4,
+            "scale": 16.0,
+            "target_token_accuracy": 0.03333333333333333
+          },
+          {
+            "mean_relative_norm": 0.21113453805446625,
+            "rank": 8,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.4222690761089325,
+            "rank": 8,
+            "scale": 1.0,
+            "target_token_accuracy": 0.26666666666666666
+          },
+          {
+            "mean_relative_norm": 0.844538152217865,
+            "rank": 8,
+            "scale": 2.0,
+            "target_token_accuracy": 0.4666666666666667
+          },
+          {
+            "mean_relative_norm": 1.68907630443573,
+            "rank": 8,
+            "scale": 4.0,
+            "target_token_accuracy": 0.5
+          },
+          {
+            "mean_relative_norm": 3.37815260887146,
+            "rank": 8,
+            "scale": 8.0,
+            "target_token_accuracy": 0.43333333333333335
+          },
+          {
+            "mean_relative_norm": 6.75630521774292,
+            "rank": 8,
+            "scale": 16.0,
+            "target_token_accuracy": 0.0
+          }
+        ],
+        "selected": {
+          "mean_relative_norm": 1.68907630443573,
+          "rank": 8,
+          "scale": 4.0,
+          "target_token_accuracy": 0.5
+        },
+        "step": 1
+      },
+      {
+        "candidates": [
+          {
+            "mean_relative_norm": 0.072933129966259,
+            "rank": 1,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.145866259932518,
+            "rank": 1,
+            "scale": 1.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.291732519865036,
+            "rank": 1,
+            "scale": 2.0,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.583465039730072,
+            "rank": 1,
+            "scale": 4.0,
+            "target_token_accuracy": 0.1
+          },
+          {
+            "mean_relative_norm": 1.166930079460144,
+            "rank": 1,
+            "scale": 8.0,
+            "target_token_accuracy": 0.1
+          },
+          {
+            "mean_relative_norm": 2.333860158920288,
+            "rank": 1,
+            "scale": 16.0,
+            "target_token_accuracy": 0.1
+          },
+          {
+            "mean_relative_norm": 0.1021730974316597,
+            "rank": 2,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.2043461948633194,
+            "rank": 2,
+            "scale": 1.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.4086923897266388,
+            "rank": 2,
+            "scale": 2.0,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.8173847794532776,
+            "rank": 2,
+            "scale": 4.0,
+            "target_token_accuracy": 0.1
+          },
+          {
+            "mean_relative_norm": 1.6347695589065552,
+            "rank": 2,
+            "scale": 8.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 3.2695391178131104,
+            "rank": 2,
+            "scale": 16.0,
+            "target_token_accuracy": 0.3
+          },
+          {
+            "mean_relative_norm": 0.143217995762825,
+            "rank": 4,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.28643599152565,
+            "rank": 4,
+            "scale": 1.0,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.5728719830513,
+            "rank": 4,
+            "scale": 2.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 1.1457439661026,
+            "rank": 4,
+            "scale": 4.0,
+            "target_token_accuracy": 0.4
+          },
+          {
+            "mean_relative_norm": 2.2914879322052,
+            "rank": 4,
+            "scale": 8.0,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 4.5829758644104,
+            "rank": 4,
+            "scale": 16.0,
+            "target_token_accuracy": 0.3333333333333333
+          },
+          {
+            "mean_relative_norm": 0.16619707643985748,
+            "rank": 8,
+            "scale": 0.5,
+            "target_token_accuracy": 0.2
+          },
+          {
+            "mean_relative_norm": 0.33239415287971497,
+            "rank": 8,
+            "scale": 1.0,
+            "target_token_accuracy": 0.16666666666666666
+          },
+          {
+            "mean_relative_norm": 0.6647883057594299,
+            "rank": 8,
+            "scale": 2.0,
+            "target_token_accuracy": 0.23333333333333334
+          },
+          {
+            "mean_relative_norm": 1.3295766115188599,
+            "rank": 8,
+            "scale": 4.0,
+            "target_token_accuracy": 0.3
+          },
+          {
+            "mean_relative_norm": 2.6591532230377197,
+            "rank": 8,
+            "scale": 8.0,
+            "target_token_accuracy": 0.4666666666666667
+          },
+          {
+            "mean_relative_norm": 5.3183064460754395,
+            "rank": 8,
+            "scale": 16.0,
+            "target_token_accuracy": 0.0
+          }
+        ],
+        "selected": {
+          "mean_relative_norm": 2.6591532230377197,
+          "rank": 8,
+          "scale": 8.0,
+          "target_token_accuracy": 0.4666666666666667
+        },
+        "step": 2
+      }
+    ],
+    "type": "class-conditioned paired transport subspace"
+  }
+}
