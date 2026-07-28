@@ -203,6 +203,15 @@ problem from output dimensionality: the next writer must predict the correct
 16 coefficients without a donor. See the
 [tens delta-rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md).
 
+A donor-free coordinate prototype then closed that gap at the tens position.
+Replacing only the 16 causal coordinates with a fit-derived tens-digit
+prototype achieved 90/90 target digits and 90/90 hard-gated identity digits on
+development, versus at most 14/90 for norm-matched controls. It requires no
+donor execution, model-weight update, or neural coefficient predictor at
+inference. This is the first deterministic native-coordinate implant in the
+project. See the
+[tens prototype-writer summary](PHASE2_TENS_PROTOTYPE_WRITER_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -284,6 +293,7 @@ either stage.
 - [Phase 2 fixed-weight scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md)
 - [Phase 2 tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md)
 - [Phase 2 tens native-delta rank summary](PHASE2_TENS_DELTA_RANK_SUMMARY.md)
+- [Phase 2 donor-free tens prototype summary](PHASE2_TENS_PROTOTYPE_WRITER_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
