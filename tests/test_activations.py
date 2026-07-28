@@ -94,6 +94,29 @@ def test_activation_capture_sequences_removes_padding() -> None:
     )
 
 
+def test_activation_capture_selects_unpadded_token_positions() -> None:
+    model = FakeModel()
+    capture = ActivationCapture(model, FakeTokenizer(), device="cpu")
+    captured = capture.capture_token_positions(
+        ["1 2 3", "4 5"],
+        [(0, 2), (1,)],
+        hidden_state_indices=[1],
+        batch_size=2,
+    )
+    assert [value.shape for value in captured[1].values] == [
+        torch.Size([2, 4]),
+        torch.Size([1, 4]),
+    ]
+    assert torch.allclose(
+        captured[1].values[0][1],
+        model.embed(torch.tensor(3)) + 1,
+    )
+    assert torch.allclose(
+        captured[1].values[1][0],
+        model.embed(torch.tensor(5)) + 1,
+    )
+
+
 def test_intervention_adds_delta_at_selected_boundary() -> None:
     model = FakeModel()
     tokenizer = FakeTokenizer()

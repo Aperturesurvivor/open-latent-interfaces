@@ -1,6 +1,10 @@
 """Tools for discovering and intervening on native latent interfaces."""
 
-from open_latent_interfaces.activations import ActivationCapture, CapturedLayer
+from open_latent_interfaces.activations import (
+    ActivationCapture,
+    CapturedLayer,
+    CapturedTokenPositions,
+)
 from open_latent_interfaces.arithmetic_coordinates import (
     ArithmeticCoordinateManifest,
     TokenLocalTransportWriter,
@@ -16,6 +20,13 @@ from open_latent_interfaces.native_coordinates import (
     NativeCoordinateWriter,
     fit_digit_prototypes,
 )
+from open_latent_interfaces.operand_reader import (
+    NearestCentroidDigitReader,
+    OperandTokenPositions,
+    fit_nearest_centroid_digit_reader,
+    locate_operand_digit_tokens,
+    reconstruct_decimal_digits,
+)
 from open_latent_interfaces.probes import (
     BinaryRidgeProbe,
     CategoricalRidgeProbe,
@@ -28,15 +39,21 @@ __all__ = [
     "BinaryRidgeProbe",
     "CategoricalRidgeProbe",
     "CapturedLayer",
+    "CapturedTokenPositions",
     "InterpretabilityArtifact",
     "LatentSite",
     "MethodProvenance",
     "NativeCoordinateManifest",
     "NativeCoordinateWriter",
+    "NearestCentroidDigitReader",
+    "OperandTokenPositions",
     "ScalarRidgeProbe",
     "TokenLocalTransportWriter",
     "corroborate",
     "fit_digit_prototypes",
+    "fit_nearest_centroid_digit_reader",
+    "locate_operand_digit_tokens",
+    "reconstruct_decimal_digits",
 ]
 
 __version__ = "0.1.0"

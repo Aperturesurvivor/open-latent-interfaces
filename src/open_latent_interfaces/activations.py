@@ -42,6 +42,23 @@ class CapturedSequences:
             raise ValueError("captured sequence widths must match")
 
 
+@dataclass(frozen=True)
+class CapturedTokenPositions:
+    """Selected unpadded token states for each prompt."""
+
+    hidden_state_index: int
+    values: tuple[torch.Tensor, ...]
+
+    def __post_init__(self) -> None:
+        if not self.values:
+            raise ValueError("captured token positions cannot be empty")
+        if any(value.ndim != 2 or value.shape[0] < 1 for value in self.values):
+            raise ValueError("each prompt requires selected token states")
+        widths = {value.shape[1] for value in self.values}
+        if len(widths) != 1:
+            raise ValueError("captured token widths must match")
+
+
 class ActivationCapture:
     """Capture residual-stream states from Hugging Face causal language models.
 
@@ -156,6 +173,71 @@ class ActivationCapture:
 
         return {
             index: CapturedSequences(index, tuple(values))
+            for index, values in chunks.items()
+        }
+
+    @torch.inference_mode()
+    def capture_token_positions(
+        self,
+        prompts: list[str],
+        positions: list[tuple[int, ...]],
+        *,
+        hidden_state_indices: Iterable[int] | None = None,
+        batch_size: int = 8,
+    ) -> dict[int, CapturedTokenPositions]:
+        """Capture selected positions indexed within each unpadded prompt."""
+
+        if not prompts or len(positions) != len(prompts):
+            raise ValueError("prompts and token positions must align")
+        if any(not row or min(row) < 0 for row in positions):
+            raise ValueError("each prompt requires nonnegative token positions")
+        if batch_size < 1:
+            raise ValueError("batch_size must be positive")
+
+        requested = None if hidden_state_indices is None else tuple(hidden_state_indices)
+        chunks: dict[int, list[torch.Tensor]] = {}
+        for start in range(0, len(prompts), batch_size):
+            batch_prompts = prompts[start : start + batch_size]
+            batch_positions = positions[start : start + batch_size]
+            encoded = self.tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+            )
+            encoded = {
+                key: value.to(self.device) if isinstance(value, torch.Tensor) else value
+                for key, value in encoded.items()
+            }
+            outputs = self.model(
+                **encoded,
+                output_hidden_states=True,
+                use_cache=False,
+                return_dict=True,
+            )
+            hidden_states = outputs.hidden_states
+            indices = tuple(range(len(hidden_states))) if requested is None else requested
+            active = encoded["attention_mask"].bool()
+            padded_positions = []
+            for row, requested_positions in enumerate(batch_positions):
+                active_positions = active[row].nonzero(as_tuple=False).flatten()
+                if max(requested_positions) >= active_positions.shape[0]:
+                    raise IndexError("token position exceeds unpadded prompt length")
+                padded_positions.append(
+                    active_positions[torch.tensor(requested_positions)]
+                )
+            for index in indices:
+                if index < 0 or index >= len(hidden_states):
+                    raise IndexError(
+                        f"hidden-state index {index} outside [0, {len(hidden_states) - 1}]"
+                    )
+                state = hidden_states[index]
+                chunks.setdefault(index, []).extend(
+                    state[row, selected].detach().float().cpu()
+                    for row, selected in enumerate(padded_positions)
+                )
+        return {
+            index: CapturedTokenPositions(index, tuple(values))
             for index, values in chunks.items()
         }
 

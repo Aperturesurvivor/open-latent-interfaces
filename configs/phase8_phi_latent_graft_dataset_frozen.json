@@ -1,0 +1,20 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "parameters": {
+      "audit_quartets_per_digit": 5,
+      "development_quartets_per_digit": 5,
+      "fit_quartets_per_digit": 20,
+      "seed": 20261001,
+      "selection_quartets_per_digit": 5
+    },
+    "sha256": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a",
+    "source": "open_latent_interfaces.phase7_data"
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "schema_version": "oli.phase8-phi-latent-graft-dataset-config/v1"
+}
