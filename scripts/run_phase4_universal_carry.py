@@ -58,6 +58,13 @@ def main() -> None:
     verify_sha256(dataset_path, config["dataset_config_sha256"])
     verify_sha256(parent_path, config["parent_result_sha256"])
     verify_sha256(prototype_path, config["prototype_artifact_sha256"])
+    prior_result = None
+    if "prior_result" in config:
+        prior_path = Path(config["prior_result"])
+        verify_sha256(prior_path, config["prior_result_sha256"])
+        prior_result = json.loads(prior_path.read_text())
+        if prior_result["passes"]:
+            raise SystemExit("bounded follow-up requires the prior non-pass")
     dataset_config = json.loads(dataset_path.read_text())
     parent = json.loads(parent_path.read_text())
     if dataset_config.get("audit_authorized", False):
@@ -258,6 +265,9 @@ def main() -> None:
         "dataset_sha256": observed_dataset_hash,
         "parent_result_sha256": config["parent_result_sha256"],
         "source_prototype_sha256": config["prototype_artifact_sha256"],
+        "prior_result_sha256": (
+            None if prior_result is None else config["prior_result_sha256"]
+        ),
         "selection_quartets_sha256": config["selection_quartets_sha256"],
         "token_region_contract_sha256": config["token_region_contract_sha256"],
         "digit_token_ids": digit_token_ids,

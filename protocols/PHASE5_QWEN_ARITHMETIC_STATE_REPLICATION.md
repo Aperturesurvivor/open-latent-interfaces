@@ -104,3 +104,8 @@ absolute gate despite adequate specificity; scale 2.0 passed accuracy but
 failed specificity. One interpolation-only follow-up may test scales strictly
 inside `(1.5, 2.0)` using the identical artifact and gates. It may not add
 scales outside the bracket or proceed to development after another non-pass.
+
+The bounded interpolation grid is 1.6, 1.7, 1.8, and 1.9. It references and
+requires the immutable first-grid non-pass, rebuilds the same weighted vector
+from the same fit artifact, and uses a fresh isotropic seed without changing
+its norm or gate role.
