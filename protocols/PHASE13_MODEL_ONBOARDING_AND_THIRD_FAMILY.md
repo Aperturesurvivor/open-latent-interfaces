@@ -173,6 +173,24 @@ The dataset is audit-sealed. Fit and selection may be exposed for discovery;
 development may be used only after component selection; none of these examples
 may become the later one-shot audit.
 
+## Frozen capability baseline
+
+`configs/phase13_smollm2_capability.json` freezes the first task-specific
+SmolLM2 model run before observing its output. The runner:
+
+- uses only the 90 exposed fit examples;
+- greedily requests exactly three continuation tokens;
+- records exact-result, position, and contextual digit-token rates;
+- verifies the model revision, onboarding result, dataset, rendered prompts,
+  token contract, digit-token map, runner, and direct code dependencies by
+  SHA-256;
+- keeps every model parameter frozen and refuses to overwrite an existing
+  result.
+
+This measurement has no advancement threshold. A strong or weak frozen-model
+baseline does not select a latent boundary and does not count as reader,
+writer, development, or audit evidence.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
