@@ -98,3 +98,9 @@ The universal follow-up introduces no new fitted weights. It evaluates the
 fit-count-weighted mean Qwen carry vector at fixed index 16 over scales 0.5,
 1.0, 1.5, 2.0, and 3.0, selecting the smallest complete pass against the
 universal no-carry and isotropic controls.
+
+The first universal grid failed. Scale 1.5 was three quartets below the
+absolute gate despite adequate specificity; scale 2.0 passed accuracy but
+failed specificity. One interpolation-only follow-up may test scales strictly
+inside `(1.5, 2.0)` using the identical artifact and gates. It may not add
+scales outside the bracket or proceed to development after another non-pass.

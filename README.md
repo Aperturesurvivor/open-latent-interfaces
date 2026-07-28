@@ -400,6 +400,12 @@ classes transferred equally well, independently favoring a universal carry
 direction. See the
 [Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md).
 
+The first universal-Qwen scale grid did not pass: scale 1.5 was specific but
+three quartets below the absolute gate, while scale 2.0 was accurate but moved
+the matched no-carry control too strongly. A single interpolation-only
+follow-up is permitted before rejecting the universal-vector hypothesis. See
+the [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -511,6 +517,7 @@ either stage.
 - [Phase 5 Qwen token-region summary](PHASE5_QWEN_TOKEN_REGION_SUMMARY.md)
 - [Phase 5 Qwen carry-context scale summary](PHASE5_QWEN_CARRY_SCALE_SUMMARY.md)
 - [Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md)
+- [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
