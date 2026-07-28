@@ -1,0 +1,2032 @@
+{
+  "artifact": {
+    "classes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "path": "artifacts/phase6b_qwen_carry_interaction.safetensors",
+    "sha256": "721a9f5959e59a7034c6f08b02331b306060d707d450030d33f76cdb11b3ab53",
+    "width": 1536
+  },
+  "behavior_result_sha256": "94e91c8e3f353fa3360e3abf73102674ce8f5d89b8488123aeecf7a2e43d66f4",
+  "claim_boundary": "One-shot development test of a donor-free matched carry interaction. Passing would not establish an audit claim.",
+  "config_sha256": "af273e66875c06dbe351bdfdb3b4d84a8795b8a81a0d9728eeab95ed2bd98edd",
+  "created_at": "2026-07-28T16:41:04.984726+00:00",
+  "dataset_sha256": "86fc17da6fa3856068a66adb0641ab63da9c82a2d9c53cb5c983ff20f27e8cd4",
+  "development_gate": {
+    "control_advantage": -0.044444444444444425,
+    "parse_rate": 1.0,
+    "passes": false,
+    "strongest_control": "wrong_class_norm_matched",
+    "strongest_control_tens_accuracy": 0.2222222222222222,
+    "target_full_accuracy": 0.13333333333333333,
+    "target_tens_accuracy": 0.17777777777777778
+  },
+  "development_quartets_sha256": "311967ace8d479c1d087fb5a2f5e947829514fe5baba6687223f7e5eefd91ace",
+  "development_rule": {
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": true
+  },
+  "development_token_region_contract_sha256": "acd02bb7b3b7000cfac44bd947fdd9beff14eb3a2d8c1e37eef8db4a9084390c",
+  "digit_token_ids": {
+    "0": 15,
+    "1": 16,
+    "2": 17,
+    "3": 18,
+    "4": 19,
+    "5": 20,
+    "6": 21,
+    "7": 22,
+    "8": 23,
+    "9": 24
+  },
+  "elapsed_seconds": 71.2070606250054,
+  "eligible_fit_quartets": 164,
+  "eligible_fit_quartets_sha256": "82e6a1be9b3daa132ed1eb10ccc1fbcbe1c92934a89f861f16ce9c5257889f96",
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "fit_cross_validation": {
+    "candidates": [
+      {
+        "mean_cosine_similarity": 0.7359396422781596,
+        "normalized_mse": 0.37736570919864765,
+        "ridge": 1.0,
+        "state_rank": 8,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7405340264483196,
+        "normalized_mse": 0.3756968669520236,
+        "ridge": 10.0,
+        "state_rank": 8,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7285480964474562,
+        "normalized_mse": 0.40962301973688064,
+        "ridge": 100.0,
+        "state_rank": 8,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7571082929285561,
+        "normalized_mse": 0.35862649780108297,
+        "ridge": 1.0,
+        "state_rank": 8,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7622425498031988,
+        "normalized_mse": 0.3545089027316981,
+        "ridge": 10.0,
+        "state_rank": 8,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7466264003660621,
+        "normalized_mse": 0.39196886146261145,
+        "ridge": 100.0,
+        "state_rank": 8,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7680465419117998,
+        "normalized_mse": 0.3503960965119511,
+        "ridge": 1.0,
+        "state_rank": 8,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7739937945110041,
+        "normalized_mse": 0.34529804176675416,
+        "ridge": 10.0,
+        "state_rank": 8,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7558739592389363,
+        "normalized_mse": 0.3846480308926088,
+        "ridge": 100.0,
+        "state_rank": 8,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7720643020257717,
+        "normalized_mse": 0.3500962749088344,
+        "ridge": 1.0,
+        "state_rank": 8,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.779335429028767,
+        "normalized_mse": 0.342656690189175,
+        "ridge": 10.0,
+        "state_rank": 8,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7614005600533834,
+        "normalized_mse": 0.3808357104230085,
+        "ridge": 100.0,
+        "state_rank": 8,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7339306459194277,
+        "normalized_mse": 0.40117526370948225,
+        "ridge": 1.0,
+        "state_rank": 16,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7467045086186107,
+        "normalized_mse": 0.37855005424488836,
+        "ridge": 10.0,
+        "state_rank": 16,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7339754686122988,
+        "normalized_mse": 0.40342629491232146,
+        "ridge": 100.0,
+        "state_rank": 16,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7399175806743342,
+        "normalized_mse": 0.3966048135792108,
+        "ridge": 1.0,
+        "state_rank": 16,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7617879262784633,
+        "normalized_mse": 0.3630587742778947,
+        "ridge": 10.0,
+        "state_rank": 16,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7519694072444264,
+        "normalized_mse": 0.38583903682865395,
+        "ridge": 100.0,
+        "state_rank": 16,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7460519744128715,
+        "normalized_mse": 0.3970536682223139,
+        "ridge": 1.0,
+        "state_rank": 16,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7717400876487174,
+        "normalized_mse": 0.3539331960058524,
+        "ridge": 10.0,
+        "state_rank": 16,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7627797359373512,
+        "normalized_mse": 0.3763100222490032,
+        "ridge": 100.0,
+        "state_rank": 16,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7486691591216297,
+        "normalized_mse": 0.40614956960864435,
+        "ridge": 1.0,
+        "state_rank": 16,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.777142931775349,
+        "normalized_mse": 0.35273647296788757,
+        "ridge": 10.0,
+        "state_rank": 16,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7695121997740211,
+        "normalized_mse": 0.3709975878335224,
+        "ridge": 100.0,
+        "state_rank": 16,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7186270690545803,
+        "normalized_mse": 0.443815837264061,
+        "ridge": 1.0,
+        "state_rank": 32,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7497507653585295,
+        "normalized_mse": 0.38161436261529885,
+        "ridge": 10.0,
+        "state_rank": 32,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7347228003711235,
+        "normalized_mse": 0.39843070135309044,
+        "ridge": 100.0,
+        "state_rank": 32,
+        "transport_rank": 4
+      },
+      {
+        "mean_cosine_similarity": 0.7124885582342381,
+        "normalized_mse": 0.46151530512460354,
+        "ridge": 1.0,
+        "state_rank": 32,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7607605631758527,
+        "normalized_mse": 0.3700925884655884,
+        "ridge": 10.0,
+        "state_rank": 32,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7550659412290992,
+        "normalized_mse": 0.3782712328931843,
+        "ridge": 100.0,
+        "state_rank": 32,
+        "transport_rank": 8
+      },
+      {
+        "mean_cosine_similarity": 0.7133562971905965,
+        "normalized_mse": 0.47958240361164245,
+        "ridge": 1.0,
+        "state_rank": 32,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.768409624332335,
+        "normalized_mse": 0.3619302486533856,
+        "ridge": 10.0,
+        "state_rank": 32,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7667645942874071,
+        "normalized_mse": 0.36659771474075653,
+        "ridge": 100.0,
+        "state_rank": 32,
+        "transport_rank": 16
+      },
+      {
+        "mean_cosine_similarity": 0.7100352426854576,
+        "normalized_mse": 0.5148423888991156,
+        "ridge": 1.0,
+        "state_rank": 32,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7726915522319514,
+        "normalized_mse": 0.3628061847919279,
+        "ridge": 10.0,
+        "state_rank": 32,
+        "transport_rank": 32
+      },
+      {
+        "mean_cosine_similarity": 0.7744110270244319,
+        "normalized_mse": 0.35991321470357207,
+        "ridge": 100.0,
+        "state_rank": 32,
+        "transport_rank": 32
+      }
+    ],
+    "folds": 5,
+    "selected": {
+      "mean_cosine_similarity": 0.779335429028767,
+      "normalized_mse": 0.342656690189175,
+      "ridge": 10.0,
+      "state_rank": 8,
+      "transport_rank": 32
+    },
+    "selection_metric": "normalized_mse"
+  },
+  "hidden_state_index": 16,
+  "intervention_scale": 1.0,
+  "metrics": {
+    "matched_no_carry_norm_matched": {
+      "base_full_accuracy": 0.8222222222222222,
+      "base_full_correct": 37,
+      "maximum_relative_frobenius_norm": 0.001547722495160997,
+      "mean_relative_frobenius_norm": 0.0007992476457729936,
+      "n": 45,
+      "outputs": [
+        {
+          "base_result": 499,
+          "parsed": 499,
+          "quartet_id": "phase6-development-q0000",
+          "response": "499",
+          "target_result": 500
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0001",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 539,
+          "parsed": 540,
+          "quartet_id": "phase6-development-q0002",
+          "response": "540",
+          "target_result": 540
+        },
+        {
+          "base_result": 259,
+          "parsed": 259,
+          "quartet_id": "phase6-development-q0003",
+          "response": "259",
+          "target_result": 260
+        },
+        {
+          "base_result": 699,
+          "parsed": 709,
+          "quartet_id": "phase6-development-q0004",
+          "response": "709",
+          "target_result": 700
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0005",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 849,
+          "parsed": 849,
+          "quartet_id": "phase6-development-q0006",
+          "response": "849",
+          "target_result": 850
+        },
+        {
+          "base_result": 479,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0007",
+          "response": "489",
+          "target_result": 480
+        },
+        {
+          "base_result": 129,
+          "parsed": 129,
+          "quartet_id": "phase6-development-q0008",
+          "response": "129",
+          "target_result": 130
+        },
+        {
+          "base_result": 299,
+          "parsed": 300,
+          "quartet_id": "phase6-development-q0009",
+          "response": "300",
+          "target_result": 300
+        },
+        {
+          "base_result": 779,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0010",
+          "response": "789",
+          "target_result": 780
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0011",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 799,
+          "parsed": 799,
+          "quartet_id": "phase6-development-q0012",
+          "response": "799",
+          "target_result": 800
+        },
+        {
+          "base_result": 169,
+          "parsed": 169,
+          "quartet_id": "phase6-development-q0013",
+          "response": "169",
+          "target_result": 170
+        },
+        {
+          "base_result": 529,
+          "parsed": 529,
+          "quartet_id": "phase6-development-q0014",
+          "response": "529",
+          "target_result": 530
+        },
+        {
+          "base_result": 569,
+          "parsed": 569,
+          "quartet_id": "phase6-development-q0015",
+          "response": "569",
+          "target_result": 570
+        },
+        {
+          "base_result": 219,
+          "parsed": 219,
+          "quartet_id": "phase6-development-q0016",
+          "response": "219",
+          "target_result": 220
+        },
+        {
+          "base_result": 469,
+          "parsed": 469,
+          "quartet_id": "phase6-development-q0017",
+          "response": "469",
+          "target_result": 470
+        },
+        {
+          "base_result": 319,
+          "parsed": 319,
+          "quartet_id": "phase6-development-q0018",
+          "response": "319",
+          "target_result": 320
+        },
+        {
+          "base_result": 329,
+          "parsed": 329,
+          "quartet_id": "phase6-development-q0019",
+          "response": "329",
+          "target_result": 330
+        },
+        {
+          "base_result": 399,
+          "parsed": 400,
+          "quartet_id": "phase6-development-q0020",
+          "response": "400",
+          "target_result": 400
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0021",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 789,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0022",
+          "response": "789",
+          "target_result": 790
+        },
+        {
+          "base_result": 209,
+          "parsed": 209,
+          "quartet_id": "phase6-development-q0023",
+          "response": "209",
+          "target_result": 210
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0024",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 489,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0025",
+          "response": "489",
+          "target_result": 490
+        },
+        {
+          "base_result": 269,
+          "parsed": 269,
+          "quartet_id": "phase6-development-q0026",
+          "response": "269",
+          "target_result": 270
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0027",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 409,
+          "parsed": 409,
+          "quartet_id": "phase6-development-q0028",
+          "response": "409",
+          "target_result": 410
+        },
+        {
+          "base_result": 859,
+          "parsed": 859,
+          "quartet_id": "phase6-development-q0029",
+          "response": "859",
+          "target_result": 860
+        },
+        {
+          "base_result": 729,
+          "parsed": 729,
+          "quartet_id": "phase6-development-q0030",
+          "response": "729",
+          "target_result": 730
+        },
+        {
+          "base_result": 679,
+          "parsed": 679,
+          "quartet_id": "phase6-development-q0031",
+          "response": "679",
+          "target_result": 680
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0032",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0033",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 619,
+          "parsed": 619,
+          "quartet_id": "phase6-development-q0034",
+          "response": "619",
+          "target_result": 620
+        },
+        {
+          "base_result": 889,
+          "parsed": 889,
+          "quartet_id": "phase6-development-q0035",
+          "response": "889",
+          "target_result": 890
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0036",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 909,
+          "parsed": 910,
+          "quartet_id": "phase6-development-q0037",
+          "response": "910",
+          "target_result": 910
+        },
+        {
+          "base_result": 149,
+          "parsed": 149,
+          "quartet_id": "phase6-development-q0038",
+          "response": "149",
+          "target_result": 150
+        },
+        {
+          "base_result": 919,
+          "parsed": 919,
+          "quartet_id": "phase6-development-q0039",
+          "response": "919",
+          "target_result": 920
+        },
+        {
+          "base_result": 159,
+          "parsed": 159,
+          "quartet_id": "phase6-development-q0040",
+          "response": "159",
+          "target_result": 160
+        },
+        {
+          "base_result": 189,
+          "parsed": 189,
+          "quartet_id": "phase6-development-q0041",
+          "response": "189",
+          "target_result": 190
+        },
+        {
+          "base_result": 929,
+          "parsed": 930,
+          "quartet_id": "phase6-development-q0042",
+          "response": "930",
+          "target_result": 930
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0043",
+          "response": "939",
+          "target_result": 940
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0044",
+          "response": "939",
+          "target_result": 940
+        }
+      ],
+      "parse_count": 45,
+      "parse_rate": 1.0,
+      "target_full_accuracy": 0.1111111111111111,
+      "target_full_correct": 5,
+      "target_position_accuracy": [
+        0.9555555555555556,
+        0.17777777777777778,
+        0.1111111111111111
+      ],
+      "target_position_correct": [
+        43,
+        8,
+        5
+      ],
+      "target_tens_accuracy": 0.17777777777777778,
+      "target_tens_correct": 8
+    },
+    "random_norm_matched": {
+      "base_full_accuracy": 0.9555555555555556,
+      "base_full_correct": 43,
+      "maximum_relative_frobenius_norm": 0.0015477229608222842,
+      "mean_relative_frobenius_norm": 0.0007992477039806545,
+      "n": 45,
+      "outputs": [
+        {
+          "base_result": 499,
+          "parsed": 499,
+          "quartet_id": "phase6-development-q0000",
+          "response": "499",
+          "target_result": 500
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0001",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0002",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 259,
+          "parsed": 259,
+          "quartet_id": "phase6-development-q0003",
+          "response": "259",
+          "target_result": 260
+        },
+        {
+          "base_result": 699,
+          "parsed": 709,
+          "quartet_id": "phase6-development-q0004",
+          "response": "709",
+          "target_result": 700
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0005",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 849,
+          "parsed": 849,
+          "quartet_id": "phase6-development-q0006",
+          "response": "849",
+          "target_result": 850
+        },
+        {
+          "base_result": 479,
+          "parsed": 479,
+          "quartet_id": "phase6-development-q0007",
+          "response": "479",
+          "target_result": 480
+        },
+        {
+          "base_result": 129,
+          "parsed": 129,
+          "quartet_id": "phase6-development-q0008",
+          "response": "129",
+          "target_result": 130
+        },
+        {
+          "base_result": 299,
+          "parsed": 309,
+          "quartet_id": "phase6-development-q0009",
+          "response": "309",
+          "target_result": 300
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0010",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0011",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 799,
+          "parsed": 799,
+          "quartet_id": "phase6-development-q0012",
+          "response": "799",
+          "target_result": 800
+        },
+        {
+          "base_result": 169,
+          "parsed": 169,
+          "quartet_id": "phase6-development-q0013",
+          "response": "169",
+          "target_result": 170
+        },
+        {
+          "base_result": 529,
+          "parsed": 529,
+          "quartet_id": "phase6-development-q0014",
+          "response": "529",
+          "target_result": 530
+        },
+        {
+          "base_result": 569,
+          "parsed": 569,
+          "quartet_id": "phase6-development-q0015",
+          "response": "569",
+          "target_result": 570
+        },
+        {
+          "base_result": 219,
+          "parsed": 219,
+          "quartet_id": "phase6-development-q0016",
+          "response": "219",
+          "target_result": 220
+        },
+        {
+          "base_result": 469,
+          "parsed": 469,
+          "quartet_id": "phase6-development-q0017",
+          "response": "469",
+          "target_result": 470
+        },
+        {
+          "base_result": 319,
+          "parsed": 319,
+          "quartet_id": "phase6-development-q0018",
+          "response": "319",
+          "target_result": 320
+        },
+        {
+          "base_result": 329,
+          "parsed": 329,
+          "quartet_id": "phase6-development-q0019",
+          "response": "329",
+          "target_result": 330
+        },
+        {
+          "base_result": 399,
+          "parsed": 399,
+          "quartet_id": "phase6-development-q0020",
+          "response": "399",
+          "target_result": 400
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0021",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 789,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0022",
+          "response": "789",
+          "target_result": 790
+        },
+        {
+          "base_result": 209,
+          "parsed": 209,
+          "quartet_id": "phase6-development-q0023",
+          "response": "209",
+          "target_result": 210
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0024",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 489,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0025",
+          "response": "489",
+          "target_result": 490
+        },
+        {
+          "base_result": 269,
+          "parsed": 269,
+          "quartet_id": "phase6-development-q0026",
+          "response": "269",
+          "target_result": 270
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0027",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 409,
+          "parsed": 409,
+          "quartet_id": "phase6-development-q0028",
+          "response": "409",
+          "target_result": 410
+        },
+        {
+          "base_result": 859,
+          "parsed": 859,
+          "quartet_id": "phase6-development-q0029",
+          "response": "859",
+          "target_result": 860
+        },
+        {
+          "base_result": 729,
+          "parsed": 729,
+          "quartet_id": "phase6-development-q0030",
+          "response": "729",
+          "target_result": 730
+        },
+        {
+          "base_result": 679,
+          "parsed": 679,
+          "quartet_id": "phase6-development-q0031",
+          "response": "679",
+          "target_result": 680
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0032",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0033",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 619,
+          "parsed": 619,
+          "quartet_id": "phase6-development-q0034",
+          "response": "619",
+          "target_result": 620
+        },
+        {
+          "base_result": 889,
+          "parsed": 889,
+          "quartet_id": "phase6-development-q0035",
+          "response": "889",
+          "target_result": 890
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0036",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 909,
+          "parsed": 909,
+          "quartet_id": "phase6-development-q0037",
+          "response": "909",
+          "target_result": 910
+        },
+        {
+          "base_result": 149,
+          "parsed": 149,
+          "quartet_id": "phase6-development-q0038",
+          "response": "149",
+          "target_result": 150
+        },
+        {
+          "base_result": 919,
+          "parsed": 919,
+          "quartet_id": "phase6-development-q0039",
+          "response": "919",
+          "target_result": 920
+        },
+        {
+          "base_result": 159,
+          "parsed": 159,
+          "quartet_id": "phase6-development-q0040",
+          "response": "159",
+          "target_result": 160
+        },
+        {
+          "base_result": 189,
+          "parsed": 189,
+          "quartet_id": "phase6-development-q0041",
+          "response": "189",
+          "target_result": 190
+        },
+        {
+          "base_result": 929,
+          "parsed": 929,
+          "quartet_id": "phase6-development-q0042",
+          "response": "929",
+          "target_result": 930
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0043",
+          "response": "939",
+          "target_result": 940
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0044",
+          "response": "939",
+          "target_result": 940
+        }
+      ],
+      "parse_count": 45,
+      "parse_rate": 1.0,
+      "target_full_accuracy": 0.0,
+      "target_full_correct": 0,
+      "target_position_accuracy": [
+        0.9333333333333333,
+        0.044444444444444446,
+        0.0
+      ],
+      "target_position_correct": [
+        42,
+        2,
+        0
+      ],
+      "target_tens_accuracy": 0.044444444444444446,
+      "target_tens_correct": 2
+    },
+    "shuffled_recipient_norm_matched": {
+      "base_full_accuracy": 0.8666666666666667,
+      "base_full_correct": 39,
+      "maximum_relative_frobenius_norm": 0.0015477221459150314,
+      "mean_relative_frobenius_norm": 0.0007992476457729936,
+      "n": 45,
+      "outputs": [
+        {
+          "base_result": 499,
+          "parsed": 500,
+          "quartet_id": "phase6-development-q0000",
+          "response": "500",
+          "target_result": 500
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0001",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0002",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 259,
+          "parsed": 259,
+          "quartet_id": "phase6-development-q0003",
+          "response": "259",
+          "target_result": 260
+        },
+        {
+          "base_result": 699,
+          "parsed": 709,
+          "quartet_id": "phase6-development-q0004",
+          "response": "709",
+          "target_result": 700
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0005",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 849,
+          "parsed": 849,
+          "quartet_id": "phase6-development-q0006",
+          "response": "849",
+          "target_result": 850
+        },
+        {
+          "base_result": 479,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0007",
+          "response": "489",
+          "target_result": 480
+        },
+        {
+          "base_result": 129,
+          "parsed": 129,
+          "quartet_id": "phase6-development-q0008",
+          "response": "129",
+          "target_result": 130
+        },
+        {
+          "base_result": 299,
+          "parsed": 300,
+          "quartet_id": "phase6-development-q0009",
+          "response": "300",
+          "target_result": 300
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0010",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0011",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 799,
+          "parsed": 799,
+          "quartet_id": "phase6-development-q0012",
+          "response": "799",
+          "target_result": 800
+        },
+        {
+          "base_result": 169,
+          "parsed": 169,
+          "quartet_id": "phase6-development-q0013",
+          "response": "169",
+          "target_result": 170
+        },
+        {
+          "base_result": 529,
+          "parsed": 529,
+          "quartet_id": "phase6-development-q0014",
+          "response": "529",
+          "target_result": 530
+        },
+        {
+          "base_result": 569,
+          "parsed": 569,
+          "quartet_id": "phase6-development-q0015",
+          "response": "569",
+          "target_result": 570
+        },
+        {
+          "base_result": 219,
+          "parsed": 219,
+          "quartet_id": "phase6-development-q0016",
+          "response": "219",
+          "target_result": 220
+        },
+        {
+          "base_result": 469,
+          "parsed": 469,
+          "quartet_id": "phase6-development-q0017",
+          "response": "469",
+          "target_result": 470
+        },
+        {
+          "base_result": 319,
+          "parsed": 319,
+          "quartet_id": "phase6-development-q0018",
+          "response": "319",
+          "target_result": 320
+        },
+        {
+          "base_result": 329,
+          "parsed": 329,
+          "quartet_id": "phase6-development-q0019",
+          "response": "329",
+          "target_result": 330
+        },
+        {
+          "base_result": 399,
+          "parsed": 400,
+          "quartet_id": "phase6-development-q0020",
+          "response": "400",
+          "target_result": 400
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0021",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 789,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0022",
+          "response": "789",
+          "target_result": 790
+        },
+        {
+          "base_result": 209,
+          "parsed": 209,
+          "quartet_id": "phase6-development-q0023",
+          "response": "209",
+          "target_result": 210
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0024",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 489,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0025",
+          "response": "489",
+          "target_result": 490
+        },
+        {
+          "base_result": 269,
+          "parsed": 269,
+          "quartet_id": "phase6-development-q0026",
+          "response": "269",
+          "target_result": 270
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0027",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 409,
+          "parsed": 409,
+          "quartet_id": "phase6-development-q0028",
+          "response": "409",
+          "target_result": 410
+        },
+        {
+          "base_result": 859,
+          "parsed": 859,
+          "quartet_id": "phase6-development-q0029",
+          "response": "859",
+          "target_result": 860
+        },
+        {
+          "base_result": 729,
+          "parsed": 729,
+          "quartet_id": "phase6-development-q0030",
+          "response": "729",
+          "target_result": 730
+        },
+        {
+          "base_result": 679,
+          "parsed": 679,
+          "quartet_id": "phase6-development-q0031",
+          "response": "679",
+          "target_result": 680
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0032",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0033",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 619,
+          "parsed": 619,
+          "quartet_id": "phase6-development-q0034",
+          "response": "619",
+          "target_result": 620
+        },
+        {
+          "base_result": 889,
+          "parsed": 889,
+          "quartet_id": "phase6-development-q0035",
+          "response": "889",
+          "target_result": 890
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0036",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 909,
+          "parsed": 909,
+          "quartet_id": "phase6-development-q0037",
+          "response": "909",
+          "target_result": 910
+        },
+        {
+          "base_result": 149,
+          "parsed": 149,
+          "quartet_id": "phase6-development-q0038",
+          "response": "149",
+          "target_result": 150
+        },
+        {
+          "base_result": 919,
+          "parsed": 919,
+          "quartet_id": "phase6-development-q0039",
+          "response": "919",
+          "target_result": 920
+        },
+        {
+          "base_result": 159,
+          "parsed": 159,
+          "quartet_id": "phase6-development-q0040",
+          "response": "159",
+          "target_result": 160
+        },
+        {
+          "base_result": 189,
+          "parsed": 189,
+          "quartet_id": "phase6-development-q0041",
+          "response": "189",
+          "target_result": 190
+        },
+        {
+          "base_result": 929,
+          "parsed": 930,
+          "quartet_id": "phase6-development-q0042",
+          "response": "930",
+          "target_result": 930
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0043",
+          "response": "939",
+          "target_result": 940
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0044",
+          "response": "939",
+          "target_result": 940
+        }
+      ],
+      "parse_count": 45,
+      "parse_rate": 1.0,
+      "target_full_accuracy": 0.08888888888888889,
+      "target_full_correct": 4,
+      "target_position_accuracy": [
+        0.9777777777777777,
+        0.13333333333333333,
+        0.08888888888888889
+      ],
+      "target_position_correct": [
+        44,
+        6,
+        4
+      ],
+      "target_tens_accuracy": 0.13333333333333333,
+      "target_tens_correct": 6
+    },
+    "target": {
+      "base_full_accuracy": 0.8222222222222222,
+      "base_full_correct": 37,
+      "maximum_relative_frobenius_norm": 0.001547722495160997,
+      "mean_relative_frobenius_norm": 0.0007992476457729936,
+      "n": 45,
+      "outputs": [
+        {
+          "base_result": 499,
+          "parsed": 500,
+          "quartet_id": "phase6-development-q0000",
+          "response": "500",
+          "target_result": 500
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0001",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 539,
+          "parsed": 540,
+          "quartet_id": "phase6-development-q0002",
+          "response": "540",
+          "target_result": 540
+        },
+        {
+          "base_result": 259,
+          "parsed": 259,
+          "quartet_id": "phase6-development-q0003",
+          "response": "259",
+          "target_result": 260
+        },
+        {
+          "base_result": 699,
+          "parsed": 709,
+          "quartet_id": "phase6-development-q0004",
+          "response": "709",
+          "target_result": 700
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0005",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 849,
+          "parsed": 849,
+          "quartet_id": "phase6-development-q0006",
+          "response": "849",
+          "target_result": 850
+        },
+        {
+          "base_result": 479,
+          "parsed": 479,
+          "quartet_id": "phase6-development-q0007",
+          "response": "479",
+          "target_result": 480
+        },
+        {
+          "base_result": 129,
+          "parsed": 129,
+          "quartet_id": "phase6-development-q0008",
+          "response": "129",
+          "target_result": 130
+        },
+        {
+          "base_result": 299,
+          "parsed": 300,
+          "quartet_id": "phase6-development-q0009",
+          "response": "300",
+          "target_result": 300
+        },
+        {
+          "base_result": 779,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0010",
+          "response": "789",
+          "target_result": 780
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0011",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 799,
+          "parsed": 800,
+          "quartet_id": "phase6-development-q0012",
+          "response": "800",
+          "target_result": 800
+        },
+        {
+          "base_result": 169,
+          "parsed": 169,
+          "quartet_id": "phase6-development-q0013",
+          "response": "169",
+          "target_result": 170
+        },
+        {
+          "base_result": 529,
+          "parsed": 529,
+          "quartet_id": "phase6-development-q0014",
+          "response": "529",
+          "target_result": 530
+        },
+        {
+          "base_result": 569,
+          "parsed": 569,
+          "quartet_id": "phase6-development-q0015",
+          "response": "569",
+          "target_result": 570
+        },
+        {
+          "base_result": 219,
+          "parsed": 219,
+          "quartet_id": "phase6-development-q0016",
+          "response": "219",
+          "target_result": 220
+        },
+        {
+          "base_result": 469,
+          "parsed": 469,
+          "quartet_id": "phase6-development-q0017",
+          "response": "469",
+          "target_result": 470
+        },
+        {
+          "base_result": 319,
+          "parsed": 319,
+          "quartet_id": "phase6-development-q0018",
+          "response": "319",
+          "target_result": 320
+        },
+        {
+          "base_result": 329,
+          "parsed": 329,
+          "quartet_id": "phase6-development-q0019",
+          "response": "329",
+          "target_result": 330
+        },
+        {
+          "base_result": 399,
+          "parsed": 400,
+          "quartet_id": "phase6-development-q0020",
+          "response": "400",
+          "target_result": 400
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0021",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 789,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0022",
+          "response": "789",
+          "target_result": 790
+        },
+        {
+          "base_result": 209,
+          "parsed": 209,
+          "quartet_id": "phase6-development-q0023",
+          "response": "209",
+          "target_result": 210
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0024",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 489,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0025",
+          "response": "489",
+          "target_result": 490
+        },
+        {
+          "base_result": 269,
+          "parsed": 269,
+          "quartet_id": "phase6-development-q0026",
+          "response": "269",
+          "target_result": 270
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0027",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 409,
+          "parsed": 409,
+          "quartet_id": "phase6-development-q0028",
+          "response": "409",
+          "target_result": 410
+        },
+        {
+          "base_result": 859,
+          "parsed": 859,
+          "quartet_id": "phase6-development-q0029",
+          "response": "859",
+          "target_result": 860
+        },
+        {
+          "base_result": 729,
+          "parsed": 729,
+          "quartet_id": "phase6-development-q0030",
+          "response": "729",
+          "target_result": 730
+        },
+        {
+          "base_result": 679,
+          "parsed": 679,
+          "quartet_id": "phase6-development-q0031",
+          "response": "679",
+          "target_result": 680
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0032",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0033",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 619,
+          "parsed": 619,
+          "quartet_id": "phase6-development-q0034",
+          "response": "619",
+          "target_result": 620
+        },
+        {
+          "base_result": 889,
+          "parsed": 889,
+          "quartet_id": "phase6-development-q0035",
+          "response": "889",
+          "target_result": 890
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0036",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 909,
+          "parsed": 909,
+          "quartet_id": "phase6-development-q0037",
+          "response": "909",
+          "target_result": 910
+        },
+        {
+          "base_result": 149,
+          "parsed": 149,
+          "quartet_id": "phase6-development-q0038",
+          "response": "149",
+          "target_result": 150
+        },
+        {
+          "base_result": 919,
+          "parsed": 919,
+          "quartet_id": "phase6-development-q0039",
+          "response": "919",
+          "target_result": 920
+        },
+        {
+          "base_result": 159,
+          "parsed": 159,
+          "quartet_id": "phase6-development-q0040",
+          "response": "159",
+          "target_result": 160
+        },
+        {
+          "base_result": 189,
+          "parsed": 189,
+          "quartet_id": "phase6-development-q0041",
+          "response": "189",
+          "target_result": 190
+        },
+        {
+          "base_result": 929,
+          "parsed": 930,
+          "quartet_id": "phase6-development-q0042",
+          "response": "930",
+          "target_result": 930
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0043",
+          "response": "939",
+          "target_result": 940
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0044",
+          "response": "939",
+          "target_result": 940
+        }
+      ],
+      "parse_count": 45,
+      "parse_rate": 1.0,
+      "target_full_accuracy": 0.13333333333333333,
+      "target_full_correct": 6,
+      "target_position_accuracy": [
+        1.0,
+        0.17777777777777778,
+        0.13333333333333333
+      ],
+      "target_position_correct": [
+        45,
+        8,
+        6
+      ],
+      "target_tens_accuracy": 0.17777777777777778,
+      "target_tens_correct": 8
+    },
+    "wrong_class_norm_matched": {
+      "base_full_accuracy": 0.7777777777777778,
+      "base_full_correct": 35,
+      "maximum_relative_frobenius_norm": 0.001547722495160997,
+      "mean_relative_frobenius_norm": 0.0007992476457729936,
+      "n": 45,
+      "outputs": [
+        {
+          "base_result": 499,
+          "parsed": 499,
+          "quartet_id": "phase6-development-q0000",
+          "response": "499",
+          "target_result": 500
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0001",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 539,
+          "parsed": 540,
+          "quartet_id": "phase6-development-q0002",
+          "response": "540",
+          "target_result": 540
+        },
+        {
+          "base_result": 259,
+          "parsed": 259,
+          "quartet_id": "phase6-development-q0003",
+          "response": "259",
+          "target_result": 260
+        },
+        {
+          "base_result": 699,
+          "parsed": 700,
+          "quartet_id": "phase6-development-q0004",
+          "response": "700",
+          "target_result": 700
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0005",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 849,
+          "parsed": 850,
+          "quartet_id": "phase6-development-q0006",
+          "response": "850",
+          "target_result": 850
+        },
+        {
+          "base_result": 479,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0007",
+          "response": "489",
+          "target_result": 480
+        },
+        {
+          "base_result": 129,
+          "parsed": 129,
+          "quartet_id": "phase6-development-q0008",
+          "response": "129",
+          "target_result": 130
+        },
+        {
+          "base_result": 299,
+          "parsed": 300,
+          "quartet_id": "phase6-development-q0009",
+          "response": "300",
+          "target_result": 300
+        },
+        {
+          "base_result": 779,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0010",
+          "response": "789",
+          "target_result": 780
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0011",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 799,
+          "parsed": 800,
+          "quartet_id": "phase6-development-q0012",
+          "response": "800",
+          "target_result": 800
+        },
+        {
+          "base_result": 169,
+          "parsed": 169,
+          "quartet_id": "phase6-development-q0013",
+          "response": "169",
+          "target_result": 170
+        },
+        {
+          "base_result": 529,
+          "parsed": 529,
+          "quartet_id": "phase6-development-q0014",
+          "response": "529",
+          "target_result": 530
+        },
+        {
+          "base_result": 569,
+          "parsed": 569,
+          "quartet_id": "phase6-development-q0015",
+          "response": "569",
+          "target_result": 570
+        },
+        {
+          "base_result": 219,
+          "parsed": 219,
+          "quartet_id": "phase6-development-q0016",
+          "response": "219",
+          "target_result": 220
+        },
+        {
+          "base_result": 469,
+          "parsed": 469,
+          "quartet_id": "phase6-development-q0017",
+          "response": "469",
+          "target_result": 470
+        },
+        {
+          "base_result": 319,
+          "parsed": 319,
+          "quartet_id": "phase6-development-q0018",
+          "response": "319",
+          "target_result": 320
+        },
+        {
+          "base_result": 329,
+          "parsed": 329,
+          "quartet_id": "phase6-development-q0019",
+          "response": "329",
+          "target_result": 330
+        },
+        {
+          "base_result": 399,
+          "parsed": 400,
+          "quartet_id": "phase6-development-q0020",
+          "response": "400",
+          "target_result": 400
+        },
+        {
+          "base_result": 379,
+          "parsed": 379,
+          "quartet_id": "phase6-development-q0021",
+          "response": "379",
+          "target_result": 380
+        },
+        {
+          "base_result": 789,
+          "parsed": 789,
+          "quartet_id": "phase6-development-q0022",
+          "response": "789",
+          "target_result": 790
+        },
+        {
+          "base_result": 209,
+          "parsed": 209,
+          "quartet_id": "phase6-development-q0023",
+          "response": "209",
+          "target_result": 210
+        },
+        {
+          "base_result": 779,
+          "parsed": 779,
+          "quartet_id": "phase6-development-q0024",
+          "response": "779",
+          "target_result": 780
+        },
+        {
+          "base_result": 489,
+          "parsed": 489,
+          "quartet_id": "phase6-development-q0025",
+          "response": "489",
+          "target_result": 490
+        },
+        {
+          "base_result": 269,
+          "parsed": 269,
+          "quartet_id": "phase6-development-q0026",
+          "response": "269",
+          "target_result": 270
+        },
+        {
+          "base_result": 539,
+          "parsed": 539,
+          "quartet_id": "phase6-development-q0027",
+          "response": "539",
+          "target_result": 540
+        },
+        {
+          "base_result": 409,
+          "parsed": 409,
+          "quartet_id": "phase6-development-q0028",
+          "response": "409",
+          "target_result": 410
+        },
+        {
+          "base_result": 859,
+          "parsed": 859,
+          "quartet_id": "phase6-development-q0029",
+          "response": "859",
+          "target_result": 860
+        },
+        {
+          "base_result": 729,
+          "parsed": 729,
+          "quartet_id": "phase6-development-q0030",
+          "response": "729",
+          "target_result": 730
+        },
+        {
+          "base_result": 679,
+          "parsed": 679,
+          "quartet_id": "phase6-development-q0031",
+          "response": "679",
+          "target_result": 680
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0032",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 609,
+          "parsed": 609,
+          "quartet_id": "phase6-development-q0033",
+          "response": "609",
+          "target_result": 610
+        },
+        {
+          "base_result": 619,
+          "parsed": 619,
+          "quartet_id": "phase6-development-q0034",
+          "response": "619",
+          "target_result": 620
+        },
+        {
+          "base_result": 889,
+          "parsed": 889,
+          "quartet_id": "phase6-development-q0035",
+          "response": "889",
+          "target_result": 890
+        },
+        {
+          "base_result": 819,
+          "parsed": 819,
+          "quartet_id": "phase6-development-q0036",
+          "response": "819",
+          "target_result": 820
+        },
+        {
+          "base_result": 909,
+          "parsed": 910,
+          "quartet_id": "phase6-development-q0037",
+          "response": "910",
+          "target_result": 910
+        },
+        {
+          "base_result": 149,
+          "parsed": 149,
+          "quartet_id": "phase6-development-q0038",
+          "response": "149",
+          "target_result": 150
+        },
+        {
+          "base_result": 919,
+          "parsed": 919,
+          "quartet_id": "phase6-development-q0039",
+          "response": "919",
+          "target_result": 920
+        },
+        {
+          "base_result": 159,
+          "parsed": 159,
+          "quartet_id": "phase6-development-q0040",
+          "response": "159",
+          "target_result": 160
+        },
+        {
+          "base_result": 189,
+          "parsed": 189,
+          "quartet_id": "phase6-development-q0041",
+          "response": "189",
+          "target_result": 190
+        },
+        {
+          "base_result": 929,
+          "parsed": 930,
+          "quartet_id": "phase6-development-q0042",
+          "response": "930",
+          "target_result": 930
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0043",
+          "response": "939",
+          "target_result": 940
+        },
+        {
+          "base_result": 939,
+          "parsed": 939,
+          "quartet_id": "phase6-development-q0044",
+          "response": "939",
+          "target_result": 940
+        }
+      ],
+      "parse_count": 45,
+      "parse_rate": 1.0,
+      "target_full_accuracy": 0.17777777777777778,
+      "target_full_correct": 8,
+      "target_position_accuracy": [
+        0.9777777777777777,
+        0.2222222222222222,
+        0.17777777777777778
+      ],
+      "target_position_correct": [
+        44,
+        10,
+        8
+      ],
+      "target_tens_accuracy": 0.2222222222222222,
+      "target_tens_correct": 10
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "parent_result_sha256": "c1183b605a37a55c0d9472f53bff5a842003ba882bdab39610e4d7a7919ecd05",
+  "passes": false,
+  "schema_version": "oli.phase6b-qwen-carry-interaction-development/v1",
+  "status": "development_only"
+}

@@ -1,0 +1,11 @@
+{
+  "audit_config": "configs/phase5_qwen_donor_free_audit.json",
+  "audit_config_sha256": "9d9b1e38e4b34dd4c5bff39d7bbcc041ed11e329a860d69f1a4f4222d9e08c6f",
+  "audit_result": "results/phase5_qwen_donor_free_audit.json",
+  "audit_result_sha256": "a80d84b8e128be2e17723750010612b0126db36c872fe8bdd33c47f19ff15fa4",
+  "class_prototype_artifact": "artifacts/phase5_qwen_donor_free_class_prototypes.safetensors",
+  "class_prototype_artifact_sha256": "a0b5771fff316292f386631bad7bee4566760c0add73635919f734e287e6b224",
+  "development_result": "results/phase5_qwen_donor_free_development.json",
+  "development_result_sha256": "e32603a8e0436a674c5d7a800a10ae92b254f0388b55e8f25b709e7cafba856a",
+  "schema_version": "oli.qwen-operand-coordinate-package-config/v1"
+}

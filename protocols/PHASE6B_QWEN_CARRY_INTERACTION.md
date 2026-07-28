@@ -58,3 +58,10 @@ A pass would show that a donor-free approximation of the matched carry
 interaction is causally sufficient on an untouched prompt family. It would not
 establish a single neuron, a thought transcript, universal transfer, or an
 audited coordinate.
+
+## Recorded outcome
+
+The one-shot development confirmation failed. The target corrected 8/45 tens
+digits, tied with the matched no-carry control and below the rotated-class
+control at 10/45. Audit remains sealed and the interaction-only additive
+writer is closed on this corpus.
