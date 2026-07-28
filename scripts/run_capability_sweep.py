@@ -65,6 +65,21 @@ def main() -> None:
         selected = [
             example for example in selected if example.regime == selected_regime
         ]
+    evaluated_presentations = config["generation"].get(
+        "presentations", ["raw", "chat"]
+    )
+    unknown_presentations = set(evaluated_presentations) - {"raw", "chat"}
+    if unknown_presentations:
+        raise SystemExit(
+            f"unknown generation presentations: {sorted(unknown_presentations)}"
+        )
+    if not evaluated_presentations:
+        raise SystemExit("generation presentations cannot be empty")
+    selected = [
+        example
+        for example in selected
+        if example.presentation in evaluated_presentations
+    ]
 
     device = torch.device(args.device)
     dtype = getattr(torch, args.dtype)
@@ -189,6 +204,7 @@ def main() -> None:
         "dataset_sha256": observed_hash,
         "model": config["model"],
         "generation": config["generation"],
+        "evaluated_presentations": evaluated_presentations,
         "environment": {
             "python": platform.python_version(),
             "torch": torch.__version__,

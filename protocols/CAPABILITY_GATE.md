@@ -46,6 +46,15 @@ The selected regime and rule must be committed before authorizing the audit.
 The audit passes at the same aggregate and worst-cell thresholds. Failure
 returns to development; the audit may not be used to pick another regime.
 
+## Cross-model screening
+
+Before fitting an interface in a second model family, the same V2 development
+split may be reused strictly as a behavioral capability screen. A frozen
+screen may omit the raw-presentation diagnostic to reduce compute, but it must
+retain every regime, canonical pair, and template family in the primary native
+chat presentation. Screening results cannot support a causal or portability
+claim and do not open any model-specific confirmatory split.
+
 ## Claim boundary
 
 Passing establishes a behavioral competence envelope only. It does not show
