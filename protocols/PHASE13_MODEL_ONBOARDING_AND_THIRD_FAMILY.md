@@ -358,6 +358,36 @@ Together with the passed leading compiler and operand reader, this completes
 component selection. The next authorized step is one integrated development
 run on the previously held Phase 13 development split.
 
+## Frozen integrated development gate
+
+`configs/phase13_smollm2_compiler_graft_development.json` freezes the first
+complete read → deterministic compute → sequential compiler write evaluation
+before exposing the 90-example development split. It binds:
+
+- the independently fitted index-1 operand reader;
+- host-side integer addition;
+- the selected index-24 leading compiler at margin 8;
+- the selected index-24 tens compiler at margin 4;
+- the selected index-24 ones compiler at margin 8;
+- one compiler step and a 0.25 relative-norm cap at every position.
+
+The reusable sequential writer implementation is
+`src/open_latent_interfaces/compiler_writer.py`; its exact hash is frozen so a
+later audit can reuse the same engine unchanged. Development evaluates base,
+oracle-compute, latent-read-compute, shuffled-read, random norm-matched,
+shuffled-random, and wrong-target norm-matched conditions.
+
+The gate requires at least 98% reader and deterministic-compute accuracy, 90%
+final and per-position accuracy, no more than a 3-point oracle gap, at least
+80% base-error recovery, 98% preservation of base-correct examples, at least
+40 points of net exact improvement, and at least 50 points of excess recovery
+over both random and wrong-target controls. It also requires target following
+under shuffled reads, failure of shuffled random and wrong-target controls,
+and perfect parse and digit-token rates.
+
+This is the first authorized use of Phase 13 development data. A nonpass must
+be preserved and cannot authorize an audit.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
