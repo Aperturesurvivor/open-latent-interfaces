@@ -79,3 +79,10 @@ The scale-only follow-up selected scale 2.0 as the smallest passing value:
 donor-free fitting is therefore fixed at operand index 12 and carry-context
 index 16. Fit data may determine class prototypes; selection may choose only
 from a frozen scale grid and matched controls.
+
+The donor-free viability gate fits full-width mean transport vectors per
+source-digit class from the 158 complete-correct fit quartets. Qwen selection
+evaluates scales 0.5, 1.0, 1.5, 2.0, and 3.0. The operand target must beat
+wrong-class and isotropic controls; the carry target must beat matched
+no-carry, wrong-class, and isotropic controls. The smallest scale satisfying
+all gates is selected. Development remains unopened.

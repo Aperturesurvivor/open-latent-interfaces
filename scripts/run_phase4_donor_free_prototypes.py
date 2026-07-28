@@ -122,6 +122,8 @@ def select_scale(
     minimum_accuracy: float,
     minimum_advantage: float,
 ) -> tuple[float, bool]:
+    passing = []
+
     def score(scale: str) -> tuple[float, float, float, float]:
         row = metrics[scale]
         strongest = max(row[name]["target_tens_accuracy"] for name in controls)
@@ -133,17 +135,21 @@ def select_scale(
             -float(scale),
         )
 
-    selected = max(metrics, key=score)
-    row = metrics[selected]
-    target_metrics = row[target]
-    strongest = max(row[name]["target_tens_accuracy"] for name in controls)
-    passes = (
-        target_metrics["target_tens_accuracy"] >= minimum_accuracy
-        and target_metrics["target_tens_accuracy"] - strongest
-        >= minimum_advantage
-        and target_metrics["parse_rate"] == 1.0
-    )
-    return float(selected), passes
+    for scale, row in metrics.items():
+        target_metrics = row[target]
+        strongest = max(
+            row[name]["target_tens_accuracy"] for name in controls
+        )
+        if (
+            target_metrics["target_tens_accuracy"] >= minimum_accuracy
+            and target_metrics["target_tens_accuracy"] - strongest
+            >= minimum_advantage
+            and target_metrics["parse_rate"] == 1.0
+        ):
+            passing.append(float(scale))
+    if passing:
+        return min(passing), True
+    return float(max(metrics, key=score)), False
 
 
 def main() -> None:
