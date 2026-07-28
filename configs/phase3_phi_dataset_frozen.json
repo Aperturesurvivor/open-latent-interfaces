@@ -1,0 +1,19 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "parameters": {
+      "audit_pairs_per_digit": 10,
+      "development_pairs_per_digit": 10,
+      "fit_pairs_per_digit": 50,
+      "seed": 20260729,
+      "selection_pairs_per_digit": 10
+    },
+    "sha256": "5a8783160f8add9bf551a8de3207b1b5a5c9ac763638250d00cd6de1807bf941"
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "schema_version": "oli.phase3-phi-dataset-config/v1"
+}

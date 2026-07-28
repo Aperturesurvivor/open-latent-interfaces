@@ -1,0 +1,16 @@
+{
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "generation": {
+    "batch_size": 8,
+    "do_sample": false,
+    "max_input_tokens": 128,
+    "max_new_tokens": 3
+  },
+  "minimum_exact_accuracy": 0.9,
+  "schema_version": "oli.phase3-prefill-behavior-config/v1",
+  "splits": [
+    "fit",
+    "selection",
+    "development"
+  ]
+}
