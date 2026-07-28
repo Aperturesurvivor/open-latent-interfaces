@@ -35,13 +35,14 @@ This is an affine, recipient-dependent state overwrite:
 
 It requires no live donor activation and changes no model weight.
 
-## Frozen selection grid
+## Frozen model and selection rule
 
-- coordinate ranks: 1, 2, 4, 8, 9
+- coordinate rank: the smallest fit-only between-centroid rank explaining at
+  least 95% of between-centroid squared singular-value energy, capped at 9
 - scales: 0.5, 1.0, 1.5, 2.0
 
-Selection chooses the passing candidate with lowest rank, then lowest scale.
-If none pass, the writer family closes without development.
+Selection does not choose rank. It chooses the lowest passing scale. If none
+pass, the writer family closes without development.
 
 ## Controls
 

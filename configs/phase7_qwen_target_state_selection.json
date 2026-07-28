@@ -1,0 +1,28 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase7_qwen_target_state_behavior_development.json",
+  "behavior_result_sha256": "bc3255f6d958be9e692f693cc920eebbbecb1378487d68fb7034fee29a3ce482",
+  "carry_context_hidden_state_index": 16,
+  "dataset_config": "configs/phase7_qwen_target_state_dataset_frozen.json",
+  "dataset_config_sha256": "8cfef996dab3025d0970e44735f37f05207eaef093b0a9d62f18f9179c92468f",
+  "eligible_fit_quartets_sha256": "0fda66724cfe7f20c759165fd3ef1d50188b95cc59e2e0cc1aca43cf4b89e693",
+  "maximum_coordinate_rank": 9,
+  "minimum_between_centroid_explained_variance": 0.95,
+  "minimum_eligible_fit_quartets": 100,
+  "minimum_fit_examples_per_target_digit": 4,
+  "random_control_seed": 20261011,
+  "scales": [
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "schema_version": "oli.phase7-qwen-target-state-selection-config/v1",
+  "selection_quartets_sha256": "4ade6bc8ada140e32398eb16949e563343b173cf95f1c4c026fa11fc004c08d4",
+  "selection_rule": {
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": true
+  },
+  "token_region_contract_sha256": "9070d4b2ad0dc2fbaa18cb7a4d39f70ca173e46b6243914d4f1d67cebd4cbf59"
+}
