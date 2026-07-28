@@ -1,0 +1,17 @@
+{
+  "dataset_config": "configs/phase6_qwen_conditional_carry_dataset_frozen.json",
+  "gate": {
+    "minimum_complete_quartet_accuracy": 0.75,
+    "minimum_row_accuracy": 0.9
+  },
+  "generation": {
+    "batch_size": 8,
+    "max_input_tokens": 256
+  },
+  "schema_version": "oli.phase6-qwen-conditional-carry-behavior-config/v1",
+  "splits": [
+    "fit",
+    "selection",
+    "development"
+  ]
+}
