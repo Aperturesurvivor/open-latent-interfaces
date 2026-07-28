@@ -1,0 +1,39 @@
+{
+  "base_model_batch_size": 4,
+  "basis_artifact": "artifacts/phase3_phi_native_coordinate_interface_v1.safetensors",
+  "basis_artifact_sha256": "960aac22478678a81a9677f03c0d7e885c60a603f22aa3737e0a19bb41803faa",
+  "behavior_result": "results/phase9_phi_wide_writer_behavior_development.json",
+  "behavior_result_sha256": "5c9347fe50df45146cadcb0938478911d4c402f0fd28612f94bfab5bd1a8ea8e",
+  "dataset_config": "configs/phase8_phi_latent_graft_dataset_frozen.json",
+  "dataset_config_sha256": "2cefb24b966ff9423dbb04be6b97f7633da09b0d64b894302ca8acf856c21aa2",
+  "eligible_fit_examples_sha256": "3c0dcd2e0d687a15149ac6feeb8a4a05fb5c4bd23432d667153b9a8b2cb420d7",
+  "hidden_state_indices": {
+    "0": 24,
+    "1": 30,
+    "2": 30
+  },
+  "minimum_fit_examples_per_digit": 4,
+  "norm_cap": 1.0,
+  "random_control_seed": 20261201,
+  "ranks": {
+    "0": 32,
+    "1": 32,
+    "2": 32
+  },
+  "scales": [
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "schema_version": "oli.phase9-phi-wide-writer-selection-config/v1",
+  "selection_examples_sha256": "cbead14468b1088afabccded879e82a6b6681d6e0762304b6356fa3b9e7aa461",
+  "selection_rule": {
+    "minimum_control_advantage": 0.5,
+    "minimum_identity_accuracy": 0.9,
+    "minimum_target_accuracy": 0.9,
+    "require_digit_token_rate": 1.0
+  },
+  "selection_targets_sha256": "afdb5503d936dcc4df8bdb3c6fabdf6e5a2ac26b16c9c8e0e99a61d6e6e03b91"
+}
