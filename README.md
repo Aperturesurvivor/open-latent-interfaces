@@ -179,6 +179,13 @@ native-donor upper bound. This motivates a frozen strength sweep before any
 larger architecture change. See the
 [balanced-counterfactual summary](PHASE2_BALANCED_COUNTERFACTUAL_SUMMARY.md).
 
+A fixed-weight, norm-bounded scale sweep then doubled the tens intervention
+amplitude. Tens accuracy improved only from 20/90 to 25/90 before declining at
+larger scales, while identity preservation fell from 82/90 to 53/90. This
+rules out insufficient amplitude as the sole bottleneck and moves the work to
+a tens-specific representation and residual-boundary study. See the
+[scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -257,6 +264,7 @@ either stage.
 - [Phase 2 multitemplate causal summary](PHASE2_MULTITEMPLATE_CAUSAL_SUMMARY.md)
 - [Phase 2 learned-basis causal summary](PHASE2_LEARNED_BASIS_SUMMARY.md)
 - [Phase 2 balanced-counterfactual summary](PHASE2_BALANCED_COUNTERFACTUAL_SUMMARY.md)
+- [Phase 2 fixed-weight scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
