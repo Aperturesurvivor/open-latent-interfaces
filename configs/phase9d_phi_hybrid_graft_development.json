@@ -1,0 +1,52 @@
+{
+  "base_model_batch_size": 4,
+  "compiler_batch_size": 2,
+  "compiler_module": "src/open_latent_interfaces/causal_compiler.py",
+  "compiler_module_sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d",
+  "compiler_selection_result": "results/phase9c_phi_iterative_leading_compiler_selection.json",
+  "compiler_selection_result_sha256": "6776b9e315e6ceb56e3e61019774b9520e8ee2f7f85aa895907d117342b26447",
+  "dataset_config": "configs/phase8_phi_latent_graft_dataset_frozen.json",
+  "dataset_config_sha256": "2cefb24b966ff9423dbb04be6b97f7633da09b0d64b894302ca8acf856c21aa2",
+  "development_examples_sha256": "5e7ac01f45abc2aac95a721c8a0d1cecfa6d98af4ba8d81ac121e54e26d31bf2",
+  "development_rule": {
+    "maximum_oracle_exact_gap": 0.05,
+    "maximum_shuffled_true_accuracy": 0.25,
+    "maximum_wrong_target_true_accuracy": 0.25,
+    "minimum_base_correct_preservation": 0.98,
+    "minimum_base_error_recovery": 0.75,
+    "minimum_computed_target_accuracy": 0.98,
+    "minimum_excess_base_error_recovery_over_random": 0.5,
+    "minimum_final_exact_accuracy": 0.95,
+    "minimum_net_improvement_over_base": 0.1,
+    "minimum_reader_pair_accuracy": 0.98,
+    "require_digit_token_rate": true,
+    "require_parse_rate": true
+  },
+  "development_token_contract_sha256": "91faffe03c994685817909a83bc1419354853b0b53cd30c180624144ba3b2fb9",
+  "leading_compiler": {
+    "desired_margin": 8.0,
+    "hidden_state_index": 24,
+    "iterations": 3,
+    "norm_cap": 0.75
+  },
+  "random_control_seed": 20261204,
+  "reader_artifact": "artifacts/phase8_phi_operand_reader.safetensors",
+  "reader_artifact_sha256": "58f84aeda73713e9eb2e8ed0347639fc84f60273ad69557d7718b096cd6ac0c0",
+  "reader_hidden_state_index": 1,
+  "reader_selection_result": "results/phase8_phi_operand_reader_selection.json",
+  "reader_selection_result_sha256": "ab2f8bb2c0f028e5b1b771cb907965d2efae95a18744644cb67e51dd487938d2",
+  "runner_sha256": "5a20b7c964092939ae17b3b33b42e006d52ce0f8a924e9c29f7fd593ba45411b",
+  "schema_version": "oli.phase9d-phi-hybrid-graft-development-config/v1",
+  "suffix_artifact": "artifacts/phase9_phi_wide_writer_prototypes.safetensors",
+  "suffix_artifact_sha256": "62d7302c7bcfe7ebe529f4f20ab91f43b61ebc8bda8bf2df86ccb053868122f0",
+  "suffix_basis_artifact": "artifacts/phase3_phi_native_coordinate_interface_v1.safetensors",
+  "suffix_basis_artifact_sha256": "960aac22478678a81a9677f03c0d7e885c60a603f22aa3737e0a19bb41803faa",
+  "suffix_selection_result": "results/phase9_phi_wide_writer_selection.json",
+  "suffix_selection_result_sha256": "c6a57224e2824845e2c7b60d449b3d0b58df9306aad69c15ee2fefee719acfb6",
+  "suffix_writer": {
+    "hidden_state_index": 30,
+    "norm_cap": 1.0,
+    "rank": 32,
+    "scale": 1.0
+  }
+}
