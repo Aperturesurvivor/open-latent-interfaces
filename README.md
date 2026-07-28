@@ -117,6 +117,13 @@ a causal part of the write path, but next-digit input alone remains
 under-specified for reliable composition. See the
 [conditional-transport summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md).
 
+A full-result variant then supplied all three target digits at every position.
+It regressed: teacher-forced transfer was only 19/45, 9/45, and 10/45, and
+closed-loop exact writing fell to 1/45. Raw one-hot result interactions
+over-specified the 480-pair regression and did not generalize to unseen result
+combinations. This architecture was rejected without opening the audit. See the
+[full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -187,6 +194,7 @@ either stage.
 - [Phase 1E donor-free typed-writer summary](PHASE1E_TYPED_WRITER_SUMMARY.md)
 - [Phase 1F paired-transport writer summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md)
 - [Phase 1G conditional-transport bridge summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md)
+- [Phase 1H full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
