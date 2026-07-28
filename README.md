@@ -324,6 +324,7 @@ either stage.
 - [Phase 2 cross-position ones prototype summary](PHASE2_ONES_PROTOTYPE_TRANSFER_SUMMARY.md)
 - [Phase 2 closed-loop dual-prototype summary](PHASE2_CLOSED_LOOP_DUAL_PROTOTYPE_SUMMARY.md)
 - [Phase 2 one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md)
+- [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 

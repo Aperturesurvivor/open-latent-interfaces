@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-latent-interfaces.org/schemas/native-coordinate-interface-v1.schema.json",
+  "title": "Open Latent Interfaces Native Coordinate Interface",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "model",
+    "representation",
+    "controller",
+    "positions",
+    "external_components",
+    "evidence",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "oli.native-coordinate-interface/v1"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1}
+      }
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["residual_width", "basis"],
+      "properties": {
+        "residual_width": {"type": "integer", "minimum": 1},
+        "basis": {"$ref": "#/$defs/tensorArtifact"}
+      }
+    },
+    "controller": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "hard_gate", "class_token_ids"],
+      "properties": {
+        "operation": {
+          "const": "typed_coordinate_replacement"
+        },
+        "hard_gate": {
+          "const": "zero_if_base_argmax_equals_requested_token"
+        },
+        "class_token_ids": {
+          "type": "object",
+          "minProperties": 10,
+          "maxProperties": 10,
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "positions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/position"
+      }
+    },
+    "external_components": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "development_result",
+        "audit_config",
+        "audit_result",
+        "audit_gate_passed",
+        "audit_runs"
+      ],
+      "properties": {
+        "development_result": {"$ref": "#/$defs/fileArtifact"},
+        "audit_config": {"$ref": "#/$defs/fileArtifact"},
+        "audit_result": {"$ref": "#/$defs/fileArtifact"},
+        "audit_gate_passed": {"const": true},
+        "audit_runs": {"const": 1}
+      }
+    },
+    "claim_boundary": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fileArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "tensorArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "key"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "key": {"type": "string", "minLength": 1}
+      }
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "answer_position",
+        "hidden_state_index",
+        "rank",
+        "scale",
+        "norm_cap",
+        "prototypes"
+      ],
+      "properties": {
+        "answer_position": {"type": "integer", "minimum": 0},
+        "hidden_state_index": {"type": "integer", "minimum": 1},
+        "rank": {"type": "integer", "minimum": 1},
+        "scale": {"type": "number", "exclusiveMinimum": 0},
+        "norm_cap": {"type": "number", "exclusiveMinimum": 0},
+        "prototypes": {"$ref": "#/$defs/tensorArtifact"}
+      }
+    }
+  }
+}

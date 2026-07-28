@@ -1,0 +1,96 @@
+{
+  "claim_boundary": [
+    "Validated only on Qwen2.5-1.5B-Instruct.",
+    "Validated only for requested digit tokens in three-digit addition answers.",
+    "Writes an externally supplied answer representation; it does not compute the sum.",
+    "Positions 1 and 2 use the native-coordinate interface; position 0 remains an external causal adapter."
+  ],
+  "controller": {
+    "class_token_ids": {
+      "0": 15,
+      "1": 16,
+      "2": 17,
+      "3": 18,
+      "4": 19,
+      "5": 20,
+      "6": 21,
+      "7": 22,
+      "8": 23,
+      "9": 24
+    },
+    "hard_gate": "zero_if_base_argmax_equals_requested_token",
+    "operation": "typed_coordinate_replacement"
+  },
+  "evidence": {
+    "audit_config": {
+      "path": "configs/phase2_closed_loop_dual_prototype_audit.json",
+      "sha256": "4fbb7aad82ce52be5f83a72d69dcd1e03be6760f453cc72525e20cf92753a9a6"
+    },
+    "audit_gate_passed": true,
+    "audit_result": {
+      "path": "results/phase2_closed_loop_dual_prototype_audit.json",
+      "sha256": "3412f243b9ce0f8951a06dc5ac5f834858394c51264df898b93c67301e09c647"
+    },
+    "audit_runs": 1,
+    "development_result": {
+      "path": "results/phase2_closed_loop_dual_prototype_development.json",
+      "sha256": "2058ac08e242be4b0b3f7832400b25c29e6eb4f74eb4cfc171fdb3b10d949cb7"
+    }
+  },
+  "external_components": [
+    {
+      "answer_position": 0,
+      "artifact": {
+        "path": "artifacts/phase2_balanced_counterfactual_causal_adapter_development.safetensors",
+        "sha256": "be23dac0cb1d30a1929fc9ee24a839c3c530565f5e7efd3b1505261563c5d7c2"
+      },
+      "hidden_state_index": 23,
+      "kind": "online_transport_adapter",
+      "scale": 1.0,
+      "source_result": {
+        "path": "results/phase2_balanced_counterfactual_causal_adapter_development.json",
+        "sha256": "01900b9391e6f03358922d2aacadd06695c228af2eb4eb5f3e7357f3afd605bf"
+      }
+    }
+  ],
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "name": "qwen25-15b-next-digit-interface-v1",
+  "positions": {
+    "1": {
+      "answer_position": 1,
+      "hidden_state_index": 27,
+      "norm_cap": 1.0,
+      "prototypes": {
+        "key": "digit",
+        "path": "artifacts/phase2_tens_prototypes.safetensors",
+        "sha256": "42b97d49573333e7817aa3464a4a916c5e26bca3bae675c5b2aaccca71a85f10"
+      },
+      "rank": 16,
+      "scale": 1.25
+    },
+    "2": {
+      "answer_position": 2,
+      "hidden_state_index": 27,
+      "norm_cap": 1.0,
+      "prototypes": {
+        "key": "digit",
+        "path": "artifacts/phase2_ones_prototypes.safetensors",
+        "sha256": "16064fd1e125e20ef4226b4648cb53e314ab3ee207fd84ee9850662025220db7"
+      },
+      "rank": 16,
+      "scale": 2.0
+    }
+  },
+  "representation": {
+    "basis": {
+      "key": "delta_basis",
+      "path": "artifacts/phase2_tens_delta_basis.safetensors",
+      "sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d"
+    },
+    "residual_width": 1536
+  },
+  "schema_version": "oli.native-coordinate-interface/v1"
+}
