@@ -1,0 +1,50 @@
+{
+  "audit_authorized": false,
+  "batch_size": 4,
+  "dataset": {
+    "parameters": {
+      "audit_pairs_per_digit": 5,
+      "development_pairs_per_digit": 5,
+      "seed": 20260730,
+      "train_pairs_per_digit": 10
+    },
+    "sha256": "33bde4a417cbde662295c3c69265b17dc8160aa110ae8090f5e74819f1e6c7b4"
+  },
+  "hidden_state_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "probe_l2": 10.0,
+  "schema_version": "oli.phase1-probe-config/v1",
+  "shuffle_seed": 20260731
+}
