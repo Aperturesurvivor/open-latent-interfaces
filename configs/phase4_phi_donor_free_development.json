@@ -1,0 +1,27 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase4_phi_carry_behavior_development.json",
+  "behavior_result_sha256": "6e74201cce34f283b044c9245b82455e3082873bb7a3f9e6cb72151c90d713a5",
+  "carry_context_hidden_state_index": 13,
+  "carry_scale": 1.0,
+  "class_prototype_artifact": "artifacts/phase4_phi_donor_free_class_prototypes.safetensors",
+  "class_prototype_artifact_sha256": "fb58ac55f804945d060e077a44a32861da0bd1b719ef0d3709e37da7fe615227",
+  "dataset_config": "configs/phase4_carry_dataset_frozen.json",
+  "dataset_config_sha256": "7f26b24b0af75a35039d7058830ba2187f7bfe4cad819fdbaed2876eda3a07fd",
+  "development_quartets_sha256": "e180f3243d806760f3e5030c9c6c438aaf9f718e3aea16cd87da220d4e790897",
+  "development_rule": {
+    "carry_minimum_tens_accuracy": 0.5,
+    "minimum_control_advantage": 0.25,
+    "operand_minimum_tens_accuracy": 0.7,
+    "require_parse_rate": 1.0
+  },
+  "development_token_region_contract_sha256": "e6f639037362c6d94d837369bb2031512e4223def28f5d4a3971781a7dde700a",
+  "operand_hidden_state_index": 1,
+  "operand_scale": 1.5,
+  "parent_correction": "results/phase4_phi_universal_carry_scale_correction.json",
+  "parent_correction_sha256": "aa26f80978c20a3baca7f64c00df2a37bc8f8288654ca46a2e7d8a0c8acc77ba",
+  "random_control_seed": 20260807,
+  "schema_version": "oli.phase4-donor-free-development-config/v1",
+  "universal_carry_artifact": "artifacts/phase4_phi_universal_carry.safetensors",
+  "universal_carry_artifact_sha256": "f4f7488e232b45c49567d02e7ea1bfffe85086542e94afc4ccee1e38cbd6bdd3"
+}

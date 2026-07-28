@@ -147,6 +147,13 @@ passing all original gates. The original selection remains a non-pass. A
 development runner may now use exactly that universal vector, index 13, and
 scale 1.0 without further tuning.
 
+The one-shot development package also fixes the donor-free operand writer at
+index 1 and scale 1.5. On all 45 unfiltered development quartets, the operand
+writer must reach at least 70% target tens accuracy and the carry writer at
+least 50%. Each must exceed its strongest fixed matched control by at least
+25 percentage points with a 100% parse rate. No development-driven retry,
+scale choice, rank choice, or filtering is authorized.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
