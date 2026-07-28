@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Select a token-local Phi operand digit reader on fresh prompts."""
+"""Select a token-local operand digit reader for a frozen causal LM."""
 
 from __future__ import annotations
 
@@ -165,6 +165,8 @@ def main() -> None:
         raise SystemExit("refusing to overwrite reader result or artifact")
 
     config = json.loads(args.config.read_text())
+    if "runner_sha256" in config:
+        verify_sha256(Path(__file__), config["runner_sha256"])
     dataset_path = Path(config["dataset_config"])
     verify_sha256(dataset_path, config["dataset_config_sha256"])
     dataset_config = json.loads(dataset_path.read_text())
@@ -312,7 +314,10 @@ def main() -> None:
     )
     artifact_hash = hashlib.sha256(args.artifact_output.read_bytes()).hexdigest()
     report = {
-        "schema_version": "oli.phase8-phi-operand-reader-selection/v1",
+        "schema_version": config.get(
+            "result_schema_version",
+            "oli.phase8-phi-operand-reader-selection/v1",
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "selection_only",
         "model": model_config,

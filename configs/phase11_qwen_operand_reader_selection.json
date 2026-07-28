@@ -1,0 +1,29 @@
+{
+  "base_model_batch_size": 8,
+  "candidate_hidden_state_indices": [
+    1,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28
+  ],
+  "dataset_config": "configs/phase11_qwen_hybrid_replication_dataset_frozen.json",
+  "dataset_config_sha256": "822f834210a31446c760904e4daef072359cdfcb78d2411abd8c84fa88620b7c",
+  "fit_examples_sha256": "818c8db6fe98a8fb44d01dc7980c0fed3f4ce0ee3546e3c7ce2b43028ab493a7",
+  "fit_token_contract_sha256": "46162392d001a746efd2d42fc911bba60b8886e3cf2688c1a9360ff2234c730d",
+  "result_schema_version": "oli.phase11-qwen-operand-reader-selection/v1",
+  "runner_sha256": "39f1f92e186c75fdbb01bab740b985e50ed59bef35768cdc3a09a3e424cd80b0",
+  "schema_version": "oli.phase11-qwen-operand-reader-selection-config/v1",
+  "selection_examples_sha256": "cbead14468b1088afabccded879e82a6b6681d6e0762304b6356fa3b9e7aa461",
+  "selection_rule": {
+    "maximum_rotated_pair_accuracy": 0.05,
+    "minimum_digit_accuracy": 0.995,
+    "minimum_operand_a_accuracy": 0.98,
+    "minimum_operand_b_accuracy": 0.98,
+    "minimum_pair_accuracy": 0.98
+  },
+  "selection_token_contract_sha256": "76e3355a8e182b2b0cfe55edac33f4e464ca92c7db92d8872664660caf285f3f"
+}
