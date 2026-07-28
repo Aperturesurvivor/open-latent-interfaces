@@ -227,11 +227,11 @@ def model_tensors(
 ) -> dict[str, torch.Tensor]:
     return {
         f"{prefix}_classes": torch.tensor(model.classes, dtype=torch.int64),
-        f"{prefix}_state_mean": model.state_mean,
-        f"{prefix}_state_basis": model.state_basis,
-        f"{prefix}_score_scale": model.score_scale,
-        f"{prefix}_delta_basis": model.delta_basis,
-        f"{prefix}_weights": model.weights,
+        f"{prefix}_state_mean": model.state_mean.contiguous(),
+        f"{prefix}_state_basis": model.state_basis.contiguous(),
+        f"{prefix}_score_scale": model.score_scale.contiguous(),
+        f"{prefix}_delta_basis": model.delta_basis.contiguous(),
+        f"{prefix}_weights": model.weights.contiguous(),
     }
 
 
