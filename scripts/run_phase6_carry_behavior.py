@@ -21,6 +21,10 @@ from open_latent_interfaces.phase6_data import (
     build_phase6_carry_quartets,
     phase6_carry_sha256,
 )
+from open_latent_interfaces.phase7_data import (
+    build_phase7_carry_quartets,
+    phase7_carry_sha256,
+)
 from open_latent_interfaces.prefill import (
     contextual_continuation_ids,
     render_prefilled_chat,
@@ -52,10 +56,19 @@ def main() -> None:
     dataset_config = json.loads(dataset_path.read_text())
     if dataset_config.get("audit_authorized", False):
         raise SystemExit("behavior development requires a sealed audit")
-    examples = build_phase6_carry_quartets(
-        **dataset_config["dataset"]["parameters"]
-    )
-    observed_hash = phase6_carry_sha256(examples)
+    dataset_phase = int(config.get("dataset_phase", 6))
+    if dataset_phase == 6:
+        examples = build_phase6_carry_quartets(
+            **dataset_config["dataset"]["parameters"]
+        )
+        observed_hash = phase6_carry_sha256(examples)
+    elif dataset_phase == 7:
+        examples = build_phase7_carry_quartets(
+            **dataset_config["dataset"]["parameters"]
+        )
+        observed_hash = phase7_carry_sha256(examples)
+    else:
+        raise SystemExit(f"unsupported carry dataset phase: {dataset_phase}")
     if observed_hash != dataset_config["dataset"]["sha256"]:
         raise SystemExit("Phase 6 dataset hash mismatch")
     splits = config["splits"]
@@ -184,7 +197,9 @@ def main() -> None:
             ),
         }
     report = {
-        "schema_version": "oli.phase6-qwen-conditional-carry-behavior/v1",
+        "schema_version": (
+            f"oli.phase{dataset_phase}-qwen-carry-behavior/v1"
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": model_config,

@@ -1,0 +1,24 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "historical_exclusion": {
+      "description": "Every canonical operand pair in Phase 4/5 and Phase 6 is excluded before splitting.",
+      "phase4_phase5_dataset_sha256": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574",
+      "phase6_dataset_sha256": "86fc17da6fa3856068a66adb0641ab63da9c82a2d9c53cb5c983ff20f27e8cd4"
+    },
+    "parameters": {
+      "audit_quartets_per_digit": 5,
+      "development_quartets_per_digit": 5,
+      "fit_quartets_per_digit": 20,
+      "seed": 20261001,
+      "selection_quartets_per_digit": 5
+    },
+    "sha256": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase7-qwen-target-state-dataset-config/v1"
+}

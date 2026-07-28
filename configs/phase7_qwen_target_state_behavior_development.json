@@ -1,0 +1,18 @@
+{
+  "dataset_config": "configs/phase7_qwen_target_state_dataset_frozen.json",
+  "dataset_phase": 7,
+  "gate": {
+    "minimum_complete_quartet_accuracy": 0.75,
+    "minimum_row_accuracy": 0.9
+  },
+  "generation": {
+    "batch_size": 8,
+    "max_input_tokens": 256
+  },
+  "schema_version": "oli.phase7-qwen-target-state-behavior-config/v1",
+  "splits": [
+    "fit",
+    "selection",
+    "development"
+  ]
+}
