@@ -1,0 +1,60 @@
+{
+  "claim_boundary": [
+    "This specification records instrumentation compatibility for the named frozen Phi revision.",
+    "Its linked hybrid-graft manifest and audit are independent evidence that discovery later succeeded.",
+    "A model-onboarding pass alone does not establish a reader, writer, reasoning channel, or deterministic graft."
+  ],
+  "compatibility": {
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_state_convention": true,
+    "single_token_decimal_digits": true
+  },
+  "evidence": {
+    "sources": {
+      "audit_result": {
+        "path": "results/phase9e_phi_hybrid_graft_audit.json",
+        "sha256": "d8a2ef793653814d04147050e0bdfaa7bccf7fefaeef066294861c50179ec8cf"
+      },
+      "hybrid_graft_manifest": {
+        "path": "manifests/phi35-mini-hybrid-arithmetic-graft-v1.json",
+        "sha256": "fdf3057403ba9e9f8dbfcf79afaa6e55ebd6afb91ddb212a4eb920679e7eb0f3"
+      }
+    },
+    "status": "audited_reference"
+  },
+  "model": {
+    "expected": {
+      "architectures": [
+        "Phi3ForCausalLM"
+      ],
+      "hidden_size": 3072,
+      "model_type": "phi3",
+      "num_hidden_layers": 32,
+      "vocab_size": 32064
+    },
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "name": "phi35-mini-audited-onboarding-reference",
+  "schema_version": "oli.model-onboarding/v1",
+  "task_contract": {
+    "assistant_prefix": "Answer=",
+    "probe": {
+      "operand_a": 137,
+      "operand_b": 248,
+      "target": 385,
+      "user_prompt": "Add 137 and 248. Respond with only Answer=<integer>."
+    },
+    "probe_results": [
+      100,
+      237,
+      580,
+      999
+    ],
+    "result_width": 3
+  }
+}

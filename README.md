@@ -480,6 +480,13 @@ This is a cross-family replication of the workflow, not vector portability:
 Phi and Qwen use different model-specific boundaries, tensor artifacts,
 compiler margins, and suffix ranks/scales.
 
+Phase 13 extracts the previously implicit model requirements into a typed,
+write-once onboarding preflight. It checks tokenizer offsets, chat-prefix and
+decimal-token contracts, decoder-block resolution, hidden-state indexing, and
+block-to-logit differentiability before any model-specific interface search.
+See the [model-onboarding guide](docs/MODEL_ONBOARDING.md) and
+[third-family protocol](protocols/PHASE13_MODEL_ONBOARDING_AND_THIRD_FAMILY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -609,6 +616,9 @@ either stage.
 - [Phase 11 Qwen nonpassing audit summary](PHASE11_QWEN_WORKFLOW_REPLICATION_SUMMARY.md)
 - [Phase 12 Qwen compiler-hardening protocol](protocols/PHASE12_QWEN_COMPILER_HARDENING.md)
 - [Phase 12 Qwen hybrid-graft audit summary](PHASE12_QWEN_HYBRID_GRAFT_AUDIT_SUMMARY.md)
+- [Phase 13 model-onboarding and third-family protocol](protocols/PHASE13_MODEL_ONBOARDING_AND_THIRD_FAMILY.md)
+- [Model-onboarding compatibility guide](docs/MODEL_ONBOARDING.md)
+- [Model-onboarding v1 schema](schemas/model-onboarding-v1.schema.json)
 - [Hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md)
 - [Operand-reader interface](docs/OPERAND_READER_INTERFACE.md)
 - [Audited Phi operand-reader manifest](manifests/phi35-mini-operand-reader-v1.json)

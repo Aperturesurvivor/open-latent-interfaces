@@ -16,6 +16,10 @@ from open_latent_interfaces.interpretability import (
     MethodProvenance,
     corroborate,
 )
+from open_latent_interfaces.model_onboarding import (
+    ModelOnboardingSpec,
+    candidate_hidden_state_indices,
+)
 from open_latent_interfaces.native_coordinates import (
     NativeCoordinateManifest,
     NativeCoordinateWriter,
@@ -46,6 +50,7 @@ __all__ = [
     "HybridGraftManifest",
     "LatentSite",
     "MethodProvenance",
+    "ModelOnboardingSpec",
     "NativeCoordinateManifest",
     "NativeCoordinateWriter",
     "NearestCentroidDigitReader",
@@ -54,6 +59,7 @@ __all__ = [
     "ScalarRidgeProbe",
     "TokenLocalTransportWriter",
     "corroborate",
+    "candidate_hidden_state_indices",
     "fit_digit_prototypes",
     "fit_nearest_centroid_digit_reader",
     "locate_operand_digit_tokens",

@@ -1,0 +1,60 @@
+{
+  "claim_boundary": [
+    "This specification records instrumentation compatibility for the named frozen Qwen revision.",
+    "Its linked hybrid-graft manifest and audit are independent evidence that discovery later succeeded.",
+    "A model-onboarding pass alone does not establish a reader, writer, reasoning channel, or deterministic graft."
+  ],
+  "compatibility": {
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_state_convention": true,
+    "single_token_decimal_digits": true
+  },
+  "evidence": {
+    "sources": {
+      "audit_result": {
+        "path": "results/phase12_qwen_hybrid_graft_audit.json",
+        "sha256": "9318e4e564a4e8f3cf37e00f0292d4f2c3ad11ec08e0446023cf483aec197ffc"
+      },
+      "hybrid_graft_manifest": {
+        "path": "manifests/qwen25-15b-hybrid-arithmetic-graft-v1.json",
+        "sha256": "80d410649a05837de06d4b49ce85d2ac1f39ae08662f092fa0918b16342f2a5f"
+      }
+    },
+    "status": "audited_reference"
+  },
+  "model": {
+    "expected": {
+      "architectures": [
+        "Qwen2ForCausalLM"
+      ],
+      "hidden_size": 1536,
+      "model_type": "qwen2",
+      "num_hidden_layers": 28,
+      "vocab_size": 151936
+    },
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "name": "qwen25-15b-audited-onboarding-reference",
+  "schema_version": "oli.model-onboarding/v1",
+  "task_contract": {
+    "assistant_prefix": "Answer=",
+    "probe": {
+      "operand_a": 137,
+      "operand_b": 248,
+      "target": 385,
+      "user_prompt": "Add 137 and 248. Respond with only Answer=<integer>."
+    },
+    "probe_results": [
+      100,
+      237,
+      580,
+      999
+    ],
+    "result_width": 3
+  }
+}

@@ -262,9 +262,8 @@ class ActivationCapture:
         return torch.cat(chunks, dim=0)
 
 
-def resolve_decoder_blocks(model: Any) -> Any:
-    """Find the repeated decoder block collection on common HF causal LMs."""
-
+def resolve_decoder_block_path(model: Any) -> tuple[tuple[str, ...], Any]:
+    """Return the attribute path and repeated decoder blocks for a causal LM."""
     candidates = (
         ("model", "layers"),
         ("model", "decoder", "layers"),
@@ -279,5 +278,11 @@ def resolve_decoder_blocks(model: Any) -> Any:
         except AttributeError:
             continue
         if hasattr(value, "__len__") and hasattr(value, "__getitem__"):
-            return value
+            return path, value
     raise TypeError("could not locate repeated decoder blocks on this model")
+
+
+def resolve_decoder_blocks(model: Any) -> Any:
+    """Find the repeated decoder block collection on common HF causal LMs."""
+    _, blocks = resolve_decoder_block_path(model)
+    return blocks
