@@ -430,6 +430,27 @@ occur only after a separate audit config binds this corpus, the passing
 development result, the unchanged sequential compiler engine, every selected
 component, all rendered/token-location hashes, and a one-run limit.
 
+## Sealed one-shot audit execution
+
+`configs/phase13_smollm2_compiler_graft_audit.json` is the only authorized
+Phase 13 audit config. Before any model evaluation, its preflight passed while
+verifying every frozen source and artifact, the passing development evidence,
+the unchanged three compiler specifications, the complete prior-data universe,
+and the exact audit prompts, operand locations, targets, and digit-token map.
+The preflight did not load the model and did not consume the audit.
+
+- audit config SHA-256:
+  `72ecc37ac889858c87c8db3a99e29d5235f37671dc842993aff2919d1fd80b8f`
+- audit runner SHA-256:
+  `fc764ce2c9683f6519b104efd1a4f0e5a751c94e75bd6daea02152c067c574a2`
+- maximum audit runs: 1
+- only permitted output:
+  `results/phase13_smollm2_compiler_graft_audit.json`
+
+The audit must preserve its first result whether it passes or does not pass.
+No threshold, component, intervention setting, dataset row, or control seed
+may be changed after the audit result is observed.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
