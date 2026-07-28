@@ -1,0 +1,13 @@
+{
+  "audit_authorized": false,
+  "batch_size": 8,
+  "fit_examples": 60,
+  "hidden_state_index": 23,
+  "ranks": [1, 2, 4, 8],
+  "random_seed": 20260804,
+  "scales": [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 32.0],
+  "schema_version": "oli.phase1-typed-digit-writer-config/v1",
+  "selection_examples": 30,
+  "stepwise_result": "results/phase1_stepwise_donor_write_development.json",
+  "stepwise_result_sha256": "f9a232bd60d1435c9ae386e472334e33643528fddf2e6c26fb0719eefe982346"
+}
