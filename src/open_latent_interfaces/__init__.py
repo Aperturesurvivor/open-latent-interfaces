@@ -1,6 +1,10 @@
 """Tools for discovering and intervening on native latent interfaces."""
 
 from open_latent_interfaces.activations import ActivationCapture, CapturedLayer
+from open_latent_interfaces.arithmetic_coordinates import (
+    ArithmeticCoordinateManifest,
+    TokenLocalTransportWriter,
+)
 from open_latent_interfaces.interpretability import (
     InterpretabilityArtifact,
     LatentSite,
@@ -20,6 +24,7 @@ from open_latent_interfaces.probes import (
 
 __all__ = [
     "ActivationCapture",
+    "ArithmeticCoordinateManifest",
     "BinaryRidgeProbe",
     "CategoricalRidgeProbe",
     "CapturedLayer",
@@ -29,6 +34,7 @@ __all__ = [
     "NativeCoordinateManifest",
     "NativeCoordinateWriter",
     "ScalarRidgeProbe",
+    "TokenLocalTransportWriter",
     "corroborate",
     "fit_digit_prototypes",
 ]

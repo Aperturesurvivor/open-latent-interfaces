@@ -1,0 +1,76 @@
+{
+  "claim_boundary": [
+    "Validated only on microsoft/Phi-3.5-mini-instruct at the named revision.",
+    "Validated on the frozen matched three-digit addition distribution with source ones digits 1 through 4.",
+    "Token selectors are semantic contracts; callers must resolve and verify the operand digit positions for their prompt renderer.",
+    "The interfaces causally write operand-update and carry-linked states but do not expose a natural-language thought transcript.",
+    "Cross-model use requires a new discovery, development, and sealed-audit workflow."
+  ],
+  "evidence": {
+    "audit_config": {
+      "path": "configs/phase4_phi_donor_free_audit.json",
+      "sha256": "c7856a84020b2390e70874364aa3847abc0930d77b032aba4f4c0f4da757c8c6"
+    },
+    "audit_gate_passed": true,
+    "audit_result": {
+      "path": "results/phase4_phi_donor_free_audit.json",
+      "sha256": "c66f97b794e2be62fc5b3cbe46a2ca6e08ddc4593ca80aebfe709456d8d9efc9"
+    },
+    "audit_runs": 1,
+    "development_correction": {
+      "path": "results/phase4_phi_development_metric_correction.json",
+      "sha256": "8fd2b91d89fcb266ba20e7edd50a1e9c671be26c0b3ae88564c9ca1947e12555"
+    }
+  },
+  "interfaces": {
+    "carry_on": {
+      "coordinate_rank": 1,
+      "hidden_state_index": 13,
+      "scale": 1.0,
+      "semantics": "write the class-invariant transition associated with an ones-column sum changing from 9 to 10",
+      "token_selector": {
+        "operand_index": 1,
+        "place": "ones",
+        "type": "operand_decimal_digit"
+      },
+      "vectors": {
+        "key": "carry_context_delta",
+        "path": "artifacts/phase4_phi_arithmetic_coordinates_v1.safetensors",
+        "sha256": "9479f3652d6b250a8ff6ae375edfe87c801c8c899dd8c962c204acdb13eb79c4",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase4-phi-arithmetic-coordinate-audit-v1/phase4_phi_arithmetic_coordinates_v1.safetensors"
+      }
+    },
+    "operand_increment": {
+      "class_labels": {
+        "key": "source_digits",
+        "path": "artifacts/phase4_phi_arithmetic_coordinates_v1.safetensors",
+        "sha256": "9479f3652d6b250a8ff6ae375edfe87c801c8c899dd8c962c204acdb13eb79c4",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase4-phi-arithmetic-coordinate-audit-v1/phase4_phi_arithmetic_coordinates_v1.safetensors"
+      },
+      "coordinate_rank": 4,
+      "hidden_state_index": 1,
+      "scale": 1.5,
+      "semantics": "increment the represented first-operand ones digit by one, conditioned on source digit 1 through 4",
+      "token_selector": {
+        "operand_index": 0,
+        "place": "ones",
+        "type": "operand_decimal_digit"
+      },
+      "vectors": {
+        "key": "operand_delta",
+        "path": "artifacts/phase4_phi_arithmetic_coordinates_v1.safetensors",
+        "sha256": "9479f3652d6b250a8ff6ae375edfe87c801c8c899dd8c962c204acdb13eb79c4",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase4-phi-arithmetic-coordinate-audit-v1/phase4_phi_arithmetic_coordinates_v1.safetensors"
+      }
+    }
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "name": "phi35-mini-arithmetic-coordinates-v1",
+  "representation": {
+    "residual_width": 3072
+  },
+  "schema_version": "oli.arithmetic-coordinate-interface/v1"
+}

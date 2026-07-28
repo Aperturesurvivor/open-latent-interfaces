@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-latent-interfaces.org/schemas/arithmetic-coordinate-interface-v1.schema.json",
+  "title": "Open Latent Interfaces Arithmetic Coordinate Interface v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "model",
+    "representation",
+    "interfaces",
+    "evidence",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "oli.arithmetic-coordinate-interface/v1"},
+    "name": {"type": "string", "minLength": 1},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "revision"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1}
+      }
+    },
+    "representation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["residual_width"],
+      "properties": {
+        "residual_width": {"type": "integer", "minimum": 1}
+      }
+    },
+    "interfaces": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/interface"}
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "development_correction",
+        "audit_config",
+        "audit_result",
+        "audit_gate_passed",
+        "audit_runs"
+      ],
+      "properties": {
+        "development_correction": {"$ref": "#/$defs/fileArtifact"},
+        "audit_config": {"$ref": "#/$defs/fileArtifact"},
+        "audit_result": {"$ref": "#/$defs/fileArtifact"},
+        "audit_gate_passed": {"const": true},
+        "audit_runs": {"const": 1}
+      }
+    },
+    "claim_boundary": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "fileArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "tensorArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "key"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "key": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri"}
+      }
+    },
+    "tokenSelector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "operand_index", "place"],
+      "properties": {
+        "type": {"const": "operand_decimal_digit"},
+        "operand_index": {"type": "integer", "minimum": 0},
+        "place": {"enum": ["ones", "tens", "hundreds"]}
+      }
+    },
+    "interface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hidden_state_index",
+        "scale",
+        "coordinate_rank",
+        "semantics",
+        "token_selector",
+        "vectors"
+      ],
+      "properties": {
+        "hidden_state_index": {"type": "integer", "minimum": 1},
+        "scale": {"type": "number", "exclusiveMinimum": 0},
+        "coordinate_rank": {"type": "integer", "minimum": 1},
+        "semantics": {"type": "string", "minLength": 1},
+        "token_selector": {"$ref": "#/$defs/tokenSelector"},
+        "vectors": {"$ref": "#/$defs/tensorArtifact"},
+        "class_labels": {"$ref": "#/$defs/tensorArtifact"}
+      }
+    }
+  }
+}

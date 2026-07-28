@@ -29,6 +29,7 @@ dev = [
 oli-phase0 = "open_latent_interfaces.phase0:main"
 oli-phase01 = "open_latent_interfaces.phase01:main"
 oli-native-interface = "open_latent_interfaces.native_coordinates:main"
+oli-arithmetic-interface = "open_latent_interfaces.arithmetic_coordinates:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/open_latent_interfaces"]

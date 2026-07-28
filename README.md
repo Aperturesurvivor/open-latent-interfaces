@@ -368,6 +368,13 @@ matched no-carry and 2/45 random. Every output parsed, and a repeat audit
 invocation was refused. See the
 [Phase 4 donor-free audit summary](PHASE4_DONOR_FREE_AUDIT_SUMMARY.md).
 
+Those audited coordinates are now packaged behind a typed manifest and Python
+API. The 74 KB artifact contains four source-digit operand vectors and one
+universal rank-one carry vector, with model revision, semantic token selectors,
+scales, and evidence hashes declared separately. See the
+[arithmetic-coordinate interface](docs/ARITHMETIC_COORDINATE_INTERFACE.md) and
+[audited manifest](manifests/phi35-mini-arithmetic-coordinates-v1.json).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -471,6 +478,9 @@ either stage.
 - [Phase 4 donor-free development summary](PHASE4_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
 - [Phase 4 donor-free audit summary](PHASE4_DONOR_FREE_AUDIT_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
+- [Arithmetic-coordinate interface and deterministic graft](docs/ARITHMETIC_COORDINATE_INTERFACE.md)
+- [Audited Phi arithmetic-coordinate manifest](manifests/phi35-mini-arithmetic-coordinates-v1.json)
+- [Arithmetic-coordinate interface schema](schemas/arithmetic-coordinate-interface-v1.schema.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
