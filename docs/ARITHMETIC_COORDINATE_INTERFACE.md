@@ -3,7 +3,7 @@
 ## Purpose
 
 This interface packages audited internal arithmetic-state transports rather
-than answer-token writers. It currently exposes:
+than answer-token writers. The Phi package exposes:
 
 1. a class-conditioned edit of the first operand's ones digit;
 2. a class-invariant rank-one carry transition at the second operand's
@@ -11,6 +11,11 @@ than answer-token writers. It currently exposes:
 
 Both are additive residual transports fitted without changing model weights.
 Inference requires no donor activation.
+
+The independent Qwen package exposes only the first operand's ones-digit
+increment. Qwen's operand coordinate passed audit, while every tested Qwen
+carry writer failed its frozen specificity gate; the failed coordinate is
+deliberately absent from the package.
 
 ## Runtime API
 
@@ -98,6 +103,14 @@ The package is 74,448 bytes and contains five tensors. Its SHA-256 is
 `9479f3652d6b250a8ff6ae375edfe87c801c8c899dd8c962c204acdb13eb79c4`.
 It is published in the
 [`phase4-phi-arithmetic-coordinate-audit-v1` release](https://github.com/Aperturesurvivor/open-latent-interfaces/releases/tag/phase4-phi-arithmetic-coordinate-audit-v1).
+
+The independently audited Qwen operand writer reached 43/45 exact answers,
+versus 0/45 for the norm-matched wrong-class control and 0/45 for random. Its
+25,216-byte package contains only source labels, fit counts, and the four
+operand vectors. Its SHA-256 is
+`adaeb2d34cb7694d9ab08bb971173730addd056eac0fe0bb69d8e1f6e28a58a2`.
+The Qwen manifest explicitly records that the carry audit failed and makes no
+carry interface available.
 
 ## Workflow portability
 

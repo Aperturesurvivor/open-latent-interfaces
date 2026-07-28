@@ -422,6 +422,14 @@ tens versus 21/45 matched no-carry, a 22.22-point margin below the fixed
 25-point gate. The audit cannot be reused for tuning. See the
 [Phase 5 Qwen audit summary](PHASE5_QWEN_DONOR_FREE_AUDIT_SUMMARY.md).
 
+The independently passing Qwen operand coordinate is packaged on its own.
+Fresh pair-disjoint recovery work then rejected two further Qwen carry
+hypotheses: recipient-conditioned full transport failed selection specificity,
+and a matched difference-in-differences carry interaction failed one-shot
+development. Carry audit remained sealed. See the
+[Phase 6 conditional-carry summary](PHASE6_QWEN_CONDITIONAL_CARRY_SELECTION_SUMMARY.md)
+and [Phase 6B interaction summary](PHASE6B_QWEN_CARRY_INTERACTION_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -536,6 +544,11 @@ either stage.
 - [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md)
 - [Phase 5 Qwen donor-free development summary](PHASE5_QWEN_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
 - [Phase 5 Qwen donor-free audit summary](PHASE5_QWEN_DONOR_FREE_AUDIT_SUMMARY.md)
+- [Phase 6 Qwen conditional-carry protocol](protocols/PHASE6_QWEN_CONDITIONAL_CARRY.md)
+- [Phase 6 Qwen conditional-carry selection summary](PHASE6_QWEN_CONDITIONAL_CARRY_SELECTION_SUMMARY.md)
+- [Phase 6B Qwen carry-interaction protocol](protocols/PHASE6B_QWEN_CARRY_INTERACTION.md)
+- [Phase 6B Qwen carry-interaction summary](PHASE6B_QWEN_CARRY_INTERACTION_SUMMARY.md)
+- [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)

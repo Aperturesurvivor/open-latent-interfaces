@@ -48,3 +48,19 @@ def test_audited_arithmetic_manifest_and_writers() -> None:
         3072,
         1.0,
     )
+
+
+def test_independently_audited_qwen_operand_manifest() -> None:
+    root = Path(__file__).parents[1]
+    manifest = ArithmeticCoordinateManifest.load(
+        root / "manifests/qwen25-15b-operand-coordinate-v1.json"
+    )
+    manifest.verify(root)
+    assert manifest.model_id == "Qwen/Qwen2.5-1.5B-Instruct"
+    assert set(manifest.interfaces) == {"operand_increment"}
+    operand = manifest.load_writer("operand_increment", root=root)
+    assert (operand.coordinate_count, operand.residual_width, operand.scale) == (
+        4,
+        1536,
+        1.0,
+    )

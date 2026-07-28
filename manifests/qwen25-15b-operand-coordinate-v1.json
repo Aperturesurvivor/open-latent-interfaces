@@ -1,0 +1,60 @@
+{
+  "claim_boundary": [
+    "Validated only on Qwen/Qwen2.5-1.5B-Instruct at the named revision.",
+    "Validated on the frozen matched three-digit addition distribution with source ones digits 1 through 4.",
+    "The sealed audit passed this operand interface independently while the Qwen carry interface failed; no carry tensor is included or claimed.",
+    "The token selector is a semantic contract; callers must resolve and verify the first operand ones digit for their prompt renderer.",
+    "The interface causally writes an operand-update state and does not expose a natural-language thought transcript.",
+    "Cross-model use requires a new discovery, development, and sealed-audit workflow."
+  ],
+  "evidence": {
+    "audit_config": {
+      "path": "configs/phase5_qwen_donor_free_audit.json",
+      "sha256": "9d9b1e38e4b34dd4c5bff39d7bbcc041ed11e329a860d69f1a4f4222d9e08c6f"
+    },
+    "audit_gate_passed": true,
+    "audit_result": {
+      "path": "results/phase5_qwen_donor_free_audit.json",
+      "sha256": "a80d84b8e128be2e17723750010612b0126db36c872fe8bdd33c47f19ff15fa4"
+    },
+    "audit_runs": 1,
+    "development_correction": {
+      "path": "results/phase5_qwen_donor_free_development.json",
+      "sha256": "e32603a8e0436a674c5d7a800a10ae92b254f0388b55e8f25b709e7cafba856a"
+    }
+  },
+  "interfaces": {
+    "operand_increment": {
+      "class_labels": {
+        "key": "source_digits",
+        "path": "artifacts/phase5_qwen_operand_coordinate_v1.safetensors",
+        "sha256": "adaeb2d34cb7694d9ab08bb971173730addd056eac0fe0bb69d8e1f6e28a58a2",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase5-qwen-operand-coordinate-audit-v1/phase5_qwen_operand_coordinate_v1.safetensors"
+      },
+      "coordinate_rank": 4,
+      "hidden_state_index": 12,
+      "scale": 1.0,
+      "semantics": "increment the represented first-operand ones digit by one, conditioned on source digit 1 through 4",
+      "token_selector": {
+        "operand_index": 0,
+        "place": "ones",
+        "type": "operand_decimal_digit"
+      },
+      "vectors": {
+        "key": "operand_delta",
+        "path": "artifacts/phase5_qwen_operand_coordinate_v1.safetensors",
+        "sha256": "adaeb2d34cb7694d9ab08bb971173730addd056eac0fe0bb69d8e1f6e28a58a2",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase5-qwen-operand-coordinate-audit-v1/phase5_qwen_operand_coordinate_v1.safetensors"
+      }
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "name": "qwen25-15b-operand-coordinate-v1",
+  "representation": {
+    "residual_width": 1536
+  },
+  "schema_version": "oli.arithmetic-coordinate-interface/v1"
+}
