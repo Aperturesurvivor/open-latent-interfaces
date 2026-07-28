@@ -1,0 +1,46 @@
+{
+  "audit_pairs_per_digit": 4,
+  "audit_policy": "one run; no audit-driven layer, strength, or bridge changes",
+  "batch_size": 16,
+  "dataset_sha256": "d5c64b07045b32637a4b58bb4314e2f4f8b6c3634fde71b71b9e0ee2edc6fb4d",
+  "development_pairs_per_digit": 4,
+  "digit_margin": 1.0,
+  "fit_policy_for_audit": "refit probes on train plus development",
+  "hidden_state_indices_developed": [
+    5,
+    10,
+    14,
+    19,
+    24
+  ],
+  "max_relative_norm": 0.15,
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "probe_l2": 10.0,
+  "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "seed": 240801,
+  "selected_hidden_state_index": 10,
+  "selected_strength": 4.0,
+  "selection_max_layer_fraction": 0.8,
+  "selection_score": [
+    0.040364623069763184,
+    0.0,
+    -0.9520886540412903
+  ],
+  "source_environment": {
+    "created_at": "2026-07-28T06:37:45.431673+00:00",
+    "cuda_available": false,
+    "git_commit": "9da83cfec3504610948b8c7af426e023b55842c5",
+    "mps_available": true,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "split_sha256": {
+    "audit": "d8560d55c24fe2486ddcee225e1c32c4a841aa5f264f4317a4297e720baa384e",
+    "development": "b9d576ee2c71a5fb3407a3cff8927b828d83e432e07ed3928e82226a0e0517dc",
+    "train": "da8bea8a5bda2d5c53df6d3a345d0915980ffb9b916693d622b3bdc667a50cd4"
+  },
+  "stage": "frozen_configuration",
+  "study": "phase01-native-math-cartography",
+  "train_pairs_per_digit": 12
+}
