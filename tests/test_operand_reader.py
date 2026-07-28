@@ -55,3 +55,17 @@ def test_audited_phi_operand_reader_manifest() -> None:
     assert manifest.hidden_state_index == 1
     assert reader.classes.tolist() == list(range(10))
     assert reader.centroids.shape == (10, 3072)
+
+
+def test_audited_qwen_operand_reader_manifest() -> None:
+    root = Path(__file__).parents[1]
+    manifest = OperandReaderManifest.load(
+        root / "manifests/qwen25-15b-operand-reader-v1.json"
+    )
+    manifest.verify(root)
+    reader = manifest.load_reader(root)
+    assert manifest.schema_version == "oli.operand-reader-interface/v2"
+    assert manifest.model_id == "Qwen/Qwen2.5-1.5B-Instruct"
+    assert manifest.hidden_state_index == 1
+    assert reader.classes.tolist() == list(range(10))
+    assert reader.centroids.shape == (10, 1536)

@@ -174,7 +174,11 @@ class OperandReaderManifest:
 
     @classmethod
     def from_dict(cls, value: dict[str, Any]) -> OperandReaderManifest:
-        if value.get("schema_version") != "oli.operand-reader-interface/v1":
+        supported = {
+            "oli.operand-reader-interface/v1",
+            "oli.operand-reader-interface/v2",
+        }
+        if value.get("schema_version") not in supported:
             raise ValueError("unsupported operand-reader manifest schema")
         model = value["model"]
         representation = value["representation"]
@@ -233,26 +237,75 @@ class OperandReaderManifest:
             raise ValueError("manifest must record a passing reader audit")
         if self.evidence.get("audit_runs") != 1:
             raise ValueError("manifest must record exactly one audit run")
-        for name in (
-            "selection_config",
-            "selection_result",
-            "development_result",
-            "development_metric_correction",
-            "audit_config",
-            "audit_result",
-        ):
-            reference = self.evidence.get(name)
+        if self.schema_version == "oli.operand-reader-interface/v1":
+            evidence_sources = self.evidence
+            required_sources = {
+                "selection_config",
+                "selection_result",
+                "development_result",
+                "development_metric_correction",
+                "audit_config",
+                "audit_result",
+            }
+        else:
+            evidence_sources = self.evidence.get("sources")
+            if not isinstance(evidence_sources, dict):
+                raise ValueError("v2 reader evidence must contain sources")
+            required_sources = {
+                "selection_config",
+                "selection_result",
+                "audit_config",
+                "audit_result",
+            }
+        if not required_sources <= set(evidence_sources):
+            missing = sorted(required_sources - set(evidence_sources))
+            raise ValueError(f"missing evidence reference: {missing[0]}")
+        source_names = (
+            required_sources
+            if self.schema_version == "oli.operand-reader-interface/v1"
+            else set(evidence_sources)
+        )
+        for name in source_names:
+            reference = evidence_sources[name]
             if not isinstance(reference, dict):
-                raise ValueError(f"missing evidence reference: {name}")
+                raise ValueError(f"invalid evidence reference: {name}")
             path = root / str(reference["path"])
             if not path.is_file():
                 raise FileNotFoundError(path)
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
             if digest != str(reference["sha256"]):
                 raise ValueError(f"evidence hash mismatch: {name}")
-        audit = json.loads(
-            (root / self.evidence["audit_result"]["path"]).read_text()
+        selection = json.loads(
+            (root / evidence_sources["selection_result"]["path"]).read_text()
         )
+        if selection.get("passes") is not True:
+            raise ValueError("reader selection result did not pass")
+        expected_model = {
+            "id": self.model_id,
+            "revision": self.model_revision,
+        }
+        if self.schema_version == "oli.operand-reader-interface/v2":
+            if selection.get("model") != expected_model:
+                raise ValueError("reader selection/model mismatch")
+            if int(selection["selection"]["hidden_state_index"]) != (
+                self.hidden_state_index
+            ):
+                raise ValueError("reader selection boundary mismatch")
+        audit = json.loads(
+            (root / evidence_sources["audit_result"]["path"]).read_text()
+        )
+        if (
+            self.schema_version == "oli.operand-reader-interface/v2"
+            and audit.get("audit_runs") != 1
+        ):
+            raise ValueError("reader evidence is not a one-shot audit")
+        if self.schema_version == "oli.operand-reader-interface/v2":
+            if audit.get("model") != expected_model:
+                raise ValueError("reader audit/model mismatch")
+            if int(audit["reader"]["hidden_state_index"]) != (
+                self.hidden_state_index
+            ):
+                raise ValueError("reader audit boundary mismatch")
         observed_pair_accuracy = audit["reader"]["metrics"]["pair_accuracy"]
         if observed_pair_accuracy < float(
             self.evidence["minimum_audit_pair_accuracy"]

@@ -463,6 +463,23 @@ random updates. See the
 [hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md), and
 [audited manifest](manifests/phi35-mini-hybrid-arithmetic-graft-v1.json).
 
+Phase 11 then repeated the workflow from scratch on
+Qwen2.5-1.5B-Instruct. Its first one-shot audit produced 90/90 true-task
+answers but correctly remained a nonpass because arbitrary shuffled-target
+following reached only 70/90. Phase 12 prospectively selected a more convergent
+three-step leading compiler on entirely new selection data, passed a separate
+90-example development gate, and then passed its single fresh audit: 90/90
+reader and deterministic-compute accuracy, 90/90 final answers, all 31 base
+errors repaired, all 59 base-correct answers preserved, and 85/90 arbitrary
+shuffled targets followed versus 1/90 for a norm-matched random control. See
+the [Phase 12 protocol](protocols/PHASE12_QWEN_COMPILER_HARDENING.md),
+[Qwen hybrid-graft manifest](manifests/qwen25-15b-hybrid-arithmetic-graft-v1.json),
+and [cross-model interface documentation](docs/HYBRID_GRAFT_INTERFACE.md).
+
+This is a cross-family replication of the workflow, not vector portability:
+Phi and Qwen use different model-specific boundaries, tensor artifacts,
+compiler margins, and suffix ranks/scales.
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -588,11 +605,19 @@ either stage.
 - [Phase 9E fresh audit dataset](protocols/PHASE9E_PHI_FRESH_AUDIT_DATASET.md)
 - [Phase 9E one-shot hybrid-graft audit](protocols/PHASE9E_PHI_ONE_SHOT_HYBRID_GRAFT_AUDIT.md)
 - [Phase 9E hybrid-graft audit summary](PHASE9E_PHI_HYBRID_GRAFT_AUDIT_SUMMARY.md)
+- [Phase 11 Qwen workflow-replication protocol](protocols/PHASE11_QWEN_WORKFLOW_REPLICATION.md)
+- [Phase 11 Qwen nonpassing audit summary](PHASE11_QWEN_WORKFLOW_REPLICATION_SUMMARY.md)
+- [Phase 12 Qwen compiler-hardening protocol](protocols/PHASE12_QWEN_COMPILER_HARDENING.md)
+- [Phase 12 Qwen hybrid-graft audit summary](PHASE12_QWEN_HYBRID_GRAFT_AUDIT_SUMMARY.md)
 - [Hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md)
 - [Operand-reader interface](docs/OPERAND_READER_INTERFACE.md)
 - [Audited Phi operand-reader manifest](manifests/phi35-mini-operand-reader-v1.json)
+- [Audited Qwen operand-reader manifest](manifests/qwen25-15b-operand-reader-v1.json)
+- [Audited Qwen hybrid-graft manifest](manifests/qwen25-15b-hybrid-arithmetic-graft-v1.json)
 - [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
+- [Operand-reader interface v2 schema](schemas/operand-reader-interface-v2.schema.json)
+- [Hybrid-graft interface v2 schema](schemas/hybrid-graft-interface-v2.schema.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)

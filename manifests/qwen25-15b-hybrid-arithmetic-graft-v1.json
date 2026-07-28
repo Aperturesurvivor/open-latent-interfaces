@@ -1,0 +1,136 @@
+{
+  "claim_boundary": [
+    "Validated only on Qwen/Qwen2.5-1.5B-Instruct at the named revision.",
+    "Validated for two-operand, three-digit integer addition under the frozen Answer= output contract.",
+    "An external semantic locator supplies operand token spans.",
+    "The deterministic host adder is externally invoked; the model is not claimed to call it naturally.",
+    "The leading writer is target-conditioned and output-side, not a universal semantic math direction.",
+    "The suffix positions use distinct frozen scales and prototype artifacts bound to one shared Qwen basis.",
+    "Independent Phi and Qwen audits replicate the workflow across two model families; no tensor or parameter portability is claimed.",
+    "The interface does not decode natural-language chain of thought or establish a general deterministic reasoning implant."
+  ],
+  "deterministic_mechanism": {
+    "input_contract": [
+      "decoded_operand_a",
+      "decoded_operand_b"
+    ],
+    "operation": "a + b",
+    "output_contract": "integer in [100, 999]",
+    "type": "host_integer_addition"
+  },
+  "evidence": {
+    "audit_runs": 1,
+    "minimum_audit_exact_accuracy": 0.95,
+    "minimum_audit_reader_pair_accuracy": 0.98,
+    "minimum_shuffled_target_accuracy": 0.9,
+    "minimum_shuffled_target_advantage_over_random": 0.7,
+    "sources": {
+      "audit_config": {
+        "path": "configs/phase12_qwen_hybrid_graft_audit.json",
+        "sha256": "d3e95c5a67867d14eaf7e2926914af33fabe837d06e5509b543dd51d0983765a"
+      },
+      "audit_result": {
+        "path": "results/phase12_qwen_hybrid_graft_audit.json",
+        "sha256": "9318e4e564a4e8f3cf37e00f0292d4f2c3ad11ec08e0446023cf483aec197ffc"
+      },
+      "compiler_selection_result": {
+        "path": "results/phase12_qwen_compiler_robustness_selection.json",
+        "sha256": "0726da399a0b17ba50daed6c2d80b196d2a40882a445b9f6fdca287bb1e9b7f0"
+      },
+      "dataset_config": {
+        "path": "configs/phase12_qwen_hybrid_graft_audit_dataset_frozen.json",
+        "sha256": "e11c952b07fbacabef06ca452192954b7ca508f2e59531eea618eccf7882c0b6"
+      },
+      "development_config": {
+        "path": "configs/phase12_qwen_hybrid_graft_development.json",
+        "sha256": "590ee53213df2365619682cf58f784f5e771570bce3476ad3e60c8ca4e8f9086"
+      },
+      "development_result": {
+        "path": "results/phase12_qwen_hybrid_graft_development.json",
+        "sha256": "55b20af26f71368e33ec97b21688088c9fe28050e4e871f9a731de254ee40c16"
+      }
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "name": "qwen25-15b-hybrid-arithmetic-graft-v1",
+  "prompt_contract": {
+    "assistant_prefix": "Answer=",
+    "locator": "external_semantic_operand_spans",
+    "output": "exactly three decimal digit tokens"
+  },
+  "reader": {
+    "hidden_state_index": 1,
+    "manifest": {
+      "path": "manifests/qwen25-15b-operand-reader-v1.json",
+      "sha256": "a976e99da2122235fbbc88cbed0e15ffe7178a44501410ce76bb5d900ddd8f71"
+    }
+  },
+  "representation": {
+    "residual_width": 1536
+  },
+  "schema_version": "oli.hybrid-graft-interface/v2",
+  "writer": {
+    "leading": {
+      "candidate_token_ids": {
+        "0": 15,
+        "1": 16,
+        "2": 17,
+        "3": 18,
+        "4": 19,
+        "5": 20,
+        "6": 21,
+        "7": 22,
+        "8": 23,
+        "9": 24
+      },
+      "desired_margin": 16.0,
+      "hidden_state_index": 23,
+      "implementation": {
+        "path": "src/open_latent_interfaces/causal_compiler.py",
+        "sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d"
+      },
+      "iterations": 3,
+      "kind": "iterative_local_margin_compiler",
+      "norm_cap": 0.25,
+      "success_gate": "exact zero additional update when requested token is full-vocabulary top-1"
+    },
+    "suffix": {
+      "basis": {
+        "key": "delta_basis",
+        "path": "artifacts/phase2_tens_delta_basis.safetensors",
+        "sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase12-qwen-hybrid-graft-audit-v1/phase2_tens_delta_basis.safetensors"
+      },
+      "hidden_state_index": 27,
+      "kind": "native_coordinate_prototypes",
+      "norm_cap": 1.0,
+      "positions": {
+        "1": {
+          "norm_cap": 1.0,
+          "prototypes": {
+            "key": "digit",
+            "path": "artifacts/phase2_tens_prototypes.safetensors",
+            "sha256": "42b97d49573333e7817aa3464a4a916c5e26bca3bae675c5b2aaccca71a85f10",
+            "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase12-qwen-hybrid-graft-audit-v1/phase2_tens_prototypes.safetensors"
+          },
+          "rank": 16,
+          "scale": 1.25
+        },
+        "2": {
+          "norm_cap": 1.0,
+          "prototypes": {
+            "key": "digit",
+            "path": "artifacts/phase2_ones_prototypes.safetensors",
+            "sha256": "16064fd1e125e20ef4226b4648cb53e314ab3ee207fd84ee9850662025220db7",
+            "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase12-qwen-hybrid-graft-audit-v1/phase2_ones_prototypes.safetensors"
+          },
+          "rank": 16,
+          "scale": 2.0
+        }
+      }
+    }
+  }
+}
