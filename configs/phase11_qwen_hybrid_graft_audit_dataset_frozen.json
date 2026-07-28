@@ -1,0 +1,25 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "canonical_pairs_sha256": "7251fe858ca49071acfb194db0d33492d6e10c1e4cbd099ccfd9fd732925e8b7",
+    "generator": "src/open_latent_interfaces/phase11_audit_data.py",
+    "parameters": {
+      "seed": 20261305
+    },
+    "prior_dataset_hashes": {
+      "phase3": "5a8783160f8add9bf551a8de3207b1b5a5c9ac763638250d00cd6de1807bf941",
+      "phase4": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574",
+      "phase6": "86fc17da6fa3856068a66adb0641ab63da9c82a2d9c53cb5c983ff20f27e8cd4",
+      "phase7": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a",
+      "phase9e": "8f598a3a1891aae5bd3f4c12cb8ad4b3c08347fffc4dfc3969986f6a6ae54c0e"
+    },
+    "sha256": "7c94ed2b91eabf3686f4211f7db5781b97a3641e083fe839c02f1180a2eb4c39",
+    "template_sha256": "81a9587ee2cb91715b6a713fe100e1a7df244701ef7b9a6fe3887cf2d929e917"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase11-qwen-hybrid-graft-audit-dataset/v1"
+}

@@ -247,3 +247,32 @@ The measurement-only correction passed:
 
 This authorizes construction of a fresh Qwen audit boundary. It does not itself
 constitute audit evidence or a cross-model replication claim.
+
+## Frozen one-shot audit
+
+The Qwen audit is frozen in:
+
+- dataset:
+  `configs/phase11_qwen_hybrid_graft_audit_dataset_frozen.json`
+- runner: `scripts/run_phase11_qwen_hybrid_graft_audit.py`
+- authorization: `configs/phase11_qwen_hybrid_graft_audit.json`
+- sole output: `results/phase11_qwen_hybrid_graft_audit.json`
+
+The audit contains 90 examples with:
+
+- zero canonical-pair overlap with Phases 3, 4, 6, 7, and the Phi Phase 9E
+  audit;
+- three prompt templates absent from all prior audit templates;
+- 10 examples for each leading digit;
+- 9 examples for every tens and ones digit;
+- 45 carry and 45 non-carry examples.
+
+The configuration authorizes exactly one run and locks the model revision,
+reader, compiler, suffix manifest, suffix tensors, all source hashes, rendered
+prompts, operand-token positions, token contract, controls, and thresholds.
+The audit requires at least 95% latent/oracle exact and per-position accuracy,
+98% reader and deterministic-compute accuracy, 98% preservation, 80% recovery,
+50-point recovery advantages over both random and wrong-target controls, and a
+70-point semantic shuffled-target advantage over matched noise.
+
+No audit result exists at the time this boundary is frozen.
