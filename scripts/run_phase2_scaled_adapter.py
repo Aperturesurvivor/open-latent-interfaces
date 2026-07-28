@@ -456,10 +456,15 @@ def save_adapters(
             "delta_basis",
             "coefficient_scale",
         ):
-            tensors[f"step{step}.projection.{name}"] = getattr(projection, name)
+            tensors[f"step{step}.projection.{name}"] = getattr(
+                projection,
+                name,
+            ).contiguous()
         for member_index, member in enumerate(ensemble.members):
             for name, tensor in member.model.state_dict().items():
-                tensors[f"step{step}.member{member_index}.model.{name}"] = tensor
+                tensors[
+                    f"step{step}.member{member_index}.model.{name}"
+                ] = tensor.contiguous()
     path.parent.mkdir(parents=True, exist_ok=True)
     save_file(tensors, str(path))
     return hashlib.sha256(path.read_bytes()).hexdigest()
