@@ -1,0 +1,26 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase5_qwen_carry_behavior_development.json",
+  "behavior_result_sha256": "37c82c255a80d44b8f272a8f6211fae9c37279df9838f649f4416b6fbe8f8d74",
+  "dataset_config": "configs/phase5_qwen_carry_dataset_frozen.json",
+  "dataset_config_sha256": "7654febd435052dba27dc0aa71b11d3a36bfbf2993dbb4937fa59e7f66208196",
+  "hidden_state_index": 16,
+  "parent_result": "results/phase5_qwen_carry_token_regions_selection.json",
+  "parent_result_sha256": "9ce897d04bed4f7fc5eb5a6633e40358a91c62a53e842fa811b2b5926aa9f029",
+  "random_control_seed": 20260809,
+  "scales": [
+    1.0,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "schema_version": "oli.phase5-qwen-carry-context-scale-config/v1",
+  "selection_quartets_sha256": "26397804c70da8d6b2d32e58724f80435d94690e90d7037890d63a883f0d780b",
+  "selection_rule": {
+    "choose": "smallest_scale_passing_all_gates",
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": 1.0
+  },
+  "token_region_contract_sha256": "43effa73f2aa4318408ab452917cf03970c2981792f20f0830ebd7f7ac4c58d5"
+}
