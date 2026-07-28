@@ -250,6 +250,12 @@ This establishes only that Phi is a valid experimental target; its latent
 interface has not yet been mapped. See the
 [Phi-3.5 capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md).
 
+On a new 720-example corpus excluding every earlier operand pair, Phi also
+passed the model-specific `Answer=` prefill gate: 428/450 fit, 82/90 selection,
+and 85/90 development examples were exact, with three aligned digit tokens on
+all 630 evaluated rows. The audit split remains sealed. See the
+[Phase 3 prefill summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -337,6 +343,7 @@ either stage.
 - [Phase 2 closed-loop dual-prototype summary](PHASE2_CLOSED_LOOP_DUAL_PROTOTYPE_SUMMARY.md)
 - [Phase 2 one-shot audit summary](PHASE2_DUAL_PROTOTYPE_AUDIT_SUMMARY.md)
 - [Phi-3.5 cross-model capability summary](CROSS_MODEL_PHI35_CAPABILITY_SUMMARY.md)
+- [Phase 3 Phi prefill behavior summary](PHASE3_PHI_PREFILL_BEHAVIOR_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
