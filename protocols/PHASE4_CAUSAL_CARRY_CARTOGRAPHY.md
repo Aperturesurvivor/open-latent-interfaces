@@ -154,6 +154,15 @@ least 50%. Each must exceed its strongest fixed matched control by at least
 25 percentage points with a 100% parse rate. No development-driven retry,
 scale choice, rank choice, or filtering is authorized.
 
+The carry coordinate passed one-shot development. The operand writer reached
+41/45 exact against 0/45 wrong-class exact but missed its tens-only advantage
+by one quartet, leaving the original conjunctive result a non-pass. Because a
+wrong operand digit can preserve the target tens character while necessarily
+failing the full result, a bounded no-rerun correction may evaluate the
+already written operand outputs using exact-result accuracy under the same
+absolute and advantage thresholds. It may not rerun development, modify any
+writer, or change the carry decision.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.

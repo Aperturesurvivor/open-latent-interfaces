@@ -348,6 +348,14 @@ The bounded correction then found that scale 1.0—and only scale 1.0—passed a
 original gates. No model inference or new candidate was introduced. That
 single universal direction is therefore fixed for untouched development.
 
+On untouched development, the universal carry direction passed at 29/45 exact
+against 16/45 matched no-carry and 4/45 random. The operand writer reached
+41/45 exact against 0/45 wrong-class exact, but its precommitted tens-only
+margin missed by one quartet because wrong digits often preserve the target
+tens character. The original combined result is preserved as a non-pass
+pending a bounded metric correction. See the
+[Phase 4 donor-free development summary](PHASE4_DONOR_FREE_DEVELOPMENT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -448,6 +456,7 @@ either stage.
 - [Phase 4 carry token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md)
 - [Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Phase 4 universal carry summary](PHASE4_UNIVERSAL_CARRY_SUMMARY.md)
+- [Phase 4 donor-free development summary](PHASE4_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
