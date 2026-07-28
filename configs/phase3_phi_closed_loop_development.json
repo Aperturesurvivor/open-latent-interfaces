@@ -1,0 +1,35 @@
+{
+  "base_model_batch_size": 8,
+  "basis": "artifacts/phase3_phi_native_bases.safetensors",
+  "basis_sha256": "33fc5a9dc0e326620769416973a167dc6b370ed18fd1407864f1e539ef449199",
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "dataset_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "development_targets_sha256": "d805f13b9a0bbafb5ac945fd3ad2b41dddef63ab9fe820b076c800d097229c65",
+  "gate": {
+    "minimum_control_advantage": 0.25,
+    "minimum_exact_accuracy": 0.5,
+    "minimum_identity_accuracy": 0.9,
+    "minimum_position_accuracy": 0.7
+  },
+  "hidden_state_indices": {
+    "0": 24,
+    "1": 30,
+    "2": 30
+  },
+  "leading_prototype": "artifacts/phase3_phi_leading_prototype_v2.safetensors",
+  "leading_prototype_sha256": "3a0623d8f077da61bad8aa5e32ca3e2b9a561f4c0168884e1805aac631aec1b0",
+  "leading_result": "results/phase3_phi_leading_prototype_rank_selection_v2.json",
+  "leading_result_sha256": "cf3c3be1ba5f11d1b461f91e98fe2f5c951c55f92b3ddc5111da5fe78ac638c9",
+  "norm_cap": 1.0,
+  "random_control_seed": 20260731,
+  "scales": {
+    "0": 1.0,
+    "1": 1.25,
+    "2": 1.25
+  },
+  "schema_version": "oli.phase3-closed-loop-development-config/v1",
+  "suffix_prototype": "artifacts/phase3_phi_digit_prototypes.safetensors",
+  "suffix_prototype_sha256": "cae12daf7b94a9c685e00244b1e039c2d80267ce660a9af9e859518bd983b552",
+  "suffix_result": "results/phase3_phi_prototype_selection.json",
+  "suffix_result_sha256": "891ae9a9228455f76c00ab4220ceb3a8de58e41f3033a1ee336f9f0f3efb4a44"
+}
