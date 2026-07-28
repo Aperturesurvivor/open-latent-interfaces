@@ -131,6 +131,13 @@ locally nonlinear. It improved third-digit transfer to 27/45 but produced only
 60-example fit set's coverage rather than another small-model variant. See the
 [local-transport summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md).
 
+Phase 2 therefore freezes a new 720-example corpus: 450 fit, 90 selection, 90
+development, and 90 sealed audit examples. It is balanced across leading
+digits, uses a distinct template family per split, and excludes every
+capability-gate and Phase 1 operand pair. The next bridge is a bottlenecked
+nonlinear adapter trained from multiple native transports per fit recipient.
+See the [Phase 2 scaled-adapter protocol](protocols/PHASE2_SCALED_ADAPTER.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -186,6 +193,7 @@ either stage.
 - [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
 - [Phase 1A J-lens development protocol](protocols/PHASE1_JLENS_DEVELOPMENT.md)
 - [Phase 1 triangulated-cartography protocol](protocols/PHASE1_TRIANGULATED_CARTOGRAPHY.md)
+- [Phase 2 scaled-adapter protocol](protocols/PHASE2_SCALED_ADAPTER.md)
 - [Arithmetic capability gate](protocols/CAPABILITY_GATE.md)
 - [Capability gate v1 results](CAPABILITY_GATE_V1_RESULTS.md)
 - [Capability gate v2 development](CAPABILITY_GATE_V2_DEVELOPMENT.md)

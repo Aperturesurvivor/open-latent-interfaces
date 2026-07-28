@@ -1,0 +1,16 @@
+{
+  "audit_authorized": false,
+  "dataset": {
+    "parameters": {
+      "audit_pairs_per_digit": 10,
+      "development_pairs_per_digit": 10,
+      "fit_pairs_per_digit": 50,
+      "seed": 20260809,
+      "selection_pairs_per_digit": 10
+    },
+    "sha256": "c5ffbdec6160efba1f421ed980e40a215a7233f719e37a2a2d1ff864ca03a9f6"
+  },
+  "phase1_local_result": "results/phase1_local_transport_dictionary_development.json",
+  "phase1_local_result_sha256": "5a7bf858dca1ecd0c79bc4e128d5ebf9c9f88f272ad26f9235cbac8e23615140",
+  "schema_version": "oli.phase2-dataset-config/v1"
+}
