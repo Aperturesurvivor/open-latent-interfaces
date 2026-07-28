@@ -76,3 +76,12 @@ coordinate for this matched carry transition in this frozen Qwen revision. It
 would not establish an individual carry neuron, a transcript of hidden
 reasoning, universality across prompts or models, or general arithmetic
 correctness.
+
+## Recorded outcome
+
+The writer failed selection specificity. At the strongest frozen scale (1.5),
+the target corrected the tens digit on 32/45 quartets, but the rotated-class
+control corrected 33/45 and the shuffled-recipient control corrected 32/45.
+The family is closed without development or audit. The result supports a
+dominant generic increment direction, not an identifiable recipient-specific
+carry map.
