@@ -42,3 +42,27 @@ def choose_donors(examples: list[Any]) -> tuple[list[int], list[int]]:
             ]
         )
     return targeted, same_leading
+
+
+def choose_multi_donors(examples: list[Any]) -> list[list[int]]:
+    """Choose one matched donor for every alternative leading-result digit."""
+
+    selections = []
+    for recipient in examples:
+        original_digit = int(str(recipient.result)[0])
+        donor_indices = []
+        for desired_digit in range(1, 10):
+            if desired_digit == original_digit:
+                continue
+            candidates = [
+                (index, donor)
+                for index, donor in enumerate(examples)
+                if int(str(donor.result)[0]) == desired_digit
+            ]
+            if not candidates:
+                raise ValueError(f"no donor available for leading digit {desired_digit}")
+            donor_indices.append(
+                min(candidates, key=lambda item: donor_distance(recipient, item[1]))[0]
+            )
+        selections.append(donor_indices)
+    return selections

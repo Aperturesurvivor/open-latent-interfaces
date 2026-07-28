@@ -2,6 +2,7 @@ import pytest
 import torch
 
 from open_latent_interfaces.typed_writer import (
+    build_conditional_transport_design,
     fit_digit_subspace,
     fit_transport_subspace,
 )
@@ -64,3 +65,26 @@ def test_transport_writer_returns_projected_class_delta() -> None:
         torch.tensor([[1.5, 0.0, 0.0], [0.0, 1.5, 0.0]]),
         atol=1e-5,
     )
+
+
+def test_conditional_transport_learns_state_digit_interaction() -> None:
+    values = torch.linspace(-3.0, 3.0, 20)
+    states = torch.stack((values, torch.ones_like(values)), dim=1)
+    digits = torch.tensor([0, 1] * 10)
+    deltas = torch.stack(
+        (
+            torch.where(digits == 0, 2.0 * values, -3.0 * values),
+            digits.float(),
+        ),
+        dim=1,
+    )
+    design = build_conditional_transport_design(
+        states,
+        deltas,
+        digits,
+        state_rank=1,
+        max_transport_rank=2,
+    )
+    model = design.fit(transport_rank=2, ridge=1e-5)
+    predicted = model.predict(states, digits)
+    assert torch.allclose(predicted, deltas, atol=1e-3)
