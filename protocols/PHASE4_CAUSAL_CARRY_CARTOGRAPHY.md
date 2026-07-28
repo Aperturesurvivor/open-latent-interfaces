@@ -134,6 +134,14 @@ already frozen carry prototypes. It introduces no new fitted weights. Scales
 matched no-carry vector and an isotropic norm-matched vector. Rank compression
 remains unauthorized unless this universal writer passes.
 
+The original universal scale scorer prioritized raw target accuracy before
+gate satisfaction. It selected scale 1.5, which failed control advantage,
+even though the already evaluated scale 1.0 satisfied every numerical gate.
+The original result remains a non-pass. A bounded no-rerun correction may
+audit all predeclared scales under the original thresholds and select the
+smallest scale passing every gate. It may not add scales, rerun inference,
+change thresholds, or introduce data or weights.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.

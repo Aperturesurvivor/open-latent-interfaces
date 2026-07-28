@@ -1,0 +1,11 @@
+{
+  "correction_rule": {
+    "choose": "smallest_scale_passing_all_original_gates",
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": 1.0
+  },
+  "original_result": "results/phase4_phi_universal_carry_selection.json",
+  "original_result_sha256": "a4b151f5b1dee6995cb5038c861afbada3f252b9abcd6c46138da4851b378929",
+  "schema_version": "oli.phase4-universal-carry-scale-correction-config/v1"
+}
