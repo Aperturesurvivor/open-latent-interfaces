@@ -156,6 +156,23 @@ This pass authorizes fresh SmolLM2-specific discovery. It is not evidence that
 the operand reader, leading compiler, suffix writer, or integrated graft will
 pass.
 
+## Fresh SmolLM2 discovery corpus
+
+`configs/phase13_smollm2_discovery_dataset_frozen.json` defines 270 examples:
+
+- 90 fit, 90 selection, and 90 development examples;
+- zero operand-pair overlap with every prior source through the Phase 12
+  Qwen audit;
+- zero pair overlap between the three Phase 13 splits;
+- three new prompt templates per split, with no prior template reused;
+- balanced leading, tens, ones, and carry labels within every split.
+
+The complete dataset SHA-256 is
+`cb99c87d4c70caa5b738b534c928e40526b19acbded3c7508d909b49d42c6b35`.
+The dataset is audit-sealed. Fit and selection may be exposed for discovery;
+development may be used only after component selection; none of these examples
+may become the later one-shot audit.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
