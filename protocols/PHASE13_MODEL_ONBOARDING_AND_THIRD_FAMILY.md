@@ -191,6 +191,18 @@ This measurement has no advancement threshold. A strong or weak frozen-model
 baseline does not select a latent boundary and does not count as reader,
 writer, development, or audit evidence.
 
+The frozen baseline was invoked once and preserved:
+
+- result: `results/phase13_smollm2_capability.json`
+- result SHA-256:
+  `4a14ae740969d6405abfe76b89f73eb490a02865ba8772a14d251b7d676321b7`
+- exact results: 21 / 90 (23.3%)
+- contextual digit tokens: 171 / 270 generated positions (63.3%)
+- positional accuracy: 26.7% leading, 35.6% tens, 46.7% ones
+
+The low baseline creates a meaningful repair opportunity, but it supplies no
+evidence that a latent reader or writer exists.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
