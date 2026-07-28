@@ -66,3 +66,21 @@ The universal carry coordinate has a one-shot untouched-development pass. The
 operand writer and combined development package retain their original
 non-pass status pending a separately frozen semantic metric correction. Audit
 remains sealed.
+
+## Bounded correction outcome
+
+The metric correction was frozen at commit `91c1153` and performed no model
+inference. Under exact-result accuracy, the operand target reached 41/45
+against 4/45 for the strongest exact control, an 82.22-point advantage. The
+unchanged carry gate also passed, so the corrected development package passes.
+
+- correction result SHA-256:
+  `8fd2b91d89fcb266ba20e7edd50a1e9c671be26c0b3ae88564c9ca1947e12555`
+- original development result status: unchanged non-pass
+- corrected operand gate: pass
+- unchanged carry gate: pass
+- new model inference, data, weights, scales, or thresholds: none
+
+This correction authorizes a separately committed one-shot audit package using
+exact-result discrimination for the operand interface and tens discrimination
+for the carry interface.

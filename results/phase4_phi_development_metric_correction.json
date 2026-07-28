@@ -1,0 +1,45 @@
+{
+  "carry_gate_unchanged": {
+    "control_advantage": 0.2888888888888889,
+    "parse_rate": 1.0,
+    "passes": true,
+    "strongest_control": "matched_no_carry_norm_matched",
+    "strongest_control_tens_accuracy": 0.35555555555555557,
+    "target_full_accuracy": 0.6444444444444445,
+    "target_tens_accuracy": 0.6444444444444445
+  },
+  "claim_boundary": "Transparent post-hoc correction from tens-character accuracy to exact-result accuracy for the operand interface. The original development result remains a non-pass. No model inference, writer change, new data, or threshold change was introduced.",
+  "config_sha256": "dddfa1049bea2395ba92902b2a1b1da21869218337c7ddfc93c9ef241a8c7b0b",
+  "corrected_passes": {
+    "all": true,
+    "carry_context": true,
+    "operand": true
+  },
+  "correction_rule": {
+    "choose_metric": "exact_result_accuracy",
+    "minimum_control_advantage": 0.25,
+    "minimum_target_accuracy": 0.7,
+    "require_parse_rate": 1.0
+  },
+  "created_at": "2026-07-28T15:44:48.860059+00:00",
+  "operand_exact_gate": {
+    "control_advantage": 0.8222222222222222,
+    "parse_rate": 1.0,
+    "passes": true,
+    "strongest_control": "random_norm_matched",
+    "strongest_control_accuracy": 0.08888888888888889,
+    "target_accuracy": 0.9111111111111111
+  },
+  "original_result": {
+    "passes": {
+      "all": false,
+      "carry_context": true,
+      "operand": false
+    },
+    "path": "results/phase4_phi_donor_free_development.json",
+    "sha256": "ec524cd83a7823ddcadf8640f204b6ea1f448f4764c5ff671ccc8efd93b0c94d"
+  },
+  "passes": true,
+  "schema_version": "oli.phase4-development-metric-correction/v1",
+  "status": "post_hoc_bounded_metric_correction_no_model_rerun"
+}

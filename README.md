@@ -356,6 +356,11 @@ tens character. The original combined result is preserved as a non-pass
 pending a bounded metric correction. See the
 [Phase 4 donor-free development summary](PHASE4_DONOR_FREE_DEVELOPMENT_SUMMARY.md).
 
+The no-rerun correction then applied exact-result discrimination to the
+operand interface: 41/45 target exact versus 4/45 strongest control. Together
+with the unchanged carry pass, the corrected development package clears every
+gate and authorizes a separately frozen one-shot audit.
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss

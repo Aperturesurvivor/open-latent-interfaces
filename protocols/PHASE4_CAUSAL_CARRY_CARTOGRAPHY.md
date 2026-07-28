@@ -163,6 +163,13 @@ already written operand outputs using exact-result accuracy under the same
 absolute and advantage thresholds. It may not rerun development, modify any
 writer, or change the carry decision.
 
+The bounded metric correction passed: operand exact accuracy was 41/45 versus
+4/45 for the strongest exact control, while the original carry pass was
+unchanged. The original development artifact remains a non-pass. A one-shot
+audit package may now freeze these exact interfaces and use exact-result
+discrimination for operand editing and tens-position discrimination for the
+carry coordinate.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
