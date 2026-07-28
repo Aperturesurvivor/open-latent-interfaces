@@ -1,0 +1,5590 @@
+{
+  "artifact": {
+    "classes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "path": "artifacts/phase7_qwen_target_state.safetensors",
+    "sha256": "8a83f4d4b661c051cabd348b7c28877196f9b809c66814b975368947418d7787",
+    "width": 1536
+  },
+  "behavior_gate": {
+    "development_passed": true,
+    "fit_passed": false,
+    "overall_passed": false,
+    "selection_passed": true
+  },
+  "behavior_result_sha256": "bc3255f6d958be9e692f693cc920eebbbecb1378487d68fb7034fee29a3ce482",
+  "claim_boundary": "Fit-only target-state rank and selection-only causal scale for a deterministic-target-conditioned overwrite. No development or audit claim.",
+  "config_sha256": "316bf706f8e3730ba9bdcb3c1407b6e3d94bb50ffe0f1fa6e56a82e174f604a7",
+  "created_at": "2026-07-28T16:54:15.725138+00:00",
+  "dataset_sha256": "5757256be84a0544352288d4a5d5a84ed3ad11d9cd6c3f6ea4f4077251f41c6a",
+  "digit_token_ids": {
+    "0": 15,
+    "1": 16,
+    "2": 17,
+    "3": 18,
+    "4": 19,
+    "5": 20,
+    "6": 21,
+    "7": 22,
+    "8": 23,
+    "9": 24
+  },
+  "elapsed_seconds": 119.79867462499533,
+  "eligible_fit_quartets": 129,
+  "eligible_fit_quartets_sha256": "0fda66724cfe7f20c759165fd3ef1d50188b95cc59e2e0cc1aca43cf4b89e693",
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "fit_only_rank_selection": {
+    "cumulative_explained_variance": [
+      0.27181512117385864,
+      0.4865940511226654,
+      0.6607718467712402,
+      0.759871780872345,
+      0.8481472730636597,
+      0.9064151048660278,
+      0.9488347768783569,
+      0.9764825701713562,
+      1.0000001192092896,
+      1.0000001192092896
+    ],
+    "maximum_rank": 9,
+    "minimum_explained_variance": 0.95,
+    "selected_rank": 8,
+    "singular_values": [
+      10.65282154083252,
+      9.469427108764648,
+      8.527547836303711,
+      6.43227481842041,
+      6.070828437805176,
+      4.932217597961426,
+      4.208346366882324,
+      3.3974883556365967,
+      3.133455991744995,
+      1.0796473361551762e-05
+    ]
+  },
+  "fit_target_digit_counts": {
+    "0": 4,
+    "1": 11,
+    "2": 15,
+    "3": 20,
+    "4": 9,
+    "5": 17,
+    "6": 9,
+    "7": 17,
+    "8": 18,
+    "9": 9
+  },
+  "hidden_state_index": 16,
+  "metrics": {
+    "0.5": {
+      "gate": {
+        "control_advantage": -0.022222222222222227,
+        "passes": false,
+        "strongest_control": "wrong_digit_norm_matched",
+        "strongest_control_tens_accuracy": 0.13333333333333333,
+        "target_tens_accuracy": 0.1111111111111111
+      },
+      "identity_digit_norm_matched": {
+        "base_full_accuracy": 0.8666666666666667,
+        "base_full_correct": 39,
+        "maximum_relative_frobenius_norm": 0.0012718706857413054,
+        "mean_relative_frobenius_norm": 0.0006965724169276655,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 110,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "110",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 460,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "460",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 800,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "800",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 979,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "979",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.08888888888888889,
+        "target_full_correct": 4,
+        "target_position_accuracy": [
+          0.9111111111111111,
+          0.08888888888888889,
+          0.08888888888888889
+        ],
+        "target_position_correct": [
+          41,
+          4,
+          4
+        ],
+        "target_tens_accuracy": 0.08888888888888889,
+        "target_tens_correct": 4
+      },
+      "random_norm_matched": {
+        "base_full_accuracy": 0.9111111111111111,
+        "base_full_correct": 41,
+        "maximum_relative_frobenius_norm": 0.001271870220080018,
+        "mean_relative_frobenius_norm": 0.0006965723587200046,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 106,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "106",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 459,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "459",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 799,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "799",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 819,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "819",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 979,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "979",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.022222222222222223,
+        "target_full_correct": 1,
+        "target_position_accuracy": [
+          0.8888888888888888,
+          0.022222222222222223,
+          0.022222222222222223
+        ],
+        "target_position_correct": [
+          40,
+          1,
+          1
+        ],
+        "target_tens_accuracy": 0.022222222222222223,
+        "target_tens_correct": 1
+      },
+      "target": {
+        "base_full_accuracy": 0.8444444444444444,
+        "base_full_correct": 38,
+        "maximum_relative_frobenius_norm": 0.0012718708021566272,
+        "mean_relative_frobenius_norm": 0.0006965723587200046,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 109,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "109",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 460,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "460",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 800,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "800",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 981,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "981",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.08888888888888889,
+        "target_full_correct": 4,
+        "target_position_accuracy": [
+          0.9111111111111111,
+          0.1111111111111111,
+          0.08888888888888889
+        ],
+        "target_position_correct": [
+          41,
+          5,
+          4
+        ],
+        "target_tens_accuracy": 0.1111111111111111,
+        "target_tens_correct": 5
+      },
+      "wrong_digit_norm_matched": {
+        "base_full_accuracy": 0.8222222222222222,
+        "base_full_correct": 37,
+        "maximum_relative_frobenius_norm": 0.0012718706857413054,
+        "mean_relative_frobenius_norm": 0.0006965724169276655,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 110,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "110",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 460,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "460",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 800,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "800",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 989,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "989",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.1111111111111111,
+        "target_full_correct": 5,
+        "target_position_accuracy": [
+          0.9111111111111111,
+          0.13333333333333333,
+          0.1111111111111111
+        ],
+        "target_position_correct": [
+          41,
+          6,
+          5
+        ],
+        "target_tens_accuracy": 0.13333333333333333,
+        "target_tens_correct": 6
+      }
+    },
+    "1.0": {
+      "gate": {
+        "control_advantage": 0.0,
+        "passes": false,
+        "strongest_control": "identity_digit_norm_matched",
+        "strongest_control_tens_accuracy": 0.28888888888888886,
+        "target_tens_accuracy": 0.28888888888888886
+      },
+      "identity_digit_norm_matched": {
+        "base_full_accuracy": 0.4444444444444444,
+        "base_full_correct": 20,
+        "maximum_relative_frobenius_norm": 0.0025437413714826107,
+        "mean_relative_frobenius_norm": 0.001393144833855331,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 110,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "110",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 171,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "171",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 798,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "798",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 247,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "247",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 300,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "300",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 310,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "310",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 337,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "337",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 330,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "330",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 491,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "491",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 577,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "577",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "112",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 913,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "913",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 999,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "999",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 771,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "771",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 827,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "827",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 937,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "937",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 921,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "921",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 981,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "981",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.13333333333333333,
+        "target_full_correct": 6,
+        "target_position_accuracy": [
+          0.8444444444444444,
+          0.28888888888888886,
+          0.15555555555555556
+        ],
+        "target_position_correct": [
+          38,
+          13,
+          7
+        ],
+        "target_tens_accuracy": 0.28888888888888886,
+        "target_tens_correct": 13
+      },
+      "random_norm_matched": {
+        "base_full_accuracy": 0.9111111111111111,
+        "base_full_correct": 41,
+        "maximum_relative_frobenius_norm": 0.002543740440160036,
+        "mean_relative_frobenius_norm": 0.0013931447174400091,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 106,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "106",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 459,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "459",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 799,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "799",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 819,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "819",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 979,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "979",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.022222222222222223,
+        "target_full_correct": 1,
+        "target_position_accuracy": [
+          0.8888888888888888,
+          0.022222222222222223,
+          0.022222222222222223
+        ],
+        "target_position_correct": [
+          40,
+          1,
+          1
+        ],
+        "target_tens_accuracy": 0.022222222222222223,
+        "target_tens_correct": 1
+      },
+      "target": {
+        "base_full_accuracy": 0.4666666666666667,
+        "base_full_correct": 21,
+        "maximum_relative_frobenius_norm": 0.0025437416043132544,
+        "mean_relative_frobenius_norm": 0.0013931447174400091,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 109,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "109",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 171,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "171",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "150",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 248,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "248",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 310,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "310",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 336,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "336",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 331,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "331",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 460,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "460",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 491,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "491",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 118,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "118",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 913,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "913",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 900,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "900",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 718,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "718",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 771,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "771",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 936,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "936",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 920,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "920",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 981,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "981",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.15555555555555556,
+        "target_full_correct": 7,
+        "target_position_accuracy": [
+          0.8666666666666667,
+          0.28888888888888886,
+          0.17777777777777778
+        ],
+        "target_position_correct": [
+          39,
+          13,
+          8
+        ],
+        "target_tens_accuracy": 0.28888888888888886,
+        "target_tens_correct": 13
+      },
+      "wrong_digit_norm_matched": {
+        "base_full_accuracy": 0.4666666666666667,
+        "base_full_correct": 21,
+        "maximum_relative_frobenius_norm": 0.0025437413714826107,
+        "mean_relative_frobenius_norm": 0.001393144833855331,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 168,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "168",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 113,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "113",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 171,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "171",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "150",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 228,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "228",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 310,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "310",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 368,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "368",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 337,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "337",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 491,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "491",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 577,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "577",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 119,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "119",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 913,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "913",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 999,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "999",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 771,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "771",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 827,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "827",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 921,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "921",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 981,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "981",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.1111111111111111,
+        "target_full_correct": 5,
+        "target_position_accuracy": [
+          0.8666666666666667,
+          0.26666666666666666,
+          0.1111111111111111
+        ],
+        "target_position_correct": [
+          39,
+          12,
+          5
+        ],
+        "target_tens_accuracy": 0.26666666666666666,
+        "target_tens_correct": 12
+      }
+    },
+    "1.5": {
+      "gate": {
+        "control_advantage": -0.022222222222222254,
+        "passes": false,
+        "strongest_control": "identity_digit_norm_matched",
+        "strongest_control_tens_accuracy": 0.35555555555555557,
+        "target_tens_accuracy": 0.3333333333333333
+      },
+      "identity_digit_norm_matched": {
+        "base_full_accuracy": 0.13333333333333333,
+        "base_full_correct": 6,
+        "maximum_relative_frobenius_norm": 0.0038156125228852034,
+        "mean_relative_frobenius_norm": 0.002089716959744692,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 110,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "110",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 158,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "158",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 170,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "170",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 798,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "798",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 247,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "247",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 439,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "439",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 390,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "390",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 310,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "310",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 346,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "346",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 367,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "367",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 336,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "336",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 330,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "330",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 491,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "491",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 422,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "422",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 546,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "546",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 576,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "576",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 118,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "118",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 627,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "627",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "349",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 918,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "918",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 151,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "151",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 999,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "999",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 770,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "770",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 888,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "888",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 822,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "822",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 827,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "827",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 846,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "846",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 846,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "846",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 936,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "936",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 922,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "922",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 982,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "982",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 154,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "154",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.13333333333333333,
+        "target_full_correct": 6,
+        "target_position_accuracy": [
+          0.7333333333333333,
+          0.35555555555555557,
+          0.15555555555555556
+        ],
+        "target_position_correct": [
+          33,
+          16,
+          7
+        ],
+        "target_tens_accuracy": 0.35555555555555557,
+        "target_tens_correct": 16
+      },
+      "random_norm_matched": {
+        "base_full_accuracy": 0.9111111111111111,
+        "base_full_correct": 41,
+        "maximum_relative_frobenius_norm": 0.0038156085647642612,
+        "mean_relative_frobenius_norm": 0.002089716959744692,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 106,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "106",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 459,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "459",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 799,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "799",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 819,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "819",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 979,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "979",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.022222222222222223,
+        "target_full_correct": 1,
+        "target_position_accuracy": [
+          0.8888888888888888,
+          0.022222222222222223,
+          0.022222222222222223
+        ],
+        "target_position_correct": [
+          40,
+          1,
+          1
+        ],
+        "target_tens_accuracy": 0.022222222222222223,
+        "target_tens_correct": 1
+      },
+      "target": {
+        "base_full_accuracy": 0.15555555555555556,
+        "base_full_correct": 7,
+        "maximum_relative_frobenius_norm": 0.003815612057223916,
+        "mean_relative_frobenius_norm": 0.002089716959744692,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 166,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "166",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 109,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "109",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 172,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "172",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 94,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "94",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 798,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "798",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 248,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "248",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 439,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "439",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 789,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "789",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 312,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "312",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 193,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "193",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 366,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "366",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 336,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "336",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 331,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "331",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 460,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "460",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 492,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "492",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 578,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "578",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 118,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "118",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 627,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "627",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 348,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "348",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 918,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "918",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "150",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 100,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "100",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 726,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "726",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 772,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "772",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 827,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "827",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 847,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "847",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 936,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "936",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 920,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "920",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 981,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "981",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 154,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "154",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.1111111111111111,
+        "target_full_correct": 5,
+        "target_position_accuracy": [
+          0.6888888888888889,
+          0.3333333333333333,
+          0.15555555555555556
+        ],
+        "target_position_correct": [
+          31,
+          15,
+          7
+        ],
+        "target_tens_accuracy": 0.3333333333333333,
+        "target_tens_correct": 15
+      },
+      "wrong_digit_norm_matched": {
+        "base_full_accuracy": 0.15555555555555556,
+        "base_full_correct": 7,
+        "maximum_relative_frobenius_norm": 0.0038156118243932724,
+        "mean_relative_frobenius_norm": 0.002089716959744692,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 168,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "168",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 113,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "113",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 158,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "158",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 171,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "171",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "150",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 798,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "798",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 248,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "248",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 228,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "228",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 300,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "300",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 818,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "818",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 347,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "347",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 368,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "368",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 337,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "337",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 492,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "492",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 516,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "516",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 577,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "577",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 119,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "119",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 626,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "626",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 628,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "628",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 918,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "918",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 151,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "151",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 741,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "741",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 100,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "100",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 726,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "726",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 771,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "771",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 826,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "826",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 847,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "847",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 920,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "920",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 982,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "982",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 154,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "154",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.1111111111111111,
+        "target_full_correct": 5,
+        "target_position_accuracy": [
+          0.7555555555555555,
+          0.35555555555555557,
+          0.15555555555555556
+        ],
+        "target_position_correct": [
+          34,
+          16,
+          7
+        ],
+        "target_tens_accuracy": 0.35555555555555557,
+        "target_tens_correct": 16
+      }
+    },
+    "2.0": {
+      "gate": {
+        "control_advantage": 0.0,
+        "passes": false,
+        "strongest_control": "identity_digit_norm_matched",
+        "strongest_control_tens_accuracy": 0.3333333333333333,
+        "target_tens_accuracy": 0.3333333333333333
+      },
+      "identity_digit_norm_matched": {
+        "base_full_accuracy": 0.044444444444444446,
+        "base_full_correct": 2,
+        "maximum_relative_frobenius_norm": 0.005087482742965221,
+        "mean_relative_frobenius_norm": 0.002786289667710662,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 168,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "168",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 110,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "110",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 160,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "160",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 170,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "170",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 91,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "91",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 768,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "768",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 247,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "247",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 439,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "439",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 390,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "390",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 222,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "222",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "889",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 346,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "346",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 367,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "367",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 336,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "336",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 330,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "330",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 446,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "446",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 491,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "491",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 422,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "422",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 546,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "546",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 516,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "516",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 576,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "576",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 118,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "118",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 627,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "627",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 348,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "348",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 91,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "91",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 151,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "151",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 100,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "100",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 567,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "567",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 772,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "772",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 888,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "888",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 822,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "822",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 827,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "827",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 846,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "846",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 846,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "846",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 936,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "936",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 922,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "922",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 982,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "982",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "149",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.08888888888888889,
+        "target_full_correct": 4,
+        "target_position_accuracy": [
+          0.6666666666666666,
+          0.3333333333333333,
+          0.13333333333333333
+        ],
+        "target_position_correct": [
+          30,
+          15,
+          6
+        ],
+        "target_tens_accuracy": 0.3333333333333333,
+        "target_tens_correct": 15
+      },
+      "random_norm_matched": {
+        "base_full_accuracy": 0.9111111111111111,
+        "base_full_correct": 41,
+        "maximum_relative_frobenius_norm": 0.005087480880320072,
+        "mean_relative_frobenius_norm": 0.0027862894348800182,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 106,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "106",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 159,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "159",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 169,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "169",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 149,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "149",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 389,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "389",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 249,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "249",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 229,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "229",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "309",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 219,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "219",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 309,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "309",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 349,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "349",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 369,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "369",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 339,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "339",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 329,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "329",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 450,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "450",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 459,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "459",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 469,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "469",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 489,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "489",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 419,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "419",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 519,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "519",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 579,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "579",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 569,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "569",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 629,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "629",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 699,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "699",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 689,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "689",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 739,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "739",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 799,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "799",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 729,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "729",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 719,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "719",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "769",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 819,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "819",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 829,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "829",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 849,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "849",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 939,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "939",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 919,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "919",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 979,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "979",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 949,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "949",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.022222222222222223,
+        "target_full_correct": 1,
+        "target_position_accuracy": [
+          0.8888888888888888,
+          0.022222222222222223,
+          0.022222222222222223
+        ],
+        "target_position_correct": [
+          40,
+          1,
+          1
+        ],
+        "target_tens_accuracy": 0.022222222222222223,
+        "target_tens_correct": 1
+      },
+      "target": {
+        "base_full_accuracy": 0.08888888888888889,
+        "base_full_correct": 4,
+        "maximum_relative_frobenius_norm": 0.005087483208626509,
+        "mean_relative_frobenius_norm": 0.0027862894348800182,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 166,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "166",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 109,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "109",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 160,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "160",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 172,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "172",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 94,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "94",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 798,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "798",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 248,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "248",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 432,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "432",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 769,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "769",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 91,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "91",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 193,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "193",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 366,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "366",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 336,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "336",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 331,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "331",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 492,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "492",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 517,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "517",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 578,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "578",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 117,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "117",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 627,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "627",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 348,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "348",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 91,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "91",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 690,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "690",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "150",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 738,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "738",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 100,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "100",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 726,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "726",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 772,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "772",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 889,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "889",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 820,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "820",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 826,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "826",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 847,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "847",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 509,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "509",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 936,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "936",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 920,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "920",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 982,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "982",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "150",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.1111111111111111,
+        "target_full_correct": 5,
+        "target_position_accuracy": [
+          0.6444444444444445,
+          0.3333333333333333,
+          0.2
+        ],
+        "target_position_correct": [
+          29,
+          15,
+          9
+        ],
+        "target_tens_accuracy": 0.3333333333333333,
+        "target_tens_correct": 15
+      },
+      "wrong_digit_norm_matched": {
+        "base_full_accuracy": 0.044444444444444446,
+        "base_full_correct": 2,
+        "maximum_relative_frobenius_norm": 0.005087482742965221,
+        "mean_relative_frobenius_norm": 0.002786289667710662,
+        "n": 45,
+        "outputs": [
+          {
+            "base_result": 169,
+            "parsed": 168,
+            "quartet_id": "phase7-selection-q0000",
+            "response": "168",
+            "target_result": 170
+          },
+          {
+            "base_result": 109,
+            "parsed": 113,
+            "quartet_id": "phase7-selection-q0001",
+            "response": "113",
+            "target_result": 110
+          },
+          {
+            "base_result": 159,
+            "parsed": 158,
+            "quartet_id": "phase7-selection-q0002",
+            "response": "158",
+            "target_result": 160
+          },
+          {
+            "base_result": 169,
+            "parsed": 171,
+            "quartet_id": "phase7-selection-q0003",
+            "response": "171",
+            "target_result": 170
+          },
+          {
+            "base_result": 149,
+            "parsed": 94,
+            "quartet_id": "phase7-selection-q0004",
+            "response": "94",
+            "target_result": 150
+          },
+          {
+            "base_result": 289,
+            "parsed": 768,
+            "quartet_id": "phase7-selection-q0005",
+            "response": "768",
+            "target_result": 290
+          },
+          {
+            "base_result": 249,
+            "parsed": 248,
+            "quartet_id": "phase7-selection-q0006",
+            "response": "248",
+            "target_result": 250
+          },
+          {
+            "base_result": 229,
+            "parsed": 435,
+            "quartet_id": "phase7-selection-q0007",
+            "response": "435",
+            "target_result": 230
+          },
+          {
+            "base_result": 289,
+            "parsed": 789,
+            "quartet_id": "phase7-selection-q0008",
+            "response": "789",
+            "target_result": 290
+          },
+          {
+            "base_result": 219,
+            "parsed": 220,
+            "quartet_id": "phase7-selection-q0009",
+            "response": "220",
+            "target_result": 220
+          },
+          {
+            "base_result": 309,
+            "parsed": 888,
+            "quartet_id": "phase7-selection-q0010",
+            "response": "888",
+            "target_result": 310
+          },
+          {
+            "base_result": 349,
+            "parsed": 193,
+            "quartet_id": "phase7-selection-q0011",
+            "response": "193",
+            "target_result": 350
+          },
+          {
+            "base_result": 369,
+            "parsed": 368,
+            "quartet_id": "phase7-selection-q0012",
+            "response": "368",
+            "target_result": 370
+          },
+          {
+            "base_result": 339,
+            "parsed": 337,
+            "quartet_id": "phase7-selection-q0013",
+            "response": "337",
+            "target_result": 340
+          },
+          {
+            "base_result": 329,
+            "parsed": 231,
+            "quartet_id": "phase7-selection-q0014",
+            "response": "231",
+            "target_result": 330
+          },
+          {
+            "base_result": 449,
+            "parsed": 449,
+            "quartet_id": "phase7-selection-q0015",
+            "response": "449",
+            "target_result": 450
+          },
+          {
+            "base_result": 459,
+            "parsed": 462,
+            "quartet_id": "phase7-selection-q0016",
+            "response": "462",
+            "target_result": 460
+          },
+          {
+            "base_result": 469,
+            "parsed": 468,
+            "quartet_id": "phase7-selection-q0017",
+            "response": "468",
+            "target_result": 470
+          },
+          {
+            "base_result": 489,
+            "parsed": 492,
+            "quartet_id": "phase7-selection-q0018",
+            "response": "492",
+            "target_result": 490
+          },
+          {
+            "base_result": 419,
+            "parsed": 420,
+            "quartet_id": "phase7-selection-q0019",
+            "response": "420",
+            "target_result": 420
+          },
+          {
+            "base_result": 519,
+            "parsed": 516,
+            "quartet_id": "phase7-selection-q0020",
+            "response": "516",
+            "target_result": 520
+          },
+          {
+            "base_result": 549,
+            "parsed": 549,
+            "quartet_id": "phase7-selection-q0021",
+            "response": "549",
+            "target_result": 550
+          },
+          {
+            "base_result": 519,
+            "parsed": 516,
+            "quartet_id": "phase7-selection-q0022",
+            "response": "516",
+            "target_result": 520
+          },
+          {
+            "base_result": 579,
+            "parsed": 577,
+            "quartet_id": "phase7-selection-q0023",
+            "response": "577",
+            "target_result": 580
+          },
+          {
+            "base_result": 569,
+            "parsed": 119,
+            "quartet_id": "phase7-selection-q0024",
+            "response": "119",
+            "target_result": 570
+          },
+          {
+            "base_result": 629,
+            "parsed": 626,
+            "quartet_id": "phase7-selection-q0025",
+            "response": "626",
+            "target_result": 630
+          },
+          {
+            "base_result": 629,
+            "parsed": 348,
+            "quartet_id": "phase7-selection-q0026",
+            "response": "348",
+            "target_result": 630
+          },
+          {
+            "base_result": 699,
+            "parsed": 91,
+            "quartet_id": "phase7-selection-q0027",
+            "response": "91",
+            "target_result": 700
+          },
+          {
+            "base_result": 699,
+            "parsed": 180,
+            "quartet_id": "phase7-selection-q0028",
+            "response": "180",
+            "target_result": 700
+          },
+          {
+            "base_result": 689,
+            "parsed": 151,
+            "quartet_id": "phase7-selection-q0029",
+            "response": "151",
+            "target_result": 690
+          },
+          {
+            "base_result": 739,
+            "parsed": 741,
+            "quartet_id": "phase7-selection-q0030",
+            "response": "741",
+            "target_result": 740
+          },
+          {
+            "base_result": 799,
+            "parsed": 100,
+            "quartet_id": "phase7-selection-q0031",
+            "response": "100",
+            "target_result": 800
+          },
+          {
+            "base_result": 729,
+            "parsed": 726,
+            "quartet_id": "phase7-selection-q0032",
+            "response": "726",
+            "target_result": 730
+          },
+          {
+            "base_result": 719,
+            "parsed": 145,
+            "quartet_id": "phase7-selection-q0033",
+            "response": "145",
+            "target_result": 720
+          },
+          {
+            "base_result": 769,
+            "parsed": 771,
+            "quartet_id": "phase7-selection-q0034",
+            "response": "771",
+            "target_result": 770
+          },
+          {
+            "base_result": 889,
+            "parsed": 886,
+            "quartet_id": "phase7-selection-q0035",
+            "response": "886",
+            "target_result": 890
+          },
+          {
+            "base_result": 819,
+            "parsed": 822,
+            "quartet_id": "phase7-selection-q0036",
+            "response": "822",
+            "target_result": 820
+          },
+          {
+            "base_result": 829,
+            "parsed": 826,
+            "quartet_id": "phase7-selection-q0037",
+            "response": "826",
+            "target_result": 830
+          },
+          {
+            "base_result": 849,
+            "parsed": 847,
+            "quartet_id": "phase7-selection-q0038",
+            "response": "847",
+            "target_result": 850
+          },
+          {
+            "base_result": 849,
+            "parsed": 505,
+            "quartet_id": "phase7-selection-q0039",
+            "response": "505",
+            "target_result": 850
+          },
+          {
+            "base_result": 939,
+            "parsed": 603,
+            "quartet_id": "phase7-selection-q0040",
+            "response": "603",
+            "target_result": 940
+          },
+          {
+            "base_result": 919,
+            "parsed": 112,
+            "quartet_id": "phase7-selection-q0041",
+            "response": "112",
+            "target_result": 920
+          },
+          {
+            "base_result": 919,
+            "parsed": 920,
+            "quartet_id": "phase7-selection-q0042",
+            "response": "920",
+            "target_result": 920
+          },
+          {
+            "base_result": 979,
+            "parsed": 982,
+            "quartet_id": "phase7-selection-q0043",
+            "response": "982",
+            "target_result": 980
+          },
+          {
+            "base_result": 949,
+            "parsed": 150,
+            "quartet_id": "phase7-selection-q0044",
+            "response": "150",
+            "target_result": 950
+          }
+        ],
+        "parse_count": 45,
+        "parse_rate": 1.0,
+        "target_full_accuracy": 0.06666666666666667,
+        "target_full_correct": 3,
+        "target_position_accuracy": [
+          0.6,
+          0.3333333333333333,
+          0.13333333333333333
+        ],
+        "target_position_correct": [
+          27,
+          15,
+          6
+        ],
+        "target_tens_accuracy": 0.3333333333333333,
+        "target_tens_correct": 15
+      }
+    }
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "passes": false,
+  "schema_version": "oli.phase7-qwen-target-state-selection/v1",
+  "selection": {
+    "coordinate_rank": 8,
+    "passes": false,
+    "scale": 2.0
+  },
+  "selection_quartets_sha256": "4ade6bc8ada140e32398eb16949e563343b173cf95f1c4c026fa11fc004c08d4",
+  "selection_rule": {
+    "minimum_control_advantage": 0.25,
+    "minimum_tens_accuracy": 0.5,
+    "require_parse_rate": true
+  },
+  "status": "selection_only",
+  "token_region_contract_sha256": "9070d4b2ad0dc2fbaa18cb7a4d39f70ca173e46b6243914d4f1d67cebd4cbf59"
+}

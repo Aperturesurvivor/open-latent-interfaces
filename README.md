@@ -430,6 +430,13 @@ development. Carry audit remained sealed. See the
 [Phase 6 conditional-carry summary](PHASE6_QWEN_CONDITIONAL_CARRY_SELECTION_SUMMARY.md)
 and [Phase 6B interaction summary](PHASE6B_QWEN_CARRY_INTERACTION_SUMMARY.md).
 
+A second fully fresh corpus then tested a target-conditioned state overwrite
+instead of an additive carry delta. Structured overwrites were clearly
+non-random, but target, identity, and wrong-digit requests were
+indistinguishable. The writer closed at selection without opening development
+or audit. See the
+[Phase 7 target-state summary](PHASE7_QWEN_TARGET_STATE_SELECTION_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -548,6 +555,8 @@ either stage.
 - [Phase 6 Qwen conditional-carry selection summary](PHASE6_QWEN_CONDITIONAL_CARRY_SELECTION_SUMMARY.md)
 - [Phase 6B Qwen carry-interaction protocol](protocols/PHASE6B_QWEN_CARRY_INTERACTION.md)
 - [Phase 6B Qwen carry-interaction summary](PHASE6B_QWEN_CARRY_INTERACTION_SUMMARY.md)
+- [Phase 7 Qwen target-state overwrite protocol](protocols/PHASE7_QWEN_TARGET_STATE_OVERWRITE.md)
+- [Phase 7 Qwen target-state selection summary](PHASE7_QWEN_TARGET_STATE_SELECTION_SUMMARY.md)
 - [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)

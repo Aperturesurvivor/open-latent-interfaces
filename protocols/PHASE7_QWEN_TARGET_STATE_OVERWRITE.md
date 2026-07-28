@@ -68,3 +68,12 @@ A passing audit would establish a deterministic-target-conditioned native
 state interface at one Qwen site for this matched addition distribution. It
 would not establish autonomous carry detection, a natural-language thought
 transcript, a single neuron, unrestricted arithmetic, or cross-model transfer.
+
+## Recorded outcome
+
+The writer failed selection and closed without development or audit. Fit-only
+geometry selected rank 8. At every scale, target-digit requests were tied with
+or weaker than identity- or wrong-digit requests. At the best target accuracy,
+all three structured overwrites corrected 15/45 tens digits, while random
+corrected 1/45. The site supports structured causal movement but not a typed
+tens-digit coordinate under this interface.
