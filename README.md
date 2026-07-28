@@ -186,6 +186,15 @@ rules out insufficient amplitude as the sole bottleneck and moves the work to
 a tens-specific representation and residual-boundary study. See the
 [scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md).
 
+A tens-only native boundary map then found a sharp causal transition: targeted
+fit-donor states rose from 8/90 tens digits at hidden index 21 to 86/90 at
+index 23. The selected index 27 reached 90/90 on development, versus 10/90 for
+the strongest norm-matched control. Because the compressed adapter's existing
+index 23 is already sufficient for native control, its bottleneck is now
+localized to residual representation or coefficient prediction rather than
+the write boundary itself. See the
+[tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -265,6 +274,7 @@ either stage.
 - [Phase 2 learned-basis causal summary](PHASE2_LEARNED_BASIS_SUMMARY.md)
 - [Phase 2 balanced-counterfactual summary](PHASE2_BALANCED_COUNTERFACTUAL_SUMMARY.md)
 - [Phase 2 fixed-weight scale-sweep summary](PHASE2_ADAPTER_SCALE_SWEEP_SUMMARY.md)
+- [Phase 2 tens native-boundary summary](PHASE2_TENS_NATIVE_BOUNDARY_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
