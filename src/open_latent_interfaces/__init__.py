@@ -22,6 +22,7 @@ from open_latent_interfaces.native_coordinates import (
 )
 from open_latent_interfaces.operand_reader import (
     NearestCentroidDigitReader,
+    OperandReaderManifest,
     OperandTokenPositions,
     fit_nearest_centroid_digit_reader,
     locate_operand_digit_tokens,
@@ -46,6 +47,7 @@ __all__ = [
     "NativeCoordinateManifest",
     "NativeCoordinateWriter",
     "NearestCentroidDigitReader",
+    "OperandReaderManifest",
     "OperandTokenPositions",
     "ScalarRidgeProbe",
     "TokenLocalTransportWriter",

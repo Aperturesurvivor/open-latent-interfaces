@@ -127,6 +127,30 @@ configuration authorizes exactly one run on the 45 untouched audit
 An existing audit output is never overwritten. Any failed audit conjunct is a
 final nonpass for this package and cannot be used to tune or repeat it.
 
+## Recorded audit outcome
+
+The one authorized audit run completed and the repeat guard refused a second
+run. The integrated package is an audit nonpass:
+
+- reader operand pairs: 45/45 exact;
+- deterministic sums: 45/45 exact;
+- latent graft: 42/45 exact;
+- oracle writer: 42/45 exact;
+- untouched base: 39/45 exact;
+- random native-subspace control: 39/45 exact;
+- shuffled-read control: 4/45 exact;
+- base-error recovery: 3/6;
+- preservation of base-correct examples: 39/39.
+
+Reader, compute, final-exact, oracle-gap, preservation, random advantage,
+shuffled, parse, and digit-token checks passed. The frozen 75% base-error
+recovery and 10-point net-improvement checks failed at 50% and 6.67 points.
+The audit may not be retuned or repeated.
+
+The operand-reader component independently passed its audit criterion at
+45/45 exact operand pairs and may be packaged with the narrower claim. The
+integrated graft may not be described as audit-passing.
+
 ## Claim boundary
 
 A passing audit would establish a complete deterministic latent graft under an

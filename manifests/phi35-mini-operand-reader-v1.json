@@ -1,0 +1,64 @@
+{
+  "claim_boundary": [
+    "Validated only on microsoft/Phi-3.5-mini-instruct at the named revision.",
+    "Validated for decimal operand digits in the frozen Phase 8 three-digit-addition prompt families.",
+    "An external semantic locator supplies the two operand token spans; autonomous operand discovery is not claimed.",
+    "Digit values are decoded from hidden states and are not read from token IDs or prompt text.",
+    "The reader audit passed independently even though the full Phase 8 read-compute-write package missed its uplift gate.",
+    "The interface does not expose a natural-language thought transcript or unrestricted mathematical state."
+  ],
+  "evidence": {
+    "audit_config": {
+      "path": "configs/phase8_phi_latent_graft_audit.json",
+      "sha256": "85bb9dd8bd1f8cdb8e109787d64548dae374790f8f00764d017a07e55302399c"
+    },
+    "audit_result": {
+      "path": "results/phase8_phi_latent_graft_audit.json",
+      "sha256": "1f01247935eb7cd080dc548af55d3a34e892dd435b92f9d75bdd68255bda3d98"
+    },
+    "audit_runs": 1,
+    "development_metric_correction": {
+      "path": "results/phase8_phi_latent_graft_development_metric_correction.json",
+      "sha256": "d78f2f51391810df9ffde34666b278ab9571d616eb866be0fea9bfd60c64b9d2"
+    },
+    "development_result": {
+      "path": "results/phase8_phi_latent_graft_development.json",
+      "sha256": "d35e45a43121303934d6eb86a431fc288a39c547db8c5c4a42458172f46174e4"
+    },
+    "minimum_audit_pair_accuracy": 0.98,
+    "reader_audit_gate_passed": true,
+    "selection_config": {
+      "path": "configs/phase8_phi_operand_reader_selection.json",
+      "sha256": "7ef45af4c805bf6cf73ca2e61ad91f562899bbc79018f52a6f07040e3c590d89"
+    },
+    "selection_result": {
+      "path": "results/phase8_phi_operand_reader_selection.json",
+      "sha256": "ab2f8bb2c0f028e5b1b771cb907965d2efae95a18744644cb67e51dd487938d2"
+    }
+  },
+  "locator": {
+    "contract": "caller supplies ordered decimal token positions for operand A and operand B; every character must occupy exactly one token",
+    "type": "external_semantic_operand_spans"
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "name": "phi35-mini-operand-reader-v1",
+  "reader": {
+    "decision_rule": "nearest full-width native-state centroid by squared Euclidean distance",
+    "hidden_state_index": 1,
+    "tensors": {
+      "centroids_key": "digit_centroids",
+      "classes_key": "digit_classes",
+      "counts_key": "fit_class_counts",
+      "path": "artifacts/phase8_phi_operand_reader.safetensors",
+      "sha256": "58f84aeda73713e9eb2e8ed0347639fc84f60273ad69557d7718b096cd6ac0c0",
+      "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase8-phi-operand-reader-audit-v1/phase8_phi_operand_reader.safetensors"
+    }
+  },
+  "representation": {
+    "residual_width": 3072
+  },
+  "schema_version": "oli.operand-reader-interface/v1"
+}

@@ -1,9 +1,14 @@
 from __future__ import annotations
 
+import argparse
+import hashlib
+import json
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
 import torch
+from safetensors.torch import load_file
 
 
 @dataclass(frozen=True)
@@ -148,3 +153,136 @@ def reconstruct_decimal_digits(digits: list[int]) -> int:
     if any(digit < 0 or digit > 9 for digit in digits):
         raise ValueError("decimal digits must be between zero and nine")
     return int("".join(str(digit) for digit in digits))
+
+
+@dataclass(frozen=True)
+class OperandReaderManifest:
+    schema_version: str
+    name: str
+    model_id: str
+    model_revision: str
+    residual_width: int
+    hidden_state_index: int
+    artifact_path: str
+    artifact_sha256: str
+    classes_key: str
+    centroids_key: str
+    counts_key: str
+    locator: dict[str, Any]
+    evidence: dict[str, Any]
+    claim_boundary: tuple[str, ...]
+
+    @classmethod
+    def from_dict(cls, value: dict[str, Any]) -> OperandReaderManifest:
+        if value.get("schema_version") != "oli.operand-reader-interface/v1":
+            raise ValueError("unsupported operand-reader manifest schema")
+        model = value["model"]
+        representation = value["representation"]
+        tensors = value["reader"]["tensors"]
+        digest = str(tensors["sha256"])
+        if len(digest) != 64 or any(
+            char not in "0123456789abcdef" for char in digest
+        ):
+            raise ValueError("artifact SHA-256 must be lowercase hexadecimal")
+        return cls(
+            schema_version=str(value["schema_version"]),
+            name=str(value["name"]),
+            model_id=str(model["id"]),
+            model_revision=str(model["revision"]),
+            residual_width=int(representation["residual_width"]),
+            hidden_state_index=int(value["reader"]["hidden_state_index"]),
+            artifact_path=str(tensors["path"]),
+            artifact_sha256=digest,
+            classes_key=str(tensors["classes_key"]),
+            centroids_key=str(tensors["centroids_key"]),
+            counts_key=str(tensors["counts_key"]),
+            locator=dict(value["locator"]),
+            evidence=dict(value["evidence"]),
+            claim_boundary=tuple(str(row) for row in value["claim_boundary"]),
+        )
+
+    @classmethod
+    def load(cls, path: Path) -> OperandReaderManifest:
+        return cls.from_dict(json.loads(path.read_text()))
+
+    def verify(self, root: Path) -> None:
+        if self.hidden_state_index < 1 or self.residual_width < 1:
+            raise ValueError("reader boundary and width must be positive")
+        artifact = root / self.artifact_path
+        if not artifact.is_file():
+            raise FileNotFoundError(artifact)
+        observed = hashlib.sha256(artifact.read_bytes()).hexdigest()
+        if observed != self.artifact_sha256:
+            raise ValueError("operand-reader artifact hash mismatch")
+        tensors = load_file(str(artifact))
+        required = (self.classes_key, self.centroids_key, self.counts_key)
+        if any(key not in tensors for key in required):
+            raise ValueError("operand-reader artifact is missing tensors")
+        classes = tensors[self.classes_key]
+        centroids = tensors[self.centroids_key]
+        counts = tensors[self.counts_key]
+        if classes.shape != (10,) or classes.tolist() != list(range(10)):
+            raise ValueError("reader classes must be decimal digits")
+        if centroids.shape != (10, self.residual_width):
+            raise ValueError("reader centroids have the wrong shape")
+        if counts.shape != (10,) or bool((counts < 1).any()):
+            raise ValueError("reader fit counts are invalid")
+        if self.locator.get("type") != "external_semantic_operand_spans":
+            raise ValueError("manifest must declare the external locator")
+        if self.evidence.get("reader_audit_gate_passed") is not True:
+            raise ValueError("manifest must record a passing reader audit")
+        if self.evidence.get("audit_runs") != 1:
+            raise ValueError("manifest must record exactly one audit run")
+        for name in (
+            "selection_config",
+            "selection_result",
+            "development_result",
+            "development_metric_correction",
+            "audit_config",
+            "audit_result",
+        ):
+            reference = self.evidence.get(name)
+            if not isinstance(reference, dict):
+                raise ValueError(f"missing evidence reference: {name}")
+            path = root / str(reference["path"])
+            if not path.is_file():
+                raise FileNotFoundError(path)
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if digest != str(reference["sha256"]):
+                raise ValueError(f"evidence hash mismatch: {name}")
+        audit = json.loads(
+            (root / self.evidence["audit_result"]["path"]).read_text()
+        )
+        observed_pair_accuracy = audit["reader"]["metrics"]["pair_accuracy"]
+        if observed_pair_accuracy < float(
+            self.evidence["minimum_audit_pair_accuracy"]
+        ):
+            raise ValueError("reader audit metric does not pass")
+
+    def load_reader(self, root: Path) -> NearestCentroidDigitReader:
+        self.verify(root)
+        tensors = load_file(str(root / self.artifact_path))
+        return NearestCentroidDigitReader(
+            classes=tensors[self.classes_key],
+            centroids=tensors[self.centroids_key],
+        )
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Validate an operand-reader interface manifest."
+    )
+    parser.add_argument("manifest", type=Path)
+    parser.add_argument("--root", type=Path)
+    args = parser.parse_args()
+    root = args.root or args.manifest.parent.parent
+    manifest = OperandReaderManifest.load(args.manifest)
+    manifest.verify(root)
+    print(
+        f"valid operand-reader interface: {manifest.name} "
+        f"(hidden-state index: {manifest.hidden_state_index})"
+    )
+
+
+if __name__ == "__main__":
+    main()

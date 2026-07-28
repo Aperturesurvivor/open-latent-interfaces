@@ -1,8 +1,11 @@
+from pathlib import Path
+
 import pytest
 import torch
 
 from open_latent_interfaces.operand_reader import (
     NearestCentroidDigitReader,
+    OperandReaderManifest,
     fit_nearest_centroid_digit_reader,
     reconstruct_decimal_digits,
 )
@@ -40,3 +43,15 @@ def test_reader_validates_width_and_decimal_reconstruction() -> None:
     assert reconstruct_decimal_digits([4, 0, 7]) == 407
     with pytest.raises(ValueError, match="at least one"):
         reconstruct_decimal_digits([])
+
+
+def test_audited_phi_operand_reader_manifest() -> None:
+    root = Path(__file__).parents[1]
+    manifest = OperandReaderManifest.load(
+        root / "manifests/phi35-mini-operand-reader-v1.json"
+    )
+    manifest.verify(root)
+    reader = manifest.load_reader(root)
+    assert manifest.hidden_state_index == 1
+    assert reader.classes.tolist() == list(range(10))
+    assert reader.centroids.shape == (10, 3072)

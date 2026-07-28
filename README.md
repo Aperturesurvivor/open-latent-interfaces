@@ -437,6 +437,21 @@ indistinguishable. The writer closed at selection without opening development
 or audit. See the
 [Phase 7 target-state summary](PHASE7_QWEN_TARGET_STATE_SELECTION_SUMMARY.md).
 
+The first complete Phi latent graft then decoded both operands from
+hidden-state index 1, performed exact host-language addition, and supplied the
+result through the audited native answer writer. Its one-shot audit decoded
+45/45 operand pairs and computed 45/45 sums; final output reached 42/45 versus
+39/45 base, 39/45 random, and 4/45 shuffled-read. It exactly matched the oracle
+writer but missed frozen recovery/uplift thresholds, so the integrated package
+is an audit nonpass. The reader component independently passed. See the
+[Phase 8 audit summary](PHASE8_PHI_LATENT_GRAFT_AUDIT_SUMMARY.md).
+
+The independently passing operand reader is packaged behind a typed manifest,
+hash-verifying CLI, and Python API. It is explicitly scoped to an external
+semantic operand-token locator. See the
+[operand-reader interface](docs/OPERAND_READER_INTERFACE.md) and
+[audited manifest](manifests/phi35-mini-operand-reader-v1.json).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -557,6 +572,10 @@ either stage.
 - [Phase 6B Qwen carry-interaction summary](PHASE6B_QWEN_CARRY_INTERACTION_SUMMARY.md)
 - [Phase 7 Qwen target-state overwrite protocol](protocols/PHASE7_QWEN_TARGET_STATE_OVERWRITE.md)
 - [Phase 7 Qwen target-state selection summary](PHASE7_QWEN_TARGET_STATE_SELECTION_SUMMARY.md)
+- [Phase 8 Phi latent read–compute–write protocol](protocols/PHASE8_PHI_LATENT_READ_COMPUTE_WRITE.md)
+- [Phase 8 Phi latent graft audit summary](PHASE8_PHI_LATENT_GRAFT_AUDIT_SUMMARY.md)
+- [Operand-reader interface](docs/OPERAND_READER_INTERFACE.md)
+- [Audited Phi operand-reader manifest](manifests/phi35-mini-operand-reader-v1.json)
 - [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
