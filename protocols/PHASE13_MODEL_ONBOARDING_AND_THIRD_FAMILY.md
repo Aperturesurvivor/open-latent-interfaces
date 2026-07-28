@@ -259,6 +259,24 @@ This is write-side selection evidence only. It does not use the fitted reader
 tensor, establish a suffix writer, test deterministic arithmetic, or expose
 the held development split.
 
+The frozen scan completed once and passed:
+
+- result: `results/phase13_smollm2_leading_compiler_selection.json`
+- result SHA-256:
+  `4c08f6ba45f9d58f04ec1693c49461863290d6750534ac9880f5ab05d88f49f8`
+- selected hidden-state index: 24
+- selected desired margin / norm cap: 8.0 / 0.25
+- target and identity: 90 / 90 each
+- wrong-target and random controls: 7 / 90 each
+- target advantage: 92.2 percentage points
+- mean target relative norm: 0.0794
+
+No earlier sampled boundary passed. The selected intervention is the output of
+SmolLM2's final decoder block, immediately before final normalization and the
+language-model head. This localizes a reliable leading-digit write interface;
+it does not show that the same boundary or parameters work at later answer
+positions.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
