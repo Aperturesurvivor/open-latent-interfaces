@@ -25,6 +25,7 @@ from open_latent_interfaces.adapter import load_online_adapter
 from open_latent_interfaces.capability import parse_first_integer
 from open_latent_interfaces.evaluation import (
     norm_match,
+    phase2_advancement_gate_passes,
     random_norm_matched,
 )
 from open_latent_interfaces.phase2_data import (
@@ -256,6 +257,21 @@ def main() -> None:
     parser.add_argument("--dtype", choices=("float16", "float32"), default="float16")
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
+    evaluation_split = config.get("evaluation_split", "development")
+    if evaluation_split not in ("development", "audit"):
+        raise SystemExit(f"unsupported evaluation split: {evaluation_split}")
+    audit_run = evaluation_split == "audit"
+    if audit_run:
+        if not config.get("audit_authorized", False):
+            raise SystemExit("audit split requires explicit authorization")
+        if config.get("maximum_audit_runs") != 1:
+            raise SystemExit("audit config must authorize exactly one run")
+        if str(args.output) != config.get("audit_output"):
+            raise SystemExit("audit output path does not match frozen config")
+        if args.output.exists():
+            raise SystemExit("refusing to overwrite an existing audit result")
+    elif config.get("audit_authorized", False):
+        raise SystemExit("audit authorization is invalid for development")
     source_result_path = Path(config["source_adapter_result"])
     source_weights_path = Path(config["source_adapter_weights"])
     prototype_result_path = Path(config["prototype_result"])
@@ -292,15 +308,43 @@ def main() -> None:
             ones_prototype_path,
             config["ones_prototypes_sha256"],
         )
+    development_result = None
+    development_result_path = None
+    development_config_path = None
+    if audit_run:
+        development_result_path = Path(config["development_result"])
+        development_config_path = Path(config["development_config"])
+        verify_sha256(
+            development_result_path,
+            config["development_result_sha256"],
+        )
+        verify_sha256(
+            development_config_path,
+            config["development_config_sha256"],
+        )
+        development_result = json.loads(development_result_path.read_text())
+        if (
+            development_result["config_sha256"]
+            != config["development_config_sha256"]
+        ):
+            raise SystemExit("development result/config provenance mismatch")
+        if not phase2_advancement_gate_passes(development_result):
+            raise SystemExit("frozen development result does not pass every gate")
     source = json.loads(source_result_path.read_text())
     prototype_result = json.loads(prototype_result_path.read_text())
     dataset_config = json.loads(dataset_config_path.read_text())
     examples = build_phase2_additions(**dataset_config["dataset"]["parameters"])
     if phase2_addition_sha256(examples) != source["dataset"]["sha256"]:
         raise SystemExit("dataset hash mismatch")
-    development = [example for example in examples if example.split == "development"]
-    targets = balanced_counterfactual_results(development)
-    if result_list_sha256(targets) != config["development_targets_sha256"]:
+    evaluation_examples = [
+        example for example in examples if example.split == evaluation_split
+    ]
+    targets = balanced_counterfactual_results(evaluation_examples)
+    expected_target_hash = config.get(
+        "evaluation_targets_sha256",
+        config.get("development_targets_sha256"),
+    )
+    if result_list_sha256(targets) != expected_target_hash:
         raise SystemExit("counterfactual target hash mismatch")
 
     device = torch.device(args.device)
@@ -349,7 +393,7 @@ def main() -> None:
         if ones_result["selection"]["selected"]["scale"] != config["scales"][2]:
             raise SystemExit("ones prototype source scale mismatch")
 
-    prompts = render_prompts(tokenizer, development)
+    prompts = render_prompts(tokenizer, evaluation_examples)
     conditions = (
         "base",
         "hybrid",
@@ -365,7 +409,7 @@ def main() -> None:
             model,
             tokenizer,
             capture,
-            examples=development,
+            examples=evaluation_examples,
             targets=targets,
             prompts=prompts,
             adapters=adapters,
@@ -400,16 +444,36 @@ def main() -> None:
                 "ones_prototypes_sha256": config["ones_prototypes_sha256"],
             }
         )
+    if development_result_path is not None:
+        sources.update(
+            {
+                "development_result": str(development_result_path),
+                "development_result_sha256": config[
+                    "development_result_sha256"
+                ],
+                "development_config": str(development_config_path),
+                "development_config_sha256": config[
+                    "development_config_sha256"
+                ],
+            }
+        )
     report = {
         "schema_version": (
-            "oli.phase2-closed-loop-dual-prototype/v1"
-            if ones_result is not None
+            "oli.phase2-closed-loop-dual-prototype-audit/v1"
+            if audit_run
             else "oli.phase2-closed-loop-hybrid/v1"
+            if ones_result is None
+            else "oli.phase2-closed-loop-dual-prototype/v1"
         ),
         "created_at": datetime.now(UTC).isoformat(),
-        "status": "development_only",
+        "status": "audit" if audit_run else "development_only",
         "model": source["model"],
-        "dataset": source["dataset"],
+        "dataset": {
+            **source["dataset"],
+            "evaluation_split": evaluation_split,
+            "evaluation_examples": len(evaluation_examples),
+            "audit_examples_unopened": 0 if audit_run else 90,
+        },
         "sources": sources,
         "write": {
             "hidden_state_indices": config["hidden_state_indices"],
@@ -427,7 +491,7 @@ def main() -> None:
         },
         "target_assignment": {
             "scheme": "balanced_all_digits_changed",
-            "development_sha256": config["development_targets_sha256"],
+            f"{evaluation_split}_sha256": expected_target_hash,
         },
         "conditions": condition_results,
         "advancement_gate": source["advancement_gate"],
@@ -440,7 +504,9 @@ def main() -> None:
         },
         "elapsed_seconds": time.perf_counter() - started,
         "claim_boundary": (
-            "Iterative closed-loop development composition; audit remains sealed."
+            "One-shot frozen audit; no post-audit selection or repair."
+            if audit_run
+            else "Iterative closed-loop development composition; audit remains sealed."
         ),
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

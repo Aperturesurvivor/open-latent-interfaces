@@ -92,3 +92,29 @@ def select_bounded_candidate(
             -row["mean_identity_relative_norm"],
         ),
     )
+
+
+def phase2_advancement_gate_passes(report: dict[str, Any]) -> bool:
+    """Check every conjunctive Phase 2 closed-loop advancement criterion."""
+    gate = report["advancement_gate"]
+    conditions = report["conditions"]
+    targeted = conditions["hybrid"]
+    identity = conditions["identity_hard_gated"]
+    controls = [
+        row["target_full_result_accuracy"]
+        for name, row in conditions.items()
+        if name not in ("hybrid", "identity_hard_gated")
+    ]
+    return (
+        targeted["target_full_result_accuracy"]
+        >= gate["exact_target_minimum"]
+        and min(targeted["step_target_token_accuracy"])
+        >= gate["per_position_target_minimum"]
+        and targeted["target_full_result_accuracy"] - max(controls)
+        >= gate["control_advantage_minimum"]
+        and identity["original_full_result_accuracy"]
+        >= gate["identity_preservation_minimum"]
+        and max(targeted["mean_relative_norm_by_step"])
+        <= gate["relative_norm_maximum"]
+        and targeted["parse_rate"] == gate["parse_rate_required"]
+    )
