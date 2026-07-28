@@ -1,0 +1,49 @@
+{
+  "base_model_batch_size": 8,
+  "behavior_result": "results/phase3_phi_prefill_behavior_development.json",
+  "behavior_result_sha256": "b8c71ac2ae6bb03b9fb707e3434695cea5f98cecdfb584f25a697e0dfdcbda35",
+  "boundary_result": "results/phase3_phi_native_boundary_selection.json",
+  "boundary_result_sha256": "aac7a27200379c47407644edf9adc40c4c30c88958c8e07157339bf2fe962a81",
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "dataset_config_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "donor_assignment_sha256": {
+    "fit_0_targeted": "c2ab1078d3f635c5e3f79821a5d3fbdae6ef1337615ea9cc8fe074be59ff8622",
+    "fit_0_wrong": "b26e924d0cd822df0bed30910a4c1124c6e0994357808bc43d7bbca7d7332439",
+    "fit_1_targeted": "b59694f8b98a916e3609531eee6b3129a76119c963e9529001eaf5708c6ae6ce",
+    "fit_1_wrong": "3f2d88c6ebfed4af048bc780b440ce210ce26b5c2b878acafb8362102cef208f",
+    "fit_2_targeted": "a05d923634e46d3bac6064e47f88637b1e88683e2a2da45fedf794a7c5cae932",
+    "fit_2_wrong": "008bf3b8b82cffac9c419e72ef6739832c70aa0e02de575096ad5d56cbb65f77",
+    "selection_0_targeted": "bca11c787dbb3811a41651a128d07ed43c6db5c2c6635ecc5c3cb86ff30277ec",
+    "selection_0_wrong": "2fa3ce515d69008c18aa81c74d19e49e5a6053bd0d6ac81ec3370cd4abcd3569",
+    "selection_1_targeted": "b3ac4dcda20accf4402e3f4b869454f6560cb9be72654f61873a8f82e7ece90d",
+    "selection_1_wrong": "3073595c60f6933bcdb7ff034ee25ff38d7864a4dcdc5ef116158cc1d31dea3b",
+    "selection_2_targeted": "8483c195b7e108486e08f5216a5b8b740d2ef12c52479a3d84f516b6db446c8d",
+    "selection_2_wrong": "11674dfe857685a7a534730b10b7450966fcfef2f46b08e5ba7232e255a842c6"
+  },
+  "hidden_state_indices": {
+    "0": 24,
+    "1": 30,
+    "2": 30
+  },
+  "random_control_seed": 20260730,
+  "ranks": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "schema_version": "oli.phase3-delta-rank-config/v1",
+  "selection_rule": {
+    "maximum_relative_norm": 1.0,
+    "minimum_control_advantage": 0.25,
+    "minimum_target_accuracy": 0.7,
+    "minimum_digit_token_rate": 1.0,
+    "rank_choice": "smallest rank passing every position sharing its basis"
+  },
+  "target_sha256": {
+    "fit": "5bb79dde4c8e7b721829eaacee8a839b3dcca8a4fed2d9a152011ff7e209843b",
+    "selection": "54f954934aae1c812667ea60e68eb49f0a0edd02478ac1e0a6f0f5e3d64be493"
+  }
+}
