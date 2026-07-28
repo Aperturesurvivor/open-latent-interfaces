@@ -305,6 +305,14 @@ development passed. The corpus was retained; fit-only estimation may use the
 127 fully correct quartets, but selection and development cannot be filtered.
 See the [Phase 4 behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md).
 
+The first causal carry map then rejected a single-vector prompt bottleneck:
+full carry-pair, difference-in-differences, matched +1, shuffled, and random
+interventions at the final `Answer=` token all reached at most 2/45 target tens
+digits. Carry must therefore be traced across prompt-token states and their
+cached downstream effects rather than assumed to reside in one terminal prompt
+vector. See the
+[Phase 4 prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -400,6 +408,7 @@ either stage.
 - [Phase 3 Phi closed-loop development summary](PHASE3_PHI_CLOSED_LOOP_DEVELOPMENT_SUMMARY.md)
 - [Phase 3 Phi one-shot audit summary](PHASE3_PHI_AUDIT_SUMMARY.md)
 - [Phase 4 carry-quartet behavior summary](PHASE4_CARRY_BEHAVIOR_SUMMARY.md)
+- [Phase 4 carry prompt-boundary summary](PHASE4_CARRY_BOUNDARY_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
