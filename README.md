@@ -337,6 +337,13 @@ class-specific carry gate therefore failed while motivating a simpler
 class-invariant carry direction. See the
 [Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md).
 
+A single class-invariant carry vector then reached 30/45 exact at scale 1.0
+against 16/45 for matched no-carry and 1/45 random. Although that scale met
+every gate, the original scorer selected a higher-accuracy scale whose control
+advantage failed; the original run is therefore preserved as a non-pass
+pending a bounded no-rerun rule correction. See the
+[Phase 4 universal carry summary](PHASE4_UNIVERSAL_CARRY_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -436,6 +443,7 @@ either stage.
 - [Phase 4 carry sequence-boundary summary](PHASE4_CARRY_SEQUENCE_BOUNDARY_SUMMARY.md)
 - [Phase 4 carry token-region summary](PHASE4_CARRY_TOKEN_REGION_SUMMARY.md)
 - [Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md)
+- [Phase 4 universal carry summary](PHASE4_UNIVERSAL_CARRY_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
