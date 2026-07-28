@@ -1,0 +1,19 @@
+{
+  "assistant_prefix": "Answer=",
+  "audit_authorized": false,
+  "dataset": {
+    "parameters": {
+      "audit_quartets_per_digit": 5,
+      "development_quartets_per_digit": 5,
+      "fit_quartets_per_digit": 20,
+      "seed": 20260801,
+      "selection_quartets_per_digit": 5
+    },
+    "sha256": "daa08c5e572676046bc3f8e27abcaab249a59dffc5965ba6729f491b098d4574"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.phase5-qwen-carry-dataset-config/v1"
+}
