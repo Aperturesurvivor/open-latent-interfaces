@@ -33,6 +33,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from open_latent_interfaces.activations import ActivationCapture
 from open_latent_interfaces.evaluation import norm_match
 from open_latent_interfaces.phase2_data import balanced_counterfactual_results
+from open_latent_interfaces.phase3_data import (
+    build_phase3_additions,
+    phase3_addition_sha256,
+)
 from open_latent_interfaces.phase7_data import (
     build_phase7_carry_quartets,
     phase7_carry_sha256,
@@ -94,11 +98,17 @@ def main() -> None:
         "dataset_config": Path(config["dataset_config"]),
         "behavior_result": Path(config["behavior_result"]),
         "basis_artifact": Path(config["basis_artifact"]),
+        "phase3_dataset_config": Path(config["phase3_dataset_config"]),
+        "phase3_behavior_result": Path(config["phase3_behavior_result"]),
     }
     for name, path in paths.items():
         verify_sha256(path, config[f"{name}_sha256"])
     dataset_config = json.loads(paths["dataset_config"].read_text())
     behavior = json.loads(paths["behavior_result"].read_text())
+    phase3_dataset_config = json.loads(
+        paths["phase3_dataset_config"].read_text()
+    )
+    phase3_behavior = json.loads(paths["phase3_behavior_result"].read_text())
     if dataset_config.get("audit_authorized", False):
         raise SystemExit("writer selection requires a sealed audit")
     if not behavior["passes"]:
@@ -117,11 +127,39 @@ def main() -> None:
     if value_sha256(exact_ids) != config["eligible_fit_examples_sha256"]:
         raise SystemExit("eligible fit example hash mismatch")
     exact_id_set = set(exact_ids)
-    fit = [
+    wide_fit = [
         row
         for row in examples
         if row.split == "fit" and row.example_id in exact_id_set
     ]
+    phase3_examples = build_phase3_additions(
+        **phase3_dataset_config["dataset"]["parameters"]
+    )
+    if phase3_addition_sha256(phase3_examples) != phase3_dataset_config[
+        "dataset"
+    ]["sha256"]:
+        raise SystemExit("Phase 3 source dataset hash mismatch")
+    if (
+        phase3_dataset_config["model"] != dataset_config["model"]
+        or not phase3_behavior["passes"]
+    ):
+        raise SystemExit("Phase 3 source model or behavior mismatch")
+    phase3_exact_ids = sorted(
+        row["example_id"]
+        for row in phase3_behavior["rows"]
+        if row["split"] == "fit" and row["exact"]
+    )
+    if value_sha256(phase3_exact_ids) != config[
+        "phase3_eligible_fit_examples_sha256"
+    ]:
+        raise SystemExit("Phase 3 eligible fit example hash mismatch")
+    phase3_exact_set = set(phase3_exact_ids)
+    phase3_fit = [
+        row
+        for row in phase3_examples
+        if row.split == "fit" and row.example_id in phase3_exact_set
+    ]
+    fit = phase3_fit + wide_fit
     selection = [row for row in examples if row.split == "selection"]
     if value_sha256([row.example_id for row in selection]) != config[
         "selection_examples_sha256"
@@ -150,11 +188,17 @@ def main() -> None:
     tokenizer.padding_side = "left"
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
-    rendered_fit = render_examples(
+    rendered_phase3_fit = render_examples(
         tokenizer,
-        fit,
+        phase3_fit,
+        assistant_prefix=phase3_dataset_config["assistant_prefix"],
+    )
+    rendered_wide_fit = render_examples(
+        tokenizer,
+        wide_fit,
         assistant_prefix=dataset_config["assistant_prefix"],
     )
+    rendered_fit = rendered_phase3_fit + rendered_wide_fit
     rendered_selection = render_examples(
         tokenizer,
         selection,
@@ -409,6 +453,16 @@ def main() -> None:
         "dataset_sha256": observed_dataset_hash,
         "behavior_result_sha256": config["behavior_result_sha256"],
         "eligible_fit_examples": len(fit),
+        "fit_sources": {
+            "phase3_exact": len(phase3_fit),
+            "wide_exact": len(wide_fit),
+            "phase3_eligible_fit_examples_sha256": config[
+                "phase3_eligible_fit_examples_sha256"
+            ],
+            "wide_eligible_fit_examples_sha256": config[
+                "eligible_fit_examples_sha256"
+            ],
+        },
         "eligible_fit_examples_sha256": config[
             "eligible_fit_examples_sha256"
         ],

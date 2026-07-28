@@ -14,6 +14,11 @@
   },
   "minimum_fit_examples_per_digit": 4,
   "norm_cap": 1.0,
+  "phase3_behavior_result": "results/phase3_phi_prefill_behavior_development.json",
+  "phase3_behavior_result_sha256": "b8c71ac2ae6bb03b9fb707e3434695cea5f98cecdfb584f25a697e0dfdcbda35",
+  "phase3_dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "phase3_dataset_config_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "phase3_eligible_fit_examples_sha256": "9eca5d03e2498de088b48465b70b6bb47273fb9f08cbef1fa2e3aa55412f753c",
   "random_control_seed": 20261201,
   "ranks": {
     "0": 32,

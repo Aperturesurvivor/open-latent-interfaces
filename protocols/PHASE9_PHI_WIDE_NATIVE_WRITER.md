@@ -12,15 +12,19 @@ The previously audited Phi causal bases and boundaries remain fixed:
 - norm cap: 1.0;
 - hard gate: exact zero when base argmax already equals the requested digit.
 
-Only the ten native coordinate prototypes per answer position may be refitted
-on the wider, non-audit Phase 8 fit distribution.
+Only the ten native coordinate prototypes per answer position may be refitted.
+The fit pool combines behavior-exact examples from the original non-audit
+Phase 3 fit distribution and the wider non-audit Phase 8 fit distribution.
+Pooling is required because the matched carry corpus intentionally contains
+only a subset of natural answer ones digits.
 
 ## Fit eligibility
 
-Phi behavior is measured on Phase 8 fit and selection prompts only. Prototype
-fitting uses fit examples whose complete natural answer is exact. Every
+Phi behavior is measured separately on both frozen source corpora. Prototype
+fitting uses only examples whose complete natural answer is exact. Every
 position must retain all required digit classes with at least four examples
-per class.
+per class. Source dataset, behavior result, and eligible-ID hashes are frozen
+independently.
 
 ## Selection
 
