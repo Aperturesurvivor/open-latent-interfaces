@@ -93,3 +93,8 @@ digit-conditioned carry writer failed because wrong source-digit classes
 transferred equally well. A bounded universal-vector follow-up may aggregate
 the already fitted Qwen class vectors by their fit counts and compare them
 with the equivalently aggregated no-carry vector and isotropic control.
+
+The universal follow-up introduces no new fitted weights. It evaluates the
+fit-count-weighted mean Qwen carry vector at fixed index 16 over scales 0.5,
+1.0, 1.5, 2.0, and 3.0, selecting the smallest complete pass against the
+universal no-carry and isotropic controls.
