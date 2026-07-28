@@ -155,6 +155,13 @@ Selection behavior localizes the next problem to template-conditioned suffix
 geometry; the audit remains sealed. See the
 [causal-adapter summary](PHASE2_CAUSAL_ADAPTER_SUMMARY.md).
 
+Fit-only training across four paraphrase families then improved suffix transfer
+to 38/90 and 34/90, exact targets to 18/90, and identity preservation to 80/90.
+This confirms template diversity helps, but does not close the gap. The next
+constraint to remove is the frozen donor-PCA output basis, which may exclude
+low-variance causal suffix directions. See the
+[multitemplate causal summary](PHASE2_MULTITEMPLATE_CAUSAL_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -230,6 +237,7 @@ either stage.
 - [Phase 1I local-transport dictionary summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md)
 - [Phase 2 scaled-adapter development summary](PHASE2_SCALED_ADAPTER_SUMMARY.md)
 - [Phase 2 causal-adapter development summary](PHASE2_CAUSAL_ADAPTER_SUMMARY.md)
+- [Phase 2 multitemplate causal summary](PHASE2_MULTITEMPLATE_CAUSAL_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
