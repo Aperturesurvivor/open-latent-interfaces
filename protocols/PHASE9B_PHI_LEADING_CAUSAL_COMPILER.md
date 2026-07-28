@@ -65,3 +65,26 @@ targets, thresholds, random seed, and numerical grid are hash-locked in
 `configs/phase9b_phi_leading_causal_compiler.json`. The runner refuses to
 overwrite an existing result.
 
+## Frozen selection outcome
+
+The one-shot compiler did not pass. The selected diagnostic margin was 32:
+
+- counterfactual target accuracy: `101/180` (`0.5611`);
+- identity accuracy: `180/180` (`1.0`);
+- wrong-digit norm-matched control: `9/180` (`0.05`);
+- random norm-matched control: `1/180` (`0.0056`);
+- target advantage over the stronger control: `0.5111`;
+- mean target relative norm: `0.1393`;
+- target digit-token rate: `1.0`.
+
+The target accuracy threshold of 0.90 was not met. The complete write-once
+result is `results/phase9b_phi_leading_causal_compiler_selection.json`, with
+SHA-256
+`b95083fc2f3f98be473a8c78759b2f2a35c54df6d8a49e02a33d3e444cd895b5`.
+
+The monotonic improvement across the frozen margin grid, strong control
+separation, low relative norm, and perfect identity preservation support only
+a narrower conclusion: the prompt-local derivative is causally useful, but a
+single first-order linearization does not cross the nonlinear leading-token
+boundary reliably. This result authorizes an exposed iterative-relinearization
+follow-up; it does not authorize an audit.
