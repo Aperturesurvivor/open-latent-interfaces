@@ -416,6 +416,12 @@ writer reached 34/45 target tens versus 22/45 matched no-carry and 0/45
 random. See the
 [Phase 5 Qwen donor-free development summary](PHASE5_QWEN_DONOR_FREE_DEVELOPMENT_SUMMARY.md).
 
+The sealed Qwen audit then passed operand editing at 43/45 exact versus 0/45
+wrong-class, but the universal carry vector failed specificity: 31/45 target
+tens versus 21/45 matched no-carry, a 22.22-point margin below the fixed
+25-point gate. The audit cannot be reused for tuning. See the
+[Phase 5 Qwen audit summary](PHASE5_QWEN_DONOR_FREE_AUDIT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -529,6 +535,7 @@ either stage.
 - [Phase 5 Qwen donor-free prototype summary](PHASE5_QWEN_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Phase 5 Qwen universal carry summary](PHASE5_QWEN_UNIVERSAL_CARRY_SUMMARY.md)
 - [Phase 5 Qwen donor-free development summary](PHASE5_QWEN_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
+- [Phase 5 Qwen donor-free audit summary](PHASE5_QWEN_DONOR_FREE_AUDIT_SUMMARY.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)

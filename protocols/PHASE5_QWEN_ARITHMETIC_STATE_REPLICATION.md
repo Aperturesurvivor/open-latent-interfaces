@@ -134,3 +134,15 @@ artifacts and passing development evidence, layers 12 and 16, scales 1.0 and
 1.6, the development random seed, exact operand discrimination, carry-tens
 discrimination, and the original numerical gates. A repeat output or changed
 source is refused before model loading.
+
+## Audit outcome
+
+The operand interface passed sealed audit at 43/45 exact against 0/45
+wrong-class exact and 0/45 random. The universal carry interface reached 31/45
+target tens against 21/45 matched no-carry and 0/45 random. Its 22.22-point
+advantage failed the fixed 25-point gate, leaving carry and the combined
+package as audit non-passes.
+
+The occupied audit output refused a repeat invocation. Phase 5 may not tune,
+repair, or re-audit the universal carry writer. Further Qwen carry work
+requires a fresh pair-disjoint corpus and a precommitted conditional writer.
