@@ -1,0 +1,182 @@
+{
+  "created_at": "2026-07-28T06:49:38.224533+00:00",
+  "dataset": {
+    "config": "wikitext-2-raw-v1",
+    "id": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "split": "train",
+    "text_field": "text"
+  },
+  "fit": {
+    "dim_batch": 16,
+    "max_seq_len": 64,
+    "skip_first": 16,
+    "source_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "target_layer": 23
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "prompts": [
+    {
+      "row_index": 5824,
+      "text_sha256": "7aee47e1111875bd1835e17ceaf8bbf13e9faf248face2d40574780587bac1be",
+      "token_count": 56
+    },
+    {
+      "row_index": 18095,
+      "text_sha256": "383e4725b08f524807b919f88807ab2ebb698a9d575d5ab3dadeb2e94726b9c5",
+      "token_count": 48
+    },
+    {
+      "row_index": 5080,
+      "text_sha256": "da675594fa286ba9bcecb658f0e805d4a39f934413089fac55f720fd8c7f51c4",
+      "token_count": 62
+    },
+    {
+      "row_index": 24020,
+      "text_sha256": "f46d996564c57d878b76b33dbf8b40973c47546c456d1d185ca0d72115fc248d",
+      "token_count": 44
+    },
+    {
+      "row_index": 4708,
+      "text_sha256": "0696aae7180256abca8e9798e726b9b5dbceeb2940c943f29cb0e59daaa6f356",
+      "token_count": 63
+    },
+    {
+      "row_index": 30771,
+      "text_sha256": "f64576e5a65ad66cdc08923d0460a8c55a63794867f89c5cbdf09392a56236f2",
+      "token_count": 48
+    },
+    {
+      "row_index": 28689,
+      "text_sha256": "821f09b89838876375cccf192618da74f0e99fdc130d734b8919db17c43ea796",
+      "token_count": 56
+    },
+    {
+      "row_index": 4517,
+      "text_sha256": "83fc88e3ff56a171285cde624dc8a56104c2ec6eed877c4838c622ac8278cebd",
+      "token_count": 58
+    },
+    {
+      "row_index": 4336,
+      "text_sha256": "57c7c9a3f5daa26307b02d8591dc65df7f25271120f288d939d5c77d324aa5d2",
+      "token_count": 45
+    },
+    {
+      "row_index": 27062,
+      "text_sha256": "3e3fbf82eb57b0e7263ce030d082a88c87ff59881248c7b276cd957fb64103a6",
+      "token_count": 56
+    },
+    {
+      "row_index": 22653,
+      "text_sha256": "832ff5267fa5599fe0bce4f4bec76b7c11a1fcc9dd9273cc0d63efbddf0e5087",
+      "token_count": 60
+    },
+    {
+      "row_index": 5298,
+      "text_sha256": "b584643cdb2f137bda79a99356e729bb8d67ec049fcf5b1bc5073e9b1e6df599",
+      "token_count": 64
+    },
+    {
+      "row_index": 25324,
+      "text_sha256": "92aaa9de880180168d768930c27416b0f6f65a3ac7a993d55c1dfd47ea1f581d",
+      "token_count": 46
+    },
+    {
+      "row_index": 26049,
+      "text_sha256": "920c189090c7ee40ed6a59e45dd8d3fa51c7999f7506089042d7f15856771d96",
+      "token_count": 50
+    },
+    {
+      "row_index": 17710,
+      "text_sha256": "c43a346c7f3f52bfbe17e289e96708777caa19162a0b8e65208090209657cce2",
+      "token_count": 59
+    },
+    {
+      "row_index": 8313,
+      "text_sha256": "9110ae318fbe143e8a2fee3e08e742246053bda8782a4b7732a2ce67e6015195",
+      "token_count": 44
+    },
+    {
+      "row_index": 4707,
+      "text_sha256": "a0bc5c4006ee138f723a63ed616f0281e25f5fc1da4d714fabe2db419529b1a5",
+      "token_count": 49
+    },
+    {
+      "row_index": 36508,
+      "text_sha256": "b20b2178804a28daed6586c668e7a477af52794a90b5274063c7a6aca71f1110",
+      "token_count": 57
+    },
+    {
+      "row_index": 28669,
+      "text_sha256": "06c750616a635c85b262db5bbeb3ed72016ba1fe1638046bcd4907bd5d37f3aa",
+      "token_count": 43
+    },
+    {
+      "row_index": 1356,
+      "text_sha256": "d8799f50ab8de351f9e486b9f80368a0b6efa3c02d4d9e43265612299eade649",
+      "token_count": 45
+    },
+    {
+      "row_index": 27723,
+      "text_sha256": "3f952949e012d329de3bbe47af237e788143116ea5b455f1ccc3dcadc9348d26",
+      "token_count": 63
+    },
+    {
+      "row_index": 14068,
+      "text_sha256": "085018a143073a07f75c18e78125266418d0fd0d39a44014a378394332973db8",
+      "token_count": 42
+    },
+    {
+      "row_index": 35972,
+      "text_sha256": "9ee8cf99a5bc17bc083066c6e5f9d0a66748a78776792f2989713f5ad82b068d",
+      "token_count": 40
+    },
+    {
+      "row_index": 34117,
+      "text_sha256": "a412d1ca335c8eb20ff57b1a9997437fe8e380c54522c7cb388274e0b339373f",
+      "token_count": 50
+    }
+  ],
+  "purpose": "phase1-development",
+  "schema_version": "oli.jlens-fit-selection/v1",
+  "selection": {
+    "eligible_rows": 1134,
+    "max_tokens": 64,
+    "min_tokens": 40,
+    "n_prompts": 24,
+    "seed": 20260727,
+    "selected_rows_sha256": "da075b35fdade7ddd94f24523c75b7e148aa5ca8d3defb3f49975905a39340bc"
+  },
+  "upstream": {
+    "license": "Apache-2.0",
+    "repository": "https://github.com/anthropics/jacobian-lens",
+    "revision": "581d398613e5602a5af361e1c34d3a92ea82ba8e"
+  }
+}

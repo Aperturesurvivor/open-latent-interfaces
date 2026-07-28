@@ -98,6 +98,7 @@ either stage.
 - [Prior art and claims boundary](docs/PRIOR_ART_AND_CLAIMS.md)
 - [Phase 0 pilot protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md)
 - [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
+- [Phase 1A J-lens development protocol](protocols/PHASE1_JLENS_DEVELOPMENT.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
