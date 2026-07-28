@@ -1,0 +1,38 @@
+{
+  "base_model_batch_size": 8,
+  "basis": "artifacts/phase3_phi_native_bases.safetensors",
+  "basis_sha256": "33fc5a9dc0e326620769416973a167dc6b370ed18fd1407864f1e539ef449199",
+  "behavior_result": "results/phase3_phi_prefill_behavior_development.json",
+  "behavior_sha256": "b8c71ac2ae6bb03b9fb707e3434695cea5f98cecdfb584f25a697e0dfdcbda35",
+  "dataset_config": "configs/phase3_phi_dataset_frozen.json",
+  "dataset_sha256": "e814285fbafcc434f642dfd0e787bf3c5da9bb8fb1d1ded14215294cb0d8f230",
+  "hidden_state_index": 24,
+  "norm_cap": 1.0,
+  "prototype_result": "results/phase3_phi_prototype_selection.json",
+  "prototype_sha256": "891ae9a9228455f76c00ab4220ceb3a8de58e41f3033a1ee336f9f0f3efb4a44",
+  "rank_result": "results/phase3_phi_delta_rank_selection.json",
+  "rank_sha256": "986c4b11a424ee4ff5233ac30349d1709fc80fca33653d0a5e6367a6a8f72ac9",
+  "ranks": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "scales": [
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "schema_version": "oli.phase3-leading-prototype-rank-config/v1",
+  "selection_rule": {
+    "minimum_digit_token_rate": 1.0,
+    "minimum_identity_accuracy": 0.9,
+    "minimum_target_accuracy": 0.7,
+    "rank_choice": "smallest rank with any passing scale",
+    "scale_choice": "same target-identity rule as frozen prototype selection"
+  },
+  "selection_targets_sha256": "54f954934aae1c812667ea60e68eb49f0a0edd02478ac1e0a6f0f5e3d64be493"
+}
