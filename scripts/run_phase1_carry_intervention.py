@@ -73,7 +73,13 @@ def main() -> None:
     args = parser.parse_args()
 
     config = json.loads(args.config.read_text())
-    probe_config = json.loads(Path(config["probe_config"]).read_text())
+    probe_config_path = Path(config["probe_config"])
+    observed_probe_config_hash = hashlib.sha256(
+        probe_config_path.read_bytes()
+    ).hexdigest()
+    if observed_probe_config_hash != config["probe_config_sha256"]:
+        raise SystemExit("probe config hash mismatch")
+    probe_config = json.loads(probe_config_path.read_text())
     examples = build_phase1_additions(**probe_config["dataset"]["parameters"])
     observed_hash = phase1_addition_sha256(examples)
     if observed_hash != probe_config["dataset"]["sha256"]:
