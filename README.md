@@ -32,11 +32,13 @@ be trained, then frozen for inference.
 No NLA has been trained here. No deterministic graft has passed an end-to-end
 audit. Probe decodability is not treated as causal use.
 
-The first completed Qwen2.5-0.5B pilot is an infrastructure success and a
-scientific non-pass: approximate result information was decodable, but exact
-recovery failed and the causal first-digit advantage over a shuffled-result
-control was small. See the
-[Phase 0 executive summary](PHASE0_EXECUTIVE_SUMMARY.md).
+The first Qwen2.5-0.5B pilot was an infrastructure success and a scientific
+non-pass. Phase 0.1 then removed digit imbalance and template leakage, committed
+its selected configuration before audit, and produced a clearer negative
+result: leading-digit decoding stayed near chance, exact scalar recovery was
+0/36, and the selected internal digit-probe direction lost to its random
+control on aggregate margin. See the
+[Phase 0.1 executive summary](PHASE01_EXECUTIVE_SUMMARY.md).
 
 ## Why this is separate from ordinary activation steering
 
@@ -92,6 +94,7 @@ either stage.
 - [Phase 0 pilot protocol](protocols/PHASE0_NATIVE_MATH_CHANNELS.md)
 - [Phase 0.1 balanced-cartography protocol](protocols/PHASE01_BALANCED_CARTOGRAPHY.md)
 - [Phase 0 lab notebook](PHASE0_LAB_NOTEBOOK.md)
+- [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
 
 ## Upstream foundations
 
