@@ -361,6 +361,13 @@ operand interface: 41/45 target exact versus 4/45 strongest control. Together
 with the unchanged carry pass, the corrected development package clears every
 gate and authorizes a separately frozen one-shot audit.
 
+The sealed one-shot audit passed both interfaces. The operand writer reached
+37/45 exact against 0/45 wrong-class and 2/45 random exact. The universal
+rank-one carry direction reached 26/45 target tens digits against 11/45
+matched no-carry and 2/45 random. Every output parsed, and a repeat audit
+invocation was refused. See the
+[Phase 4 donor-free audit summary](PHASE4_DONOR_FREE_AUDIT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -462,6 +469,7 @@ either stage.
 - [Phase 4 donor-free prototype summary](PHASE4_DONOR_FREE_PROTOTYPE_SUMMARY.md)
 - [Phase 4 universal carry summary](PHASE4_UNIVERSAL_CARRY_SUMMARY.md)
 - [Phase 4 donor-free development summary](PHASE4_DONOR_FREE_DEVELOPMENT_SUMMARY.md)
+- [Phase 4 donor-free audit summary](PHASE4_DONOR_FREE_AUDIT_SUMMARY.md)
 - [Native-coordinate interface API and manifest](docs/NATIVE_COORDINATE_INTERFACE.md)
 - [Audited Phi native-coordinate manifest](manifests/phi35-mini-next-digit-interface-v1.json)
 - [Native-coordinate interface v2 schema](schemas/native-coordinate-interface-v2.schema.json)

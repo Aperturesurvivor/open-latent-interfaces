@@ -185,6 +185,11 @@ The audit authorization fixes:
 The runner refuses an existing output, a different path, a changed engine, a
 non-passing corrected development package, or more than one authorized run.
 
+The one-shot audit passed both interfaces: operand exact accuracy was 37/45
+against 2/45 for the strongest exact control, and carry tens accuracy was
+26/45 against 11/45 for matched no-carry. All outputs parsed. The occupied
+audit output path refused a repeat invocation.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.
