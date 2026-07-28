@@ -116,3 +116,22 @@ index 23, desired margin 16, and norm cap 0.25 fixed, then evaluates cumulative
 relinearization depths 1 through 4. The earliest depth satisfying the unchanged
 gate must be selected. Target, wrong-digit, and random-norm controls are
 recomputed at every depth; the identity compiler remains a single step.
+
+### Iterative outcome
+
+The bounded iterative selection passed:
+
+- result: `results/phase11_qwen_iterative_leading_compiler.json`
+- result SHA-256:
+  `b3a4cf804afa39e29aea3720caee8da6c472d1292a77795f22a4c26641e89516`
+- selected iteration count: 2 (the earliest passing depth)
+- target accuracy: 85/90 (base: 2/90)
+- identity accuracy: 90/90 (base: 85/90)
+- strongest semantic-control accuracy: 11/90
+- control advantage: 74/90
+- mean target relative norm: 0.2021
+
+Iterations 3 and 4 reached 90/90 target accuracy, but were not selected because
+iteration 2 already passed. The complete Qwen leading compiler is therefore:
+hidden-state index 23, desired margin 16, relative-norm cap 0.25, and two
+relinearization steps.
