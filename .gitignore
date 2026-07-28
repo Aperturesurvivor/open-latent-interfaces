@@ -1,0 +1,22 @@
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Model and experiment artifacts
+artifacts/
+checkpoints/
+data/activations/
+results/pilot_*.json
+results/*_raw.jsonl
+*.safetensors
+*.pt
+*.pth
+*.npz
+*.parquet
+

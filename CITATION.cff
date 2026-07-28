@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "Open Latent Interfaces"
+type: software
+authors:
+  - family-names: Wilson
+    given-names: Josiah
+repository-code: "https://github.com/Aperturesurvivor/open-latent-interfaces"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-07-27
+

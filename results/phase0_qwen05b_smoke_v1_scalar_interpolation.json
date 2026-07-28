@@ -1,0 +1,165 @@
+{
+  "protocol_note": "Retained superseded smoke: pair-disjoint interpolation design and first-digit endpoint, but the write diagnostic used a scalar-sum probe rather than the later categorical leading-digit bridge.",
+  "causal_result_intervention": {
+    "base": {
+      "mean_target_logit": 20.8984375,
+      "mean_target_rank": 2.3333332538604736,
+      "median_target_rank": 1.0,
+      "top1_exact": 0.6666666865348816
+    },
+    "eligible_examples": 6,
+    "endpoint": "first generated result digit only",
+    "ineligible_first_digit_examples": 0,
+    "pilot_selected_strength": 1.0,
+    "selection_warning": "Strength was selected on the pilot test set; it must be frozen on a new audit before any confirmatory claim.",
+    "status": "pilot_complete",
+    "strength_sweep": {
+      "0.5": {
+        "activation_norm_mean": 13.247492790222168,
+        "delta_norm_mean": 0.04688873514533043,
+        "shuffled_margin_delta": 0.013020833022892475,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.90625,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted": {
+          "mean_target_logit": 20.90364646911621,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted_margin_delta": 0.0,
+        "targeted_minus_shuffled_margin_delta": -0.013020833022892475
+      },
+      "1.0": {
+        "activation_norm_mean": 13.247492790222168,
+        "delta_norm_mean": 0.09377747029066086,
+        "shuffled_margin_delta": 0.01822916604578495,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.90364646911621,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted": {
+          "mean_target_logit": 20.9140625,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted_margin_delta": 0.0052083334885537624,
+        "targeted_minus_shuffled_margin_delta": -0.013020832557231188
+      },
+      "2.0": {
+        "activation_norm_mean": 13.247492790222168,
+        "delta_norm_mean": 0.18755494058132172,
+        "shuffled_margin_delta": 0.0390625,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.90364646911621,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted": {
+          "mean_target_logit": 20.921875,
+          "mean_target_rank": 2.3333332538604736,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.6666666865348816
+        },
+        "targeted_margin_delta": 0.0078125,
+        "targeted_minus_shuffled_margin_delta": -0.03125
+      }
+    }
+  },
+  "claim_boundary": "This run tests frozen-model observability and a probe-defined oracle-result intervention. It is not an NLA, an end-to-end deterministic graft, or proof of a model-native mathematical API.",
+  "configuration": {
+    "batch_size": 8,
+    "graft_strengths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "hidden_state_indices": [
+      12,
+      24
+    ],
+    "max_relative_norm": 0.15,
+    "probe_l2": 10.0,
+    "seed": 240727
+  },
+  "dataset": {
+    "development_examples": 24,
+    "examples": 96,
+    "generator": "open_latent_interfaces.dataset.build_phase0_dataset",
+    "sha256": "86a335b1d6aaaa8756576b9bf7e9a4d97f209ac9bd967cdb92c21ec673929803",
+    "test_examples": 24,
+    "train_examples": 48
+  },
+  "environment": {
+    "created_at": "2026-07-28T06:25:11.402582+00:00",
+    "cuda_available": false,
+    "git_commit": null,
+    "mps_available": true,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layer_metrics": {
+    "12": {
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 145.97711181640625,
+        "r2": 0.33237242698669434,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 208.9347686767578,
+        "r2": -0.2894960641860962,
+        "rounded_exact": 0.0
+      }
+    },
+    "24": {
+      "route_development": {
+        "accuracy": 0.9583333134651184,
+        "auc": 1.0,
+        "balanced_accuracy": 0.9722222089767456
+      },
+      "route_test": {
+        "accuracy": 0.9583333134651184,
+        "auc": 1.0,
+        "balanced_accuracy": 0.9722222089767456
+      },
+      "sum_development": {
+        "mae": 172.34222412109375,
+        "r2": -0.08440959453582764,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 225.2605743408203,
+        "r2": -0.5352836847305298,
+        "rounded_exact": 0.0
+      }
+    }
+  },
+  "model": {
+    "frozen_parameters": true,
+    "name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "number_of_blocks": 24,
+    "requested_revision": "main",
+    "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "pilot_selected_hidden_state_index": 12,
+  "status": "pilot",
+  "study": "phase0-native-mathematical-channel-pilot"
+}

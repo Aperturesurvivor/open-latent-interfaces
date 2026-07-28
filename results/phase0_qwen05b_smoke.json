@@ -1,0 +1,246 @@
+{
+  "causal_result_intervention": {
+    "base": {
+      "mean_target_logit": 20.6015625,
+      "mean_target_rank": 3.5,
+      "median_target_rank": 1.0,
+      "top1_exact": 0.5
+    },
+    "eligible_examples": 8,
+    "endpoint": "first generated result digit only",
+    "fit_digit_support": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ineligible_first_digit_examples": 0,
+    "pilot_selected_strength": 2.0,
+    "selection_warning": "Strength was selected on the pilot test set; it must be frozen on a new audit before any confirmatory claim.",
+    "status": "pilot_complete",
+    "strength_sweep": {
+      "0.5": {
+        "activation_norm_mean": 230.86361694335938,
+        "delta_norm_mean": 5.904370307922363,
+        "shuffled_margin_delta": 0.048828125,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.64453125,
+          "mean_target_rank": 2.375,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.5
+        },
+        "targeted": {
+          "mean_target_logit": 20.970703125,
+          "mean_target_rank": 1.875,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.5
+        },
+        "targeted_margin_delta": 0.390625,
+        "targeted_minus_shuffled_margin_delta": 0.341796875
+      },
+      "1.0": {
+        "activation_norm_mean": 230.86361694335938,
+        "delta_norm_mean": 11.808740615844727,
+        "shuffled_margin_delta": -0.015625,
+        "shuffled_target_control": {
+          "mean_target_logit": 20.404296875,
+          "mean_target_rank": 2.25,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.375
+        },
+        "targeted": {
+          "mean_target_logit": 21.13671875,
+          "mean_target_rank": 1.375,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.625
+        },
+        "targeted_margin_delta": 0.71484375,
+        "targeted_minus_shuffled_margin_delta": 0.73046875
+      },
+      "2.0": {
+        "activation_norm_mean": 230.86361694335938,
+        "delta_norm_mean": 23.125524520874023,
+        "shuffled_margin_delta": -0.072265625,
+        "shuffled_target_control": {
+          "mean_target_logit": 19.78125,
+          "mean_target_rank": 2.25,
+          "median_target_rank": 2.0,
+          "top1_exact": 0.375
+        },
+        "targeted": {
+          "mean_target_logit": 21.037109375,
+          "mean_target_rank": 1.25,
+          "median_target_rank": 1.0,
+          "top1_exact": 0.75
+        },
+        "targeted_margin_delta": 1.234375,
+        "targeted_minus_shuffled_margin_delta": 1.306640625
+      }
+    },
+    "unused_scalar_probe_test_metrics": {
+      "mae": 54.023136138916016,
+      "r2": 0.8060150742530823,
+      "rounded_exact": 0.125
+    },
+    "write_bridge": "leading-digit categorical ridge margin direction"
+  },
+  "claim_boundary": "This run tests frozen-model observability and a probe-defined oracle-result intervention. It is not an NLA, an end-to-end deterministic graft, or proof of a model-native mathematical API.",
+  "configuration": {
+    "batch_size": 8,
+    "digit_margin": 1.0,
+    "graft_strengths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "hidden_state_indices": [
+      12,
+      24
+    ],
+    "max_relative_norm": 0.15,
+    "probe_l2": 10.0,
+    "seed": 240727
+  },
+  "dataset": {
+    "development_examples": 32,
+    "examples": 160,
+    "generator": "open_latent_interfaces.dataset.build_phase0_dataset",
+    "sha256": "adb3e63640bf8ae73e5ad642cd8b93783eae184d373919808d501cdbd41aca34",
+    "test_examples": 32,
+    "train_examples": 96
+  },
+  "environment": {
+    "created_at": "2026-07-28T06:26:57.870426+00:00",
+    "cuda_available": false,
+    "git_commit": null,
+    "mps_available": true,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layer_metrics": {
+    "12": {
+      "leading_digit_development": {
+        "accuracy": 0.125,
+        "macro_recall_present_classes": 0.06666667014360428,
+        "per_class_recall": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.3333333432674408,
+          "6": 0.0,
+          "7": 0.0,
+          "8": null,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.375,
+        "macro_recall_present_classes": 0.5833333134651184,
+        "per_class_recall": {
+          "0": null,
+          "1": 1.0,
+          "2": 1.0,
+          "3": null,
+          "4": null,
+          "5": 0.0,
+          "6": 0.3333333432674408,
+          "7": null,
+          "8": null,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 56.38585662841797,
+        "r2": 0.7530144453048706,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 107.81566619873047,
+        "r2": 0.5031623840332031,
+        "rounded_exact": 0.0
+      }
+    },
+    "24": {
+      "leading_digit_development": {
+        "accuracy": 0.25,
+        "macro_recall_present_classes": 0.2666666805744171,
+        "per_class_recall": {
+          "0": null,
+          "1": null,
+          "2": null,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.3333333432674408,
+          "6": 1.0,
+          "7": 0.0,
+          "8": null,
+          "9": null
+        }
+      },
+      "leading_digit_test": {
+        "accuracy": 0.5,
+        "macro_recall_present_classes": 0.6666666865348816,
+        "per_class_recall": {
+          "0": null,
+          "1": 1.0,
+          "2": 1.0,
+          "3": null,
+          "4": null,
+          "5": 0.6666666865348816,
+          "6": 0.0,
+          "7": null,
+          "8": null,
+          "9": null
+        }
+      },
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 95.95677947998047,
+        "r2": 0.3918917775154114,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 58.70790100097656,
+        "r2": 0.7912816405296326,
+        "rounded_exact": 0.0
+      }
+    }
+  },
+  "model": {
+    "frozen_parameters": true,
+    "name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "number_of_blocks": 24,
+    "requested_revision": "main",
+    "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "pilot_selected_hidden_state_index": 24,
+  "status": "pilot",
+  "study": "phase0-native-mathematical-channel-pilot"
+}

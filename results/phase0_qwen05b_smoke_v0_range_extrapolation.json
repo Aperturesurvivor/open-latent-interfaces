@@ -1,0 +1,96 @@
+{
+  "protocol_note": "Retained superseded smoke: split-specific value ranges accidentally tested numeric extrapolation and the single-token endpoint was incompatible with Qwen's digit tokenizer.",
+  "causal_result_intervention": {
+    "reason": "no test result had a verified single-token representation",
+    "status": "not_run"
+  },
+  "claim_boundary": "This run tests frozen-model observability and a probe-defined oracle-result intervention. It is not an NLA, an end-to-end deterministic graft, or proof of a model-native mathematical API.",
+  "configuration": {
+    "batch_size": 8,
+    "graft_strengths": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "hidden_state_indices": [
+      12,
+      24
+    ],
+    "max_relative_norm": 0.15,
+    "probe_l2": 10.0,
+    "seed": 240727
+  },
+  "dataset": {
+    "development_examples": 24,
+    "examples": 96,
+    "generator": "open_latent_interfaces.dataset.build_phase0_dataset",
+    "sha256": "49bf366ca2023568f180868fe9c011a9f92fada94d4cbd691626cfe4866768b6",
+    "test_examples": 24,
+    "train_examples": 48
+  },
+  "environment": {
+    "created_at": "2026-07-28T06:23:29.264932+00:00",
+    "cuda_available": false,
+    "git_commit": null,
+    "mps_available": true,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.12",
+    "torch": "2.13.0"
+  },
+  "layer_metrics": {
+    "12": {
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 341.2660217285156,
+        "r2": -90.53894805908203,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 513.4567260742188,
+        "r2": -162.8340301513672,
+        "rounded_exact": 0.0
+      }
+    },
+    "24": {
+      "route_development": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "route_test": {
+        "accuracy": 1.0,
+        "auc": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      "sum_development": {
+        "mae": 337.9931335449219,
+        "r2": -88.90412139892578,
+        "rounded_exact": 0.0
+      },
+      "sum_test": {
+        "mae": 564.9335327148438,
+        "r2": -198.07986450195312,
+        "rounded_exact": 0.0
+      }
+    }
+  },
+  "model": {
+    "frozen_parameters": true,
+    "name": "Qwen/Qwen2.5-0.5B-Instruct",
+    "number_of_blocks": 24,
+    "requested_revision": "main",
+    "resolved_revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "pilot_selected_hidden_state_index": 24,
+  "status": "pilot",
+  "study": "phase0-native-mathematical-channel-pilot"
+}
