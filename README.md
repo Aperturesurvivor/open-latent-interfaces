@@ -124,6 +124,13 @@ over-specified the 480-pair regression and did not generalize to unseen result
 combinations. This architecture was rejected without opening the audit. See the
 [full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md).
 
+A digit-restricted nearest-state dictionary then tested whether transport was
+locally nonlinear. It improved third-digit transfer to 27/45 but produced only
+4/45 exact results, below the 6/45 linear bridge, while later norms exceeded
+100%. Retrieval was rejected. The compression bottleneck now points to the
+60-example fit set's coverage rather than another small-model variant. See the
+[local-transport summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -195,6 +202,7 @@ either stage.
 - [Phase 1F paired-transport writer summary](PHASE1F_PAIRED_TRANSPORT_SUMMARY.md)
 - [Phase 1G conditional-transport bridge summary](PHASE1G_CONDITIONAL_TRANSPORT_SUMMARY.md)
 - [Phase 1H full-result transport summary](PHASE1H_FULL_RESULT_TRANSPORT_SUMMARY.md)
+- [Phase 1I local-transport dictionary summary](PHASE1I_LOCAL_TRANSPORT_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
