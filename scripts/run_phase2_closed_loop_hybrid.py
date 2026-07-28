@@ -64,16 +64,17 @@ def component_delta(
     results: list[int],
     *,
     adapters: dict[int, Any],
-    prototypes: dict[str, torch.Tensor],
+    prototypes_by_step: dict[int, dict[str, torch.Tensor]],
     basis: torch.Tensor,
 ) -> torch.Tensor:
-    if step == 1:
+    if step in prototypes_by_step:
         return prototype_delta(
             states,
             results,
-            prototypes,
+            prototypes_by_step[step],
             basis,
             method="digit",
+            answer_position=step,
         )
     digits = torch.tensor([int(str(result)[step]) for result in results])
     return adapters[step].predict(states, digits)
@@ -89,7 +90,7 @@ def evaluate_condition(
     targets: list[int],
     prompts: list[str],
     adapters: dict[int, Any],
-    prototypes: dict[str, torch.Tensor],
+    prototypes_by_step: dict[int, dict[str, torch.Tensor]],
     basis: torch.Tensor,
     config: dict[str, Any],
     device: torch.device,
@@ -123,7 +124,7 @@ def evaluate_condition(
             states,
             targets,
             adapters=adapters,
-            prototypes=prototypes,
+            prototypes_by_step=prototypes_by_step,
             basis=basis,
         )
         targeted, targeted_gate = cap_and_gate(
@@ -152,7 +153,7 @@ def evaluate_condition(
                 states,
                 originals,
                 adapters=adapters,
-                prototypes=prototypes,
+                prototypes_by_step=prototypes_by_step,
                 basis=basis,
             )
             delta, gate = cap_and_gate(
@@ -169,7 +170,7 @@ def evaluate_condition(
                 states,
                 shuffled_targets,
                 adapters=adapters,
-                prototypes=prototypes,
+                prototypes_by_step=prototypes_by_step,
                 basis=basis,
             )
             scaled = raw * config["scales"][step]
@@ -182,7 +183,7 @@ def evaluate_condition(
                 shuffled_states,
                 targets,
                 adapters=adapters,
-                prototypes=prototypes,
+                prototypes_by_step=prototypes_by_step,
                 basis=basis,
             )
             scaled = raw * config["scales"][step]
@@ -259,6 +260,18 @@ def main() -> None:
     source_weights_path = Path(config["source_adapter_weights"])
     prototype_result_path = Path(config["prototype_result"])
     prototype_path = Path(config["prototypes"])
+    ones_result_path = (
+        Path(config["ones_prototype_result"])
+        if "ones_prototype_result" in config
+        else None
+    )
+    ones_prototype_path = (
+        Path(config["ones_prototypes"])
+        if "ones_prototypes" in config
+        else None
+    )
+    if (ones_result_path is None) != (ones_prototype_path is None):
+        raise SystemExit("ones prototype result and artifact must be configured together")
     basis_path = Path(config["basis"])
     dataset_config_path = Path(config["dataset_config"])
     for path, expected in (
@@ -270,6 +283,15 @@ def main() -> None:
         (dataset_config_path, config["dataset_config_sha256"]),
     ):
         verify_sha256(path, expected)
+    if ones_result_path is not None and ones_prototype_path is not None:
+        verify_sha256(
+            ones_result_path,
+            config["ones_prototype_result_sha256"],
+        )
+        verify_sha256(
+            ones_prototype_path,
+            config["ones_prototypes_sha256"],
+        )
     source = json.loads(source_result_path.read_text())
     prototype_result = json.loads(prototype_result_path.read_text())
     dataset_config = json.loads(dataset_config_path.read_text())
@@ -295,15 +317,25 @@ def main() -> None:
     for parameter in model.parameters():
         parameter.requires_grad_(False)
     capture = ActivationCapture(model, tokenizer, device=device)
+    adapter_steps = (0,) if ones_prototype_path is not None else (0, 2)
     adapters = {
         step: load_online_adapter(str(source_weights_path), step=step)
-        for step in (0, 2)
+        for step in adapter_steps
     }
     prototype_tensors = load_file(str(prototype_path))
-    prototypes = {
-        "digit": prototype_tensors["digit"].float(),
-        "prefix": prototype_tensors["prefix"].float(),
+    prototypes_by_step = {
+        1: {
+            "digit": prototype_tensors["digit"].float(),
+            "prefix": prototype_tensors["prefix"].float(),
+        }
     }
+    ones_result = None
+    if ones_result_path is not None and ones_prototype_path is not None:
+        ones_result = json.loads(ones_result_path.read_text())
+        ones_tensors = load_file(str(ones_prototype_path))
+        prototypes_by_step[2] = {
+            "digit": ones_tensors["digit"].float(),
+        }
     basis = load_file(str(basis_path))["delta_basis"][
         : config["prototype_rank"]
     ].float()
@@ -311,6 +343,11 @@ def main() -> None:
         raise SystemExit("prototype source method mismatch")
     if prototype_result["selection"]["selected"]["scale"] != config["scales"][1]:
         raise SystemExit("prototype source scale mismatch")
+    if ones_result is not None:
+        if ones_result["selection"]["selected"]["method"] != "digit":
+            raise SystemExit("ones prototype source method mismatch")
+        if ones_result["selection"]["selected"]["scale"] != config["scales"][2]:
+            raise SystemExit("ones prototype source scale mismatch")
 
     prompts = render_prompts(tokenizer, development)
     conditions = (
@@ -332,7 +369,7 @@ def main() -> None:
             targets=targets,
             prompts=prompts,
             adapters=adapters,
-            prototypes=prototypes,
+            prototypes_by_step=prototypes_by_step,
             basis=basis,
             config=config,
             device=device,
@@ -340,24 +377,40 @@ def main() -> None:
         )
         for index, condition in enumerate(conditions)
     }
+    sources = {
+        "adapter_result": str(source_result_path),
+        "adapter_result_sha256": config["source_adapter_result_sha256"],
+        "adapter_weights": str(source_weights_path),
+        "adapter_weights_sha256": config["source_adapter_weights_sha256"],
+        "prototype_result": str(prototype_result_path),
+        "prototype_result_sha256": config["prototype_result_sha256"],
+        "prototypes": str(prototype_path),
+        "prototypes_sha256": config["prototypes_sha256"],
+        "basis": str(basis_path),
+        "basis_sha256": config["basis_sha256"],
+    }
+    if ones_result_path is not None and ones_prototype_path is not None:
+        sources.update(
+            {
+                "ones_prototype_result": str(ones_result_path),
+                "ones_prototype_result_sha256": config[
+                    "ones_prototype_result_sha256"
+                ],
+                "ones_prototypes": str(ones_prototype_path),
+                "ones_prototypes_sha256": config["ones_prototypes_sha256"],
+            }
+        )
     report = {
-        "schema_version": "oli.phase2-closed-loop-hybrid/v1",
+        "schema_version": (
+            "oli.phase2-closed-loop-dual-prototype/v1"
+            if ones_result is not None
+            else "oli.phase2-closed-loop-hybrid/v1"
+        ),
         "created_at": datetime.now(UTC).isoformat(),
         "status": "development_only",
         "model": source["model"],
         "dataset": source["dataset"],
-        "sources": {
-            "adapter_result": str(source_result_path),
-            "adapter_result_sha256": config["source_adapter_result_sha256"],
-            "adapter_weights": str(source_weights_path),
-            "adapter_weights_sha256": config["source_adapter_weights_sha256"],
-            "prototype_result": str(prototype_result_path),
-            "prototype_result_sha256": config["prototype_result_sha256"],
-            "prototypes": str(prototype_path),
-            "prototypes_sha256": config["prototypes_sha256"],
-            "basis": str(basis_path),
-            "basis_sha256": config["basis_sha256"],
-        },
+        "sources": sources,
         "write": {
             "hidden_state_indices": config["hidden_state_indices"],
             "scales": config["scales"],
@@ -365,7 +418,11 @@ def main() -> None:
             "position_components": [
                 "causal_adapter",
                 "rank16_digit_prototype",
-                "causal_adapter",
+                (
+                    "rank16_digit_prototype"
+                    if ones_result is not None
+                    else "causal_adapter"
+                ),
             ],
         },
         "target_assignment": {
