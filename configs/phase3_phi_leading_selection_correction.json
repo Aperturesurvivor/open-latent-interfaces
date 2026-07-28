@@ -1,0 +1,6 @@
+{
+  "schema_version": "oli.phase3-leading-selection-correction/v1",
+  "selection_examples": 90,
+  "source_prototype_sha256": "3a0623d8f077da61bad8aa5e32ca3e2b9a561f4c0168884e1805aac631aec1b0",
+  "source_result_sha256": "f470a4fbbb7067fd753acb8add0c87e3f5545fead8d3d3dc22c36324098c9c12"
+}

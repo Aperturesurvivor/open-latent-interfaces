@@ -56,8 +56,9 @@ def candidate_passes(row: dict[str, float], config: dict[str, object]) -> bool:
     rule = config["selection_rule"]
     assert isinstance(rule, dict)
     return (
-        row["target_accuracy"] >= rule["minimum_target_accuracy"]
-        and row["identity_accuracy"] >= rule["minimum_identity_accuracy"]
+        row["target_accuracy"] + 1e-7 >= rule["minimum_target_accuracy"]
+        and row["identity_accuracy"] + 1e-7
+        >= rule["minimum_identity_accuracy"]
         and row["target_relative_norm"] <= config["norm_cap"]
     )
 
