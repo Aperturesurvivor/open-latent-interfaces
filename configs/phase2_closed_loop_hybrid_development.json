@@ -1,0 +1,23 @@
+{
+  "audit_authorized": false,
+  "base_model_batch_size": 4,
+  "basis": "artifacts/phase2_tens_delta_basis.safetensors",
+  "basis_sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d",
+  "dataset_config": "configs/phase2_dataset_frozen.json",
+  "dataset_config_sha256": "c689e2e627c07c1a18e104ac05e9f32826ca5ace3f45493ea00445724b4fd71c",
+  "development_targets_sha256": "9113b3aac8e32681b1eeaa9f668a7941d0206daa78ad2eb9a3d092b870fdc803",
+  "hidden_state_indices": [23, 27, 23],
+  "norm_cap": 1.0,
+  "prototype_rank": 16,
+  "prototype_result": "results/phase2_tens_prototype_writer_development.json",
+  "prototype_result_sha256": "ff882c86a6b96e67bd4b984c7540fa2a0d847b0280edac6035be242e2c7008e1",
+  "prototypes": "artifacts/phase2_tens_prototypes.safetensors",
+  "prototypes_sha256": "42b97d49573333e7817aa3464a4a916c5e26bca3bae675c5b2aaccca71a85f10",
+  "random_control_seed": 20260826,
+  "scales": [1.0, 1.25, 1.0],
+  "schema_version": "oli.phase2-closed-loop-hybrid-config/v1",
+  "source_adapter_result": "results/phase2_balanced_counterfactual_causal_adapter_development.json",
+  "source_adapter_result_sha256": "01900b9391e6f03358922d2aacadd06695c228af2eb4eb5f3e7357f3afd605bf",
+  "source_adapter_weights": "artifacts/phase2_balanced_counterfactual_causal_adapter_development.safetensors",
+  "source_adapter_weights_sha256": "be23dac0cb1d30a1929fc9ee24a839c3c530565f5e7efd3b1505261563c5d7c2"
+}
