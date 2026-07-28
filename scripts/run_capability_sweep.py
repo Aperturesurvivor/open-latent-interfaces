@@ -58,6 +58,13 @@ def main() -> None:
             f"dataset hash mismatch: {observed_hash} != {config['dataset']['sha256']}"
         )
     selected = [example for example in examples if example.split == args.split]
+    if args.split == "audit":
+        selected_regime = config.get("selected_regime")
+        if not selected_regime:
+            raise SystemExit("authorized audit config must name one selected_regime")
+        selected = [
+            example for example in selected if example.regime == selected_regime
+        ]
 
     device = torch.device(args.device)
     dtype = getattr(torch, args.dtype)

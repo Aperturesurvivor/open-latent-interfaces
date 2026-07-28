@@ -1,0 +1,35 @@
+{
+  "audit_authorized": true,
+  "dataset": {
+    "audit_pairs": 8,
+    "development_pairs": 12,
+    "protocol_version": "v2",
+    "seed": 20260728,
+    "sha256": "bed9d447a6aa59c5c825e537b69d5cbadd9c8a0e8c049acad8badd1338af56af"
+  },
+  "development_evidence": {
+    "config_sha256": "3a1ba3a398fb89d7474a947a635e86c716e1ada2b03d414a266502e647a05fea",
+    "result_sha256": "139ca508a64b126027d8f4beafd358af8c472fee2a797fabf5b9325320512c9c"
+  },
+  "generation": {
+    "batch_size": 16,
+    "do_sample": false,
+    "max_input_tokens": 128,
+    "max_new_tokens": 8
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.capability-sweep-audit-config/v2",
+  "selected_regime": "three_digit_mixed",
+  "selection_rule": {
+    "aggregate_exact_accuracy": 0.9,
+    "preference": "hardest passing regime",
+    "primary_presentations": [
+      "chat"
+    ],
+    "raw_presentation_role": "diagnostic_only",
+    "worst_cell_exact_accuracy": 0.8
+  }
+}
