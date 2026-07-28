@@ -89,3 +89,23 @@ passes the precommitted target, identity, control-advantage, digit-token, and
 relative-norm gates, bounded iterative relinearization must be frozen as a new
 exposed selection stage. The later audited Qwen suffix boundary at index 27 is
 not loaded or evaluated during this search.
+
+### One-step outcome
+
+The one-step search did not pass:
+
+- result: `results/phase11_qwen_leading_compiler_selection.json`
+- result SHA-256:
+  `8b54e635cff31ff5f35f486ef9eec283d03018d5f2cfaaaf17622d1e0fc9b247`
+- best fallback under the precommitted scoring rule: hidden-state index 23,
+  desired margin 16, norm cap 0.25
+- target accuracy: 57/90 (base: 2/90)
+- identity accuracy: 90/90 (base: 85/90)
+- strongest semantic-control accuracy: 13/90
+- control advantage: 44/90
+- mean target relative norm: 0.1900
+
+This is a non-passing selection result, not a failed audit. The deterministic
+fallback parameters now form the fixed input to a separate bounded iterative
+relinearization selection. That stage may select only the iteration count; it
+may not reopen the layer, margin, or norm-cap search.
