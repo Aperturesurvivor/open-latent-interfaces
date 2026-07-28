@@ -139,10 +139,11 @@ def main() -> None:
         audit_paths = {
             "development_config": Path(config["development_config"]),
             "development_result": Path(config["development_result"]),
-            "development_metric_correction": Path(
-                config["development_metric_correction"]
-            ),
         }
+        if "development_metric_correction" in config:
+            audit_paths["development_metric_correction"] = Path(
+                config["development_metric_correction"]
+            )
         for name, path in audit_paths.items():
             verify_sha256(path, config[f"{name}_sha256"])
         development_config = json.loads(
@@ -151,15 +152,18 @@ def main() -> None:
         development_result = json.loads(
             audit_paths["development_result"].read_text()
         )
-        metric_correction = json.loads(
-            audit_paths["development_metric_correction"].read_text()
-        )
-        if not metric_correction["passes"]:
-            raise SystemExit("corrected development package did not pass")
-        if metric_correction["original_result"]["sha256"] != config[
-            "development_result_sha256"
-        ]:
-            raise SystemExit("development correction/result mismatch")
+        if "development_metric_correction" in audit_paths:
+            metric_correction = json.loads(
+                audit_paths["development_metric_correction"].read_text()
+            )
+            if not metric_correction["passes"]:
+                raise SystemExit("corrected development package did not pass")
+            if metric_correction["original_result"]["sha256"] != config[
+                "development_result_sha256"
+            ]:
+                raise SystemExit("development correction/result mismatch")
+        elif not development_result["passes"]["all"]:
+            raise SystemExit("uncorrected development package did not pass")
         if development_result["config_sha256"] != config[
             "development_config_sha256"
         ]:
@@ -181,6 +185,10 @@ def main() -> None:
         for key in locked_keys:
             if config[key] != development_config[key]:
                 raise SystemExit(f"audit changed development field: {key}")
+        if "operand_accuracy_field" in development_config and config.get(
+            "operand_accuracy_field"
+        ) != development_config["operand_accuracy_field"]:
+            raise SystemExit("audit changed operand accuracy field")
 
     examples = build_phase4_carry_quartets(
         **dataset_config["dataset"]["parameters"]

@@ -127,3 +127,10 @@ operand exact accuracy was 43/45 against 1/45 wrong-class exact; carry tens
 accuracy was 34/45 against 22/45 matched no-carry and 0/45 random. A one-shot
 audit may now be authorized only after the engine, artifacts, token contract,
 metrics, output path, and maximum run count are hash-locked.
+
+The audit authorization fixes exactly one run, one output path, all 45 audit
+quartet IDs and Qwen token contracts, the split-parameterized engine hash, all
+artifacts and passing development evidence, layers 12 and 16, scales 1.0 and
+1.6, the development random seed, exact operand discrimination, carry-tens
+discrimination, and the original numerical gates. A repeat output or changed
+source is refused before model loading.
