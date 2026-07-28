@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "all_parameters_frozen": true,
+    "architecture": true,
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_size": true,
+    "hidden_state_convention": true,
+    "model_type": true,
+    "next_token_logits": true,
+    "num_hidden_layers": true,
+    "operand_locator": true,
+    "single_token_decimal_digits": true,
+    "vocab_size": true
+  },
+  "claim_boundary": "Compatibility only: a pass authorizes model-specific discovery but is not evidence that a latent reader or writer exists.",
+  "created_at": "2026-07-28T20:52:23.881553+00:00",
+  "elapsed_seconds": 30.165049667004496,
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.13.0",
+    "transformers": "4.57.6"
+  },
+  "error": null,
+  "mode": "live",
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "observed": {
+    "architectures": [
+      "Phi3ForCausalLM"
+    ],
+    "candidate_reader_hidden_state_indices": [
+      1,
+      5,
+      9,
+      13,
+      17,
+      21,
+      25,
+      29
+    ],
+    "decoder_block_count": 32,
+    "decoder_block_path": [
+      "model",
+      "layers"
+    ],
+    "device": "mps",
+    "digit_token_ids": {
+      "0": 29900,
+      "1": 29896,
+      "2": 29906,
+      "3": 29941,
+      "4": 29946,
+      "5": 29945,
+      "6": 29953,
+      "7": 29955,
+      "8": 29947,
+      "9": 29929
+    },
+    "dtype": "float16",
+    "gradient_probe_hidden_state_index": 16,
+    "gradient_probe_norm": 5.518004894256592,
+    "hidden_size": 3072,
+    "hidden_state_count": 33,
+    "hidden_state_widths": [
+      3072
+    ],
+    "model_class": "Phi3ForCausalLM",
+    "model_type": "phi3",
+    "num_hidden_layers": 32,
+    "operand_positions": {
+      "operand_a": [
+        3,
+        4,
+        5
+      ],
+      "operand_b": [
+        8,
+        9,
+        10
+      ]
+    },
+    "rendered_probe": "<|user|>\nAdd 137 and 248. Respond with only Answer=<integer>.<|end|>\n<|assistant|>\nAnswer=",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "tokenizer_is_fast": true,
+    "vocab_size": 32064
+  },
+  "passes": true,
+  "runner_sha256": "b63e5385c173f2575eb2cee32a851cfc61d8c998348ba33cf2a251692754aeaa",
+  "schema_version": "oli.model-onboarding-result/v1",
+  "spec_sha256": "f0fb15e1ae460c5247655e180151824cb652b83373c0a7062842461d43be25ec",
+  "status": "compatibility_preflight"
+}

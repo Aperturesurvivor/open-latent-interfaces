@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "all_parameters_frozen": true,
+    "architecture": true,
+    "block_to_logits_gradient": true,
+    "chat_prefill": true,
+    "compositional_fixed_width_results": true,
+    "decoder_block_stack": true,
+    "fast_tokenizer_offsets": true,
+    "hidden_size": true,
+    "hidden_state_convention": true,
+    "model_type": true,
+    "next_token_logits": true,
+    "num_hidden_layers": true,
+    "operand_locator": true,
+    "single_token_decimal_digits": true,
+    "vocab_size": true
+  },
+  "claim_boundary": "Compatibility only: a pass authorizes model-specific discovery but is not evidence that a latent reader or writer exists.",
+  "created_at": "2026-07-28T20:51:43.715741+00:00",
+  "elapsed_seconds": 5.604617707998841,
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.13.0",
+    "transformers": "4.57.6"
+  },
+  "error": null,
+  "mode": "live",
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "observed": {
+    "architectures": [
+      "Qwen2ForCausalLM"
+    ],
+    "candidate_reader_hidden_state_indices": [
+      1,
+      5,
+      8,
+      11,
+      15,
+      19,
+      22,
+      25
+    ],
+    "decoder_block_count": 28,
+    "decoder_block_path": [
+      "model",
+      "layers"
+    ],
+    "device": "mps",
+    "digit_token_ids": {
+      "0": 15,
+      "1": 16,
+      "2": 17,
+      "3": 18,
+      "4": 19,
+      "5": 20,
+      "6": 21,
+      "7": 22,
+      "8": 23,
+      "9": 24
+    },
+    "dtype": "float16",
+    "gradient_probe_hidden_state_index": 14,
+    "gradient_probe_norm": 3.454968214035034,
+    "hidden_size": 1536,
+    "hidden_state_count": 29,
+    "hidden_state_widths": [
+      1536
+    ],
+    "model_class": "Qwen2ForCausalLM",
+    "model_type": "qwen2",
+    "num_hidden_layers": 28,
+    "operand_positions": {
+      "operand_a": [
+        26,
+        27,
+        28
+      ],
+      "operand_b": [
+        31,
+        32,
+        33
+      ]
+    },
+    "rendered_probe": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nAdd 137 and 248. Respond with only Answer=<integer>.<|im_end|>\n<|im_start|>assistant\nAnswer=",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "tokenizer_is_fast": true,
+    "vocab_size": 151936
+  },
+  "passes": true,
+  "runner_sha256": "b63e5385c173f2575eb2cee32a851cfc61d8c998348ba33cf2a251692754aeaa",
+  "schema_version": "oli.model-onboarding-result/v1",
+  "spec_sha256": "754bd63c0bbe620ff67e65d147927771029b5e564aea092a8c2057ab71395815",
+  "status": "compatibility_preflight"
+}

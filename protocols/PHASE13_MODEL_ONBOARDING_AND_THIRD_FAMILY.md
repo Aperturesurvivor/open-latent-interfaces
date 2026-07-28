@@ -51,6 +51,39 @@ data. Their linked manifests and audit hashes establish that a compatibility
 pass was followed by successful discovery in those historical cases; they do
 not make compatibility sufficient.
 
+## Live regression outcome
+
+Both audited references passed all 15 observed metadata and live-model checks
+under the frozen onboarding implementation:
+
+### Phi-3.5-mini
+
+- result: `results/model_onboarding_phi35_mini_live.json`
+- result SHA-256:
+  `b29354c83e5023e380ab3a52f33060b440de5631b125d7f70d8b66e9519da476`
+- decoder path: `model.layers`
+- decoder blocks / hidden states: 32 / 33
+- residual width: 3072
+- contextual digit IDs: 29900, 29896, 29906, 29941, 29946, 29945,
+  29953, 29955, 29947, 29929
+- mid-stack gradient probe: hidden-state index 16, norm 5.5180
+
+### Qwen2.5-1.5B
+
+- result: `results/model_onboarding_qwen25_15b_live.json`
+- result SHA-256:
+  `08823a15819b4c8df227ce2dd2bf326d5e7e69eb0cd20e7c45ea5a4a79d17c46`
+- decoder path: `model.layers`
+- decoder blocks / hidden states: 28 / 29
+- residual width: 1536
+- contextual digit IDs: 15 through 24
+- mid-stack gradient probe: hidden-state index 14, norm 3.4550
+
+Every parameter was frozen, both operand locators resolved each decimal
+character to one token, and fixed-width results composed exactly. This
+regression validates the onboarding instrumentation against two models with
+independently passing downstream audits.
+
 ## Third-family candidate rule
 
 Before task-specific discovery, the candidate must be frozen by exact
