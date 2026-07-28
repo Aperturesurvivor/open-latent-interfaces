@@ -220,6 +220,25 @@ reader tensor or historical winning layer is loaded. A reader pass advances
 component discovery but is not evidence of arithmetic computation, writing,
 an integrated graft, development generalization, or audit success.
 
+The frozen reader selection was invoked once and passed:
+
+- result: `results/phase13_smollm2_operand_reader_selection.json`
+- result SHA-256:
+  `f37b0a41ccc53d8964c10dd2abc1a8a3a6dd3e4eef8c257d4c985b8a8d4de1c8`
+- selected hidden-state index: 1, the earliest passing candidate
+- selected accuracy: 499 / 499 operand digits and 90 / 90 operand pairs
+- rotated-label control: 0 / 90 operand pairs
+- artifact: `artifacts/phase13_smollm2_operand_reader.safetensors`
+- artifact SHA-256:
+  `ccbf156d079df6a13d9b4f4c8fe3a7fb6e6d9e66338c27b9034ce94b462d38ab`
+- artifact width: 2048
+
+Indices 4 and 7 also reached perfect selection accuracy. Accuracy then
+declined monotonically across the sampled deeper boundaries, reaching 11 / 90
+exact pairs at index 22. This supports the narrow interpretation that
+token-local operand identity is readily decodable early in SmolLM2 under the
+external token locator.
+
 ## Model-specific discovery boundary
 
 The following workflow components transfer:
