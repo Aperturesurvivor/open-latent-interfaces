@@ -1,0 +1,118 @@
+{
+  "claim_boundary": [
+    "Validated only on microsoft/Phi-3.5-mini-instruct at the named revision.",
+    "Validated for two-operand, three-digit integer addition under the frozen Answer= output contract.",
+    "An external semantic locator supplies operand token spans.",
+    "The deterministic host adder is externally invoked; the model is not claimed to call it naturally.",
+    "The leading writer is target-conditioned and output-side, not a universal semantic math direction.",
+    "The workflow is audited on one model; vector or parameter portability to another model is not claimed.",
+    "The interface does not decode natural-language chain of thought."
+  ],
+  "deterministic_mechanism": {
+    "input_contract": [
+      "decoded_operand_a",
+      "decoded_operand_b"
+    ],
+    "operation": "a + b",
+    "output_contract": "integer in [100, 999]",
+    "type": "host_integer_addition"
+  },
+  "evidence": {
+    "audit_config": {
+      "path": "configs/phase9e_phi_hybrid_graft_audit.json",
+      "sha256": "fe551da2968add3b128f2e72b77f27418312f842dcf63b38875e430dbaee6d53"
+    },
+    "audit_result": {
+      "path": "results/phase9e_phi_hybrid_graft_audit.json",
+      "sha256": "d8a2ef793653814d04147050e0bdfaa7bccf7fefaeef066294861c50179ec8cf"
+    },
+    "audit_runs": 1,
+    "dataset_config": {
+      "path": "configs/phase9e_phi_hybrid_graft_audit_dataset_frozen.json",
+      "sha256": "574cd6700763aecf8187e1ce77b0b007ab7ed1cae1fc443552bfa9dcd15e0945"
+    },
+    "development_correction": {
+      "path": "results/phase9d_phi_hybrid_graft_gate_correction.json",
+      "sha256": "07038f7f834774df0f505e8a9b85859fb1c752d01fc5e8c6251e698f581e757b"
+    },
+    "development_result": {
+      "path": "results/phase9d_phi_hybrid_graft_development.json",
+      "sha256": "a41a28814499e0eaf0c3190d0aba5ade98070c2b35bd63d070d8216257fad02a"
+    },
+    "minimum_audit_exact_accuracy": 0.95,
+    "minimum_audit_reader_pair_accuracy": 0.98
+  },
+  "model": {
+    "id": "microsoft/Phi-3.5-mini-instruct",
+    "revision": "2fe192450127e6a83f7441aef6e3ca586c338b77"
+  },
+  "name": "phi35-mini-hybrid-arithmetic-graft-v1",
+  "prompt_contract": {
+    "assistant_prefix": "Answer=",
+    "locator": "external_semantic_operand_spans",
+    "output": "exactly three decimal digit tokens"
+  },
+  "reader": {
+    "hidden_state_index": 1,
+    "manifest": {
+      "path": "manifests/phi35-mini-operand-reader-v1.json",
+      "sha256": "6187f7cf693141b65466aac7ddd181e34e5bc2cb295fa13c7ef74629d858ab38"
+    }
+  },
+  "representation": {
+    "residual_width": 3072
+  },
+  "schema_version": "oli.hybrid-graft-interface/v1",
+  "writer": {
+    "leading": {
+      "candidate_token_ids": {
+        "0": 29900,
+        "1": 29896,
+        "2": 29906,
+        "3": 29941,
+        "4": 29946,
+        "5": 29945,
+        "6": 29953,
+        "7": 29955,
+        "8": 29947,
+        "9": 29929
+      },
+      "desired_margin": 8.0,
+      "hidden_state_index": 24,
+      "implementation": {
+        "path": "src/open_latent_interfaces/causal_compiler.py",
+        "sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d"
+      },
+      "iterations": 3,
+      "kind": "iterative_local_margin_compiler",
+      "norm_cap": 0.75,
+      "success_gate": "exact zero additional update when requested token is full-vocabulary top-1"
+    },
+    "suffix": {
+      "basis": {
+        "key": "suffix_basis",
+        "path": "artifacts/phase3_phi_native_coordinate_interface_v1.safetensors",
+        "sha256": "960aac22478678a81a9677f03c0d7e885c60a603f22aa3737e0a19bb41803faa",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase9e-phi-hybrid-graft-audit-v1/phase3_phi_native_coordinate_interface_v1.safetensors"
+      },
+      "hidden_state_index": 30,
+      "kind": "native_coordinate_prototypes",
+      "norm_cap": 1.0,
+      "positions": {
+        "1": {
+          "prototype_key": "tens_digit"
+        },
+        "2": {
+          "prototype_key": "ones_digit"
+        }
+      },
+      "prototypes": {
+        "path": "artifacts/phase9_phi_wide_writer_prototypes.safetensors",
+        "sha256": "62d7302c7bcfe7ebe529f4f20ab91f43b61ebc8bda8bf2df86ccb053868122f0",
+        "url": "https://github.com/Aperturesurvivor/open-latent-interfaces/releases/download/phase9e-phi-hybrid-graft-audit-v1/phase9_phi_wide_writer_prototypes.safetensors"
+      },
+      "rank": 32,
+      "scale": 1.0
+    }
+  }
+}

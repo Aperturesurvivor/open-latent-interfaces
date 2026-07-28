@@ -9,6 +9,7 @@ from open_latent_interfaces.arithmetic_coordinates import (
     ArithmeticCoordinateManifest,
     TokenLocalTransportWriter,
 )
+from open_latent_interfaces.hybrid_graft import HybridGraftManifest
 from open_latent_interfaces.interpretability import (
     InterpretabilityArtifact,
     LatentSite,
@@ -42,6 +43,7 @@ __all__ = [
     "CapturedLayer",
     "CapturedTokenPositions",
     "InterpretabilityArtifact",
+    "HybridGraftManifest",
     "LatentSite",
     "MethodProvenance",
     "NativeCoordinateManifest",

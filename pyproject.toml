@@ -31,6 +31,7 @@ oli-phase01 = "open_latent_interfaces.phase01:main"
 oli-native-interface = "open_latent_interfaces.native_coordinates:main"
 oli-arithmetic-interface = "open_latent_interfaces.arithmetic_coordinates:main"
 oli-operand-reader = "open_latent_interfaces.operand_reader:main"
+oli-hybrid-graft = "open_latent_interfaces.hybrid_graft:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/open_latent_interfaces"]

@@ -452,6 +452,17 @@ semantic operand-token locator. See the
 [operand-reader interface](docs/OPERAND_READER_INTERFACE.md) and
 [audited manifest](manifests/phi35-mini-operand-reader-v1.json).
 
+Phase 9 replaced the limiting global leading-digit prototype with a bounded
+prompt-local causal compiler and refit the two native suffix coordinates on a
+wider distribution. The complete reader → host integer addition → hybrid
+writer then passed a one-shot audit on 90 pair- and template-disjoint
+examples: 90/90 exact versus 80/90 base, all ten base errors recovered,
+80/80 base-correct rows preserved, and 0/10 errors recovered by norm-matched
+random updates. See the
+[Phase 9E audit summary](PHASE9E_PHI_HYBRID_GRAFT_AUDIT_SUMMARY.md),
+[hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md), and
+[audited manifest](manifests/phi35-mini-hybrid-arithmetic-graft-v1.json).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -574,6 +585,10 @@ either stage.
 - [Phase 7 Qwen target-state selection summary](PHASE7_QWEN_TARGET_STATE_SELECTION_SUMMARY.md)
 - [Phase 8 Phi latent read–compute–write protocol](protocols/PHASE8_PHI_LATENT_READ_COMPUTE_WRITE.md)
 - [Phase 8 Phi latent graft audit summary](PHASE8_PHI_LATENT_GRAFT_AUDIT_SUMMARY.md)
+- [Phase 9E fresh audit dataset](protocols/PHASE9E_PHI_FRESH_AUDIT_DATASET.md)
+- [Phase 9E one-shot hybrid-graft audit](protocols/PHASE9E_PHI_ONE_SHOT_HYBRID_GRAFT_AUDIT.md)
+- [Phase 9E hybrid-graft audit summary](PHASE9E_PHI_HYBRID_GRAFT_AUDIT_SUMMARY.md)
+- [Hybrid-graft interface](docs/HYBRID_GRAFT_INTERFACE.md)
 - [Operand-reader interface](docs/OPERAND_READER_INTERFACE.md)
 - [Audited Phi operand-reader manifest](manifests/phi35-mini-operand-reader-v1.json)
 - [Audited Qwen operand-coordinate manifest](manifests/qwen25-15b-operand-coordinate-v1.json)
