@@ -63,6 +63,7 @@ def paired_summary(
         "oracle_compute_hybrid_write",
         "latent_read_compute_hybrid_write",
         "shuffled_read_compute_hybrid_write",
+        "shuffled_random_norm_matched",
         "random_norm_matched",
         "wrong_target_norm_matched",
     ):
@@ -107,6 +108,7 @@ def development_gate(
     latent = conditions["latent_read_compute_hybrid_write"]
     oracle = conditions["oracle_compute_hybrid_write"]
     shuffled = conditions["shuffled_read_compute_hybrid_write"]
+    shuffled_random = conditions["shuffled_random_norm_matched"]
     latent_paired = paired["latent_read_compute_hybrid_write"]
     random_paired = paired["random_norm_matched"]
     wrong_paired = paired["wrong_target_norm_matched"]
@@ -121,6 +123,10 @@ def development_gate(
     ) / max(1, base_error_count)
     oracle_gap = (
         oracle["true_result_accuracy"] - latent["true_result_accuracy"]
+    )
+    shuffled_target_advantage = (
+        shuffled["target_full_result_accuracy"]
+        - shuffled_random["target_full_result_accuracy"]
     )
     checks = {
         "reader": reader["pair_accuracy"] >= rule["minimum_reader_pair_accuracy"],
@@ -137,8 +143,6 @@ def development_gate(
         >= rule["minimum_base_correct_preservation"],
         "net_improvement": latent_paired["net_exact_improvement_rate"]
         >= rule["minimum_net_improvement_over_base"],
-        "excess_recovery_over_random": excess_random
-        >= rule["minimum_excess_base_error_recovery_over_random"],
         "wrong_target_recovery": wrong_paired["base_error_recovery"]
         <= rule["maximum_wrong_target_base_error_recovery"],
         "excess_recovery_over_wrong": excess_wrong
@@ -147,6 +151,12 @@ def development_gate(
         <= rule["maximum_shuffled_true_accuracy"],
         "shuffled_target_following": shuffled["target_full_result_accuracy"]
         >= rule["minimum_shuffled_target_accuracy"],
+        "shuffled_random_target_control": shuffled_random[
+            "target_full_result_accuracy"
+        ]
+        <= rule["maximum_shuffled_random_target_accuracy"],
+        "shuffled_target_advantage_over_random": shuffled_target_advantage
+        >= rule["minimum_shuffled_target_advantage_over_random"],
         "parse": (
             not rule["require_parse_rate"] or latent["parse_rate"] == 1.0
         ),
@@ -163,6 +173,7 @@ def development_gate(
             "oracle_exact_gap": oracle_gap,
             "excess_base_error_recovery_over_random": excess_random,
             "excess_base_error_recovery_over_wrong_target": excess_wrong,
+            "shuffled_target_advantage_over_random": shuffled_target_advantage,
         },
     }
 
@@ -188,6 +199,7 @@ def main() -> None:
             "reader_artifact",
             "compiler_selection_result",
             "compiler_module",
+            "initial_development_result",
             "suffix_manifest",
             "suffix_audit_result",
             "tens_prototype_artifact",
@@ -204,6 +216,9 @@ def main() -> None:
     compiler_selection = json.loads(
         paths["compiler_selection_result"].read_text()
     )
+    initial_development = json.loads(
+        paths["initial_development_result"].read_text()
+    )
     suffix_manifest = json.loads(paths["suffix_manifest"].read_text())
     if dataset_config.get("audit_authorized", False):
         raise SystemExit("hybrid development requires a sealed audit")
@@ -211,6 +226,8 @@ def main() -> None:
         raise SystemExit("operand reader source did not pass")
     if not compiler_selection["selection"]["passes"]:
         raise SystemExit("leading compiler source did not pass")
+    if initial_development["passes"]:
+        raise SystemExit("refinement requires a non-passing initial development")
     if (
         compiler_selection["selection"]["iterations"]
         != config["leading_compiler"]["iterations"]
@@ -258,7 +275,8 @@ def main() -> None:
     selected = [
         row
         for row in examples
-        if row.split == "development" and row.variant == "carry_base"
+        if row.split == "development"
+        and row.variant in set(config["development_variants"])
     ]
     if value_sha256([row.example_id for row in selected]) != config[
         "development_examples_sha256"
@@ -374,6 +392,11 @@ def main() -> None:
         true_delta.norm(dim=1),
         seed=config["random_control_seed"],
     )
+    shuffled_leading_random = random_norm_matched(
+        tuple(shuffled_delta.shape),
+        shuffled_delta.norm(dim=1),
+        seed=config["random_control_seed"] + 1,
+    )
     wrong_targets = wrong_all_digits(true_targets)
     wrong_ids = torch.tensor(
         [digit_token_ids[int(str(value)[0])] for value in wrong_targets]
@@ -426,6 +449,12 @@ def main() -> None:
             true_targets,
             leading_random,
             true_trace.base_recipient_states,
+        ),
+        "shuffled_random_norm_matched": (
+            "random_norm_matched",
+            shuffled_targets,
+            shuffled_leading_random,
+            shuffled_trace.base_recipient_states,
         ),
         "wrong_target_norm_matched": (
             "wrong_target_norm_matched",

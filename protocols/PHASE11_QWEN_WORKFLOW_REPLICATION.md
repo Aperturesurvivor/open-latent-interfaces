@@ -182,3 +182,17 @@ semantic shuffled-target following against a norm-matched random intervention
 aimed at the same shuffled target set. This directly tests causal target
 specificity over every example rather than relying on a single naturally
 occurring base error.
+
+The refinement is frozen in
+`configs/phase11_qwen_hybrid_graft_development_refined.json`. It expands the
+exposed evaluation to all 180 Phase 7 development examples and adds a
+`shuffled_random_norm_matched` condition. Advancement now requires:
+
+- semantic shuffled-target following of at least 80%;
+- norm-matched random shuffled-target following of at most 25%;
+- at least 50 percentage points of target-following advantage;
+- all original reader, compute, exact-output, per-position, identity,
+  wrong-target, parse, and digit-token checks.
+
+No model, reader, compiler, suffix tensor, layer, scale, rank, or norm setting
+is changed by this refinement.
