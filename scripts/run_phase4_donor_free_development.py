@@ -129,9 +129,11 @@ def main() -> None:
         raise SystemExit("development validation requires a sealed audit")
     if not behavior["splits"]["development"]["passes"]:
         raise SystemExit("untouched development behavior gate did not pass")
-    if not correction["passes"] or correction["selected_scale"] != config[
-        "carry_scale"
-    ]:
+    corrected_scale = correction.get(
+        "selected_scale",
+        correction.get("selection", {}).get("scale"),
+    )
+    if not correction["passes"] or corrected_scale != config["carry_scale"]:
         raise SystemExit("carry scale differs from bounded correction")
     if evaluation_split == "audit":
         audit_paths = {

@@ -115,3 +115,9 @@ matched no-carry and 0/45 random. The universal artifact hash was unchanged.
 One-shot Qwen development is authorized with operand index 12, scale 1.0 and
 carry-context index 16, scale 1.6. Operand discrimination uses exact-result
 accuracy; carry discrimination uses tens-position accuracy.
+
+The one-shot development package fixes all Qwen artifacts, token contracts,
+controls, random seed, and thresholds. The operand writer must reach 70% exact
+accuracy and the carry writer 50% target-tens accuracy; each must exceed its
+strongest fixed control by 25 points with a 100% parse rate. No
+development-driven retry is authorized.
