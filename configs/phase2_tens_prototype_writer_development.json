@@ -1,0 +1,30 @@
+{
+  "audit_authorized": false,
+  "base_model_batch_size": 4,
+  "basis": "artifacts/phase2_tens_delta_basis.safetensors",
+  "basis_sha256": "8c9b0e53a3b8216e724ab37519a51723c0e0697d956ade56dceb362217b3084d",
+  "dataset_config": "configs/phase2_dataset_frozen.json",
+  "dataset_config_sha256": "c689e2e627c07c1a18e104ac05e9f32826ca5ace3f45493ea00445724b4fd71c",
+  "fit_templates": [
+    "Calculate {a} + {b}. Reply with only the integer.",
+    "Add {a} and {b}. Return only the integer.",
+    "Determine the total of {a} and {b}. Return only the integer.",
+    "Solve {a} plus {b}. Give only the integer."
+  ],
+  "hidden_state_index": 27,
+  "methods": ["digit", "prefix"],
+  "min_control_advantage": 0.25,
+  "min_identity_accuracy": 0.9,
+  "min_target_accuracy": 0.7,
+  "norm_cap": 1.0,
+  "random_control_seed": 20260825,
+  "rank": 16,
+  "scales": [0.5, 0.75, 1.0, 1.25, 1.5],
+  "schema_version": "oli.phase2-tens-prototype-writer-config/v1",
+  "source_result": "results/phase2_tens_delta_rank_development.json",
+  "source_result_sha256": "6bed6d5bbd2ba68901914afec6d4f739f8ad8f5d3301964c83d294c383f74244",
+  "target_sha256": {
+    "development": "9113b3aac8e32681b1eeaa9f668a7941d0206daa78ad2eb9a3d092b870fdc803",
+    "selection": "e634189d51047698cb103b7e48b1acb6707164f987f99f8706b0ad553f844098"
+  }
+}
