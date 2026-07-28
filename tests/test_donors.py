@@ -1,4 +1,8 @@
-from open_latent_interfaces.donors import choose_donors, choose_multi_donors
+from open_latent_interfaces.donors import (
+    choose_cyclic_donors,
+    choose_donors,
+    choose_multi_donors,
+)
 from open_latent_interfaces.phase1_data import build_phase1_additions
 
 
@@ -30,3 +34,17 @@ def test_multi_donors_cover_every_alternative_leading_digit() -> None:
         observed = {int(str(examples[index].result)[0]) for index in donor_indices}
         assert len(donor_indices) == 8
         assert observed == set(range(1, 10)) - {original_digit}
+
+
+def test_cyclic_donors_follow_requested_offsets() -> None:
+    examples = [
+        example
+        for example in build_phase1_additions()
+        if example.split == "train"
+    ]
+    selections = choose_cyclic_donors(examples, offsets=(1, 3, 5, 7))
+    for recipient, donor_indices in zip(examples, selections, strict=True):
+        original = int(str(recipient.result)[0])
+        expected = {(original - 1 + offset) % 9 + 1 for offset in (1, 3, 5, 7)}
+        observed = {int(str(examples[index].result)[0]) for index in donor_indices}
+        assert observed == expected

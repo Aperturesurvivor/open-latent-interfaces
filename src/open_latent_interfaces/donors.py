@@ -66,3 +66,34 @@ def choose_multi_donors(examples: list[Any]) -> list[list[int]]:
             )
         selections.append(donor_indices)
     return selections
+
+
+def choose_cyclic_donors(
+    examples: list[Any],
+    *,
+    offsets: tuple[int, ...],
+) -> list[list[int]]:
+    """Choose matched donors at fixed cyclic leading-digit offsets."""
+
+    if not offsets or any(offset < 1 or offset > 8 for offset in offsets):
+        raise ValueError("cyclic donor offsets must be between 1 and 8")
+    if len(set(offsets)) != len(offsets):
+        raise ValueError("cyclic donor offsets must be unique")
+    selections = []
+    for recipient in examples:
+        original_digit = int(str(recipient.result)[0])
+        row = []
+        for offset in offsets:
+            desired_digit = (original_digit - 1 + offset) % 9 + 1
+            candidates = [
+                (index, donor)
+                for index, donor in enumerate(examples)
+                if int(str(donor.result)[0]) == desired_digit
+            ]
+            if not candidates:
+                raise ValueError(f"no donor available for leading digit {desired_digit}")
+            row.append(
+                min(candidates, key=lambda item: donor_distance(recipient, item[1]))[0]
+            )
+        selections.append(row)
+    return selections
