@@ -1,0 +1,1938 @@
+{
+  "claim_boundary": "Teacher-forced digit readouts are correlational. Later steps include already-emitted answer prefixes and cannot establish pre-output access to the full result.",
+  "created_at": "2026-07-28T07:40:00.283222+00:00",
+  "dataset": {
+    "n_examples": 36,
+    "presentation": "chat",
+    "regime": "three_digit_mixed",
+    "source": "capability_sweep_v2",
+    "split": "development",
+    "template_families": [
+      "direct",
+      "symbolic",
+      "word_problem"
+    ]
+  },
+  "elapsed_seconds": 57.92587524999544,
+  "environment": {
+    "device": "mps",
+    "dtype": "float16",
+    "python": "3.12.12",
+    "torch": "2.12.0",
+    "transformers": "5.9.0"
+  },
+  "final_model": {
+    "steps": {
+      "0": {
+        "digit_accuracy": 1.0,
+        "mean_digit_margin": 12.499565972222221,
+        "mean_reciprocal_rank": 1.0,
+        "median_digit_rank": 1.0,
+        "median_vocabulary_rank": 1.0,
+        "n": 36,
+        "vocabulary_hit_at_10": 1.0
+      },
+      "1": {
+        "digit_accuracy": 0.9722222222222222,
+        "mean_digit_margin": 13.922309027777779,
+        "mean_reciprocal_rank": 0.9861111111111112,
+        "median_digit_rank": 1.0,
+        "median_vocabulary_rank": 1.0,
+        "n": 36,
+        "vocabulary_hit_at_10": 1.0
+      },
+      "2": {
+        "digit_accuracy": 1.0,
+        "mean_digit_margin": 14.065104166666666,
+        "mean_reciprocal_rank": 1.0,
+        "median_digit_rank": 1.0,
+        "median_vocabulary_rank": 1.0,
+        "n": 36,
+        "vocabulary_hit_at_10": 1.0
+      }
+    },
+    "teacher_forced_full_result_accuracy": 0.9722222222222222
+  },
+  "layer_metrics": {
+    "jacobian_lens": {
+      "0": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.9369032118055556,
+            "mean_reciprocal_rank": 7.408009480971723e-05,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 16068.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.7706163194444446,
+            "mean_reciprocal_rank": 0.09819253550491638,
+            "median_digit_rank": 7.5,
+            "median_vocabulary_rank": 21.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.25
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.0494791666666665,
+            "mean_reciprocal_rank": 0.05453744741106263,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 30.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "1": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.3158637152777777,
+            "mean_reciprocal_rank": 0.0013772992090418568,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 1465.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.5394965277777777,
+            "mean_reciprocal_rank": 0.1428800978933723,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 18.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.16666666666666666
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.7973090277777777,
+            "mean_reciprocal_rank": 0.056188573606722074,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 21.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "10": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.9937879774305556,
+            "mean_reciprocal_rank": 7.569002778239756e-05,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 15423.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.9563802083333335,
+            "mean_reciprocal_rank": 0.12207064109637639,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 11.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.4444444444444444
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.8407118055555556,
+            "mean_reciprocal_rank": 0.08504894673823409,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 22.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.3055555555555556
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "11": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.6626790364583333,
+            "mean_reciprocal_rank": 3.577693394416969e-05,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 29603.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.0240885416666665,
+            "mean_reciprocal_rank": 0.10985353770978985,
+            "median_digit_rank": 7.5,
+            "median_vocabulary_rank": 13.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.3888888888888889
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.6844618055555556,
+            "mean_reciprocal_rank": 0.09246376259310066,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 20.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.25
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "12": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -0.9557969835069444,
+            "mean_reciprocal_rank": 3.289873124804271e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 29808.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.6401909722222223,
+            "mean_reciprocal_rank": 0.08472995959007817,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 18.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.19444444444444445
+          },
+          "2": {
+            "digit_accuracy": 0.1388888888888889,
+            "mean_digit_margin": -2.1608072916666665,
+            "mean_reciprocal_rank": 0.07741930847641426,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 21.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.2222222222222222
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "13": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -0.7677188449435763,
+            "mean_reciprocal_rank": 1.966220048950535e-05,
+            "median_digit_rank": 4.5,
+            "median_vocabulary_rank": 50136.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.0190972222222223,
+            "mean_reciprocal_rank": 0.047943211653968636,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 30.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1388888888888889
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -1.9780815972222223,
+            "mean_reciprocal_rank": 0.03880802484923771,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 43.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "14": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.2475450303819444,
+            "mean_reciprocal_rank": 2.1625248408057728e-05,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 46821.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.425564236111111,
+            "mean_reciprocal_rank": 0.035394582552476225,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 60.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1111111111111111
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.3092447916666665,
+            "mean_reciprocal_rank": 0.04674686994486788,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 71.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "15": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -0.8269856770833334,
+            "mean_reciprocal_rank": 1.1961761355444316e-05,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 80851.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.3148871527777777,
+            "mean_reciprocal_rank": 0.01216870387385584,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 103.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -1.9240451388888888,
+            "mean_reciprocal_rank": 0.021396339502939815,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 100.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.05555555555555555
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "16": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -0.9040798611111112,
+            "mean_reciprocal_rank": 9.65464486788135e-06,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 102547.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.061252170138889,
+            "mean_reciprocal_rank": 0.0021951002953920886,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 551.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -1.6723090277777777,
+            "mean_reciprocal_rank": 0.006567372734513908,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 314.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "17": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.1111111111111111,
+            "mean_digit_margin": -0.7412109375,
+            "mean_reciprocal_rank": 1.132709940802759e-05,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 88425.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.6298285590277777,
+            "mean_reciprocal_rank": 0.0004076756189107995,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 3397.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.83837890625,
+            "mean_reciprocal_rank": 0.005284862279038417,
+            "median_digit_rank": 3.0,
+            "median_vocabulary_rank": 1262.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "18": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.1111111111111111,
+            "mean_digit_margin": -0.6342230902777778,
+            "mean_reciprocal_rank": 8.647776039659682e-06,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 116331.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.4677734375,
+            "mean_reciprocal_rank": 0.00019357953252793994,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 7073.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.540744357638889,
+            "mean_reciprocal_rank": 0.0004867143490863441,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 7745.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "19": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -0.7407972547743056,
+            "mean_reciprocal_rank": 1.8325072378735697e-05,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 70876.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.6830647786458335,
+            "mean_reciprocal_rank": 0.0002371530918839955,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 5042.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.1597222222222223,
+            "mean_reciprocal_rank": 0.00632411429861869,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 686.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "2": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.9057074652777777,
+            "mean_reciprocal_rank": 0.0021737514489023582,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 938.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.5386284722222223,
+            "mean_reciprocal_rank": 0.08923795249256841,
+            "median_digit_rank": 7.5,
+            "median_vocabulary_rank": 16.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.19444444444444445
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.6011284722222223,
+            "mean_reciprocal_rank": 0.0721888581143925,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 25.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.25
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "20": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.0716417100694444,
+            "mean_reciprocal_rank": 0.00012412947196877944,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 12297.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.0284830729166665,
+            "mean_reciprocal_rank": 0.0007172304392015725,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 2272.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.047580295138889,
+            "mean_reciprocal_rank": 0.0009329072400685715,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 3156.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "21": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.9525010850694444,
+            "mean_reciprocal_rank": 0.0004548846169380852,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 2903.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.05555555555555555,
+            "mean_digit_margin": -2.492919921875,
+            "mean_reciprocal_rank": 0.003244515337719831,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 620.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -2.3533799913194446,
+            "mean_reciprocal_rank": 0.0010327692897683137,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 3190.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "22": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.4271375868055554,
+            "mean_reciprocal_rank": 0.043732418054833924,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 42.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1111111111111111
+          },
+          "1": {
+            "digit_accuracy": 0.05555555555555555,
+            "mean_digit_margin": -3.6202256944444446,
+            "mean_reciprocal_rank": 0.014957184275964161,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 1158.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.027777777777777776
+          },
+          "2": {
+            "digit_accuracy": 0.05555555555555555,
+            "mean_digit_margin": -2.130859375,
+            "mean_reciprocal_rank": 0.016804021469131257,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 151.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.05555555555555555
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "23": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.5,
+            "mean_digit_margin": 0.8747829861111112,
+            "mean_reciprocal_rank": 0.6407579940188636,
+            "median_digit_rank": 1.5,
+            "median_vocabulary_rank": 2.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.9444444444444444
+          },
+          "1": {
+            "digit_accuracy": 0.5555555555555556,
+            "mean_digit_margin": 0.4052191840277778,
+            "mean_reciprocal_rank": 0.40714369069563033,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 3.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.6388888888888888
+          },
+          "2": {
+            "digit_accuracy": 0.9444444444444444,
+            "mean_digit_margin": 3.3793402777777777,
+            "mean_reciprocal_rank": 0.6175892187484874,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.7222222222222222
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.1388888888888889
+      },
+      "24": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.6666666666666666,
+            "mean_digit_margin": 1.9487847222222223,
+            "mean_reciprocal_rank": 0.7462962962962963,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.5,
+            "mean_digit_margin": 0.8279079861111112,
+            "mean_reciprocal_rank": 0.6658138401559454,
+            "median_digit_rank": 1.5,
+            "median_vocabulary_rank": 2.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.9722222222222222
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 4.672526041666667,
+            "mean_reciprocal_rank": 0.8925925925925926,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.19444444444444445
+      },
+      "25": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 4.156032986111111,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.9166666666666666,
+            "mean_digit_margin": 3.099392361111111,
+            "mean_reciprocal_rank": 0.9583333333333334,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 3.8407660590277777,
+            "mean_reciprocal_rank": 0.6008065728360888,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 2.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.8888888888888888
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.9166666666666666
+      },
+      "26": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 8.910590277777779,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.9722222222222222,
+            "mean_digit_margin": 6.880425347222222,
+            "mean_reciprocal_rank": 0.9861111111111112,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 7.110785590277778,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.9722222222222222
+      },
+      "3": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.414767795138889,
+            "mean_reciprocal_rank": 0.00024139265365972362,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 6748.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.8480902777777777,
+            "mean_reciprocal_rank": 0.01939646550409377,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 59.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.8871527777777777,
+            "mean_reciprocal_rank": 0.013965925937652125,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 127.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "4": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -3.6564127604166665,
+            "mean_reciprocal_rank": 3.286377397734898e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 53966.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.402126736111111,
+            "mean_reciprocal_rank": 0.007120530328334084,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 224.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.3721788194444444,
+            "mean_reciprocal_rank": 0.005561272355358825,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 578.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "5": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.4876302083333335,
+            "mean_reciprocal_rank": 0.00014451460115468825,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 9228.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.7873263888888888,
+            "mean_reciprocal_rank": 0.029153373721714886,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 51.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.2862413194444444,
+            "mean_reciprocal_rank": 0.012832488704700749,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 140.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "6": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.3525390625,
+            "mean_reciprocal_rank": 0.0001867233241866947,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 7245.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.05555555555555555,
+            "mean_digit_margin": -2.1786024305555554,
+            "mean_reciprocal_rank": 0.05766081924398947,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 32.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.5447048611111112,
+            "mean_reciprocal_rank": 0.02136271366821734,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 63.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "7": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.3656684027777777,
+            "mean_reciprocal_rank": 6.417030659124395e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 16413.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.6684027777777777,
+            "mean_reciprocal_rank": 0.05595809918439852,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 28.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1388888888888889
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.5687934027777777,
+            "mean_reciprocal_rank": 0.03580808586864912,
+            "median_digit_rank": 4.5,
+            "median_vocabulary_rank": 43.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.027777777777777776
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "8": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.5654161241319444,
+            "mean_reciprocal_rank": 7.07499691064548e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 15535.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.6145833333333335,
+            "mean_reciprocal_rank": 0.057748004883370174,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 31.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1111111111111111
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.6460503472222223,
+            "mean_reciprocal_rank": 0.03712592223245403,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 57.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.1388888888888889
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "9": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.1990966796875,
+            "mean_reciprocal_rank": 3.1445061844987974e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 37260.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.896484375,
+            "mean_reciprocal_rank": 0.07048396552365745,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 22.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.19444444444444445
+          },
+          "2": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.7953559027777777,
+            "mean_reciprocal_rank": 0.02997969528320279,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 69.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.05555555555555555
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      }
+    },
+    "logit_lens": {
+      "0": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.6558159722222223,
+            "mean_reciprocal_rank": 0.004292479149954833,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 457.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.265462239583333,
+            "mean_reciprocal_rank": 2.3822303463832317e-05,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 54391.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.299045138888889,
+            "mean_reciprocal_rank": 8.683344589084904e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 75503.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "1": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -3.3247612847222223,
+            "mean_reciprocal_rank": 0.0036649560121811984,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 552.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.12646484375,
+            "mean_reciprocal_rank": 7.942802901056073e-05,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 18623.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.69091796875,
+            "mean_reciprocal_rank": 0.00039342889612370863,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 34179.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "10": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.6776801215277777,
+            "mean_reciprocal_rank": 0.00238128342614136,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 1187.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -8.405164930555555,
+            "mean_reciprocal_rank": 2.0861268536964813e-05,
+            "median_digit_rank": 8.0,
+            "median_vocabulary_rank": 74720.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.8408203125,
+            "mean_reciprocal_rank": 0.0018471051888239547,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 43469.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "11": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.4951171875,
+            "mean_reciprocal_rank": 0.010876429244994254,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 348.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -7.092122395833333,
+            "mean_reciprocal_rank": 1.9894241780409817e-05,
+            "median_digit_rank": 8.0,
+            "median_vocabulary_rank": 81630.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.127604166666667,
+            "mean_reciprocal_rank": 0.0003383651347491223,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 80060.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "12": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.9957682291666665,
+            "mean_reciprocal_rank": 0.03525823079386466,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 241.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.246636284722222,
+            "mean_reciprocal_rank": 1.4843491797839554e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 90744.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.411024305555555,
+            "mean_reciprocal_rank": 0.00017891079944984785,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 66478.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "13": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.8408745659722223,
+            "mean_reciprocal_rank": 0.01608817088149099,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 295.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.05555555555555555
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.584526909722222,
+            "mean_reciprocal_rank": 1.8769794476572396e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 85289.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.811686197916667,
+            "mean_reciprocal_rank": 0.0012463344358251292,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 39782.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "14": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.427951388888889,
+            "mean_reciprocal_rank": 0.06151123093906487,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 53.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.19444444444444445
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.808919270833333,
+            "mean_reciprocal_rank": 5.6078821941130786e-05,
+            "median_digit_rank": 7.5,
+            "median_vocabulary_rank": 25076.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.0263671875,
+            "mean_reciprocal_rank": 0.01832677141545814,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 12708.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.05555555555555555
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "15": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.4478624131944444,
+            "mean_reciprocal_rank": 0.01791586804161625,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 61.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -5.446397569444445,
+            "mean_reciprocal_rank": 2.2392071584751265e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 68222.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.315972222222222,
+            "mean_reciprocal_rank": 0.00032159730350307274,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 37495.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "16": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.8181423611111112,
+            "mean_reciprocal_rank": 0.007316042242038575,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 176.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -5.523383246527778,
+            "mean_reciprocal_rank": 1.4754162164245948e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 82954.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -4.932942708333333,
+            "mean_reciprocal_rank": 0.0009429803344972779,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 40741.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "17": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.0176866319444444,
+            "mean_reciprocal_rank": 0.038637978486413295,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 39.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.08333333333333333
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.003255208333333,
+            "mean_reciprocal_rank": 1.4767818316496138e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 103264.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.381184895833333,
+            "mean_reciprocal_rank": 0.001077062173175867,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 44005.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "18": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.7144097222222223,
+            "mean_reciprocal_rank": 0.008414563130458396,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 300.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.027777777777777776
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.916612413194445,
+            "mean_reciprocal_rank": 1.064648293297901e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 110606.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.26806640625,
+            "mean_reciprocal_rank": 0.002292740625581383,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 26550.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "19": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.2184787326388888,
+            "mean_reciprocal_rank": 0.0030958663191106915,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 1308.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.250189887152778,
+            "mean_reciprocal_rank": 8.892227587486084e-06,
+            "median_digit_rank": 8.0,
+            "median_vocabulary_rank": 123335.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.038519965277778,
+            "mean_reciprocal_rank": 0.004204464844573305,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 17430.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "2": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -4.025173611111111,
+            "mean_reciprocal_rank": 0.006080215881955975,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 496.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.988172743055555,
+            "mean_reciprocal_rank": 7.703939490856224e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 15775.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.1171875,
+            "mean_reciprocal_rank": 0.0021654564278488324,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 21317.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "20": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.5244140625,
+            "mean_reciprocal_rank": 0.014314262681282278,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 144.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -4.900960286458333,
+            "mean_reciprocal_rank": 9.623626925769618e-06,
+            "median_digit_rank": 7.5,
+            "median_vocabulary_rank": 109698.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -3.808322482638889,
+            "mean_reciprocal_rank": 0.0003886055413354458,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 38347.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "21": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -2.0591362847222223,
+            "mean_reciprocal_rank": 0.014866533573428958,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 140.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.027777777777777776
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -3.958523220486111,
+            "mean_reciprocal_rank": 2.5596027355511093e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 47086.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -3.6052788628472223,
+            "mean_reciprocal_rank": 0.001014274260882591,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 28243.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "22": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -4.2744140625,
+            "mean_reciprocal_rank": 0.18055894991068924,
+            "median_digit_rank": 4.5,
+            "median_vocabulary_rank": 16.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.4444444444444444
+          },
+          "1": {
+            "digit_accuracy": 0.027777777777777776,
+            "mean_digit_margin": -4.886338975694445,
+            "mean_reciprocal_rank": 0.0006568578191599321,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 49995.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.027777777777777776,
+            "mean_digit_margin": -3.0003255208333335,
+            "mean_reciprocal_rank": 0.0003961527248364031,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 5055.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "23": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.5,
+            "mean_digit_margin": 1.4340277777777777,
+            "mean_reciprocal_rank": 0.7291666666666666,
+            "median_digit_rank": 1.5,
+            "median_vocabulary_rank": 1.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.5555555555555556,
+            "mean_digit_margin": 0.24137369791666666,
+            "mean_reciprocal_rank": 0.2398010517341747,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 37.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.4444444444444444
+          },
+          "2": {
+            "digit_accuracy": 0.8055555555555556,
+            "mean_digit_margin": 3.4526909722222223,
+            "mean_reciprocal_rank": 0.3296085512331817,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 4.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.5555555555555556
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.1388888888888889
+      },
+      "24": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.6666666666666666,
+            "mean_digit_margin": 2.921875,
+            "mean_reciprocal_rank": 0.8263888888888888,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.5,
+            "mean_digit_margin": 0.8136935763888888,
+            "mean_reciprocal_rank": 0.4464290870002907,
+            "median_digit_rank": 1.5,
+            "median_vocabulary_rank": 2.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.5833333333333334
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 4.826822916666667,
+            "mean_reciprocal_rank": 0.6213378442545109,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 2.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.9722222222222222
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.16666666666666666
+      },
+      "25": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 5.688802083333333,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.9166666666666666,
+            "mean_digit_margin": 3.9200846354166665,
+            "mean_reciprocal_rank": 0.6906341012846151,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.8888888888888888
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 4.536024305555555,
+            "mean_reciprocal_rank": 0.11240825959573605,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 12.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.3333333333333333
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.9166666666666666
+      },
+      "26": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 9.74587673611111,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "1": {
+            "digit_accuracy": 0.9444444444444444,
+            "mean_digit_margin": 7.974609375,
+            "mean_reciprocal_rank": 0.9722222222222222,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          },
+          "2": {
+            "digit_accuracy": 1.0,
+            "mean_digit_margin": 8.970052083333334,
+            "mean_reciprocal_rank": 1.0,
+            "median_digit_rank": 1.0,
+            "median_vocabulary_rank": 1.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 1.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.9444444444444444
+      },
+      "3": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.474338107638889,
+            "mean_reciprocal_rank": 0.00261079421171965,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 859.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.31591796875,
+            "mean_reciprocal_rank": 0.00016155117154735075,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 12530.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.139811197916667,
+            "mean_reciprocal_rank": 0.0019289924288832165,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 32167.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "4": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.1111111111111111,
+            "mean_digit_margin": -2.3841145833333335,
+            "mean_reciprocal_rank": 0.0020508755111238977,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 1247.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -6.2607421875,
+            "mean_reciprocal_rank": 0.0002113004661089198,
+            "median_digit_rank": 4.0,
+            "median_vocabulary_rank": 9303.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.311957465277778,
+            "mean_reciprocal_rank": 0.000216224942168811,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 34394.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "5": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -1.89208984375,
+            "mean_reciprocal_rank": 0.0004077184678820199,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 2843.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -5.988932291666667,
+            "mean_reciprocal_rank": 0.00028910460848174393,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 11021.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -5.435492621527778,
+            "mean_reciprocal_rank": 0.001264402125882685,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 19536.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "6": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.5756293402777777,
+            "mean_reciprocal_rank": 0.0030633662012727846,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 711.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -7.051540798611111,
+            "mean_reciprocal_rank": 2.8374932817796486e-05,
+            "median_digit_rank": 5.0,
+            "median_vocabulary_rank": 49936.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.614366319444445,
+            "mean_reciprocal_rank": 0.004125467728959366,
+            "median_digit_rank": 6.5,
+            "median_vocabulary_rank": 38767.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "7": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.3465711805555554,
+            "mean_reciprocal_rank": 0.0027506583265685834,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 571.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -7.962999131944445,
+            "mean_reciprocal_rank": 1.645582380332361e-05,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 71806.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.189670138888889,
+            "mean_reciprocal_rank": 0.0035668719015808548,
+            "median_digit_rank": 5.5,
+            "median_vocabulary_rank": 46583.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "8": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -1.6746961805555556,
+            "mean_reciprocal_rank": 0.0016388071216199198,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 1002.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -7.961046006944445,
+            "mean_reciprocal_rank": 1.0093197714082228e-05,
+            "median_digit_rank": 7.0,
+            "median_vocabulary_rank": 115176.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -6.712022569444445,
+            "mean_reciprocal_rank": 0.0006508130688726344,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 65678.5,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      },
+      "9": {
+        "steps": {
+          "0": {
+            "digit_accuracy": 0.08333333333333333,
+            "mean_digit_margin": -2.7783745659722223,
+            "mean_reciprocal_rank": 0.0021366093437003917,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 928.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "1": {
+            "digit_accuracy": 0.0,
+            "mean_digit_margin": -8.55978732638889,
+            "mean_reciprocal_rank": 2.536244605290699e-05,
+            "median_digit_rank": 8.0,
+            "median_vocabulary_rank": 87133.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          },
+          "2": {
+            "digit_accuracy": 0.16666666666666666,
+            "mean_digit_margin": -7.297309027777778,
+            "mean_reciprocal_rank": 0.0006027591127223431,
+            "median_digit_rank": 6.0,
+            "median_vocabulary_rank": 64728.0,
+            "n": 36,
+            "vocabulary_hit_at_10": 0.0
+          }
+        },
+        "teacher_forced_full_result_accuracy": 0.0
+      }
+    }
+  },
+  "lens": {
+    "matrix_diagnostics": {
+      "0": {
+        "cosine_with_identity": 0.12790713786620897,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.7758465053042435
+      },
+      "1": {
+        "cosine_with_identity": 0.13206425462915006,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.7346930670169831
+      },
+      "10": {
+        "cosine_with_identity": 0.28052699776771867,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6714378078287556
+      },
+      "11": {
+        "cosine_with_identity": 0.29642134013455296,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6999495578069899
+      },
+      "12": {
+        "cosine_with_identity": 0.3046497592483761,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.7444110859818681
+      },
+      "13": {
+        "cosine_with_identity": 0.32159806793378554,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.7618681781514915
+      },
+      "14": {
+        "cosine_with_identity": 0.32826088936098113,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.8203336809821491
+      },
+      "15": {
+        "cosine_with_identity": 0.35838375291552815,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.8658468541151221
+      },
+      "16": {
+        "cosine_with_identity": 0.37602338488375125,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.9565691290358799
+      },
+      "17": {
+        "cosine_with_identity": 0.446231062771449,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.9310467975034751
+      },
+      "18": {
+        "cosine_with_identity": 0.4997940748584359,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.9722016471334067
+      },
+      "19": {
+        "cosine_with_identity": 0.602317936112584,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.0227712230548538
+      },
+      "2": {
+        "cosine_with_identity": 0.14379145187741582,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6750298209282539
+      },
+      "20": {
+        "cosine_with_identity": 0.6606489509342813,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.082449215241149
+      },
+      "21": {
+        "cosine_with_identity": 0.7595030484139911,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.1086472392441995
+      },
+      "22": {
+        "cosine_with_identity": 0.8233298980333599,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.1759943701725193
+      },
+      "23": {
+        "cosine_with_identity": 0.8641597578644056,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.1948955578968443
+      },
+      "24": {
+        "cosine_with_identity": 0.8888196431002826,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.1518599238229064
+      },
+      "25": {
+        "cosine_with_identity": 0.9227915380479534,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.1435075978939813
+      },
+      "26": {
+        "cosine_with_identity": 0.9346697990304091,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 1.117139628766507
+      },
+      "3": {
+        "cosine_with_identity": 0.15343631049387801,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6331703706364085
+      },
+      "4": {
+        "cosine_with_identity": 0.16550536648515077,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6020870083100467
+      },
+      "5": {
+        "cosine_with_identity": 0.18766174451733075,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.5757003997259132
+      },
+      "6": {
+        "cosine_with_identity": 0.20796741333802626,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.5868845117243771
+      },
+      "7": {
+        "cosine_with_identity": 0.23223528745836486,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.60097229093464
+      },
+      "8": {
+        "cosine_with_identity": 0.25034210595928086,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.6181605466588695
+      },
+      "9": {
+        "cosine_with_identity": 0.26119829449395926,
+        "finite": true,
+        "frobenius_norm_over_sqrt_d": 0.645519375675594
+      }
+    },
+    "n_prompts": 12,
+    "path": "artifacts/jlens/phase1_qwen15b_development_lens.pt",
+    "sha256": "94c6d1c326393370adc5de538cdaaef2d3c3a0d83bb6b9c2eba0102afcf550b9"
+  },
+  "model": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "schema_version": "oli.jlens-arithmetic-timing/v1",
+  "status": "development_only"
+}

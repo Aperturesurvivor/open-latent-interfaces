@@ -60,6 +60,14 @@ presentation. This establishes the behavioral envelope for Phase 1, not a
 latent-mechanism claim. See the
 [capability audit](CAPABILITY_GATE_V2_AUDIT.md).
 
+The first 1.5B J-lens timing map then found a late transition: teacher-forced
+three-digit readout stayed at 0% through block 22 and reached 91.7–97.2% only at
+blocks 25–26. Vanilla logit lens behaved almost identically. Those layers are
+too output-adjacent for the frozen Phase 1 interface gate, so probes and donor
+patches—not interpretation prose—must now determine whether earlier
+non-vocabulary state exists. See the
+[Phase 1B J-lens summary](PHASE1B_JLENS_SUMMARY.md).
+
 ## Why this is separate from ordinary activation steering
 
 The project is not trying only to make a model more likely to discuss
@@ -123,6 +131,7 @@ either stage.
 - [Phase 0.1 lab notebook](PHASE01_LAB_NOTEBOOK.md)
 - [Phase 1A executive summary](PHASE1A_EXECUTIVE_SUMMARY.md)
 - [Phase 1A lab notebook](PHASE1A_LAB_NOTEBOOK.md)
+- [Phase 1B J-lens development summary](PHASE1B_JLENS_SUMMARY.md)
 - [Interpretability backends and evidence contract](docs/INTERPRETABILITY_BACKENDS.md)
 - [Interpretability artifact JSON schema](schemas/interpretability-artifact-v1.schema.json)
 
