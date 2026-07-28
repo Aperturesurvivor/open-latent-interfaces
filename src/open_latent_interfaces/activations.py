@@ -25,6 +25,23 @@ class CapturedLayer:
             raise ValueError("captured values must have shape [examples, width]")
 
 
+@dataclass(frozen=True)
+class CapturedSequences:
+    """Unpadded residual sequences for one hidden-state index."""
+
+    hidden_state_index: int
+    values: tuple[torch.Tensor, ...]
+
+    def __post_init__(self) -> None:
+        if not self.values:
+            raise ValueError("captured sequences cannot be empty")
+        if any(value.ndim != 2 for value in self.values):
+            raise ValueError("each captured sequence must have shape [tokens, width]")
+        widths = {value.shape[1] for value in self.values}
+        if len(widths) != 1:
+            raise ValueError("captured sequence widths must match")
+
+
 class ActivationCapture:
     """Capture residual-stream states from Hugging Face causal language models.
 
@@ -85,6 +102,60 @@ class ActivationCapture:
 
         return {
             index: CapturedLayer(index, torch.cat(values, dim=0))
+            for index, values in chunks.items()
+        }
+
+    @torch.inference_mode()
+    def capture_sequences(
+        self,
+        prompts: list[str],
+        *,
+        hidden_state_indices: Iterable[int] | None = None,
+        batch_size: int = 8,
+    ) -> dict[int, CapturedSequences]:
+        """Capture every active prompt token, excluding tokenizer padding."""
+
+        if not prompts:
+            raise ValueError("at least one prompt is required")
+        if batch_size < 1:
+            raise ValueError("batch_size must be positive")
+
+        requested = None if hidden_state_indices is None else tuple(hidden_state_indices)
+        chunks: dict[int, list[torch.Tensor]] = {}
+        for start in range(0, len(prompts), batch_size):
+            batch_prompts = prompts[start : start + batch_size]
+            encoded = self.tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+            )
+            encoded = {
+                key: value.to(self.device) if isinstance(value, torch.Tensor) else value
+                for key, value in encoded.items()
+            }
+            outputs = self.model(
+                **encoded,
+                output_hidden_states=True,
+                use_cache=False,
+                return_dict=True,
+            )
+            hidden_states = outputs.hidden_states
+            indices = tuple(range(len(hidden_states))) if requested is None else requested
+            active = encoded["attention_mask"].bool()
+            for index in indices:
+                if index < 0 or index >= len(hidden_states):
+                    raise IndexError(
+                        f"hidden-state index {index} outside [0, {len(hidden_states) - 1}]"
+                    )
+                state = hidden_states[index]
+                chunks.setdefault(index, []).extend(
+                    state[row, active[row]].detach().float().cpu()
+                    for row in range(len(batch_prompts))
+                )
+
+        return {
+            index: CapturedSequences(index, tuple(values))
             for index, values in chunks.items()
         }
 

@@ -62,6 +62,31 @@ Selection and development may not be filtered. Every causal report must retain
 the original behavior non-pass and report complete unfiltered selection
 metrics. This amendment does not authorize audit access.
 
+## Prompt-boundary amendment after the single-token non-pass
+
+The first selection-only causal map patched only the final `Answer=` prompt
+token. Full carry-pair, difference-in-differences, matched increment,
+shuffled, and random interventions all reached at most 2/45 target tens
+digits. That result rejects a single-vector prompt bottleneck but leaves a
+distributed prompt-state mechanism unresolved.
+
+The next frozen selection experiment replaces the residual states of every
+active prompt token once, before cached autoregressive generation. It does not
+patch generated answer tokens. Corresponding quartet prompts must have equal
+token lengths, and that length matrix is hash-locked. The conditions are:
+
+1. zero intervention;
+2. the complete carry-pair sequence delta;
+3. the carry difference-in-differences sequence delta, Frobenius-norm matched
+   per example to the complete carry delta;
+4. the matched no-carry +1 sequence delta at the same norm;
+5. an isotropic random sequence delta at the same norm.
+
+The full sequence condition remains an upper-bound sufficiency test. A
+carry-specific claim still requires the difference-in-differences condition
+to pass its absolute threshold and outperform both matched controls. Generated
+tokens remain unpatched so the experiment cannot teacher-force the answer.
+
 ## Evidence rules
 
 - A carry probe is correlational evidence only.

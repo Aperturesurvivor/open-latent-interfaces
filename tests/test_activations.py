@@ -10,6 +10,7 @@ from open_latent_interfaces.activations import (
 from open_latent_interfaces.interventions import (
     intervened_next_token_logits,
     one_shot_last_token_addition_hook,
+    one_shot_sequence_addition_hook,
 )
 
 
@@ -75,6 +76,24 @@ def test_activation_capture_uses_hf_hidden_state_indexing() -> None:
     assert torch.allclose(difference, torch.ones_like(difference))
 
 
+def test_activation_capture_sequences_removes_padding() -> None:
+    model = FakeModel()
+    capture = ActivationCapture(model, FakeTokenizer(), device="cpu")
+    captured = capture.capture_sequences(
+        ["1 2 3", "4 5"],
+        hidden_state_indices=[1],
+        batch_size=2,
+    )
+    assert [value.shape for value in captured[1].values] == [
+        torch.Size([3, 4]),
+        torch.Size([2, 4]),
+    ]
+    assert torch.allclose(
+        captured[1].values[1][-1],
+        model.embed(torch.tensor(5)) + 1,
+    )
+
+
 def test_intervention_adds_delta_at_selected_boundary() -> None:
     model = FakeModel()
     tokenizer = FakeTokenizer()
@@ -109,4 +128,17 @@ def test_one_shot_hook_changes_only_first_forward() -> None:
     first = hook(None, (), (hidden,))[0]
     second = hook(None, (), (hidden,))[0]
     assert torch.equal(first[0, -1], torch.ones(4))
+    assert torch.equal(second, hidden)
+
+
+def test_one_shot_sequence_hook_changes_active_prompt_tokens_only_once() -> None:
+    mask = torch.tensor([[0, 1, 1], [1, 1, 1]])
+    delta = torch.ones(2, 3, 4)
+    hook = one_shot_sequence_addition_hook(delta, mask)
+    hidden = torch.zeros(2, 3, 4)
+    first = hook(None, (), (hidden,))[0]
+    second = hook(None, (), (hidden,))[0]
+    assert torch.equal(first[0, 0], torch.zeros(4))
+    assert torch.equal(first[0, 1:], torch.ones(2, 4))
+    assert torch.equal(first[1], torch.ones(3, 4))
     assert torch.equal(second, hidden)
