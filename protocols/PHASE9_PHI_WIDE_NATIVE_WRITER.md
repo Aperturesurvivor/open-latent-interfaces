@@ -56,3 +56,25 @@ not be rerun, filtered, or used to choose prototypes, scales, or thresholds.
 Passing selection or exposed development would establish only a wider
 development candidate. A new held-out audit is required before claiming that
 the refitted writer or the rebuilt latent graft generalizes.
+
+## Frozen selection outcome
+
+The selection run closed the all-position refit as a non-pass:
+
+- leading digit, hidden index 24, rank 32, scale 1.0: target accuracy
+  `87/180` (`0.4833`), identity accuracy `172/180` (`0.9556`), and control
+  advantage `0.2667`;
+- tens digit, hidden index 30, rank 32, scale 1.0: target and identity
+  accuracy `180/180`, with control advantage `0.9056`;
+- ones digit, hidden index 30, rank 32, scale 1.0: target and identity
+  accuracy `180/180`, with control advantage `0.9278`.
+
+The complete result is
+`results/phase9_phi_wide_writer_selection.json`. Its SHA-256 is
+`c6a57224e2824845e2c7b60d449b3d0b58df9306aad69c15ee2fefee719acfb6`.
+The fitted prototype artifact SHA-256 is
+`62d7302c7bcfe7ebe529f4f20ab91f43b61ebc8bda8bf2df86ccb053868122f0`.
+
+This result localizes the remaining writer bottleneck to the leading token.
+The two suffix coordinates are retained as development candidates. The failed
+leading prototype is not eligible for a new audit.
