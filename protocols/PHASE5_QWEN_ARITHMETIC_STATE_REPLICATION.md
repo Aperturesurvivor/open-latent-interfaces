@@ -48,3 +48,16 @@ The frozen non-audit behavior gate passed in every split: 95.56% fit rows,
 95.00% selection rows, and 95.56% development rows were exact, with
 158/180, 39/45, and 41/45 complete-correct quartets respectively. The eligible
 fit pool therefore advances to causal mapping without a behavior amendment.
+
+## Frozen token-region scan
+
+All 45 selection quartets have one changed first-operand digit token and one
+carry-context second-operand digit token under the Qwen renderer. Their
+positions and sequence lengths are hash-locked. Hidden-state indices
+1, 4, 8, 12, 16, 20, 24, and 27 span the Qwen stack.
+
+At every boundary, the scan separately tests the changed operand token, the
+carry-context token, and the downstream tail. Each target has an isotropic
+region- and norm-matched control; carry regions additionally face the matched
+no-carry `+1` regional delta. Selection gates and thresholds are identical to
+the Phase 4 regional map.
