@@ -1,0 +1,29 @@
+{
+  "base_model_batch_size": 8,
+  "compiler_batch_size": 4,
+  "compiler_module": "src/open_latent_interfaces/causal_compiler.py",
+  "compiler_module_sha256": "9510add2023b576d8ff2534b1bce57ed26e45d36ab918b78ddbfbe2bb84fb61d",
+  "dataset_config": "configs/phase12_qwen_compiler_robustness_dataset_frozen.json",
+  "dataset_config_sha256": "2ffff61d9b957a78150921ce475b2c95014916b9e8e28c4bea80cad15e8ef3d2",
+  "desired_margin": 16.0,
+  "digit_token_contract_sha256": "9c823b18a064e0fc33ff5281a91c18db7c2e61a31d0e1517ec046b90cbfcb26e",
+  "hidden_state_index": 23,
+  "maximum_iterations": 4,
+  "norm_cap": 0.25,
+  "phase11_audit_result": "results/phase11_qwen_hybrid_graft_audit.json",
+  "phase11_audit_result_sha256": "1840165adbcc0083fb937fa8407fe64ca23dc3a51de14bd14b3cc423ee61d692",
+  "random_control_seed": 20261308,
+  "rendered_prompts_sha256": "58f7d368d7958df72965b5f553f00a728ca3ac088a84beecc9132224ad917fd9",
+  "runner_sha256": "31e21fe99db5d1ee72d1c6b791668ab0bb3280cd0159dc6d2e5a00797b95a7bd",
+  "schema_version": "oli.phase12-qwen-compiler-robustness-selection-config/v1",
+  "selection_examples_sha256": "3ede006ac5b8fdc998fe31248fcf70e3ce41d288942a46742a36e0da81a8f3a7",
+  "selection_rule": {
+    "maximum_mean_relative_norm": 0.25,
+    "minimum_control_advantage": 0.5,
+    "minimum_identity_accuracy": 0.95,
+    "minimum_target_accuracy": 0.95,
+    "minimum_template_target_accuracy": 0.9,
+    "require_digit_token_rate": true
+  },
+  "selection_targets_sha256": "3c801507480b75e778dd4d942aebfbcc2e5d1cae8684a6d9ed434cbb43358913"
+}
